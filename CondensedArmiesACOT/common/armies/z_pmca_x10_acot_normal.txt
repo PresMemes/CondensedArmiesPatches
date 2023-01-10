@@ -1,0 +1,2025 @@
+#Defensive armies cant transport of the planet
+#maintenance is directly scripted here. 2.5 translates to 2.5 monthly cost (excluding other upkeep modifiers)
+#morale_damage = 1          # average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+############### STANDARD ARMY ###############
+## N TO DM = +10.0 DMG, HP, +10.0 Morale
+## DM TO AE = +5.0 DMG, HP, +5.0 Morale
+## AE TO SE = +10.0 DMG, HP, +10.0 Morale
+############# INFANTRY - GOOD MORALE, LOW COLLATERAL DAMAGE, FAST TO RECRUIT
+# Assault Armies
+pmca_ten_assault_army = {
+	damage = 10
+	health = 10
+	morale = 10
+	morale_damage = 0.5
+	collateral_damage = 2.5
+	war_exhaustion = 2.5
+	time = 50
+	icon = GFX_army_type_infantry
+	prerequisites = {
+		"tech_assault_armies"
+	}
+	resources = {
+		category = armies
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+	}
+	potential_country = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+		NOT = { has_technology = tech_acot_army_dm }
+
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+	ai_weight = {
+		base = 150
+	}
+}
+
+pmca_ten_acot_infantry_dm = {
+	use_armynames_from = assault_army
+	damage = 20
+	health = 20
+	morale = 12.5
+	morale_damage = 0.5
+	collateral_damage = 2.5
+	war_exhaustion = 2.5
+	time = 50
+	icon = GFX_army_type_infantry
+	prerequisites = {
+		"tech_acot_army_dm"
+	}
+	resources = {
+		category = armies
+		cost = {
+			minerals = 1500
+		}
+		upkeep = {
+			energy = 7.5
+		}
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+	}
+	potential_country = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1500
+		}
+	}
+	potential = {
+		NOT = {
+			has_global_flag = acot_army_forbidden
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = {
+				has_technology = tech_acot_army_ae
+			}
+		}
+	}
+	ai_weight = {
+		base = 150
+	}
+}
+
+pmca_ten_acot_infantry_ae = {
+	use_armynames_from = assault_army
+	damage = 25
+	health = 25
+	morale = 15
+	morale_damage = 0.5
+	collateral_damage = 2.5
+	war_exhaustion = 2.5
+	time = 50
+	icon = GFX_army_type_infantry
+	prerequisites = {
+		"tech_acot_army_ae"
+	}
+	resources = {
+		category = armies
+		cost = {
+			minerals = 2000
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+	}
+	potential_country = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 2000
+		}
+	}
+	potential = {
+		NOT = {
+			has_global_flag = acot_army_forbidden
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = {
+				has_technology = tech_acot_army_se
+			}
+		}
+	}
+	ai_weight = {
+		base = 150
+	}
+}
+
+# SE Army
+pmca_ten_acot_infantry_se = {
+	use_armynames_from = assault_army
+	damage = 35
+	health = 35
+	morale = 20
+	morale_damage = 0.5
+	collateral_damage = 2.5
+	war_exhaustion = 2.5
+	time = 50
+	icon = GFX_army_type_infantry
+	prerequisites = {
+		"tech_acot_army_se"
+	}
+	resources = {
+		category = armies
+		cost = {
+			minerals = 2500
+		}
+		upkeep = {
+			energy = 12.5
+		}
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+	}
+	potential_country = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 2500
+		}
+	}
+	potential = {
+		NOT = {
+			has_global_flag = acot_army_forbidden
+		}
+		from = {
+			NOR = {
+				is_sapient = no
+			}
+		}
+	}
+	ai_weight = {
+		base = 150
+	}
+}
+
+# ######################### SLAVES #########################
+# pmca_ten_slave_army = {
+# 	damage = 7.5
+# 	health = 7.5
+# 	morale = 2.5
+# 	morale_damage = 0
+# 	collateral_damage = 2
+# 	war_exhaustion = 0.5
+# 	time = 25
+# 	icon = GFX_army_type_slave
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 200
+# 		}
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_neural_implants"
+# 	}
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = "requires_slave_processing_facility"
+# 			OR = {
+# 				has_building = building_slave_processing
+# 				AND = {
+# 					exists = orbital_defence
+# 					orbital_defence = {
+# 						exists = starbase
+# 						starbase = {
+# 							#has_starbase_building = ring_slave_processing_facility
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		any_owned_pop = {
+# 			is_pop_category = slave
+# 		}
+# 	}
+# 	potential_country = {
+# 		has_policy_flag = slavery_allowed
+# 		NOT = {
+# 			has_authority = auth_machine_intelligence
+# 		}
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 200
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_dm
+# 			}
+# 			any_owned_pop = {
+# 				is_pop_category = slave
+# 				is_same_species = from
+# 			}
+# 		}
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 75
+# 	}
+# }
+
+# pmca_ten_acot_slave_army_dm = {
+# 	damage = 8.5
+# 	health = 8.5
+# 	morale = 7.5
+# 	morale_damage = 0.5
+# 	collateral_damage = 2
+# 	war_exhaustion = 0.5
+# 	time = 25
+# 	icon = GFX_army_type_slave
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 200
+# 		}
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_neural_implants"
+# 	}
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = "requires_slave_processing_facility"
+# 			OR = {
+# 				has_building = building_slave_processing
+# 				AND = {
+# 					exists = orbital_defence
+# 					orbital_defence = {
+# 						exists = starbase
+# 						starbase = {
+# 							#has_starbase_building = ring_slave_processing_facility
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		any_owned_pop = {
+# 			is_pop_category = slave
+# 		}
+# 	}
+# 	potential_country = {
+# 		has_policy_flag = slavery_allowed
+# 		NOT = {
+# 			has_authority = auth_machine_intelligence
+# 		}
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 200
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_technology = tech_acot_army_dm
+# 			has_technology = tech_neural_implants
+# 			any_owned_pop = {
+# 				is_pop_category = slave
+# 				is_same_species = from
+# 			}
+# 		}
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 75
+# 	}
+# }
+
+# ######################### UNDEAD #########################
+# # Undead Armies
+# pmca_ten_undead_army = {
+# 	damage = 7.5
+# 	health = 15
+# 	has_morale = no
+# 	collateral_damage = 5
+# 	morale_damage = 0.75
+# 	war_exhaustion = 2
+# 	time = 70
+# 	icon = GFX_army_type_undead
+# 	pop_limited = no
+# 	disband_if_species_lacks_rights = no	#i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			energy = 500
+# 			minerals = 1000
+# 		}
+# 		upkeep = {
+# 			energy = 12
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		has_valid_civic = civic_reanimated_armies
+# 	}
+# 	potential_country = {
+# 		has_valid_civic = civic_reanimated_armies
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		planet = {
+# 			has_active_building = building_dread_encampment
+# 			num_assigned_jobs = {
+# 				job = necromancer
+# 				value >= 10
+# 			}
+# 		}
+# 		NOT = {
+# 			has_technology = tech_acot_army_dm
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_undead_army_dm = {
+# 	use_armynames_from = undead_army
+# 	damage = 17.5
+# 	health = 25
+# 	has_morale = no
+# 	collateral_damage = 5
+# 	morale_damage = 0.75
+# 	war_exhaustion = 2
+# 	time = 70
+# 	icon = GFX_army_type_undead
+# 	pop_limited = no
+# 	disband_if_species_lacks_rights = no	#i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+# 	prerequisites = {
+# 		"tech_acot_army_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1500
+# 		}
+# 		upkeep = {
+# 			energy = 7.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		has_valid_civic = civic_reanimated_armies
+# 	}
+# 	potential_country = {
+# 		has_valid_civic = civic_reanimated_armies
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		planet = {
+# 			has_active_building = building_dread_encampment
+# 			num_assigned_jobs = {
+# 				job = necromancer
+# 				value >= 10
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 180
+# 	}
+# }
+
+# ######################### LIGHT #########################
+# pmca_ten_acot_light_armor = {
+# 	use_armynames_from = assault_army
+# 	damage = 15
+# 	health = 25
+# 	morale = 7.5
+# 	morale_damage = 1
+# 	collateral_damage = 10
+# 	war_exhaustion = 10
+# 	time = 90
+# 	has_species = no
+# 	icon = GFX_acot_type_light
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2000
+# 		}
+# 		upkeep = {
+# 			energy = 10
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 2000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_light_armor_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 25
+# 	health = 35
+# 	morale = 10
+# 	morale_damage = 1
+# 	collateral_damage = 10
+# 	war_exhaustion = 10
+# 	time = 90
+# 	has_species = no
+# 	icon = GFX_acot_type_light
+# 	prerequisites = {
+# 		"tech_acot_army_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3000
+# 		}
+# 		upkeep = {
+# 			energy = 15
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 3000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_light_armor_ae = {
+# 	use_armynames_from = assault_army
+# 	damage = 30
+# 	health = 40
+# 	morale = 12.5
+# 	morale_damage = 1
+# 	collateral_damage = 10
+# 	war_exhaustion = 10
+# 	time = 90
+# 	has_species = no
+# 	icon = GFX_acot_type_light
+# 	prerequisites = {
+# 		"tech_acot_army_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 4000
+# 		}
+# 		upkeep = {
+# 			energy = 20
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_light_armor_se = {
+# 	use_armynames_from = assault_army
+# 	damage = 40
+# 	health = 50
+# 	morale = 17.5
+# 	morale_damage = 1
+# 	collateral_damage = 10
+# 	war_exhaustion = 10
+# 	time = 90
+# 	has_species = no
+# 	icon = GFX_acot_type_light
+# 	prerequisites = {
+# 		"tech_acot_army_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 6000
+# 		}
+# 		upkeep = {
+# 			energy = 30
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 6000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# ######################### HEAVY #########################
+# pmca_ten_acot_heavy_armor = {
+# 	use_armynames_from = assault_army
+# 	damage = 45
+# 	health = 55
+# 	morale = 15
+# 	morale_damage = 2
+# 	collateral_damage = 30
+# 	war_exhaustion = 25
+# 	time = 180
+# 	has_species = no
+# 	icon = GFX_army_type_heavy
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 4500
+# 			alloys = 1500
+# 		}
+# 		upkeep = {
+# 			energy = 45
+# 			alloys = 15
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# pmca_ten_acot_heavy_armor_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 55
+# 	health = 65
+# 	morale = 17.5
+# 	morale_damage = 2
+# 	collateral_damage = 30
+# 	war_exhaustion = 25
+# 	time = 180
+# 	has_species = no
+# 	icon = GFX_army_type_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 5500
+# 			alloys = 2000
+# 		}
+# 		upkeep = {
+# 			energy = 55
+# 			alloys = 20
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 2000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# pmca_ten_acot_heavy_armor_ae = {
+# 	use_armynames_from = assault_army
+# 	damage = 60
+# 	health = 70
+# 	morale = 20
+# 	morale_damage = 2
+# 	collateral_damage = 30
+# 	war_exhaustion = 25
+# 	time = 180
+# 	has_species = no
+# 	icon = GFX_army_type_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 6000
+# 			alloys = 2500
+# 		}
+# 		upkeep = {
+# 			energy = 60
+# 			alloys = 25
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 2500
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# pmca_ten_acot_heavy_armor_se = {
+# 	use_armynames_from = assault_army
+# 	damage = 70
+# 	health = 80
+# 	morale = 25
+# 	morale_damage = 2
+# 	collateral_damage = 30
+# 	war_exhaustion = 25
+# 	time = 180
+# 	has_species = no
+# 	icon = GFX_army_type_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 8000
+# 			alloys = 3500
+# 		}
+# 		upkeep = {
+# 			energy = 80
+# 			alloys = 35
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 3500
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# ######################### ROBOTS #########################
+# # Robotic Armies
+# pmca_ten_acot_drone_army = {
+# 	damage = 5
+# 	health = 2
+# 	morale_damage = 0.05
+# 	collateral_damage = 0
+# 	war_exhaustion = 1
+# 	has_morale = no
+# 	time = 30
+# 	icon = GFX_army_type_droid_drone
+# 	has_species = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 500
+# 		}
+# 		upkeep = {
+# 			energy = 2.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 500
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_dm
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_robotic_workers"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_drone_army_dm = {
+# 	damage = 15
+# 	health = 12
+# 	morale_damage = 0.05
+# 	collateral_damage = 0
+# 	war_exhaustion = 1
+# 	has_morale = no
+# 	time = 30
+# 	icon = GFX_army_type_droid_drone
+# 	has_species = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 600
+# 		}
+# 		upkeep = {
+# 			energy = 3
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 600
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_ae
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_dm"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_drone_army_ae = {
+# 	damage = 20
+# 	health = 17
+# 	morale_damage = 0.05
+# 	collateral_damage = 0
+# 	war_exhaustion = 1
+# 	has_morale = no
+# 	time = 30
+# 	icon = GFX_army_type_droid_drone
+# 	has_species = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 700
+# 		}
+# 		upkeep = {
+# 			energy = 3.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 700
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_se
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_ae"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_drone_army_se = {
+# 	damage = 30
+# 	health = 27
+# 	morale_damage = 0.05
+# 	collateral_damage = 0
+# 	war_exhaustion = 1
+# 	has_morale = no
+# 	time = 30
+# 	icon = GFX_army_type_droid_drone
+# 	has_species = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 900
+# 		}
+# 		upkeep = {
+# 			energy = 4.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 900
+# 		}
+# 	}
+# 	potential = {
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_se"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_robotic_army = {
+# 	damage = 10
+# 	health = 15
+# 	morale_damage = 0.1
+# 	collateral_damage = 10
+# 	war_exhaustion = 7.5
+# 	has_morale = no
+# 	time = 60
+# 	icon = GFX_army_type_droid_unit
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1500
+# 		}
+# 		upkeep = {
+# 			energy = 15
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = "trait_mechanical"
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_dm
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_droid_workers"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Synthetic Omnic Armies
+# pmca_ten_acot_droid_army_dm = {
+# 	use_armynames_from = robotic_army
+# 	damage = 20
+# 	health = 25
+# 	has_morale = no
+# 	morale_damage = 0.1
+# 	collateral_damage = 17.5
+# 	war_exhaustion = 15
+# 	time = 160
+# 	icon = GFX_army_type_machine_assault
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1750
+# 		}
+# 		upkeep = {
+# 			energy = 17.5
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_dm"
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1750
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = { has_global_flag = acot_army_forbidden }
+# 		from = { has_trait = "trait_mechanical" }
+# 		owner = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			NOT = { has_technology = tech_acot_army_robotic_ae }
+# 		}
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = { has_policy_flag = robots_outlawed }
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = { has_policy_flag = robots_outlawed }
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 		modifier = {
+# 			set = 0
+# 			is_fallen_empire = yes
+# 			NOT = { has_ethic = ethic_fanatic_materialist }
+# 		}
+# 	}
+# }
+
+# # Synthetic Omnic Armies
+# pmca_ten_acot_droid_army_ae = {
+# 	use_armynames_from = robotic_army
+# 	damage = 25
+# 	health = 30
+# 	has_morale = no
+# 	morale_damage = 0.1
+# 	collateral_damage = 17.5
+# 	war_exhaustion = 15
+# 	time = 160
+# 	icon = GFX_army_type_machine_assault
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2000
+# 		}
+# 		upkeep = {
+# 			energy = 20
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_ae"
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 2000
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = { has_global_flag = acot_army_forbidden }
+# 		from = { has_trait = "trait_mechanical" }
+# 		owner = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			NOT = { has_technology = tech_acot_army_robotic_se }
+# 		}
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = { has_policy_flag = robots_outlawed }
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 		modifier = {
+# 			set = 0
+# 			is_fallen_empire = yes
+# 			NOT = {
+# 				has_ethic = ethic_fanatic_materialist
+# 			}
+# 		}
+# 	}
+# }
+
+# # Synthetic Omnic Armies
+# pmca_ten_acot_droid_army_se = {
+# 	use_armynames_from = robotic_army
+# 	damage = 35
+# 	health = 40
+# 	has_morale = no
+# 	morale_damage = 0.1
+# 	collateral_damage = 17.5
+# 	war_exhaustion = 15
+# 	time = 160
+# 	icon = GFX_army_type_machine_assault
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2500
+# 		}
+# 		upkeep = {
+# 			energy = 25
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_se"
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 2500
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = { has_global_flag = acot_army_forbidden }
+# 		from = { has_trait = "trait_mechanical" }
+# 		owner = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 		}
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = { has_policy_flag = robots_outlawed }
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 		modifier = {
+# 			set = 0
+# 			is_fallen_empire = yes
+# 			NOT = {
+# 				has_ethic = ethic_fanatic_materialist
+# 			}
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_droid_mech = {
+# 	damage = 25
+# 	health = 40
+# 	morale_damage = 0.5
+# 	collateral_damage = 20
+# 	war_exhaustion = 15
+# 	has_morale = no
+# 	time = 125
+# 	icon = GFX_acot_type_droid_mech
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2500
+# 			alloys = 500
+# 		}
+# 		upkeep = {
+# 			energy = 25
+# 			alloys = 5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = "trait_mechanical"
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_dm
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_droid_workers"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_droid_mech_dm = {
+# 	damage = 35
+# 	health = 50
+# 	morale_damage = 0.5
+# 	collateral_damage = 20
+# 	war_exhaustion = 15
+# 	has_morale = no
+# 	time = 125
+# 	icon = GFX_acot_type_droid_mech
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3000
+# 			alloys = 750
+# 		}
+# 		upkeep = {
+# 			energy = 35
+# 			alloys = 7.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 750
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = "trait_mechanical"
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_ae
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_dm"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_droid_mech_ae = {
+# 	damage = 40
+# 	health = 55
+# 	morale_damage = 0.5
+# 	collateral_damage = 20
+# 	war_exhaustion = 15
+# 	has_morale = no
+# 	time = 125
+# 	icon = GFX_acot_type_droid_mech
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3250
+# 			alloys = 1000
+# 		}
+# 		upkeep = {
+# 			energy = 32.5
+# 			alloys = 10
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 1000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = "trait_mechanical"
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_robotic_se
+# 			}
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_ae"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# # Robotic Armies
+# pmca_ten_acot_droid_mech_se = {
+# 	damage = 50
+# 	health = 65
+# 	morale_damage = 0.5
+# 	collateral_damage = 20
+# 	war_exhaustion = 15
+# 	has_morale = no
+# 	time = 125
+# 	icon = GFX_acot_type_droid_mech
+# 	has_species = yes
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3750
+# 			alloys = 1500
+# 		}
+# 		upkeep = {
+# 			energy = 37.5
+# 			alloys = 15
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = alloys
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = "trait_mechanical"
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_robotic_se"
+# 	}
+# 	allow = {
+# 		owner = {
+# 			NOT = {
+# 				has_policy_flag = robots_outlawed
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				NOT = {
+# 					has_policy_flag = robots_outlawed
+# 				}
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				NAND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 			}
+# 			is_fallen_empire = no
+# 		}
+# 	}
+# }
+
+# ############### SPECIAL FORCE
+# pmca_ten_acot_special_force = {
+# 	damage = 17.5
+# 	health = 15
+# 	morale = 60
+# 	morale_damage = 0.75
+# 	collateral_damage = 5
+# 	war_exhaustion = 10
+# 	time = 75
+# 	icon = GFX_army_type_special
+# 	prerequisites = {
+# 		"tech_acot_army_3"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2500
+# 			unity = 250
+# 		}
+# 		upkeep = {
+# 			energy = 50
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = unity
+# 			PMCA_VALUE = 250
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_dm
+# 			}
+# 			is_regular_empire = yes
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 	}
+# }
+
+# pmca_ten_acot_special_force_dm = {
+# 	damage = 27.5
+# 	health = 25
+# 	morale = 65
+# 	morale_damage = 0.75
+# 	collateral_damage = 5
+# 	war_exhaustion = 10
+# 	time = 75
+# 	icon = GFX_army_type_special
+# 	prerequisites = {
+# 		"tech_acot_army_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3000
+# 			unity = 250
+# 		}
+# 		upkeep = {
+# 			energy = 50
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = unity
+# 			PMCA_VALUE = 250
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_ae
+# 			}
+# 			is_regular_empire = yes
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 	}
+# }
+
+# pmca_ten_acot_special_force_ae = {
+# 	damage = 32.5
+# 	health = 30
+# 	morale = 70
+# 	morale_damage = 0.75
+# 	collateral_damage = 5
+# 	war_exhaustion = 10
+# 	time = 75
+# 	icon = GFX_army_type_special
+# 	prerequisites = {
+# 		"tech_acot_army_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3250
+# 			unity = 250
+# 		}
+# 		upkeep = {
+# 			energy = 50
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = unity
+# 			PMCA_VALUE = 250
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_se
+# 			}
+# 			is_regular_empire = yes
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 	}
+# }
+
+# pmca_ten_acot_special_force_se = {
+# 	damage = 42.5
+# 	health = 40
+# 	morale = 75
+# 	morale_damage = 0.75
+# 	collateral_damage = 5
+# 	war_exhaustion = 10
+# 	time = 75
+# 	icon = GFX_army_type_special
+# 	prerequisites = {
+# 		"tech_acot_army_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 3750
+# 			unity = 250
+# 		}
+# 		upkeep = {
+# 			energy = 50
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 		is_fallen_empire = no
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = unity
+# 			PMCA_VALUE = 250
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_dm
+# 			}
+# 			is_regular_empire = yes
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 45
+# 	}
+# }
+
+# # Xenomorph Armies
+# pmca_ten_xenomorph_army = {
+# 	damage = 40
+# 	morale_damage = 2.5
+# 	collateral_damage = 40
+# 	war_exhaustion = 1
+# 	health = 20
+# 	has_morale = no
+# 	time = 100
+# 	icon = GFX_army_type_xenomorph
+# 	has_species = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2500
+# 			food = 1500
+# 		}
+# 		upkeep = {
+# 			energy = 25
+# 		}
+# 	}
+# 	potential_country = {
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = food
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_morphogenetic_field_mastery"
+# 	}
+# 	ai_weight = {
+# 		base = 15
+# 		modifier = {
+# 			factor = 10
+# 			is_fallen_empire = yes
+# 			has_ethic = ethic_fanatic_xenophobe
+# 		}
+# 		modifier = {
+# 			set = 0
+# 			is_xenophile = yes
+# 		}
+# 	}
+# }

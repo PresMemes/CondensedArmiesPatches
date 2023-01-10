@@ -1,0 +1,1125 @@
+# #Defensive armies can't transport of the planet
+# #maintenance is directly scripted here. 2.5 translates to 2.5 monthly cost (excluding other upkeep modifiers)
+# #morale_damage = 1              # average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+# ############### STANDARD ARMY ###############
+# ############# INFANTRY - GOOD MORALE, LOW COLLATERAL DAMAGE, FAST TO RECRUIT
+# # Assault Armies
+# pmca_ten_acot_hive_infantry_1 = {
+# 	use_armynames_from = assault_army
+# 	damage = 5
+# 	health = 5
+# 	has_morale = no
+# 	morale_damage = 2.5
+# 	collateral_damage = 3
+# 	war_exhaustion = 1
+# 	time = 50
+# 	icon = GFX_army_type_hive_infantry
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 500
+# 		}
+# 		upkeep = {
+# 			minerals = 5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_hive_infantry_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 15
+# 	health = 15
+# 	has_morale = no
+# 	morale_damage = 2.5
+# 	collateral_damage = 3
+# 	war_exhaustion = 1
+# 	time = 50
+# 	icon = GFX_army_type_hive_infantry
+# 	prerequisites = {
+# 		"tech_acot_army_hive_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 600
+# 		}
+# 		upkeep = {
+# 			minerals = 6
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_hive_infantry_ae = {
+# 	use_armynames_from = assault_army
+# 	damage = 20
+# 	health = 20
+# 	has_morale = no
+# 	morale_damage = 2.5
+# 	collateral_damage = 3
+# 	war_exhaustion = 1
+# 	time = 50
+# 	icon = GFX_army_type_hive_infantry
+# 	prerequisites = {
+# 		"tech_acot_army_hive_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 700
+# 		}
+# 		upkeep = {
+# 			minerals = 7
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 700
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# # SE Army
+# pmca_ten_acot_hive_infantry_se = {
+# 	use_armynames_from = assault_army
+# 	damage = 30
+# 	health = 30
+# 	has_morale = no
+# 	morale_damage = 2.5
+# 	collateral_damage = 3
+# 	war_exhaustion = 1
+# 	time = 50
+# 	icon = GFX_army_type_hive_infantry
+# 	prerequisites = {
+# 		"tech_acot_army_hive_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			minerals = 8
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 800
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# ### CLONE VARIANT
+# # Assault Armies
+# pmca_ten_acot_hive_clone_infantry_1 = {
+# 	use_armynames_from = assault_army
+# 	damage = 5
+# 	health = 5
+# 	has_morale = no
+# 	morale_damage = 1
+# 	collateral_damage = 3
+# 	war_exhaustion = 0.5
+# 	time = 25
+# 	icon = GFX_army_type_hive_infantry
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_gene_banks"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 500
+# 		}
+# 		upkeep = {
+# 			minerals = 5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_hive_clone_infantry_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 15
+# 	health = 15
+# 	has_morale = no
+# 	morale_damage = 2.5
+# 	collateral_damage = 3
+# 	war_exhaustion = 0.5
+# 	time = 25
+# 	icon = GFX_army_type_hive_infantry
+# 	pop_limited = no
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 600
+# 		}
+# 		upkeep = {
+# 			minerals = 6
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 600
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			has_technology = tech_gene_banks
+# 			has_technology = tech_acot_army_hive_dm
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# ############################
+# # Assault Armies
+# pmca_ten_acot_hive_swarmer_1 = {
+# 	use_armynames_from = clone_army
+# 	damage = 5
+# 	health = 1
+# 	has_morale = no
+# 	morale_damage = 2
+# 	collateral_damage = 2.5
+# 	war_exhaustion = 0.5
+# 	has_species = no
+# 	time = 10
+# 	icon = GFX_acot_type_hive_swarmer
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_acot_army_hive_3"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 250
+# 		}
+# 		upkeep = {
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 250
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_hive_swarmer_dm = {
+# 	use_armynames_from = clone_army
+# 	damage = 15
+# 	health = 11
+# 	has_morale = no
+# 	morale_damage = 2
+# 	collateral_damage = 2.5
+# 	war_exhaustion = 0.5
+# 	has_species = no
+# 	time = 10
+# 	icon = GFX_acot_type_hive_swarmer
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_acot_army_hive_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 350
+# 		}
+# 		upkeep = {
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 350
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# pmca_ten_acot_hive_swarmer_ae = {
+# 	use_armynames_from = clone_army
+# 	damage = 20
+# 	health = 16
+# 	has_morale = no
+# 	morale_damage = 2
+# 	collateral_damage = 2.5
+# 	war_exhaustion = 0.5
+# 	has_species = no
+# 	time = 10
+# 	icon = GFX_acot_type_hive_swarmer
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_acot_army_hive_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 450
+# 		}
+# 		upkeep = {
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 450
+# 		}
+# 	}
+# 	potential = {
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# # SE Army
+# pmca_ten_acot_hive_swarmer_se = {
+# 	use_armynames_from = clone_army
+# 	damage = 30
+# 	health = 26
+# 	has_morale = no
+# 	morale_damage = 2
+# 	collateral_damage = 2.5
+# 	war_exhaustion = 0.5
+# 	has_species = no
+# 	time = 10
+# 	icon = GFX_acot_type_hive_swarmer
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_acot_army_hive_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 550
+# 		}
+# 		upkeep = {
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 550
+# 		}
+# 	}
+# 	potential = {
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# #######
+# pmca_ten_acot_hive_clone_swarmer_1 = {
+# 	use_armynames_from = clone_army
+# 	damage = 3
+# 	health = 0.8
+# 	has_morale = no
+# 	morale_damage = 1
+# 	collateral_damage = 2.5
+# 	war_exhaustion = 0
+# 	has_species = no
+# 	time = 2
+# 	icon = GFX_acot_type_hive_swarmer
+# 	pop_limited = no
+# 	prerequisites = {
+# 		"tech_gene_banks"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 50
+# 		}
+# 		upkeep = {
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 50
+# 		}
+# 	}
+# 	potential = {
+# 	}
+# 	ai_weight = {
+# 		base = 150
+# 	}
+# }
+
+# ############################
+# #### Hunters
+# pmca_ten_acot_hive_light_1 = {
+# 	use_armynames_from = assault_army
+# 	damage = 7.5
+# 	health = 17.5
+# 	has_morale = no
+# 	morale_damage = 3.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 7.5
+# 	time = 70
+# 	has_species = yes
+# 	icon = GFX_army_type_hive_light
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1500
+# 		}
+# 		upkeep = {
+# 			minerals = 5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_hive_light_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 17.5
+# 	health = 27.5
+# 	has_morale = no
+# 	morale_damage = 3.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 7.5
+# 	time = 70
+# 	has_species = yes
+# 	icon = GFX_army_type_hive_light
+# 	prerequisites = {
+# 		"tech_acot_army_hive_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1600
+# 		}
+# 		upkeep = {
+# 			minerals = 6
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1600
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_hive_light_ae = {
+# 	use_armynames_from = assault_army
+# 	damage = 22.5
+# 	health = 32.5
+# 	has_morale = no
+# 	morale_damage = 3.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 7.5
+# 	time = 70
+# 	has_species = yes
+# 	icon = GFX_army_type_hive_light
+# 	prerequisites = {
+# 		"tech_acot_army_hive_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1700
+# 		}
+# 		upkeep = {
+# 			minerals = 7
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1700
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# # SE Army
+# pmca_ten_acot_hive_light_se = {
+# 	use_armynames_from = assault_army
+# 	damage = 32.5
+# 	health = 42.5
+# 	has_morale = no
+# 	morale_damage = 3.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 7.5
+# 	time = 70
+# 	has_species = yes
+# 	icon = GFX_army_type_hive_light
+# 	prerequisites = {
+# 		"tech_acot_army_hive_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1800
+# 		}
+# 		upkeep = {
+# 			minerals = 8
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1800
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# ####
+# #### Hunters
+# pmca_ten_acot_hive_clone_light_1 = {
+# 	use_armynames_from = assault_army
+# 	damage = 7.5
+# 	health = 17.5
+# 	has_morale = no
+# 	morale_damage = 1.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 3
+# 	time = 35
+# 	has_species = yes
+# 	pop_limited = no
+# 	icon = GFX_army_type_hive_light
+# 	prerequisites = {
+# 		"tech_gene_banks"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1500
+# 		}
+# 		upkeep = {
+# 			minerals = 5
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# pmca_ten_acot_hive_clone_light_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 17.5
+# 	health = 27.5
+# 	has_morale = no
+# 	morale_damage = 1.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 3
+# 	time = 35
+# 	has_species = yes
+# 	pop_limited = no
+# 	icon = GFX_army_type_hive_light
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 1600
+# 		}
+# 		upkeep = {
+# 			minerals = 6
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 1600
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			has_technology = tech_gene_banks
+# 			has_technology = tech_acot_army_hive_dm
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 90
+# 	}
+# }
+
+# ############################
+# #### Hunters
+# pmca_ten_acot_hive_heavy_1 = {
+# 	use_armynames_from = assault_army
+# 	damage = 37.5
+# 	health = 45
+# 	has_morale = no
+# 	morale_damage = 4.5
+# 	collateral_damage = 35
+# 	war_exhaustion = 15
+# 	time = 140
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_heavy
+# 	prerequisites = {
+# 		"tech_assault_armies"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 5000
+# 		}
+# 		upkeep = {
+# 			minerals = 50
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 5000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_dm
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# pmca_ten_acot_hive_heavy_dm = {
+# 	use_armynames_from = assault_army
+# 	damage = 47.5
+# 	health = 55
+# 	has_morale = no
+# 	morale_damage = 4.5
+# 	collateral_damage = 35
+# 	war_exhaustion = 15
+# 	time = 140
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_hive_dm"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 5500
+# 		}
+# 		upkeep = {
+# 			minerals = 55
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 5500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_ae
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# pmca_ten_acot_hive_heavy_ae = {
+# 	use_armynames_from = assault_army
+# 	damage = 52.5
+# 	health = 60
+# 	has_morale = no
+# 	morale_damage = 4.5
+# 	collateral_damage = 35
+# 	war_exhaustion = 15
+# 	time = 140
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_hive_ae"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 6000
+# 		}
+# 		upkeep = {
+# 			minerals = 60
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 6000
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			NOT = {
+# 				has_technology = tech_acot_army_hive_se
+# 			}
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# # SE Army
+# pmca_ten_acot_hive_heavy_se = {
+# 	use_armynames_from = assault_army
+# 	damage = 62.5
+# 	health = 70
+# 	has_morale = no
+# 	morale_damage = 4.5
+# 	collateral_damage = 35
+# 	war_exhaustion = 15
+# 	time = 140
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_heavy
+# 	prerequisites = {
+# 		"tech_acot_army_hive_se"
+# 	}
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 6500
+# 		}
+# 		upkeep = {
+# 			minerals = 65
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		is_hive_empire = yes
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = minerals
+# 			PMCA_VALUE = 6500
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 	}
+# 	ai_weight = {
+# 		base = 60
+# 	}
+# }
+
+# ########################################################################
+# # Hive-Mind Masterminds
+# pmca_ten_acot_army_hive_control = {
+# 	damage = 27.5
+# 	health = 42.5
+# 	morale = 80
+# 	morale_damage = 4.5
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 15
+# 	time = 90
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_controller
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2000
+# 			sr_dark_matter = 20
+# 			acot_sr_dark_energy = 20
+# 			unity = 200
+# 		}
+# 	}
+# 	allow = {
+# 		OR = {
+# 			has_building = building_fe_hive_evochamber
+# 			has_building = building_ae_hive_evochamber
+# 			has_district = district_acot_enigmapolis_fortress
+# 		}
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = acot_sr_dark_energy
+# 			PMCA_VALUE = 20
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_hive_control"
+# 	}
+# }
+
+# # Hive-Mind Masterminds
+# pmca_ten_acot_army_hive_control_se = {
+# 	damage = 37.5
+# 	health = 52.5
+# 	morale = 82.5
+# 	morale_damage = 4.75
+# 	collateral_damage = 12.5
+# 	war_exhaustion = 15
+# 	time = 90
+# 	has_species = yes
+# 	icon = GFX_acot_type_hive_controller
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 2250
+# 			sr_dark_matter = 22.5
+# 			acot_sr_dark_energy = 22.5
+# 			unity = 250
+# 		}
+# 	}
+# 	allow = {
+# 		OR = {
+# 			has_building = building_fe_hive_evochamber
+# 			has_building = building_ae_hive_evochamber
+# 			has_district = district_acot_enigmapolis_fortress
+# 		}
+# 	}
+# 	show_tech_unlock_if = {
+# 		owner = {
+# 			has_technology = tech_acot_army_hive_se
+# 		}
+# 	}
+# 	potential_country = {
+# 		is_hive_empire = yes
+
+# 		pmca_materiel_policy_check = {
+# 			PMCA_MULT = ten
+# 			PMCA_RESOURCE = acot_sr_dark_energy
+# 			PMCA_VALUE = 22.5
+# 		}
+# 	}
+# 	potential = {
+# 		NOT = {
+# 			has_global_flag = acot_army_forbidden
+# 		}
+# 		from = {
+# 			has_trait = trait_hive_mind
+# 		}
+# 		owner = {
+# 			has_technology = tech_acot_army_hive_se
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_acot_army_hive_control"
+# 	}
+# }
