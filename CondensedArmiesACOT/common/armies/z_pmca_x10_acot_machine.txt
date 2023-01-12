@@ -55,7 +55,7 @@ pmca_ten_machine_assault_1 = {
 	prerequisites = { "tech_assault_armies" }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -106,7 +106,7 @@ pmca_ten_acot_army_machine_dm = {
 	prerequisites = { "tech_acot_army_machine_dm" }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}	
 }
 
@@ -156,7 +156,7 @@ pmca_ten_acot_army_machine_ae = {
 	prerequisites = { "tech_acot_army_machine_ae" }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}	
 }
 
@@ -250,7 +250,7 @@ pmca_ten_acot_army_machine_spm = {
 	prerequisites = { tech_adaptive_combat_algorithms }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -300,7 +300,7 @@ pmca_ten_acot_army_machine_spm_dm = {
 	prerequisites = { "tech_acot_army_machine_dm" }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}	
 }
 
@@ -349,7 +349,7 @@ pmca_ten_acot_army_machine_spm_ae = {
 	prerequisites = { "tech_acot_army_machine_ae" }
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}	
 }
 
@@ -447,7 +447,7 @@ pmca_ten_machine_assault_2 = {
 	prerequisites = { "tech_assault_armies" }
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -500,7 +500,7 @@ pmca_ten_acot_army_machine_light_dm = {
 	prerequisites = { "tech_acot_army_machine_dm" }
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}	
 }
 
@@ -552,7 +552,7 @@ pmca_ten_acot_army_machine_light_ae = {
 	prerequisites = { "tech_acot_army_machine_ae" }
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}	
 }
 
@@ -601,7 +601,7 @@ pmca_ten_acot_army_machine_light_se = {
 	prerequisites = { "tech_acot_army_machine_se" }
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}	
 }
 
@@ -654,7 +654,7 @@ pmca_ten_machine_assault_3 = {
 	prerequisites = { "tech_assault_armies" }
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -708,7 +708,7 @@ pmca_ten_acot_army_machine_heavy_dm = {
 	prerequisites = { "tech_acot_army_machine_dm" }
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -761,7 +761,7 @@ pmca_ten_acot_army_machine_heavy_ae = {
 	prerequisites = { "tech_acot_army_machine_ae" }
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -811,7 +811,7 @@ pmca_ten_acot_army_machine_heavy_se = {
 	prerequisites = { "tech_acot_army_machine_se" }
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -865,7 +865,7 @@ pmca_ten_acot_army_machine_cyborg = {
 	}
 
 	ai_weight = {
-		base = 80
+		base = 120.0
 	}
 }
 
@@ -917,7 +917,7 @@ pmca_ten_acot_army_machine_cyborg_dm = {
 	}
 
 	ai_weight = {
-		base = 80
+		base = 120.0
 	}
 }
 
@@ -969,7 +969,7 @@ pmca_ten_acot_army_machine_cyborg_ae = {
 	}
 
 	ai_weight = {
-		base = 80
+		base = 120.0
 	}
 }
 
@@ -1017,7 +1017,7 @@ pmca_ten_acot_army_machine_cyborg_se = {
 	}
 
 	ai_weight = {
-		base = 80
+		base = 120.0
 	}
 }
 

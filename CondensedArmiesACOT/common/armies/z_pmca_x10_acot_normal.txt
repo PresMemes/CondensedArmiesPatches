@@ -17,7 +17,7 @@ pmca_ten_assault_army = {
 	morale_damage = 0.50
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 500.0
+	time = 50.0
 	icon = GFX_army_type_infantry
 	prerequisites = { "tech_assault_armies" }
 	resources = {
@@ -41,7 +41,7 @@ pmca_ten_assault_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 1000.0
+			PMCA_VALUE = 1000.0
 		}
 	}
 	potential = {
@@ -72,7 +72,7 @@ pmca_ten_acot_infantry_dm = {
 	morale_damage = 0.50
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 500.0
+	time = 50.0
 	icon = GFX_army_type_infantry
 	prerequisites = { "tech_acot_army_dm" }
 	resources = {
@@ -95,7 +95,7 @@ pmca_ten_acot_infantry_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 	potential = {
@@ -127,7 +127,7 @@ pmca_ten_acot_infantry_ae = {
 	morale_damage = 0.50
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 500.0
+	time = 50.0
 	icon = GFX_army_type_infantry
 	prerequisites = { "tech_acot_army_ae" }
 	resources = {
@@ -150,7 +150,7 @@ pmca_ten_acot_infantry_ae = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2000.0
+			PMCA_VALUE = 2000.0
 		}
 	}
 	potential = {
@@ -183,7 +183,7 @@ pmca_ten_acot_infantry_se = {
 	morale_damage = 0.50
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 500.0
+	time = 50.0
 	icon = GFX_army_type_infantry
 	prerequisites = { "tech_acot_army_se" }
 	resources = {
@@ -206,7 +206,7 @@ pmca_ten_acot_infantry_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2500.0
+			PMCA_VALUE = 2500.0
 		}
 	}
 	potential = {
@@ -232,7 +232,7 @@ pmca_ten_slave_army = {
 	morale_damage = 0.0
 	collateral_damage = 2.0
 	war_exhaustion = 0.5
-	time = 250.0
+	time = 25.0
 	icon = GFX_army_type_slave
 
 	resources = {
@@ -272,7 +272,7 @@ pmca_ten_slave_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 200.0
+			PMCA_VALUE = 200.0
 		}
 	}
 	potential = {
@@ -295,7 +295,7 @@ pmca_ten_slave_army = {
 	}
 
 	ai_weight = {
-		base = 75.0
+		base = 60.0
 	}	
 }
 
@@ -306,7 +306,7 @@ pmca_ten_acot_slave_army_dm = {
 	morale_damage = 0.50
 	collateral_damage = 2.0
 	war_exhaustion = 0.5
-	time = 250.0
+	time = 25.0
 	icon = GFX_army_type_slave
 
 	resources = {
@@ -346,7 +346,7 @@ pmca_ten_acot_slave_army_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 200.0
+			PMCA_VALUE = 200.0
 		}
 	}
 	potential = {
@@ -368,7 +368,7 @@ pmca_ten_acot_slave_army_dm = {
 	}
 
 	ai_weight = {
-		base = 75.0
+		base = 60.0
 	}	
 }
 
@@ -382,7 +382,7 @@ pmca_ten_undead_army = {
 	collateral_damage = 5.0
 	morale_damage = 0.75
 	war_exhaustion = 2.0
-	time = 700.0
+	time = 70.0
 	icon = GFX_army_type_undead
 	pop_limited = no
 	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
@@ -395,7 +395,7 @@ pmca_ten_undead_army = {
 			minerals = 1000.0
 		}
 		upkeep = {
-			energy = 12.0
+			energy = 12.000000000000002
 		}
 	}
 
@@ -409,7 +409,7 @@ pmca_ten_undead_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = energy
-			PMCA_RESOURCE = 500.0
+			PMCA_VALUE = 500.0
 		}
 	}
 	potential = {
@@ -445,7 +445,7 @@ pmca_ten_acot_undead_army_dm = {
 	collateral_damage = 5.0
 	morale_damage = 0.75
 	war_exhaustion = 2.0
-	time = 700.0
+	time = 70.0
 	icon = GFX_army_type_undead
 	pop_limited = no
 	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
@@ -468,7 +468,7 @@ pmca_ten_acot_undead_army_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 	potential = {
@@ -490,7 +490,7 @@ pmca_ten_acot_undead_army_dm = {
 	}
 
 	ai_weight = {
-		base = 180.0
+		base = 270.0
 	}
 }
 
@@ -505,9 +505,9 @@ pmca_ten_acot_light_armor = {
 	morale_damage = 1.00
 	collateral_damage = 10.0
 	war_exhaustion = 10.0
-	time = 900.0
+	time = 90.0
 	has_species = no
-pmca_ten_	icon = GFX_acot_type_light
+    icon = GFX_acot_type_light
 
 	prerequisites = { "tech_assault_armies" }
 
@@ -532,7 +532,7 @@ pmca_ten_	icon = GFX_acot_type_light
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2000.0
+			PMCA_VALUE = 2000.0
 		}
 	}
 	potential = {
@@ -557,9 +557,9 @@ pmca_ten_acot_light_armor_dm = {
 	morale_damage = 1.00
 	collateral_damage = 10.0
 	war_exhaustion = 10.0
-	time = 900.0
+	time = 90.0
 	has_species = no
-pmca_ten_	icon = GFX_acot_type_light
+    icon = GFX_acot_type_light
 
 	prerequisites = { "tech_acot_army_dm" }
 
@@ -584,7 +584,7 @@ pmca_ten_	icon = GFX_acot_type_light
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 3000.0
+			PMCA_VALUE = 3000.0
 		}
 	}
 	potential = {
@@ -609,9 +609,9 @@ pmca_ten_acot_light_armor_ae = {
 	morale_damage = 1.00
 	collateral_damage = 10.0
 	war_exhaustion = 10.0
-	time = 900.0
+	time = 90.0
 	has_species = no
-pmca_ten_	icon = GFX_acot_type_light
+    icon = GFX_acot_type_light
 
 	prerequisites = { "tech_acot_army_ae" }
 
@@ -636,7 +636,7 @@ pmca_ten_	icon = GFX_acot_type_light
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 4000.0
+			PMCA_VALUE = 4000.0
 		}
 	}
 	potential = {
@@ -661,9 +661,9 @@ pmca_ten_acot_light_armor_se = {
 	morale_damage = 1.00
 	collateral_damage = 10.0
 	war_exhaustion = 10.0
-	time = 900.0
+	time = 90.0
 	has_species = no
-pmca_ten_	icon = GFX_acot_type_light
+    icon = GFX_acot_type_light
 
 	prerequisites = { "tech_acot_army_se" }
 
@@ -688,7 +688,7 @@ pmca_ten_	icon = GFX_acot_type_light
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 6000.0
+			PMCA_VALUE = 6000.0
 		}
 	}
 	potential = {
@@ -710,7 +710,7 @@ pmca_ten_acot_heavy_armor = {
 	morale_damage = 2.00
 	collateral_damage = 30.0
 	war_exhaustion = 25.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 	icon = GFX_army_type_heavy
 
@@ -739,7 +739,7 @@ pmca_ten_acot_heavy_armor = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 	potential = {
@@ -764,7 +764,7 @@ pmca_ten_acot_heavy_armor_dm = {
 	morale_damage = 2.00
 	collateral_damage = 30.0
 	war_exhaustion = 25.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 	icon = GFX_army_type_heavy
 
@@ -793,7 +793,7 @@ pmca_ten_acot_heavy_armor_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 2000.0
+			PMCA_VALUE = 2000.0
 		}
 	}
 	potential = {
@@ -818,7 +818,7 @@ pmca_ten_acot_heavy_armor_ae = {
 	morale_damage = 2.00
 	collateral_damage = 30.0
 	war_exhaustion = 25.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 	icon = GFX_army_type_heavy
 
@@ -847,7 +847,7 @@ pmca_ten_acot_heavy_armor_ae = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 2500.0
+			PMCA_VALUE = 2500.0
 		}
 	}
 	potential = {
@@ -872,7 +872,7 @@ pmca_ten_acot_heavy_armor_se = {
 	morale_damage = 2.00
 	collateral_damage = 30.0
 	war_exhaustion = 25.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 	icon = GFX_army_type_heavy
 
@@ -901,7 +901,7 @@ pmca_ten_acot_heavy_armor_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 3500.0
+			PMCA_VALUE = 3500.0
 		}
 	}
 	potential = {
@@ -923,7 +923,7 @@ pmca_ten_acot_drone_army = {
 	collateral_damage = 0.0
 	war_exhaustion = 1.0
 	has_morale = no
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_droid_drone
 	has_species = no
 
@@ -948,7 +948,7 @@ pmca_ten_acot_drone_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 500.0
+			PMCA_VALUE = 500.0
 		}
 	}
 
@@ -967,7 +967,7 @@ pmca_ten_acot_drone_army = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 		modifier = {
 			set = 0.0
 			OR = {
@@ -987,12 +987,12 @@ pmca_ten_acot_drone_army = {
 # Robotic Armies
 pmca_ten_acot_drone_army_dm = {
 	damage = 15.0
-	health = 12.0
+	health = 12.000000000000002
 	morale_damage = 0.05
 	collateral_damage = 0.0
 	war_exhaustion = 1.0
 	has_morale = no
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_droid_drone
 	has_species = no
 
@@ -1002,7 +1002,7 @@ pmca_ten_acot_drone_army_dm = {
 			minerals = 600.0
 		}
 		upkeep = {
-			energy = 3.0
+			energy = 3.0000000000000004
 		}
 	}
 
@@ -1017,7 +1017,7 @@ pmca_ten_acot_drone_army_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 600.0
+			PMCA_VALUE = 600.0
 		}
 	}
 
@@ -1036,7 +1036,7 @@ pmca_ten_acot_drone_army_dm = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 		modifier = {
 			set = 0.0
 			OR = {
@@ -1061,7 +1061,7 @@ pmca_ten_acot_drone_army_ae = {
 	collateral_damage = 0.0
 	war_exhaustion = 1.0
 	has_morale = no
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_droid_drone
 	has_species = no
 
@@ -1071,7 +1071,7 @@ pmca_ten_acot_drone_army_ae = {
 			minerals = 700.0
 		}
 		upkeep = {
-			energy = 3.5
+			energy = 3.5000000000000004
 		}
 	}
 
@@ -1086,7 +1086,7 @@ pmca_ten_acot_drone_army_ae = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 700.0
+			PMCA_VALUE = 700.0
 		}
 	}
 
@@ -1105,7 +1105,7 @@ pmca_ten_acot_drone_army_ae = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 		modifier = {
 			set = 0.0
 			OR = {
@@ -1130,7 +1130,7 @@ pmca_ten_acot_drone_army_se = {
 	collateral_damage = 0.0
 	war_exhaustion = 1.0
 	has_morale = no
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_droid_drone
 	has_species = no
 
@@ -1155,7 +1155,7 @@ pmca_ten_acot_drone_army_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 900.0
+			PMCA_VALUE = 900.0
 		}
 	}
 
@@ -1169,7 +1169,7 @@ pmca_ten_acot_drone_army_se = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 		modifier = {
 			set = 0.0
 			OR = {
@@ -1194,7 +1194,7 @@ pmca_ten_robotic_army = {
 	collateral_damage = 10.0
 	war_exhaustion = 7.5
 	has_morale = no
-	time = 600.0
+	time = 60.0
 	icon = GFX_army_type_droid_unit
 	has_species = yes
 
@@ -1219,7 +1219,7 @@ pmca_ten_robotic_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 
@@ -1266,7 +1266,7 @@ pmca_ten_acot_droid_army_dm = {
 	morale_damage = 0.10
 	collateral_damage = 17.5
 	war_exhaustion = 15.0
-	time = 1600.0
+	time = 160.0
 	icon = GFX_army_type_machine_assault
 	has_species = yes
 	resources = {
@@ -1284,7 +1284,7 @@ pmca_ten_acot_droid_army_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 1750.0
+			PMCA_VALUE = 1750.0
 		}
 	}
 	potential = {
@@ -1335,7 +1335,7 @@ pmca_ten_acot_droid_army_ae = {
 	morale_damage = 0.10
 	collateral_damage = 17.5
 	war_exhaustion = 15.0
-	time = 1600.0
+	time = 160.0
 	icon = GFX_army_type_machine_assault
 	has_species = yes
 	resources = {
@@ -1353,7 +1353,7 @@ pmca_ten_acot_droid_army_ae = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2000.0
+			PMCA_VALUE = 2000.0
 		}
 	}
 	potential = {
@@ -1404,7 +1404,7 @@ pmca_ten_acot_droid_army_se = {
 	morale_damage = 0.10
 	collateral_damage = 17.5
 	war_exhaustion = 15.0
-	time = 1600.0
+	time = 160.0
 	icon = GFX_army_type_machine_assault
 	has_species = yes
 	resources = {
@@ -1422,7 +1422,7 @@ pmca_ten_acot_droid_army_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2500.0
+			PMCA_VALUE = 2500.0
 		}
 	}
 	potential = {
@@ -1468,8 +1468,8 @@ pmca_ten_acot_droid_mech = {
 	collateral_damage = 20.0
 	war_exhaustion = 15.0
 	has_morale = no
-	time = 1250.0
-pmca_ten_	icon = GFX_acot_type_droid_mech
+	time = 125.0
+    icon = GFX_acot_type_droid_mech
 	has_species = yes
 
 	resources = {
@@ -1495,7 +1495,7 @@ pmca_ten_	icon = GFX_acot_type_droid_mech
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 500.0
+			PMCA_VALUE = 500.0
 		}
 	}
 
@@ -1540,8 +1540,8 @@ pmca_ten_acot_droid_mech_dm = {
 	collateral_damage = 20.0
 	war_exhaustion = 15.0
 	has_morale = no
-	time = 1250.0
-pmca_ten_	icon = GFX_acot_type_droid_mech
+	time = 125.0
+    icon = GFX_acot_type_droid_mech
 	has_species = yes
 
 	resources = {
@@ -1567,7 +1567,7 @@ pmca_ten_	icon = GFX_acot_type_droid_mech
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 750.0
+			PMCA_VALUE = 750.0
 		}
 	}
 
@@ -1612,8 +1612,8 @@ pmca_ten_acot_droid_mech_ae = {
 	collateral_damage = 20.0
 	war_exhaustion = 15.0
 	has_morale = no
-	time = 1250.0
-pmca_ten_	icon = GFX_acot_type_droid_mech
+	time = 125.0
+    icon = GFX_acot_type_droid_mech
 	has_species = yes
 
 	resources = {
@@ -1639,7 +1639,7 @@ pmca_ten_	icon = GFX_acot_type_droid_mech
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 1000.0
+			PMCA_VALUE = 1000.0
 		}
 	}
 
@@ -1684,8 +1684,8 @@ pmca_ten_acot_droid_mech_se = {
 	collateral_damage = 20.0
 	war_exhaustion = 15.0
 	has_morale = no
-	time = 1250.0
-pmca_ten_	icon = GFX_acot_type_droid_mech
+	time = 125.0
+    icon = GFX_acot_type_droid_mech
 	has_species = yes
 
 	resources = {
@@ -1711,7 +1711,7 @@ pmca_ten_	icon = GFX_acot_type_droid_mech
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 
@@ -1752,7 +1752,7 @@ pmca_ten_acot_special_force = {
 	morale_damage = 0.75
 	collateral_damage = 5.0
 	war_exhaustion = 10.0
-	time = 750.0
+	time = 75.0
 	icon = GFX_army_type_special
 	prerequisites = { "tech_acot_army_3" }
 	resources = {
@@ -1774,7 +1774,7 @@ pmca_ten_acot_special_force = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2500.0
+			PMCA_VALUE = 2500.0
 		}
 	}
 	potential = {
@@ -1794,7 +1794,7 @@ pmca_ten_acot_special_force = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 	}
 }
 
@@ -1805,7 +1805,7 @@ pmca_ten_acot_special_force_dm = {
 	morale_damage = 0.75
 	collateral_damage = 5.0
 	war_exhaustion = 10.0
-	time = 750.0
+	time = 75.0
 	icon = GFX_army_type_special
 	prerequisites = { "tech_acot_army_dm" }
 	resources = {
@@ -1827,7 +1827,7 @@ pmca_ten_acot_special_force_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 3000.0
+			PMCA_VALUE = 3000.0
 		}
 	}
 	potential = {
@@ -1847,7 +1847,7 @@ pmca_ten_acot_special_force_dm = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 	}
 }
 
@@ -1858,7 +1858,7 @@ pmca_ten_acot_special_force_ae = {
 	morale_damage = 0.75
 	collateral_damage = 5.0
 	war_exhaustion = 10.0
-	time = 750.0
+	time = 75.0
 	icon = GFX_army_type_special
 	prerequisites = { "tech_acot_army_ae" }
 	resources = {
@@ -1880,7 +1880,7 @@ pmca_ten_acot_special_force_ae = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 3250.0
+			PMCA_VALUE = 3250.0
 		}
 	}
 	potential = {
@@ -1900,7 +1900,7 @@ pmca_ten_acot_special_force_ae = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 	}
 }
 
@@ -1911,7 +1911,7 @@ pmca_ten_acot_special_force_se = {
 	morale_damage = 0.75
 	collateral_damage = 5.0
 	war_exhaustion = 10.0
-	time = 750.0 
+	time = 75.0 
 	icon = GFX_army_type_special
 	prerequisites = { "tech_acot_army_se" }
 	resources = {
@@ -1933,7 +1933,7 @@ pmca_ten_acot_special_force_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 3750.0
+			PMCA_VALUE = 3750.0
 		}
 	}
 	potential = {
@@ -1953,7 +1953,7 @@ pmca_ten_acot_special_force_se = {
 	}
 
 	ai_weight = {
-		base = 45.0
+		base = 67.5
 	}
 }
 
@@ -1967,7 +1967,7 @@ pmca_ten_acot_army_mat = {
 	morale_damage = 1.0
 	collateral_damage = 15.0
 	war_exhaustion = 30.0
-	time = 2500.0
+	time = 250.0
 	has_species = no
 
 	prerequisites = { "tech_acot_army_mat" }
@@ -1987,7 +1987,7 @@ pmca_ten_acot_army_mat = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 60.0
+			PMCA_VALUE = 60.0
 		}
 	}
 	potential = {
@@ -2010,7 +2010,7 @@ pmca_ten_acot_army_mat_se = {
 	morale_damage = 1.0
 	collateral_damage = 15.0
 	war_exhaustion = 30.0
-	time = 2500.0
+	time = 250.0
 	has_species = no
 
 	prerequisites = { "tech_acot_army_mat" }
@@ -2035,7 +2035,7 @@ pmca_ten_acot_army_mat_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 65.0
+			PMCA_VALUE = 65.0
 		}
 	}
 
@@ -2062,7 +2062,7 @@ pmca_ten_acot_army_spirit = {
 	morale_damage = 1.00
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
-	time = 850.0
+	time = 85.0
 	icon = GFX_army_type_spirit
 	resources = {
 		category = armies
@@ -2083,7 +2083,7 @@ pmca_ten_acot_army_spirit = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 15.0
+			PMCA_VALUE = 15.0
 		}
 	}
 	potential = {
@@ -2109,7 +2109,7 @@ pmca_ten_acot_army_spirit_se = {
 	morale_damage = 1.00
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
-	time = 850.0
+	time = 85.0
 	icon = GFX_army_type_spirit
 	resources = {
 		category = armies
@@ -2135,7 +2135,7 @@ pmca_ten_acot_army_spirit_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 17.5
+			PMCA_VALUE = 17.5
 		}
 	}
 	potential = {
@@ -2164,7 +2164,7 @@ pmca_ten_acot_army_phobe = {
 	morale_damage = 1.50
 	collateral_damage = 25.0
 	war_exhaustion = 12.5
-	time = 900.0
+	time = 90.0
 	icon = GFX_army_type_phobe
 	resources = {
 		category = armies
@@ -2185,7 +2185,7 @@ pmca_ten_acot_army_phobe = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 17.5
+			PMCA_VALUE = 17.5
 		}
 	}
 	potential = {
@@ -2211,7 +2211,7 @@ pmca_ten_acot_army_phobe_se = {
 	morale_damage = 1.50
 	collateral_damage = 25.0
 	war_exhaustion = 12.5
-	time = 900.0
+	time = 90.0
 	icon = GFX_army_type_phobe
 	resources = {
 		category = armies
@@ -2237,7 +2237,7 @@ pmca_ten_acot_army_phobe_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 18.5
+			PMCA_VALUE = 18.5
 		}
 	}
 	potential = {
@@ -2266,7 +2266,7 @@ pmca_ten_acot_army_phile = {
 	morale_damage = 1.50
 	collateral_damage = 0.0
 	war_exhaustion = 12.5
-	time = 750.0
+	time = 75.0
 	icon = GFX_army_type_phile
 	resources = {
 		category = armies
@@ -2287,7 +2287,7 @@ pmca_ten_acot_army_phile = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 17.5
+			PMCA_VALUE = 17.5
 		}
 	}
 	potential = {
@@ -2312,7 +2312,7 @@ pmca_ten_acot_army_phile_se = {
 	morale_damage = 1.50
 	collateral_damage = 0.0
 	war_exhaustion = 12.5
-	time = 750.0
+	time = 75.0
 	icon = GFX_army_type_phile
 	resources = {
 		category = armies
@@ -2338,7 +2338,7 @@ pmca_ten_acot_army_phile_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 18.700000000000003
+			PMCA_VALUE = 18.700000000000003
 		}
 	}
 	potential = {
@@ -2367,7 +2367,7 @@ pmca_ten_acot_army_ega = {
 	morale_damage = 2
 	collateral_damage = 35.0
 	war_exhaustion = 30.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 
 	allow = {
@@ -2388,7 +2388,7 @@ pmca_ten_acot_army_ega = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 40.0
+			PMCA_VALUE = 40.0
 		}
 	}
 	potential = {
@@ -2409,7 +2409,7 @@ pmca_ten_acot_army_ega_se = {
 	morale_damage = 2.2
 	collateral_damage = 35.0
 	war_exhaustion = 30.0
-	time = 1800.0
+	time = 180.0
 	has_species = no
 
 	allow = {
@@ -2435,7 +2435,7 @@ pmca_ten_acot_army_ega_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 42.5
+			PMCA_VALUE = 42.5
 		}
 	}
 
@@ -2460,7 +2460,7 @@ pmca_ten_acot_army_auth = {
 	morale_damage = 1.50
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
-	time = 850.0
+	time = 85.0
 	icon = GFX_army_type_auth
 	resources = {
 		category = armies
@@ -2481,7 +2481,7 @@ pmca_ten_acot_army_auth = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 20.0
+			PMCA_VALUE = 20.0
 		}
 	}
 	potential = {
@@ -2507,7 +2507,7 @@ pmca_ten_acot_army_auth_se = {
 	morale_damage = 1.50
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
-	time = 850.0
+	time = 85.0
 	icon = GFX_army_type_auth
 	resources = {
 		category = armies
@@ -2533,7 +2533,7 @@ pmca_ten_acot_army_auth_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 21.7
+			PMCA_VALUE = 21.7
 		}
 	}
 	potential = {
@@ -2562,14 +2562,14 @@ pmca_ten_acot_army_paci = {
 	morale_damage = 0.25
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 450.0
+	time = 45.0
 	icon = GFX_army_type_paci
 	resources = {
 		category = armies
 		cost = {
 			minerals = 2250.0
-			sr_dark_matter = 11.200000000000001
-			acot_sr_dark_energy = 11.200000000000001
+			sr_dark_matter = 11.2
+			acot_sr_dark_energy = 11.2
 			unity = 225.0
 		}
 		produces = {
@@ -2593,7 +2593,7 @@ pmca_ten_acot_army_paci = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 11.200000000000001
+			PMCA_VALUE = 11.2
 		}
 	}
 	potential = {
@@ -2620,7 +2620,7 @@ pmca_ten_acot_army_paci_se = {
 	morale_damage = 0.25
 	collateral_damage = 2.5
 	war_exhaustion = 2.5
-	time = 450.0
+	time = 45.0
 	icon = GFX_army_type_paci
 	resources = {
 		category = armies
@@ -2655,7 +2655,7 @@ pmca_ten_acot_army_paci_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 12.5
+			PMCA_VALUE = 12.5
 		}
 	}
 	potential = {
@@ -2685,7 +2685,7 @@ pmca_ten_acot_army_mili = {
 	morale_damage = 0.50
 	collateral_damage = 5.0
 	war_exhaustion = 2.5
-	time = 600.0
+	time = 60.0
 	icon = GFX_army_type_mili
 	resources = {
 		category = armies
@@ -2706,7 +2706,7 @@ pmca_ten_acot_army_mili = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 10.0
+			PMCA_VALUE = 10.0
 		}
 	}
 	potential = {
@@ -2733,7 +2733,7 @@ pmca_ten_acot_army_mili_se = {
 	morale_damage = 0.50
 	collateral_damage = 5.0
 	war_exhaustion = 2.5
-	time = 600.0
+	time = 60.0
 	icon = GFX_army_type_mili
 	resources = {
 		category = armies
@@ -2758,7 +2758,7 @@ pmca_ten_acot_army_mili_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 11.0
+			PMCA_VALUE = 11.0
 		}
 	}
 	potential = {
@@ -2788,7 +2788,7 @@ pmca_ten_acot_army_synth = {
 	morale_damage = 0.5
 	collateral_damage = 10.0
 	war_exhaustion = 15.0
-	time = 1600.0
+	time = 160.0
 	icon = GFX_army_type_machine_assault
 	has_species = yes
 	resources = {
@@ -2807,7 +2807,7 @@ pmca_ten_acot_army_synth = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 350.0
+			PMCA_VALUE = 350.0
 		}
 	}	
 	prerequisites = { "tech_acot_army_synth" }
@@ -2829,7 +2829,7 @@ pmca_ten_acot_army_synth_se = {
 	morale_damage = 0.5
 	collateral_damage = 10.0
 	war_exhaustion = 15.0
-	time = 1600.0
+	time = 160.0
 	icon = GFX_army_type_machine_assault
 	has_species = yes
 	resources = {
@@ -2847,7 +2847,7 @@ pmca_ten_acot_army_synth_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 400.0
+			PMCA_VALUE = 400.0
 		}
 	}
 	show_tech_unlock_if = {
@@ -2875,7 +2875,7 @@ pmca_ten_psionic_army = {
 	morale = 50.0
 	collateral_damage = 2.0
 	war_exhaustion = 30.0
-	time = 1200.0
+	time = 120.0
 	icon = GFX_army_type_psionic
 
 	resources = {
@@ -2893,7 +2893,7 @@ pmca_ten_psionic_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = unity
-			PMCA_RESOURCE = 250.0
+			PMCA_VALUE = 250.0
 		}
 	}
 	potential = {
@@ -2947,7 +2947,7 @@ pmca_ten_acot_army_psi = {
 	morale = 65.0
 	collateral_damage = 2.0
 	war_exhaustion = 30.0
-	time = 1200.0
+	time = 120.0
 	icon = GFX_army_type_psionic
 	resources = {
 		category = armies
@@ -2966,7 +2966,7 @@ pmca_ten_acot_army_psi = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 300.0
+			PMCA_VALUE = 300.0
 		}
 	}
 	potential = {
@@ -3005,7 +3005,7 @@ pmca_ten_acot_army_psi_se = {
 	morale = 70.0
 	collateral_damage = 2.0
 	war_exhaustion = 30.0
-	time = 1200.0
+	time = 120.0
 	icon = GFX_army_type_psionic
 	resources = {
 		category = armies
@@ -3023,7 +3023,7 @@ pmca_ten_acot_army_psi_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 350.0
+			PMCA_VALUE = 350.0
 		}
 	}
 	show_tech_unlock_if = {
@@ -3070,7 +3070,7 @@ pmca_ten_clone_army = {
 	morale = 7.5
 	collateral_damage = 2.5
 	war_exhaustion = 1.0
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_clone
 	has_species = no
 
@@ -3096,7 +3096,7 @@ pmca_ten_clone_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 2000.0
+			PMCA_VALUE = 2000.0
 		}
 	}
 	potential = {
@@ -3138,7 +3138,7 @@ pmca_ten_acot_army_clone_dm = {
 	morale = 10.0
 	collateral_damage = 2.5
 	war_exhaustion = 1.0
-	time = 300.0
+	time = 30.0
 	icon = GFX_army_type_clone
 	has_species = no
 
@@ -3163,7 +3163,7 @@ pmca_ten_acot_army_clone_dm = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 50.0
+			PMCA_VALUE = 50.0
 		}
 	}
 	
@@ -3183,7 +3183,7 @@ pmca_ten_gene_warrior_army = {
 	morale_damage = 1.0
 	collateral_damage = 7.5
 	war_exhaustion = 20.0
-	time = 1500.0
+	time = 150.0
 	icon = GFX_army_type_gene_warrior
 
 	resources = {
@@ -3200,7 +3200,7 @@ pmca_ten_gene_warrior_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
-			PMCA_RESOURCE = 3000.0
+			PMCA_VALUE = 3000.0
 		}
 	}
 	potential = {
@@ -3235,7 +3235,7 @@ pmca_ten_acot_army_gene = {
 	morale_damage = 1.0
 	collateral_damage = 7.5
 	war_exhaustion = 20.0
-	time = 1500.0
+	time = 150.0
 	icon = GFX_army_type_gene_warrior
 	resources = {
 		category = armies
@@ -3254,7 +3254,7 @@ pmca_ten_acot_army_gene = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = sr_dark_matter
-			PMCA_RESOURCE = 350.0
+			PMCA_VALUE = 350.0
 		}
 	}
 	potential = {
@@ -3287,7 +3287,7 @@ pmca_ten_acot_army_gene_se = {
 	morale_damage = 1.0
 	collateral_damage = 7.5
 	war_exhaustion = 20.0
-	time = 1500.0
+	time = 150.0
 	icon = GFX_army_type_gene_warrior
 	resources = {
 		category = armies
@@ -3305,7 +3305,7 @@ pmca_ten_acot_army_gene_se = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = acot_sr_stellarite
-			PMCA_RESOURCE = 400.0
+			PMCA_VALUE = 400.0
 		}
 	}
 	show_tech_unlock_if = {
@@ -3342,7 +3342,7 @@ pmca_ten_xenomorph_army = {
 	war_exhaustion = 1.0
 	health = 20.0
 	has_morale = no
-	time = 1000.0
+	time = 100.0
 	icon = GFX_army_type_xenomorph
 	has_species = no
 
@@ -3361,7 +3361,7 @@ pmca_ten_xenomorph_army = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = food
-			PMCA_RESOURCE = 1500.0
+			PMCA_VALUE = 1500.0
 		}
 	}
 

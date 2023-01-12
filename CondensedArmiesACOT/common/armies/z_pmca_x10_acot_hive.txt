@@ -51,7 +51,7 @@ pmca_ten_acot_hive_infantry_1 = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -100,7 +100,7 @@ pmca_ten_acot_hive_infantry_dm = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -149,7 +149,7 @@ pmca_ten_acot_hive_infantry_ae = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -194,7 +194,7 @@ pmca_ten_acot_hive_infantry_se = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -247,7 +247,7 @@ pmca_ten_acot_hive_clone_infantry_1 = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -295,7 +295,7 @@ pmca_ten_acot_hive_clone_infantry_dm = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -345,7 +345,7 @@ pmca_ten_acot_hive_swarmer_1 = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -392,7 +392,7 @@ pmca_ten_acot_hive_swarmer_dm = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -439,7 +439,7 @@ pmca_ten_acot_hive_swarmer_ae = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -482,7 +482,7 @@ pmca_ten_acot_hive_swarmer_se = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -526,7 +526,7 @@ pmca_ten_acot_hive_clone_swarmer_1 = {
 	}
 
 	ai_weight = {
-		base = 100
+		base = 150.0
 	}
 }
 
@@ -581,7 +581,7 @@ pmca_ten_acot_hive_light_1 = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -633,7 +633,7 @@ pmca_ten_acot_hive_light_dm = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -685,7 +685,7 @@ pmca_ten_acot_hive_light_ae = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -733,7 +733,7 @@ pmca_ten_acot_hive_light_se = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -789,7 +789,7 @@ pmca_ten_acot_hive_clone_light_1 = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -839,7 +839,7 @@ pmca_ten_acot_hive_clone_light_dm = {
 	}
 
 	ai_weight = {
-		base = 60
+		base = 90.0
 	}
 }
 
@@ -894,7 +894,7 @@ pmca_ten_acot_hive_heavy_1 = {
 	}
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -946,7 +946,7 @@ pmca_ten_acot_hive_heavy_dm = {
 	}
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -998,7 +998,7 @@ pmca_ten_acot_hive_heavy_ae = {
 	}
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
@@ -1046,7 +1046,7 @@ pmca_ten_acot_hive_heavy_se = {
 	}
 
 	ai_weight = {
-		base = 40
+		base = 60.0
 	}
 }
 
