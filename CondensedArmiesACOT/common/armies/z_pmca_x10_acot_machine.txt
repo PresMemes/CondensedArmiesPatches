@@ -32,14 +32,15 @@ pmca_ten_machine_assault_1 = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1000.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1000.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -57,6 +58,7 @@ pmca_ten_machine_assault_1 = {
 	ai_weight = {
 		base = 150.0
 	}
+    uses_armynames_from = machine_assault_1
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -83,14 +85,15 @@ pmca_ten_acot_army_machine_dm = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1200.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1200.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -133,14 +136,15 @@ pmca_ten_acot_army_machine_ae = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1400.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1400.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -183,11 +187,11 @@ pmca_ten_acot_army_machine_se = {
 	}
 
 	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1600.0
-		}
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1600.0
+        }
 	}
 
 	potential = {
@@ -230,14 +234,15 @@ pmca_ten_acot_army_machine_spm = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 700.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 700.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		owner = {
@@ -280,14 +285,15 @@ pmca_ten_acot_army_machine_spm_dm = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 800.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 800.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		owner = {
@@ -329,14 +335,15 @@ pmca_ten_acot_army_machine_spm_ae = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 900.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 900.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		owner = {
@@ -378,11 +385,13 @@ pmca_ten_acot_army_machine_spm_se = {
 	}
 
 	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1000.0
-		}
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1000.0
+        }
+
+		has_authority = auth_machine_intelligence
 	}
 
 	potential = {
@@ -400,7 +409,7 @@ pmca_ten_acot_army_machine_spm_se = {
 ############### MACHINE
 
 # Battle Frames
-pmca_ten_machine_assault_2 = {
+machine_assault_2 = {
 	damage = 12.5
 	health = 30.0
 	has_morale = no
@@ -424,14 +433,15 @@ pmca_ten_machine_assault_2 = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 2000.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 2000.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -449,6 +459,7 @@ pmca_ten_machine_assault_2 = {
 	ai_weight = {
 		base = 90.0
 	}
+    uses_armynames_from = acot_army_machine_spm_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -477,14 +488,15 @@ pmca_ten_acot_army_machine_light_dm = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 2250.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 2250.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -529,14 +541,15 @@ pmca_ten_acot_army_machine_light_ae = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 2500.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 2500.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -581,14 +594,15 @@ pmca_ten_acot_army_machine_light_se = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 2750.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 2750.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -608,7 +622,7 @@ pmca_ten_acot_army_machine_light_se = {
 ############### MACHINE
 
 # Mega-Warform
-pmca_ten_machine_assault_3 = {
+machine_assault_3 = {
 	damage = 45.0
 	health = 65.0
 	has_morale = no
@@ -633,14 +647,15 @@ pmca_ten_machine_assault_3 = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = alloys
+            PMCA_VALUE = 5000.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = alloys
-			PMCA_VALUE = 3000.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -656,6 +671,7 @@ pmca_ten_machine_assault_3 = {
 	ai_weight = {
 		base = 60.0
 	}
+    uses_armynames_from = acot_army_machine_light_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -685,14 +701,15 @@ pmca_ten_acot_army_machine_heavy_dm = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = alloys
+            PMCA_VALUE = 3500.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = alloys
-			PMCA_VALUE = 3500.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -738,14 +755,15 @@ pmca_ten_acot_army_machine_heavy_ae = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = alloys
+            PMCA_VALUE = 4000.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = alloys
-			PMCA_VALUE = 4000.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -791,14 +809,15 @@ pmca_ten_acot_army_machine_heavy_se = {
 	}
 
 	potential_country = {
-		has_authority = auth_machine_intelligence
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = alloys
+            PMCA_VALUE = 4500.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = alloys
-			PMCA_VALUE = 4500.0
-		}
+		has_authority = auth_machine_intelligence
 	}
+
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
 		from = {
@@ -842,13 +861,13 @@ pmca_ten_acot_army_machine_cyborg = {
 		has_valid_civic = civic_machine_assimilator
 	}
 	potential_country = {
-		has_valid_civic = civic_machine_assimilator
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1200.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1200.0
-		}
+		has_valid_civic = civic_machine_assimilator
 	}
 	potential = {
 		from = {
@@ -867,6 +886,7 @@ pmca_ten_acot_army_machine_cyborg = {
 	ai_weight = {
 		base = 120.0
 	}
+    uses_armynames_from = acot_army_machine_cyborg
 }
 
 # Assault Armies
@@ -894,13 +914,13 @@ pmca_ten_acot_army_machine_cyborg_dm = {
 		has_valid_civic = civic_machine_assimilator
 	}
 	potential_country = {
-		has_valid_civic = civic_machine_assimilator
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1400.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1400.0
-		}
+		has_valid_civic = civic_machine_assimilator
 	}
 	potential = {
 		from = {
@@ -919,6 +939,7 @@ pmca_ten_acot_army_machine_cyborg_dm = {
 	ai_weight = {
 		base = 120.0
 	}
+    uses_armynames_from = acot_army_machine_cyborg_dm
 }
 
 # Assault Armies
@@ -946,13 +967,13 @@ pmca_ten_acot_army_machine_cyborg_ae = {
 		has_valid_civic = civic_machine_assimilator
 	}
 	potential_country = {
-		has_valid_civic = civic_machine_assimilator
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1600.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1600.0
-		}
+		has_valid_civic = civic_machine_assimilator
 	}
 	potential = {
 		from = {
@@ -971,6 +992,7 @@ pmca_ten_acot_army_machine_cyborg_ae = {
 	ai_weight = {
 		base = 120.0
 	}
+    uses_armynames_from = acot_army_machine_cyborg_ae
 }
 
 # Assault Armies
@@ -998,13 +1020,13 @@ pmca_ten_acot_army_machine_cyborg_se = {
 		has_valid_civic = civic_machine_assimilator
 	}
 	potential_country = {
-		has_valid_civic = civic_machine_assimilator
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = minerals
+            PMCA_VALUE = 1800.0
+        }
 
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 1800.0
-		}
+		has_valid_civic = civic_machine_assimilator
 	}
 
 	potential = {
@@ -1019,6 +1041,7 @@ pmca_ten_acot_army_machine_cyborg_se = {
 	ai_weight = {
 		base = 120.0
 	}
+    uses_armynames_from = acot_army_machine_cyborg_se
 }
 
 ############### MACHINE
@@ -1050,20 +1073,20 @@ pmca_ten_acot_army_machine_special = {
 		}
 	}
 
+	potential_country = {
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = sr_dark_matter
+            PMCA_VALUE = 35.0
+        }
+	}
+
 
 	allow = {
 		OR = {
 			has_building = building_fe_machine_dome
 			has_building = building_ae_machine_dome
 			has_district = district_acot_enigmapolis_fortress
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = sr_dark_matter
-			PMCA_VALUE = 30.0
 		}
 	}
 
@@ -1110,20 +1133,19 @@ pmca_ten_acot_army_machine_special_se = {
 		}
 	}
 
+	potential_country = {
+        pmca_materiel_policy_check = {
+            PMCA_MULT = ten
+            PMCA_RESOURCE = sr_dark_matter
+            PMCA_VALUE = 37.5
+        }
+	}
 
 	allow = {
 		OR = {
 			has_building = building_fe_machine_dome
 			has_building = building_ae_machine_dome
 			has_district = district_acot_enigmapolis_fortress
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = sr_dark_matter
-			PMCA_VALUE = 37.5
 		}
 	}
 
