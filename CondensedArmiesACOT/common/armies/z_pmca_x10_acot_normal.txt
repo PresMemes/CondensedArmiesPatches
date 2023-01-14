@@ -406,12 +406,14 @@ pmca_ten_undead_army = {
 		has_valid_civic = civic_reanimated_armies
 	}
 
-	potential_country = { has_valid_civic = civic_reanimated_armies }
+	potential_country = {
+		has_valid_civic = civic_reanimated_armies
         pmca_materiel_policy_check = {
             PMCA_MULT = ten
             PMCA_RESOURCE = energy
             PMCA_VALUE = 500.0
         }
+	}
 
 	potential = {
 		from = {
@@ -464,12 +466,14 @@ pmca_ten_acot_undead_army_dm = {
 	show_tech_unlock_if = {
 		has_valid_civic = civic_reanimated_armies
 	}
-	potential_country = { has_valid_civic = civic_reanimated_armies }
+	potential_country = {
+		has_valid_civic = civic_reanimated_armies
         pmca_materiel_policy_check = {
             PMCA_MULT = ten
             PMCA_RESOURCE = minerals
             PMCA_VALUE = 1500.0
         }
+	}
 
 	potential = {
 		NOT = { has_global_flag = acot_army_forbidden }
