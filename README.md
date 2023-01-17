@@ -19,7 +19,7 @@ First things first, download `pmca_main.py`, `pmca_inserter.py`, `pmca_multiplie
 Create two (2) new files where you extracted the python scripts called `input.txt` and `output.txt`.
 
 Paste whatever mod's armies you want to patch inside of `input.txt`.
-Open `pmca_inserter.py` and change "acot_" to whatever prefix the mod uses. If the mod doesn't use one, just set to something random like "asbdujhdaw"
+Open `pmca_main.py` and change "acot_" to whatever prefix the mod uses. If the mod doesn't use one, just set to something random like "asbdujhdaw"
 ```py
 InsertOperation = pmca_insertOp("input.txt", "output.txt", False, "acot_")
 ```
