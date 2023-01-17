@@ -126,15 +126,29 @@ Now that you've gone through and changed everything to your liking, comment out 
 ```py
 InsertOperation.readAndWrite()
 #MultiplyOperation.readAndWrite()
+#MultiplyOperationp2.readAndWrite()
 ```
 ↓ ↓ ↓
 ```py
 #InsertOperation.readAndWrite()
 MultiplyOperation.readAndWrite()
+#MultiplyOperationp2.readAndWrite()
 ```
 And run `pmca_main.py` again.
 Congratulations, you (should) now have the x10 variations of some modded armies! Now, copy and paste `output.txt` into `input.txt` AND your x10 army file in your mod.
 
+Comment out `MultiplyOperation.readAndWrite()` and uncomment `MultiplyOperationp2.readAndWrite()`
+```py
+#InsertOperation.readAndWrite()
+MultiplyOperation.readAndWrite()
+#MultiplyOperationp2.readAndWrite()
+```
+↓ ↓ ↓
+```py
+#InsertOperation.readAndWrite()
+#MultiplyOperation.readAndWrite()
+MultiplyOperationp2.readAndWrite()
+```
 Run `pmca_main.py` again, and copy `output.txt` to your x100 army file.
 
 
