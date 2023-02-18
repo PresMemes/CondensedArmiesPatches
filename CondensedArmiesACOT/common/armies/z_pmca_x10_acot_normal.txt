@@ -62,7 +62,7 @@ pmca_ten_assault_army = {
 	ai_weight = {
 		base = 150.0
 	}
-    uses_armynames_from = assault_army
+    use_armynames_from = assault_army
 }
 
 pmca_ten_acot_infantry_dm = {
@@ -298,7 +298,7 @@ pmca_ten_slave_army = {
 	ai_weight = {
 		base = 75.0
 	}	
-    uses_armynames_from = slave_army
+    use_armynames_from = slave_army
 }
 
 pmca_ten_acot_slave_army_dm = {
@@ -372,7 +372,7 @@ pmca_ten_acot_slave_army_dm = {
 	ai_weight = {
 		base = 75.0
 	}	
-    uses_armynames_from = acot_slave_army_dm
+    use_armynames_from = acot_slave_army_dm
 }
 
 ######################### UNDEAD #########################
@@ -438,7 +438,7 @@ pmca_ten_undead_army = {
 	ai_weight = {
 		base = 150.0
 	}
-    uses_armynames_from = undead_army
+    use_armynames_from = undead_army
 }
 
 pmca_ten_acot_undead_army_dm = {
@@ -986,7 +986,7 @@ pmca_ten_acot_drone_army = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army
+    use_armynames_from = acot_drone_army
 }
 
 # Robotic Armies
@@ -1056,7 +1056,7 @@ pmca_ten_acot_drone_army_dm = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_dm
+    use_armynames_from = acot_drone_army_dm
 }
 
 # Robotic Armies
@@ -1126,7 +1126,7 @@ pmca_ten_acot_drone_army_ae = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_ae
+    use_armynames_from = acot_drone_army_ae
 }
 
 # Robotic Armies
@@ -1191,7 +1191,7 @@ pmca_ten_acot_drone_army_se = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_se
+    use_armynames_from = acot_drone_army_se
 }
 
 # Robotic Armies
@@ -1262,7 +1262,7 @@ pmca_ten_robotic_army = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = robotic_army
+    use_armynames_from = robotic_army
 }
 
 
@@ -1542,7 +1542,7 @@ pmca_ten_acot_droid_mech = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech
+    use_armynames_from = acot_droid_mech
 }
 
 # Robotic Armies
@@ -1615,7 +1615,7 @@ pmca_ten_acot_droid_mech_dm = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_dm
+    use_armynames_from = acot_droid_mech_dm
 }
 
 # Robotic Armies
@@ -1688,7 +1688,7 @@ pmca_ten_acot_droid_mech_ae = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_ae
+    use_armynames_from = acot_droid_mech_ae
 }
 
 # Robotic Armies
@@ -1756,7 +1756,7 @@ pmca_ten_acot_droid_mech_se = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_se
+    use_armynames_from = acot_droid_mech_se
 }
 
 ############### SPECIAL FORCE
@@ -1813,7 +1813,7 @@ pmca_ten_acot_special_force = {
 	ai_weight = {
 		base = 45.0
 	}
-    uses_armynames_from = acot_special_force
+    use_armynames_from = acot_special_force
 }
 
 pmca_ten_acot_special_force_dm = {
@@ -1868,7 +1868,7 @@ pmca_ten_acot_special_force_dm = {
 	ai_weight = {
 		base = 45.0
 	}
-    uses_armynames_from = acot_special_force_dm
+    use_armynames_from = acot_special_force_dm
 }
 
 pmca_ten_acot_special_force_ae = {
@@ -1923,7 +1923,7 @@ pmca_ten_acot_special_force_ae = {
 	ai_weight = {
 		base = 45.0
 	}
-    uses_armynames_from = acot_special_force_ae
+    use_armynames_from = acot_special_force_ae
 }
 
 pmca_ten_acot_special_force_se = {
@@ -1978,7 +1978,7 @@ pmca_ten_acot_special_force_se = {
 	ai_weight = {
 		base = 45.0
 	}
-    uses_armynames_from = acot_special_force_se
+    use_armynames_from = acot_special_force_se
 }
 
 ############### MATERIALIST
@@ -2025,7 +2025,7 @@ pmca_ten_acot_army_mat = {
 	allow = {
 		has_advanced_fort = yes
 	}
-    uses_armynames_from = acot_army_mat
+    use_armynames_from = acot_army_mat
 }
 
 # FE Tank
@@ -2077,7 +2077,7 @@ pmca_ten_acot_army_mat_se = {
 	allow = {
 		has_advanced_fort = yes
 	}
-    uses_armynames_from = acot_army_mat_se
+    use_armynames_from = acot_army_mat_se
 }
 
 ############### SPIRITuALIST
@@ -2128,7 +2128,7 @@ pmca_ten_acot_army_spirit = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
-    uses_armynames_from = acot_army_spirit
+    use_armynames_from = acot_army_spirit
 }
 
 # Spiritualist Inquisitor
@@ -2183,7 +2183,7 @@ pmca_ten_acot_army_spirit_se = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
-    uses_armynames_from = acot_army_spirit_se
+    use_armynames_from = acot_army_spirit_se
 }
 
 ############### XENOPHONE
@@ -2234,7 +2234,7 @@ pmca_ten_acot_army_phobe = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
-    uses_armynames_from = acot_army_phobe
+    use_armynames_from = acot_army_phobe
 }
 
 # Xenophobe Death Bringer
@@ -2289,7 +2289,7 @@ pmca_ten_acot_army_phobe_se = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
-    uses_armynames_from = acot_army_phobe_se
+    use_armynames_from = acot_army_phobe_se
 }
 
 ############### XENOPHILE
@@ -2340,7 +2340,7 @@ pmca_ten_acot_army_phile = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
-    uses_armynames_from = acot_army_phile
+    use_armynames_from = acot_army_phile
 }
 
 pmca_ten_acot_army_phile_se = {
@@ -2394,7 +2394,7 @@ pmca_ten_acot_army_phile_se = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
-    uses_armynames_from = acot_army_phile_se
+    use_armynames_from = acot_army_phile_se
 }
 
 ############### EGA
@@ -2440,7 +2440,7 @@ pmca_ten_acot_army_ega = {
 	}
 	
 	prerequisites = { "tech_acot_army_ega" }
-    uses_armynames_from = acot_army_ega
+    use_armynames_from = acot_army_ega
 }
 
 # FE Egalitarian Gunship
@@ -2491,7 +2491,7 @@ pmca_ten_acot_army_ega_se = {
 	}
 	
 	prerequisites = { "tech_acot_army_ega" }
-    uses_armynames_from = acot_army_ega_se
+    use_armynames_from = acot_army_ega_se
 }
 
 ############### AUTH
@@ -2542,7 +2542,7 @@ pmca_ten_acot_army_auth = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
-    uses_armynames_from = acot_army_auth
+    use_armynames_from = acot_army_auth
 }
 
 # Authoritarian Enforcers
@@ -2597,7 +2597,7 @@ pmca_ten_acot_army_auth_se = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
-    uses_armynames_from = acot_army_auth_se
+    use_armynames_from = acot_army_auth_se
 }
 
 ############### PACIF
@@ -2659,7 +2659,7 @@ pmca_ten_acot_army_paci = {
 			NOT = { has_authority = auth_machine_intelligence }
 		}
 	}
-    uses_armynames_from = acot_army_paci
+    use_armynames_from = acot_army_paci
 }
 
 # Pacifist Peacekeeper
@@ -2723,7 +2723,7 @@ pmca_ten_acot_army_paci_se = {
 			has_technology = tech_acot_army_se
 		}
 	}
-    uses_armynames_from = acot_army_paci_se
+    use_armynames_from = acot_army_paci_se
 }
 
 ############### MILI
@@ -2989,7 +2989,7 @@ pmca_ten_psionic_army = {
 			NOT = { has_ethic = ethic_fanatic_spiritualist }
 		}
 	}
-    uses_armynames_from = psionic_army
+    use_armynames_from = psionic_army
 }
 
 # Dark Disciples
@@ -3183,7 +3183,7 @@ pmca_ten_clone_army = {
 			has_origin = origin_clone_army
 		}
 	}
-    uses_armynames_from = clone_army
+    use_armynames_from = clone_army
 }
 
 # Elite Clone Armies
@@ -3227,7 +3227,7 @@ pmca_ten_acot_army_clone_dm = {
 			NOT = { has_authority = auth_machine_intelligence }
 		}
 	}
-    uses_armynames_from = acot_army_clone_dm
+    use_armynames_from = acot_army_clone_dm
 }
 
 # Gene Warrior Armies
@@ -3279,7 +3279,7 @@ pmca_ten_gene_warrior_army = {
 	ai_weight = {
 		base = 150.0
 	}
-    uses_armynames_from = gene_warrior_army
+    use_armynames_from = gene_warrior_army
 }
 
 # Supra Gene Warrior Armies
@@ -3436,5 +3436,5 @@ pmca_ten_xenomorph_army = {
 			is_xenophile = yes
 		}
 	}
-    uses_armynames_from = xenomorph_army
+    use_armynames_from = xenomorph_army
 }

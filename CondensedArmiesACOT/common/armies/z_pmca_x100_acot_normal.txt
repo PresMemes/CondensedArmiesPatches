@@ -10,7 +10,7 @@
 
 ############# INFANTRY - GOOD MORALE, LOW COLLATERAL DAMAGE, FAST TO RECRUIT
 # Assault Armies
-pmca_ten_assault_army = {
+pmca_hundred_assault_army = {
 	damage = 100.0
 	health = 100.0
 	morale = 100.0
@@ -62,10 +62,10 @@ pmca_ten_assault_army = {
 	ai_weight = {
 		base = 200.0
 	}
-    uses_armynames_from = assault_army
+    use_armynames_from = assault_army
 }
 
-pmca_ten_acot_infantry_dm = {
+pmca_hundred_acot_infantry_dm = {
 	use_armynames_from = assault_army
 	damage = 200.0
 	health = 200.0
@@ -120,7 +120,7 @@ pmca_ten_acot_infantry_dm = {
 	}
 }
 
-pmca_ten_acot_infantry_ae = {
+pmca_hundred_acot_infantry_ae = {
 	use_armynames_from = assault_army
 	damage = 250.0
 	health = 250.0
@@ -176,7 +176,7 @@ pmca_ten_acot_infantry_ae = {
 }
 
 # SE Army
-pmca_ten_acot_infantry_se = {
+pmca_hundred_acot_infantry_se = {
 	use_armynames_from = assault_army
 	damage = 350.0
 	health = 350.0
@@ -226,7 +226,7 @@ pmca_ten_acot_infantry_se = {
 
 ######################### SLAVES #########################
 
-pmca_ten_slave_army = {
+pmca_hundred_slave_army = {
 	damage = 75.0
 	health = 75.0
 	morale = 25.0
@@ -298,10 +298,10 @@ pmca_ten_slave_army = {
 	ai_weight = {
 		base = 100.0
 	}	
-    uses_armynames_from = slave_army
+    use_armynames_from = slave_army
 }
 
-pmca_ten_acot_slave_army_dm = {
+pmca_hundred_acot_slave_army_dm = {
 	damage = 85.0
 	health = 85.0
 	morale = 75.0
@@ -372,13 +372,13 @@ pmca_ten_acot_slave_army_dm = {
 	ai_weight = {
 		base = 100.0
 	}	
-    uses_armynames_from = acot_slave_army_dm
+    use_armynames_from = acot_slave_army_dm
 }
 
 ######################### UNDEAD #########################
 
 # Undead Armies
-pmca_ten_undead_army = {
+pmca_hundred_undead_army = {
 	damage = 75.0
 	health = 150.0
 	has_morale = no
@@ -438,10 +438,10 @@ pmca_ten_undead_army = {
 	ai_weight = {
 		base = 200.0
 	}
-    uses_armynames_from = undead_army
+    use_armynames_from = undead_army
 }
 
-pmca_ten_acot_undead_army_dm = {
+pmca_hundred_acot_undead_army_dm = {
 	use_armynames_from = undead_army
 	damage = 175.0
 	health = 250.0
@@ -501,7 +501,7 @@ pmca_ten_acot_undead_army_dm = {
 
 ######################### LIGHT #########################
 
-pmca_ten_acot_light_armor = {
+pmca_hundred_acot_light_armor = {
 	use_armynames_from = assault_army
 	damage = 150.0
 	health = 250.0
@@ -553,7 +553,7 @@ pmca_ten_acot_light_armor = {
 	}
 }
 
-pmca_ten_acot_light_armor_dm = {
+pmca_hundred_acot_light_armor_dm = {
 	use_armynames_from = assault_army
 	damage = 250.0
 	health = 350.0
@@ -605,7 +605,7 @@ pmca_ten_acot_light_armor_dm = {
 	}
 }
 
-pmca_ten_acot_light_armor_ae = {
+pmca_hundred_acot_light_armor_ae = {
 	use_armynames_from = assault_army
 	damage = 300.0
 	health = 400.0
@@ -657,7 +657,7 @@ pmca_ten_acot_light_armor_ae = {
 	}
 }
 
-pmca_ten_acot_light_armor_se = {
+pmca_hundred_acot_light_armor_se = {
 	use_armynames_from = assault_army
 	damage = 400.0
 	health = 500.0
@@ -706,7 +706,7 @@ pmca_ten_acot_light_armor_se = {
 
 ######################### HEAVY #########################
 
-pmca_ten_acot_heavy_armor = {
+pmca_hundred_acot_heavy_armor = {
 	use_armynames_from = assault_army
 	damage = 450.0
 	health = 550.0
@@ -760,7 +760,7 @@ pmca_ten_acot_heavy_armor = {
 	}
 }
 
-pmca_ten_acot_heavy_armor_dm = {
+pmca_hundred_acot_heavy_armor_dm = {
 	use_armynames_from = assault_army
 	damage = 550.0
 	health = 650.0
@@ -814,7 +814,7 @@ pmca_ten_acot_heavy_armor_dm = {
 	}
 }
 
-pmca_ten_acot_heavy_armor_ae = {
+pmca_hundred_acot_heavy_armor_ae = {
 	use_armynames_from = assault_army
 	damage = 600.0
 	health = 700.0
@@ -868,7 +868,7 @@ pmca_ten_acot_heavy_armor_ae = {
 	}
 }
 
-pmca_ten_acot_heavy_armor_se = {
+pmca_hundred_acot_heavy_armor_se = {
 	use_armynames_from = assault_army
 	damage = 700.0
 	health = 800.0
@@ -920,7 +920,7 @@ pmca_ten_acot_heavy_armor_se = {
 ######################### ROBOTS #########################
 
 # Robotic Armies
-pmca_ten_acot_drone_army = {
+pmca_hundred_acot_drone_army = {
 	damage = 50.0
 	health = 20.0
 	morale_damage = 0.05
@@ -986,11 +986,11 @@ pmca_ten_acot_drone_army = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army
+    use_armynames_from = acot_drone_army
 }
 
 # Robotic Armies
-pmca_ten_acot_drone_army_dm = {
+pmca_hundred_acot_drone_army_dm = {
 	damage = 150.0
 	health = 120.0
 	morale_damage = 0.05
@@ -1056,11 +1056,11 @@ pmca_ten_acot_drone_army_dm = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_dm
+    use_armynames_from = acot_drone_army_dm
 }
 
 # Robotic Armies
-pmca_ten_acot_drone_army_ae = {
+pmca_hundred_acot_drone_army_ae = {
 	damage = 200.0
 	health = 170.0
 	morale_damage = 0.05
@@ -1126,11 +1126,11 @@ pmca_ten_acot_drone_army_ae = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_ae
+    use_armynames_from = acot_drone_army_ae
 }
 
 # Robotic Armies
-pmca_ten_acot_drone_army_se = {
+pmca_hundred_acot_drone_army_se = {
 	damage = 300.0
 	health = 270.0
 	morale_damage = 0.05
@@ -1191,11 +1191,11 @@ pmca_ten_acot_drone_army_se = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_drone_army_se
+    use_armynames_from = acot_drone_army_se
 }
 
 # Robotic Armies
-pmca_ten_robotic_army = {
+pmca_hundred_robotic_army = {
 	damage = 100.0
 	health = 150.0
 	morale_damage = 0.10
@@ -1262,12 +1262,12 @@ pmca_ten_robotic_army = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = robotic_army
+    use_armynames_from = robotic_army
 }
 
 
 # Synthetic Omnic Armies
-pmca_ten_acot_droid_army_dm = {
+pmca_hundred_acot_droid_army_dm = {
 	use_armynames_from = robotic_army
 	damage = 200.0
 	health = 250.0
@@ -1337,7 +1337,7 @@ pmca_ten_acot_droid_army_dm = {
 
 
 # Synthetic Omnic Armies
-pmca_ten_acot_droid_army_ae = {
+pmca_hundred_acot_droid_army_ae = {
 	use_armynames_from = robotic_army
 	damage = 250.0
 	health = 300.0
@@ -1407,7 +1407,7 @@ pmca_ten_acot_droid_army_ae = {
 
 
 # Synthetic Omnic Armies
-pmca_ten_acot_droid_army_se = {
+pmca_hundred_acot_droid_army_se = {
 	use_armynames_from = robotic_army
 	damage = 350.0
 	health = 400.0
@@ -1473,7 +1473,7 @@ pmca_ten_acot_droid_army_se = {
 }
 
 # Robotic Armies
-pmca_ten_acot_droid_mech = {
+pmca_hundred_acot_droid_mech = {
 	damage = 250.0
 	health = 400.0
 	morale_damage = 0.50
@@ -1542,11 +1542,11 @@ pmca_ten_acot_droid_mech = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech
+    use_armynames_from = acot_droid_mech
 }
 
 # Robotic Armies
-pmca_ten_acot_droid_mech_dm = {
+pmca_hundred_acot_droid_mech_dm = {
 	damage = 350.0
 	health = 500.0
 	morale_damage = 0.50
@@ -1615,11 +1615,11 @@ pmca_ten_acot_droid_mech_dm = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_dm
+    use_armynames_from = acot_droid_mech_dm
 }
 
 # Robotic Armies
-pmca_ten_acot_droid_mech_ae = {
+pmca_hundred_acot_droid_mech_ae = {
 	damage = 400.0
 	health = 550.0
 	morale_damage = 0.50
@@ -1688,11 +1688,11 @@ pmca_ten_acot_droid_mech_ae = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_ae
+    use_armynames_from = acot_droid_mech_ae
 }
 
 # Robotic Armies
-pmca_ten_acot_droid_mech_se = {
+pmca_hundred_acot_droid_mech_se = {
 	damage = 500.0
 	health = 650.0
 	morale_damage = 0.50
@@ -1756,12 +1756,12 @@ pmca_ten_acot_droid_mech_se = {
 			is_fallen_empire = no
 		}
 	}
-    uses_armynames_from = acot_droid_mech_se
+    use_armynames_from = acot_droid_mech_se
 }
 
 ############### SPECIAL FORCE
 
-pmca_ten_acot_special_force = {
+pmca_hundred_acot_special_force = {
 	damage = 175.0
 	health = 150.0
 	morale = 600.0
@@ -1813,10 +1813,10 @@ pmca_ten_acot_special_force = {
 	ai_weight = {
 		base = 60.0
 	}
-    uses_armynames_from = acot_special_force
+    use_armynames_from = acot_special_force
 }
 
-pmca_ten_acot_special_force_dm = {
+pmca_hundred_acot_special_force_dm = {
 	damage = 275.0
 	health = 250.0
 	morale = 650.0
@@ -1868,10 +1868,10 @@ pmca_ten_acot_special_force_dm = {
 	ai_weight = {
 		base = 60.0
 	}
-    uses_armynames_from = acot_special_force_dm
+    use_armynames_from = acot_special_force_dm
 }
 
-pmca_ten_acot_special_force_ae = {
+pmca_hundred_acot_special_force_ae = {
 	damage = 325.0
 	health = 300.0
 	morale = 700.0
@@ -1923,10 +1923,10 @@ pmca_ten_acot_special_force_ae = {
 	ai_weight = {
 		base = 60.0
 	}
-    uses_armynames_from = acot_special_force_ae
+    use_armynames_from = acot_special_force_ae
 }
 
-pmca_ten_acot_special_force_se = {
+pmca_hundred_acot_special_force_se = {
 	damage = 425.0
 	health = 400.0
 	morale = 750.0
@@ -1978,13 +1978,13 @@ pmca_ten_acot_special_force_se = {
 	ai_weight = {
 		base = 60.0
 	}
-    uses_armynames_from = acot_special_force_se
+    use_armynames_from = acot_special_force_se
 }
 
 ############### MATERIALIST
 
 # FE Tank
-pmca_ten_acot_army_mat = {
+pmca_hundred_acot_army_mat = {
 	damage = 400.0
 	health = 750.0
 	morale = 450.0
@@ -2025,11 +2025,11 @@ pmca_ten_acot_army_mat = {
 	allow = {
 		has_advanced_fort = yes
 	}
-    uses_armynames_from = acot_army_mat
+    use_armynames_from = acot_army_mat
 }
 
 # FE Tank
-pmca_ten_acot_army_mat_se = {
+pmca_hundred_acot_army_mat_se = {
 	damage = 500.0
 	health = 850.0
 	morale = 450.0
@@ -2077,13 +2077,13 @@ pmca_ten_acot_army_mat_se = {
 	allow = {
 		has_advanced_fort = yes
 	}
-    uses_armynames_from = acot_army_mat_se
+    use_armynames_from = acot_army_mat_se
 }
 
 ############### SPIRITuALIST
 
 # Spiritualist Inquisitor
-pmca_ten_acot_army_spirit = {
+pmca_hundred_acot_army_spirit = {
 	damage = 275.0
 	health = 600.0
 	morale = 1500.0
@@ -2128,11 +2128,11 @@ pmca_ten_acot_army_spirit = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
-    uses_armynames_from = acot_army_spirit
+    use_armynames_from = acot_army_spirit
 }
 
 # Spiritualist Inquisitor
-pmca_ten_acot_army_spirit_se = {
+pmca_hundred_acot_army_spirit_se = {
 	damage = 375.0
 	health = 700.0
 	morale = 1600.0
@@ -2183,13 +2183,13 @@ pmca_ten_acot_army_spirit_se = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
-    uses_armynames_from = acot_army_spirit_se
+    use_armynames_from = acot_army_spirit_se
 }
 
 ############### XENOPHONE
 
 # Xenophobe Death Bringer
-pmca_ten_acot_army_phobe = {
+pmca_hundred_acot_army_phobe = {
 	damage = 350.0
 	health = 350.0
 	morale = 600.0
@@ -2234,11 +2234,11 @@ pmca_ten_acot_army_phobe = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
-    uses_armynames_from = acot_army_phobe
+    use_armynames_from = acot_army_phobe
 }
 
 # Xenophobe Death Bringer
-pmca_ten_acot_army_phobe_se = {
+pmca_hundred_acot_army_phobe_se = {
 	damage = 450.0
 	health = 450.0
 	morale = 625.0
@@ -2289,13 +2289,13 @@ pmca_ten_acot_army_phobe_se = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 	}
-    uses_armynames_from = acot_army_phobe_se
+    use_armynames_from = acot_army_phobe_se
 }
 
 ############### XENOPHILE
 
 # Xenophile Sniper
-pmca_ten_acot_army_phile = {
+pmca_hundred_acot_army_phile = {
 	damage = 450.0
 	health = 200.0
 	morale = 500.0
@@ -2340,10 +2340,10 @@ pmca_ten_acot_army_phile = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
-    uses_armynames_from = acot_army_phile
+    use_armynames_from = acot_army_phile
 }
 
-pmca_ten_acot_army_phile_se = {
+pmca_hundred_acot_army_phile_se = {
 	damage = 550.0
 	health = 300.0
 	morale = 525.0
@@ -2394,13 +2394,13 @@ pmca_ten_acot_army_phile_se = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
-    uses_armynames_from = acot_army_phile_se
+    use_armynames_from = acot_army_phile_se
 }
 
 ############### EGA
 
 # FE Egalitarian Gunship
-pmca_ten_acot_army_ega = {
+pmca_hundred_acot_army_ega = {
 	damage = 800.0
 	health = 650.0
 	morale = 400.0
@@ -2440,11 +2440,11 @@ pmca_ten_acot_army_ega = {
 	}
 	
 	prerequisites = { "tech_acot_army_ega" }
-    uses_armynames_from = acot_army_ega
+    use_armynames_from = acot_army_ega
 }
 
 # FE Egalitarian Gunship
-pmca_ten_acot_army_ega_se = {
+pmca_hundred_acot_army_ega_se = {
 	damage = 900.0
 	health = 750.0
 	morale = 425.0
@@ -2491,13 +2491,13 @@ pmca_ten_acot_army_ega_se = {
 	}
 	
 	prerequisites = { "tech_acot_army_ega" }
-    uses_armynames_from = acot_army_ega_se
+    use_armynames_from = acot_army_ega_se
 }
 
 ############### AUTH
 
 # Authoritarian Enforcers
-pmca_ten_acot_army_auth = {
+pmca_hundred_acot_army_auth = {
 	damage = 350.0
 	health = 350.0
 	morale = 850.0
@@ -2542,11 +2542,11 @@ pmca_ten_acot_army_auth = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
-    uses_armynames_from = acot_army_auth
+    use_armynames_from = acot_army_auth
 }
 
 # Authoritarian Enforcers
-pmca_ten_acot_army_auth_se = {
+pmca_hundred_acot_army_auth_se = {
 	damage = 450.0
 	health = 450.0
 	morale = 900.0
@@ -2597,13 +2597,13 @@ pmca_ten_acot_army_auth_se = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
-    uses_armynames_from = acot_army_auth_se
+    use_armynames_from = acot_army_auth_se
 }
 
 ############### PACIF
 
 # Pacifist Peacekeeper
-pmca_ten_acot_army_paci = {
+pmca_hundred_acot_army_paci = {
 	damage = 250.0
 	health = 350.0
 	morale = 750.0
@@ -2659,11 +2659,11 @@ pmca_ten_acot_army_paci = {
 			NOT = { has_authority = auth_machine_intelligence }
 		}
 	}
-    uses_armynames_from = acot_army_paci
+    use_armynames_from = acot_army_paci
 }
 
 # Pacifist Peacekeeper
-pmca_ten_acot_army_paci_se = {
+pmca_hundred_acot_army_paci_se = {
 	damage = 350.0
 	health = 450.0
 	morale = 775.0
@@ -2723,13 +2723,13 @@ pmca_ten_acot_army_paci_se = {
 			has_technology = tech_acot_army_se
 		}
 	}
-    uses_armynames_from = acot_army_paci_se
+    use_armynames_from = acot_army_paci_se
 }
 
 ############### MILI
 
 # Militarist Heavy Trooper Army
-pmca_ten_acot_army_mili = {
+pmca_hundred_acot_army_mili = {
 	use_armynames_from = gene_warrior_army
 	damage = 325.0
 	health = 250.0
@@ -2777,7 +2777,7 @@ pmca_ten_acot_army_mili = {
 }
 
 # Militarist Heavy Trooper Army
-pmca_ten_acot_army_mili_se = {
+pmca_hundred_acot_army_mili_se = {
 	use_armynames_from = gene_warrior_army
 	damage = 425.0
 	health = 350.0
@@ -2833,7 +2833,7 @@ pmca_ten_acot_army_mili_se = {
 ############### SYNTH
 
 # Synthetic Omnic Armies
-pmca_ten_acot_army_synth = {
+pmca_hundred_acot_army_synth = {
 	use_armynames_from = assault_army
 	damage = 350.0
 	health = 400.0
@@ -2874,7 +2874,7 @@ pmca_ten_acot_army_synth = {
 }
 
 # Synthetic Omnic Armies
-pmca_ten_acot_army_synth_se = {
+pmca_hundred_acot_army_synth_se = {
 	use_armynames_from = assault_army
 	damage = 450.0
 	health = 500.0
@@ -2921,7 +2921,7 @@ pmca_ten_acot_army_synth_se = {
 ############### PSI
 
 # Psionic Armies
-pmca_ten_psionic_army = {
+pmca_hundred_psionic_army = {
 	damage = 200.0
 	morale_damage = 2.5
 	health = 175.0
@@ -2989,11 +2989,11 @@ pmca_ten_psionic_army = {
 			NOT = { has_ethic = ethic_fanatic_spiritualist }
 		}
 	}
-    uses_armynames_from = psionic_army
+    use_armynames_from = psionic_army
 }
 
 # Dark Disciples
-pmca_ten_acot_army_psi = {
+pmca_hundred_acot_army_psi = {
 	use_armynames_from = psionic_army
 	damage = 400.0
 	morale_damage = 2.5
@@ -3051,7 +3051,7 @@ pmca_ten_acot_army_psi = {
 }
 
 # Dark Disciples
-pmca_ten_acot_army_psi_se = {
+pmca_hundred_acot_army_psi_se = {
 	use_armynames_from = psionic_army
 	damage = 500.0
 	morale_damage = 2.5
@@ -3118,7 +3118,7 @@ pmca_ten_acot_army_psi_se = {
 ############### GENE
 
 # Clone Armies
-pmca_ten_clone_army = {
+pmca_hundred_clone_army = {
 	damage = 100.0
 	health = 100.0
 	morale = 75.0
@@ -3183,11 +3183,11 @@ pmca_ten_clone_army = {
 			has_origin = origin_clone_army
 		}
 	}
-    uses_armynames_from = clone_army
+    use_armynames_from = clone_army
 }
 
 # Elite Clone Armies
-pmca_ten_acot_army_clone_dm = {
+pmca_hundred_acot_army_clone_dm = {
 	damage = 200.0
 	health = 200.0
 	morale = 100.0
@@ -3227,11 +3227,11 @@ pmca_ten_acot_army_clone_dm = {
 			NOT = { has_authority = auth_machine_intelligence }
 		}
 	}
-    uses_armynames_from = acot_army_clone_dm
+    use_armynames_from = acot_army_clone_dm
 }
 
 # Gene Warrior Armies
-pmca_ten_gene_warrior_army = {
+pmca_hundred_gene_warrior_army = {
 	damage = 200.0
 	health = 250.0
 	morale = 250.0
@@ -3279,11 +3279,11 @@ pmca_ten_gene_warrior_army = {
 	ai_weight = {
 		base = 200.0
 	}
-    uses_armynames_from = gene_warrior_army
+    use_armynames_from = gene_warrior_army
 }
 
 # Supra Gene Warrior Armies
-pmca_ten_acot_army_gene = {
+pmca_hundred_acot_army_gene = {
 	use_armynames_from = gene_warrior_army
 	damage = 400.0
 	health = 450.0
@@ -3335,7 +3335,7 @@ pmca_ten_acot_army_gene = {
 }
 
 # Supra Gene Warrior Armies
-pmca_ten_acot_army_gene_se = {
+pmca_hundred_acot_army_gene_se = {
 	use_armynames_from = gene_warrior_army
 	damage = 500.0
 	health = 550.0
@@ -3391,7 +3391,7 @@ pmca_ten_acot_army_gene_se = {
 ##########################################
 
 # Xenomorph Armies
-pmca_ten_xenomorph_army = {
+pmca_hundred_xenomorph_army = {
 	damage = 400.0
 	morale_damage = 2.50
 	collateral_damage = 400.0
@@ -3436,5 +3436,5 @@ pmca_ten_xenomorph_army = {
 			is_xenophile = yes
 		}
 	}
-    uses_armynames_from = xenomorph_army
+    use_armynames_from = xenomorph_army
 }

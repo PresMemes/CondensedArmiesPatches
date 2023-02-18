@@ -58,7 +58,7 @@ pmca_ten_machine_assault_1 = {
 	ai_weight = {
 		base = 150.0
 	}
-    uses_armynames_from = machine_assault_1
+    use_armynames_from = machine_assault_1
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -409,7 +409,7 @@ pmca_ten_acot_army_machine_spm_se = {
 ############### MACHINE
 
 # Battle Frames
-machine_assault_2 = {
+pmca_ten_machine_assault_2 = {
 	damage = 12.5
 	health = 30.0
 	has_morale = no
@@ -459,7 +459,7 @@ machine_assault_2 = {
 	ai_weight = {
 		base = 90.0
 	}
-    uses_armynames_from = acot_army_machine_spm_se
+    use_armynames_from = acot_army_machine_spm_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -622,7 +622,7 @@ pmca_ten_acot_army_machine_light_se = {
 ############### MACHINE
 
 # Mega-Warform
-machine_assault_3 = {
+pmca_ten_machine_assault_3 = {
 	damage = 45.0
 	health = 65.0
 	has_morale = no
@@ -671,7 +671,7 @@ machine_assault_3 = {
 	ai_weight = {
 		base = 60.0
 	}
-    uses_armynames_from = acot_army_machine_light_se
+    use_armynames_from = acot_army_machine_light_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
@@ -886,7 +886,7 @@ pmca_ten_acot_army_machine_cyborg = {
 	ai_weight = {
 		base = 120.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg
+    use_armynames_from = acot_army_machine_cyborg
 }
 
 # Assault Armies
@@ -939,7 +939,7 @@ pmca_ten_acot_army_machine_cyborg_dm = {
 	ai_weight = {
 		base = 120.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_dm
+    use_armynames_from = acot_army_machine_cyborg_dm
 }
 
 # Assault Armies
@@ -992,7 +992,7 @@ pmca_ten_acot_army_machine_cyborg_ae = {
 	ai_weight = {
 		base = 120.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_ae
+    use_armynames_from = acot_army_machine_cyborg_ae
 }
 
 # Assault Armies
@@ -1041,7 +1041,7 @@ pmca_ten_acot_army_machine_cyborg_se = {
 	ai_weight = {
 		base = 120.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_se
+    use_armynames_from = acot_army_machine_cyborg_se
 }
 
 ############### MACHINE

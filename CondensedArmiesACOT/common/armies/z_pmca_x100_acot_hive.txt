@@ -1099,7 +1099,7 @@ pmca_ten_acot_army_hive_control = {
 	}
 	
 	prerequisites = { "tech_acot_army_hive_control" }
-    uses_armynames_from = acot_army_hive_control
+    use_armynames_from = acot_army_hive_control
 }
 
 # Hive-Mind Masterminds
@@ -1158,6 +1158,6 @@ pmca_ten_acot_army_hive_control_se = {
 	}
 	
 	prerequisites = { "tech_acot_army_hive_control" }
-    uses_armynames_from = acot_army_hive_control
+    use_armynames_from = acot_army_hive_control
 }
 

@@ -9,7 +9,7 @@
 ### Machine Empire Armies
 
 # Hunter-Killer Armies
-pmca_ten_machine_assault_1 = {
+pmca_hundred_machine_assault_1 = {
 	damage = 75.0
 	health = 125.0
 	has_morale = no
@@ -58,11 +58,11 @@ pmca_ten_machine_assault_1 = {
 	ai_weight = {
 		base = 200.0
 	}
-    uses_armynames_from = machine_assault_1
+    use_armynames_from = machine_assault_1
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
-pmca_ten_acot_army_machine_dm = {
+pmca_hundred_acot_army_machine_dm = {
 	use_armynames_from = machine_assault_1
 	damage = 175.0
 	health = 225.0
@@ -113,7 +113,7 @@ pmca_ten_acot_army_machine_dm = {
 	}	
 }
 
-pmca_ten_acot_army_machine_ae = {
+pmca_hundred_acot_army_machine_ae = {
 	use_armynames_from = machine_assault_1
 	damage = 225.0
 	health = 275.0
@@ -164,7 +164,7 @@ pmca_ten_acot_army_machine_ae = {
 	}	
 }
 
-pmca_ten_acot_army_machine_se = {
+pmca_hundred_acot_army_machine_se = {
 	use_armynames_from = machine_assault_1
 	damage = 325.0
 	health = 375.0
@@ -209,7 +209,7 @@ pmca_ten_acot_army_machine_se = {
 ############### SPM
 
 # Hunter-Killer Armies
-pmca_ten_acot_army_machine_spm = {
+pmca_hundred_acot_army_machine_spm = {
 	use_armynames_from = machine_assault_1
 	damage = 70.0
 	health = 75.0
@@ -260,7 +260,7 @@ pmca_ten_acot_army_machine_spm = {
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
-pmca_ten_acot_army_machine_spm_dm = {
+pmca_hundred_acot_army_machine_spm_dm = {
 	use_armynames_from = machine_assault_1
 	damage = 170.0
 	health = 175.0
@@ -310,7 +310,7 @@ pmca_ten_acot_army_machine_spm_dm = {
 	}	
 }
 
-pmca_ten_acot_army_machine_spm_ae = {
+pmca_hundred_acot_army_machine_spm_ae = {
 	use_armynames_from = machine_assault_1
 	damage = 220.0
 	health = 225.0
@@ -360,7 +360,7 @@ pmca_ten_acot_army_machine_spm_ae = {
 	}	
 }
 
-pmca_ten_acot_army_machine_spm_se = {
+pmca_hundred_acot_army_machine_spm_se = {
 	use_armynames_from = machine_assault_1
 	damage = 320.0
 	health = 325.0
@@ -409,7 +409,7 @@ pmca_ten_acot_army_machine_spm_se = {
 ############### MACHINE
 
 # Battle Frames
-machine_assault_2 = {
+pmca_hundred_machine_assault_2 = {
 	damage = 125.0
 	health = 300.0
 	has_morale = no
@@ -459,11 +459,11 @@ machine_assault_2 = {
 	ai_weight = {
 		base = 120.0
 	}
-    uses_armynames_from = acot_army_machine_spm_se
+    use_armynames_from = acot_army_machine_spm_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
-pmca_ten_acot_army_machine_light_dm = {
+pmca_hundred_acot_army_machine_light_dm = {
 	use_armynames_from = machine_assault_2
 	damage = 225.0
 	health = 400.0
@@ -516,7 +516,7 @@ pmca_ten_acot_army_machine_light_dm = {
 	}	
 }
 
-pmca_ten_acot_army_machine_light_ae = {
+pmca_hundred_acot_army_machine_light_ae = {
 	use_armynames_from = machine_assault_2
 	damage = 275.0
 	health = 450.0
@@ -569,7 +569,7 @@ pmca_ten_acot_army_machine_light_ae = {
 	}	
 }
 
-pmca_ten_acot_army_machine_light_se = {
+pmca_hundred_acot_army_machine_light_se = {
 	use_armynames_from = machine_assault_2
 	damage = 375.0
 	health = 550.0
@@ -622,7 +622,7 @@ pmca_ten_acot_army_machine_light_se = {
 ############### MACHINE
 
 # Mega-Warform
-machine_assault_3 = {
+pmca_hundred_machine_assault_3 = {
 	damage = 450.0
 	health = 650.0
 	has_morale = no
@@ -671,11 +671,11 @@ machine_assault_3 = {
 	ai_weight = {
 		base = 80.0
 	}
-    uses_armynames_from = acot_army_machine_light_se
+    use_armynames_from = acot_army_machine_light_se
 }
 
 # SPM-Battledroids - Essentially a clone equivalent of Machine Empire
-pmca_ten_acot_army_machine_heavy_dm = {
+pmca_hundred_acot_army_machine_heavy_dm = {
 	use_armynames_from = machine_assault_3
 	damage = 550.0
 	health = 750.0
@@ -729,7 +729,7 @@ pmca_ten_acot_army_machine_heavy_dm = {
 	}
 }
 
-pmca_ten_acot_army_machine_heavy_ae = {
+pmca_hundred_acot_army_machine_heavy_ae = {
 	use_armynames_from = machine_assault_3
 	damage = 600.0
 	health = 800.0
@@ -783,7 +783,7 @@ pmca_ten_acot_army_machine_heavy_ae = {
 	}
 }
 
-pmca_ten_acot_army_machine_heavy_se = {
+pmca_hundred_acot_army_machine_heavy_se = {
 	use_armynames_from = machine_assault_3
 	damage = 700.0
 	health = 900.0
@@ -837,7 +837,7 @@ pmca_ten_acot_army_machine_heavy_se = {
 ############### CYBORGS
 
 # Assault Armies
-pmca_ten_acot_army_machine_cyborg = {
+pmca_hundred_acot_army_machine_cyborg = {
 	damage = 100.0
 	health = 100.0
 	has_morale = no
@@ -886,11 +886,11 @@ pmca_ten_acot_army_machine_cyborg = {
 	ai_weight = {
 		base = 160.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg
+    use_armynames_from = acot_army_machine_cyborg
 }
 
 # Assault Armies
-pmca_ten_acot_army_machine_cyborg_dm = {
+pmca_hundred_acot_army_machine_cyborg_dm = {
 	damage = 200.0
 	health = 200.0
 	has_morale = no
@@ -939,11 +939,11 @@ pmca_ten_acot_army_machine_cyborg_dm = {
 	ai_weight = {
 		base = 160.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_dm
+    use_armynames_from = acot_army_machine_cyborg_dm
 }
 
 # Assault Armies
-pmca_ten_acot_army_machine_cyborg_ae = {
+pmca_hundred_acot_army_machine_cyborg_ae = {
 	damage = 250.0
 	health = 250.0
 	has_morale = no
@@ -992,11 +992,11 @@ pmca_ten_acot_army_machine_cyborg_ae = {
 	ai_weight = {
 		base = 160.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_ae
+    use_armynames_from = acot_army_machine_cyborg_ae
 }
 
 # Assault Armies
-pmca_ten_acot_army_machine_cyborg_se = {
+pmca_hundred_acot_army_machine_cyborg_se = {
 	damage = 350.0
 	health = 350.0
 	has_morale = no
@@ -1041,13 +1041,13 @@ pmca_ten_acot_army_machine_cyborg_se = {
 	ai_weight = {
 		base = 160.0
 	}
-    uses_armynames_from = acot_army_machine_cyborg_se
+    use_armynames_from = acot_army_machine_cyborg_se
 }
 
 ############### MACHINE
 
 # Omnimech
-pmca_ten_acot_army_machine_special = {
+pmca_hundred_acot_army_machine_special = {
 	use_armynames_from = machine_assault_2
 	damage = 300.0
 	health = 475.0
@@ -1107,7 +1107,7 @@ pmca_ten_acot_army_machine_special = {
 }
 
 # Omnimech
-pmca_ten_acot_army_machine_special_se = {
+pmca_hundred_acot_army_machine_special_se = {
 	use_armynames_from = machine_assault_2
 	damage = 400.0
 	health = 575.0
