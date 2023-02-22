@@ -6,7 +6,7 @@
 
 ############# INFANTRY - GOOD MORALE, LOW COLLATERAL DAMAGE, FAST TO RECRUIT
 # Assault Armies
-pmca_ten_acot_hive_infantry_1 = {
+pmca_hundred_acot_hive_infantry_1 = {
 	use_armynames_from = assault_army
 	damage = 50.0
 	health = 50.0
@@ -55,7 +55,7 @@ pmca_ten_acot_hive_infantry_1 = {
 	}
 }
 
-pmca_ten_acot_hive_infantry_dm = {
+pmca_hundred_acot_hive_infantry_dm = {
 	use_armynames_from = assault_army
 	damage = 150.0
 	health = 150.0
@@ -104,7 +104,7 @@ pmca_ten_acot_hive_infantry_dm = {
 	}
 }
 
-pmca_ten_acot_hive_infantry_ae = {
+pmca_hundred_acot_hive_infantry_ae = {
 	use_armynames_from = assault_army
 	damage = 200.0
 	health = 200.0
@@ -154,7 +154,7 @@ pmca_ten_acot_hive_infantry_ae = {
 }
 
 # SE Army
-pmca_ten_acot_hive_infantry_se = {
+pmca_hundred_acot_hive_infantry_se = {
 	use_armynames_from = assault_army
 	damage = 300.0
 	health = 300.0
@@ -201,7 +201,7 @@ pmca_ten_acot_hive_infantry_se = {
 ### CLONE VARIANT
 
 # Assault Armies
-pmca_ten_acot_hive_clone_infantry_1 = {
+pmca_hundred_acot_hive_clone_infantry_1 = {
 	use_armynames_from = assault_army
 	damage = 50.0
 	health = 50.0
@@ -251,7 +251,7 @@ pmca_ten_acot_hive_clone_infantry_1 = {
 	}
 }
 
-pmca_ten_acot_hive_clone_infantry_dm = {
+pmca_hundred_acot_hive_clone_infantry_dm = {
 	use_armynames_from = assault_army
 	damage = 150.0
 	health = 150.0
@@ -302,7 +302,7 @@ pmca_ten_acot_hive_clone_infantry_dm = {
 ############################
 
 # Assault Armies
-pmca_ten_acot_hive_swarmer_1 = {
+pmca_hundred_acot_hive_swarmer_1 = {
 	use_armynames_from = clone_army
 	damage = 50.0
 	health = 10.0
@@ -349,7 +349,7 @@ pmca_ten_acot_hive_swarmer_1 = {
 	}
 }
 
-pmca_ten_acot_hive_swarmer_dm = {
+pmca_hundred_acot_hive_swarmer_dm = {
 	use_armynames_from = clone_army
 	damage = 150.0
 	health = 110.0
@@ -396,7 +396,7 @@ pmca_ten_acot_hive_swarmer_dm = {
 	}
 }
 
-pmca_ten_acot_hive_swarmer_ae = {
+pmca_hundred_acot_hive_swarmer_ae = {
 	use_armynames_from = clone_army
 	damage = 200.0
 	health = 160.0
@@ -444,7 +444,7 @@ pmca_ten_acot_hive_swarmer_ae = {
 }
 
 # SE Army
-pmca_ten_acot_hive_swarmer_se = {
+pmca_hundred_acot_hive_swarmer_se = {
 	use_armynames_from = clone_army
 	damage = 300.0
 	health = 260.0
@@ -488,7 +488,7 @@ pmca_ten_acot_hive_swarmer_se = {
 
 #######
 
-pmca_ten_acot_hive_clone_swarmer_1 = {
+pmca_hundred_acot_hive_clone_swarmer_1 = {
 	use_armynames_from = clone_army
 	damage = 30.0
 	health = 8.0
@@ -533,7 +533,7 @@ pmca_ten_acot_hive_clone_swarmer_1 = {
 ############################
 
 #### Hunters
-pmca_ten_acot_hive_light_1 = {
+pmca_hundred_acot_hive_light_1 = {
 	use_armynames_from = assault_army
 	damage = 75.0
 	health = 175.0
@@ -585,7 +585,7 @@ pmca_ten_acot_hive_light_1 = {
 	}
 }
 
-pmca_ten_acot_hive_light_dm = {
+pmca_hundred_acot_hive_light_dm = {
 	use_armynames_from = assault_army
 	damage = 175.0
 	health = 275.0
@@ -637,7 +637,7 @@ pmca_ten_acot_hive_light_dm = {
 	}
 }
 
-pmca_ten_acot_hive_light_ae = {
+pmca_hundred_acot_hive_light_ae = {
 	use_armynames_from = assault_army
 	damage = 225.0
 	health = 325.0
@@ -690,7 +690,7 @@ pmca_ten_acot_hive_light_ae = {
 }
 
 # SE Army
-pmca_ten_acot_hive_light_se = {
+pmca_hundred_acot_hive_light_se = {
 	use_armynames_from = assault_army
 	damage = 325.0
 	health = 425.0
@@ -740,7 +740,7 @@ pmca_ten_acot_hive_light_se = {
 ####
 
 #### Hunters
-pmca_ten_acot_hive_clone_light_1 = {
+pmca_hundred_acot_hive_clone_light_1 = {
 	use_armynames_from = assault_army
 	damage = 75.0
 	health = 175.0
@@ -793,7 +793,7 @@ pmca_ten_acot_hive_clone_light_1 = {
 	}
 }
 
-pmca_ten_acot_hive_clone_light_dm = {
+pmca_hundred_acot_hive_clone_light_dm = {
 	use_armynames_from = assault_army
 	damage = 175.0
 	health = 275.0
@@ -846,7 +846,7 @@ pmca_ten_acot_hive_clone_light_dm = {
 ############################
 
 #### Hunters
-pmca_ten_acot_hive_heavy_1 = {
+pmca_hundred_acot_hive_heavy_1 = {
 	use_armynames_from = assault_army
 	damage = 375.0
 	health = 450.0
@@ -898,7 +898,7 @@ pmca_ten_acot_hive_heavy_1 = {
 	}
 }
 
-pmca_ten_acot_hive_heavy_dm = {
+pmca_hundred_acot_hive_heavy_dm = {
 	use_armynames_from = assault_army
 	damage = 475.0
 	health = 550.0
@@ -950,7 +950,7 @@ pmca_ten_acot_hive_heavy_dm = {
 	}
 }
 
-pmca_ten_acot_hive_heavy_ae = {
+pmca_hundred_acot_hive_heavy_ae = {
 	use_armynames_from = assault_army
 	damage = 525.0
 	health = 600.0
@@ -1003,7 +1003,7 @@ pmca_ten_acot_hive_heavy_ae = {
 }
 
 # SE Army
-pmca_ten_acot_hive_heavy_se = {
+pmca_hundred_acot_hive_heavy_se = {
 	use_armynames_from = assault_army
 	damage = 625.0
 	health = 700.0
@@ -1053,7 +1053,7 @@ pmca_ten_acot_hive_heavy_se = {
 ########################################################################
 
 # Hive-Mind Masterminds
-pmca_ten_acot_army_hive_control = {
+pmca_hundred_acot_army_hive_control = {
 	damage = 275.0
 	health = 425.0
 	morale = 800.0
@@ -1103,7 +1103,7 @@ pmca_ten_acot_army_hive_control = {
 }
 
 # Hive-Mind Masterminds
-pmca_ten_acot_army_hive_control_se = {
+pmca_hundred_acot_army_hive_control_se = {
 	damage = 375.0
 	health = 525.0
 	morale = 825.0
