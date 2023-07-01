@@ -57,8 +57,8 @@ pmca_ten_riesigerkatzenpanzer_assault = {
 <details><summary>Missing/incorrect uses_armynames_from</summary>
 <p>
 
-If the line `uses_armynames_from` is at the very bottom of an army definition, it was probably added by the script.
-If it looks like `uses_armynames_from = some_name` or `some_name` is replaced by the **previous** army, replace `some_name` with the non-condensed army
+If the line `use_armynames_from` is at the very bottom of an army definition, it was probably added by the script.
+If it looks like `use_armynames_from = some_name` or `some_name` is replaced by the **previous** army, replace `some_name` with the non-condensed army
 Example below: 
 ```
 pmca_ten_shroud_summoned_army = {
