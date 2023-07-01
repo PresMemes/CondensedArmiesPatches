@@ -12,7 +12,7 @@ pmca_ten_space_marine_company = {
 	icon = GFX_army_type_space_marine_company
 
 	prerequisites = { "tech_gene_tailoring" }
-	
+
 	resources = {
 		category = armies
 		cost = {
@@ -32,62 +32,13 @@ pmca_ten_space_marine_company = {
 			PMCA_VALUE = 10000
 		}
 	}
-	
-	potential = {		
+
+	potential = {
 		planet = {
-			has_active_building = building_space_marine_chapter_fortress			
+			has_active_building = building_space_marine_chapter_fortress
 		}
 	}
-	
-}
-
-pmca_ten_space_marine_garrison = {
-	damage = 40
-	health = 40
-	morale = 40
-	morale_damage = 1.0
-	collateral_damage = 10
-	war_exhaustion = 0
-	has_morale = yes
-	defensive = yes
-	has_species = yes
-	time = 250
-	icon = GFX_army_type_space_marine_garrison
-
-	prerequisites = { "tech_gene_tailoring" }	
-	
-	resources = {
-		category = armies
-		cost = {
-			minerals = 8000
-		}
-
-		upkeep = {
-			energy = 60
-			alloys = 2.5
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
-			}
-			unity = 5
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 8000
-		}
-	}
-		
-	potential = {		
-		planet = {
-			has_active_building = building_space_marine_chapter_fortress			
-		}
-	}
+	use_armynames_from = space_marine_company
 }
 
 pmca_ten_space_marine_brotherhood = {
@@ -103,7 +54,7 @@ pmca_ten_space_marine_brotherhood = {
 	icon = GFX_army_type_space_marine_brotherood
 
 	prerequisites = { "tech_telepathy" }
-	
+
 	resources = {
 		category = armies
 		cost = {
@@ -113,7 +64,7 @@ pmca_ten_space_marine_brotherhood = {
 
 		upkeep = {
 			energy = 60
-			alloys = 2.5			
+			alloys = 2.5
 		}
 	}
 
@@ -124,14 +75,13 @@ pmca_ten_space_marine_brotherhood = {
 			PMCA_VALUE = 250
 		}
 	}
-	
-	potential = {		
+
+	potential = {
 		planet = {
-			has_active_building = building_space_marine_chapter_fortress			
+			has_active_building = building_space_marine_chapter_fortress
 		}
 	}
-		
-	
+	use_armynames_from = space_marine_brotherhood
 }
 
 pmca_ten_death_watch_company = {
@@ -147,7 +97,7 @@ pmca_ten_death_watch_company = {
 	icon = GFX_army_type_death_watch_company
 
 	prerequisites = { "tech_living_state" }
-	
+
 	resources = {
 		category = armies
 		cost = {
@@ -158,7 +108,7 @@ pmca_ten_death_watch_company = {
 
 		upkeep = {
 			energy = 100
-			alloys = 2.5				
+			alloys = 2.5
 		}
 	}
 
@@ -169,13 +119,13 @@ pmca_ten_death_watch_company = {
 			PMCA_VALUE = 150
 		}
 	}
-	
-	potential = {		
+
+	potential = {
 		planet = {
-			has_active_building = building_death_watch_fortress			
+			has_active_building = building_death_watch_fortress
 		}
 	}
-	
+
 	allow = {
 		# custom_tooltip = {
 			# text = death_watch_company_limit_tooltip
@@ -205,6 +155,7 @@ pmca_ten_death_watch_company = {
 			}
 		}
 	}
+	use_armynames_from = death_watch_company
 }
 
 pmca_ten_titan_legion_army = {
@@ -219,8 +170,8 @@ pmca_ten_titan_legion_army = {
 	icon = GFX_army_type_titan_legion
 	has_species = no
 
-	prerequisites = { "tech_ship_armor_4" }	 
-	
+	prerequisites = { "tech_ship_armor_4" }
+
 	resources = {
 		category = armies
 		cost = {
@@ -242,12 +193,11 @@ pmca_ten_titan_legion_army = {
 			PMCA_VALUE = 10000
 		}
 	}
-	
-	potential = {		
+
+	potential = {
 		planet = {
-			has_active_building = building_titan_foundry			
+			has_active_building = building_titan_foundry
 		}
 	}
-
-	
+	use_armynames_from = titan_legion_army
 }
