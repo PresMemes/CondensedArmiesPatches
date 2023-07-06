@@ -1,13 +1,13 @@
 # How to make a patch for Condensed Armies
 This guide will assume:
 1. You know how to mod Stellaris. (Required)
-2. How to run python scripts. (Optional, but heavily recommended)
+2. How to run Python scripts. (Optional, but heavily recommended)
 
 If you do not know how to mod Stellaris, I'd recommend starting with the [Modding Tutorial](https://stellaris.paradoxwikis.com/Modding_tutorial).
 
 Table of Contents:
   - [Patching With Python (Recommended)](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-with-python-recommended)
-    - [The Imporant Part (Post-Insert)](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
+    - [The Important Part (Post-Insert)](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
     - [Localisation](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#localisation)
   - [Patching Manually WIP](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
 
@@ -16,33 +16,25 @@ Table of Contents:
 
 First things first, download `pmca_main.py`, `pmca_inserter.py`, `pmca_multiplier.py`, and `pmca_locmaker.py` and extract them wherever you want.
 
-Create two (2) new files where you extracted the python scripts called `input.txt` and `output.txt`.
+Create two (2) new files where you extracted the Python scripts called `input.txt` and `output.txt`.
 
-Paste whatever mod's armies you want to patch inside of `input.txt`.
-Open `pmca_main.py` and change "acot_" to whatever prefix the mod uses. If the mod doesn't use one, just set to something random like "asbdujhdaw"
-```py
-InsertOperation = pmca_insertOp("input.txt", "output.txt", False, "acot_")
-```
-↓ ↓ ↓
-```py
-InsertOperation = pmca_insertOp("input.txt", "output.txt", False, "giga_")
-```
+Paste whatever mod's armies you want to patch inside `input.txt`.
 Now run `main.py` and copy the contents of `output.txt` INTO `input.txt`
 
 ### The Important Part
 Now: Go through the entirety of `input.txt` and make sure nothing is missing or obviously incorrect.
 In particular, what you'll usually be fixing some (or all) of the following:
-  - Missing pmca_ten_ at the first line of an army definition
-  - Missing or incorrect `uses_armynames_from`
+  - Missing `pmca_ten_` prefix
+  - Missing or incorrect `use_armynames_from`
   - Missing `potential_country`
   - Missing or incorrect `pmca_materiel_policy_check`
   
-Check the below collapsed sections for more details on how to fix them. (Do NOT change the numbers for damage, health, etc)
+Check the collapsed sections below for more details on how to fix them. (Do NOT change the numbers for damage, health, etc)
   
-<details><summary>Missing pmca_ten_</summary>
+<details><summary>Missing pmca_ten_ prefix</summary>
 <p>
 
-Sometimes, armies don't have a prefix which will get missed by the script. Simply put `pmca_ten_` in front of the army def. Example below: 
+If the script somehow forgets to place it, put `pmca_ten_` in front of the army def. Example below: 
 ```
 riesigerkatzenpanzer_assault = {
 ```
@@ -54,11 +46,11 @@ pmca_ten_riesigerkatzenpanzer_assault = {
 </p>
 </details>
 
-<details><summary>Missing/incorrect uses_armynames_from</summary>
+<details><summary>Missing/incorrect use_armynames_from</summary>
 <p>
 
 If the line `use_armynames_from` is at the very bottom of an army definition, it was probably added by the script.
-If it looks like `use_armynames_from = some_name` or `some_name` is replaced by the **previous** army, replace `some_name` with the non-condensed army
+Make sure it points to the non-condensed version of the army.
 Example below: 
 ```
 pmca_ten_shroud_summoned_army = {
@@ -82,7 +74,7 @@ pmca_ten_shroud_summoned_army = {
 <details><summary>Missing potential_country</summary>
 <p>
 
-Sometimes, armies don't have a `potential_country` block. Simply insert the following code into the army def:
+Sometimes, armies don't have a `potential_country` block. Insert the following block and make sure it lines up with the actual cost of the army.
 ```
 potential_country = {
   pmca_materiel_policy_check = {
@@ -99,7 +91,7 @@ potential_country = {
 <details><summary>Incorrect pmca_materiel_policy_check</summary>
 <p>
 
-By default, pmca_materiel_policy will pretty much always be wrong. So just change `PMCA_RESOURCE` and `PMCA_VALUE` to something that fits the army.
+By default, pmca_materiel_policy will always assume an army will cost 100 minerals, change what `PMCA_RESOURCE` and `PMCA_VALUE` are to fix this.
 Example:
 ```
 cost = {
@@ -153,11 +145,13 @@ Run `pmca_main.py` again, and copy `output.txt` to your x100 army file.
 
 
 #### Localisation
- 1. Copy CWtools auto-generated missing loc into `input.txt`
- 2. Run `pmca_locmaker.py` NOT `pmca_main.py`
- 3. Copy `output.txt` to your .yml file
+
+ 1. Delete all army_def_plural, as the script doesn't handle it at the moment. Also, make sure there are no empty lines in the file.
+ 2. Copy auto-generated missing loc into `input.txt`
+ 3. Run `pmca_locmaker.py` by itself
+ 4. Copy `output.txt` to your .yml file
  
  
 # Patching manually
-tl;dr, multiply numbers by 10/100, and add missing stuff. Check the collapsed sections for stuff to add in.
-TODO: Write this
+To be honest, it's pretty boring. Just go through every. single. line. and change the value to x10/x100. Except for build time and morale damage. See the above collapsed sections for things to add.
+For AI weight, the x10 version should have a 1.5x higher base, with x100 armies having a 2x base. So a vanilla army with an AI weight of 100 should have a weight of 150/200 for x10 and x100 respectively.
