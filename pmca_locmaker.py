@@ -28,4 +28,5 @@ with open("input.txt", "r") as file_input, open("output.txt", "w") as file_outpu
                 else:
                     armyNameOrDesc = re.findall(r'(?:pmca_ten_)([^;]*):', placeholderString)
                     placeholderString = re.sub('("REPLACE_ME")', combineStrings("", armyNameOrDesc), placeholderString)
+
         file_output.write(" " + placeholderString)

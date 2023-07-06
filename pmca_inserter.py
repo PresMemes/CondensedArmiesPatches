@@ -6,7 +6,6 @@ class pmca_insertOp:
     # Constructor Args
     input_file_name = "input.txt"
     output_file_name = "output.txt"
-    modPrefix = "acot_"
     isHundred = False
 
     # Non-Constructor Args
@@ -19,11 +18,10 @@ class pmca_insertOp:
 
 
     # Constructor
-    def __init__(self, input_file_name, output_file_name, isHundred, modPrefix):
+    def __init__(self, input_file_name, output_file_name, isHundred):
         self.input_file_name = input_file_name
         self.output_file_name = output_file_name
         self.isHundred = isHundred
-        self.modPrefix = modPrefix
 
     # Count the number of braces. If numIsolatedBraces == 0, we must be outside an army definition (i.e whitespace between armies)
     def updateNumBraces(self, line, insertBool):
@@ -52,13 +50,16 @@ class pmca_insertOp:
 
     # If modPrefix is in inputString, add pmca_ten_ to the front of the line (or replace it if x10 -> x100) also fetches the army name for later
     def updatePrefix(self, armyDefLine):
-        outputString = armyDefLine
-        if (not self.inPrereq and self.modPrefix in armyDefLine and self.numIsolatedBraces == 1 and not "pmca_ten_" in armyDefLine and not "icon" in armyDefLine):
-            self.armyDefName = re.match(r"\w+", outputString).group(0)
-            outputString = "pmca_ten_" + outputString
+        prefixStringOutput = armyDefLine
+        if (self.numIsolatedBraces == 1 and "= {" in armyDefLine and not "prereq" in armyDefLine and not "pmca_ten_" in armyDefLine and not "icon" in armyDefLine):
+            self.armyDefName = re.match(r"\w+", prefixStringOutput).group(0)
+            prefixStringOutput = "pmca_ten_" + armyDefLine
+        # if (not self.inPrereq and self.modPrefix in armyDefLine and self.numIsolatedBraces == 1 and not "pmca_ten_" in armyDefLine and not "icon" in armyDefLine):
+        #     self.armyDefName = re.match(r"\w+", prefixStringOutput).group(0)
+        #     prefixStringOutput = "pmca_ten_" + prefixStringOutput
         if (self.isHundred):
-            outputString = re.sub("pmca_ten_", "pmca_hundred_", outputString)
-        return outputString
+            prefixStringOutput = re.sub("pmca_ten_", "pmca_hundred_", prefixStringOutput)
+        return prefixStringOutput
 
     # Main function
     def readAndWrite(self):
@@ -79,7 +80,7 @@ class pmca_insertOp:
                     file_output.write("        }\n\n")
                     outputLine = ""
                 if (self.insertArmyNameCheck(outputLine)):
-                    concatArmyName = "    uses_armynames_from = " + self.armyDefName + "\n"
+                    concatArmyName = "    use_armynames_from = " + self.armyDefName + "\n"
                     file_output.write(concatArmyName)
                     file_output.write(outputLine)
                     outputLine = ""

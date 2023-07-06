@@ -38,7 +38,7 @@ class pmca_multiplyOp:
             self.resourceIsolatedBraces -= 1
         if (self.resourceIsolatedBraces == 0):
             self.inResourceTable = False
-            
+
     # Does inputString have a int/float?
     def has_number(self, line):
         return bool(re.search(r'\d', line))
@@ -46,7 +46,7 @@ class pmca_multiplyOp:
     # Does inputString contain any of the following?
     def containsValid(self, line):
         return bool(self.inResourceTable or "damage" in line or "health" in line or "morale" in line or "war_exhaustion" in line or "PMCA_VALUE" in line or "base" in line)
-    
+
     # Convert inputList into a float, multiply it, then return it as a string
     def convertList(self, findallList):
         output = float(findallList[0]) * self.factor
@@ -83,4 +83,6 @@ class pmca_multiplyOp:
                 if (not self.inPrereq and not "morale_damage" in outputLine):
                     outputLine = self.replaceNumber(outputLine)
                 self.updatePrereq(outputLine, True)
+                if (self.isHundred and "pmca_ten_" in outputLine and "= {" in outputLine):
+                    outputLine = re.sub("pmca_ten_", "pmca_hundred_", outputLine)
                 file_output.write(outputLine)
