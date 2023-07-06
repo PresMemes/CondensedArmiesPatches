@@ -9,10 +9,10 @@ Table of Contents:
   - [Patching With Python (Recommended)](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-with-python-recommended)
     - [The Important Part (Post-Insert)](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
     - [Localisation](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#localisation)
-  - [Patching Manually WIP](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
+  - [Patching Manually](https://github.com/PresMemes/CondensedArmiesPatches/new/main?readme=1#patching-manually)
 
 # Patching with Python (Recommended)
-**Required: Python 3.8.10 or Later, VSCode with CWTools addon**
+**Required: Python 3.8.10 or Later**
 
 First things first, download `pmca_main.py`, `pmca_inserter.py`, `pmca_multiplier.py`, and `pmca_locmaker.py` and extract them wherever you want.
 
