@@ -1,72 +1,4 @@
-# Assault Armies
-pmca_ten_assault_army = {
-	damage = 10.0
-	health = 10.0
-	morale = 10.0
-	morale_damage = 1.00
-	collateral_damage = 10.0
-	war_exhaustion = 10.0
-	time = 90
-	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" }
-	resources = {
-		category = armies
-		cost = {
-			minerals = 1000.0
-		}
-
-		upkeep = {
-			energy = 10.0
-		}
-	}
-	show_tech_unlock_if = {
-		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
-	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
-
-        OR = {
-            NOT = { has_authority = auth_machine_intelligence }
-            has_valid_civic = civic_machine_assimilator
-        }
-    }
-    potential = {
-        from = {
-            NOR = {
-                has_trait = "trait_mechanical"
-                has_trait = "trait_machine_unit"
-                is_sapient = no
-            }
-        }
-    }
-	ai_weight = {
-		base = 0.0
-		modifier = {
-			set = 0
-			OR = {
-				is_fallen_empire = yes
-				has_technology = tech_telepathy
-				has_technology = tech_gene_seed_purification
-				AND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
-					has_technology = tech_gene_banks
-				}
-			}
-		}
-	}
-    use_armynames_from = assault_army
-}
-
+# Assault Army
 pmca_ten_infantry_army = {
 	damage = 10.0
 	health = 10.0
@@ -89,23 +21,23 @@ pmca_ten_infantry_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -151,9 +83,8 @@ pmca_ten_infantry_army = {
 			}
 		}
 	}
-    use_armynames_from = infantry_army
+	use_armynames_from = infantry_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_armor_division = {
 	damage = 22.5
 	health = 20.0
@@ -177,16 +108,16 @@ pmca_ten_armor_division = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 100.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 100.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -194,7 +125,7 @@ pmca_ten_armor_division = {
 		}
 		NOT = { has_technology = "tech_housing_2" }
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -247,9 +178,8 @@ pmca_ten_armor_division = {
 			}
 		}
 	}
-    use_armynames_from = armor_division
+	use_armynames_from = armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_gravity_armor_division = {
 	damage = 29.0
 	health = 25.0
@@ -273,23 +203,23 @@ pmca_ten_gravity_armor_division = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 150.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 150.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -342,9 +272,8 @@ pmca_ten_gravity_armor_division = {
 			}
 		}
 	}
-    use_armynames_from = gravity_armor_division
+	use_armynames_from = gravity_armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_mechanized_division = {
 	damage = 15.0
 	health = 15.0
@@ -367,23 +296,23 @@ pmca_ten_mechanized_division = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1500.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1500.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -436,9 +365,8 @@ pmca_ten_mechanized_division = {
 			}
 		}
 	}
-    use_armynames_from = mechanized_division
+	use_armynames_from = mechanized_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_airborne_division = {
 	damage = 12.5
 	health = 10.0
@@ -461,23 +389,23 @@ pmca_ten_airborne_division = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -523,9 +451,8 @@ pmca_ten_airborne_division = {
 			}
 		}
 	}
-    use_armynames_from = airborne_division
+	use_armynames_from = airborne_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_marine_division = {
 	damage = 15.0
 	health = 10.0
@@ -548,16 +475,16 @@ pmca_ten_marine_division = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -565,7 +492,7 @@ pmca_ten_marine_division = {
 		}
 		NOT = { has_civic = civic_distinguished_admiralty }
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -611,9 +538,8 @@ pmca_ten_marine_division = {
 			}
 		}
 	}
-    use_armynames_from = marine_division
+	use_armynames_from = marine_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_fighter_wing = {
 	damage = 22.5
 	health = 7.5
@@ -637,23 +563,23 @@ pmca_ten_fighter_wing = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -706,9 +632,8 @@ pmca_ten_fighter_wing = {
 			}
 		}
 	}
-    use_armynames_from = fighter_wing
+	use_armynames_from = fighter_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_close_air_support_wing = {
 	damage = 30.0
 	health = 7.5
@@ -732,23 +657,23 @@ pmca_ten_close_air_support_wing = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -801,9 +726,8 @@ pmca_ten_close_air_support_wing = {
 			}
 		}
 	}
-    use_armynames_from = close_air_support_wing
+	use_armynames_from = close_air_support_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_strategic_bomber_wing = {
 	damage = 20.0
 	health = 5.0
@@ -827,23 +751,23 @@ pmca_ten_strategic_bomber_wing = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -896,9 +820,8 @@ pmca_ten_strategic_bomber_wing = {
 			}
 		}
 	}
-    use_armynames_from = strategic_bomber_wing
+	use_armynames_from = strategic_bomber_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_titan_army = {
 	damage = 100.0
 	health = 80.0
@@ -923,23 +846,23 @@ pmca_ten_titan_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -992,9 +915,8 @@ pmca_ten_titan_army = {
 			}
 		}
 	}
-    use_armynames_from = titan_army
+	use_armynames_from = titan_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_chivalric_army = {
 	damage = 17.5
 	health = 15.0
@@ -1017,16 +939,16 @@ pmca_ten_chivalric_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		has_civic = civic_aristocratic_elite
 		NOT = { has_origin = origin_mechanists }
@@ -1035,7 +957,7 @@ pmca_ten_chivalric_army = {
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1081,7 +1003,7 @@ pmca_ten_chivalric_army = {
 			}
 		}
 	}
-    use_armynames_from = chivalric_army
+	use_armynames_from = chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_mecha_chivalric_army = {
@@ -1107,16 +1029,16 @@ pmca_ten_mecha_chivalric_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1125,7 +1047,7 @@ pmca_ten_mecha_chivalric_army = {
 		has_civic = civic_aristocratic_elite
 		has_origin = origin_mechanists
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1178,7 +1100,7 @@ pmca_ten_mecha_chivalric_army = {
 			}
 		}
 	}
-    use_armynames_from = mecha_chivalric_army
+	use_armynames_from = mecha_chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_republican_guard = {
@@ -1203,16 +1125,16 @@ pmca_ten_republican_guard = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1222,9 +1144,9 @@ pmca_ten_republican_guard = {
 			has_ethic = ethic_egalitarian
 			has_ethic = ethic_fanatic_egalitarian
 			has_civic = civic_parliamentary_system
-			}
+		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1271,7 +1193,7 @@ pmca_ten_republican_guard = {
 			}
 		}
 	}
-    use_armynames_from = republican_guard
+	use_armynames_from = republican_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_naval_infantry = {
@@ -1296,16 +1218,16 @@ pmca_ten_naval_infantry = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1313,7 +1235,7 @@ pmca_ten_naval_infantry = {
 		}
 		has_civic = civic_distinguished_admiralty
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1359,9 +1281,8 @@ pmca_ten_naval_infantry = {
 			}
 		}
 	}
-    use_armynames_from = naval_infantry
+	use_armynames_from = naval_infantry # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_esoteric_army = {
 	damage = 30.0
 	health = 25.0
@@ -1386,20 +1307,20 @@ pmca_ten_esoteric_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		has_origin = origin_scion
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1445,9 +1366,8 @@ pmca_ten_esoteric_army = {
 			}
 		}
 	}
-    use_armynames_from = esoteric_army
+	use_armynames_from = esoteric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_void_warband = {
 	damage = 17.5
 	health = 10.0
@@ -1470,16 +1390,16 @@ pmca_ten_void_warband = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1487,7 +1407,7 @@ pmca_ten_void_warband = {
 		}
 		has_civic = civic_barbaric_despoilers
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1533,7 +1453,7 @@ pmca_ten_void_warband = {
 			}
 		}
 	}
-    use_armynames_from = void_warband
+	use_armynames_from = void_warband # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_ideological_army = {
@@ -1558,20 +1478,20 @@ pmca_ten_ideological_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		has_civic = civic_nationalistic_zeal
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 			NOR = {
 				has_civic = civic_feudal_realm
@@ -1621,9 +1541,8 @@ pmca_ten_ideological_army = {
 			}
 		}
 	}
-    use_armynames_from = ideological_army
+	use_armynames_from = ideological_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_imperial_guard = {
 	damage = 17.5
 	health = 15.0
@@ -1646,16 +1565,16 @@ pmca_ten_imperial_guard = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1665,9 +1584,9 @@ pmca_ten_imperial_guard = {
 			has_ethic = ethic_authoritarian
 			has_authority = auth_imperial
 			has_ethic = ethic_fanatic_authoritarian
-			}
+		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -1714,7 +1633,7 @@ pmca_ten_imperial_guard = {
 			}
 		}
 	}
-    use_armynames_from = imperial_guard
+	use_armynames_from = imperial_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_conscript_army = {
@@ -1741,20 +1660,18 @@ pmca_ten_conscript_army = {
 	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 500.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 500.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		has_civic = civic_shared_burden
-		NOT = { has_authority = auth_machine_intelligence }
-		any_owned_pop = {
-		}
+		is_machine_empire = no
 	}
 	potential = {
 		from = {
@@ -1789,9 +1706,8 @@ pmca_ten_conscript_army = {
 			}
 		}
 	}
-    use_armynames_from = conscript_army
+	use_armynames_from = conscript_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_sacraficial_army = {
 	damage = 70.0
 	health = 7.5
@@ -1816,26 +1732,26 @@ pmca_ten_sacraficial_army = {
 	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 500.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 500.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		has_civic = civic_death_cult
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		any_owned_pop = {
 		}
 	}
 	potential = {
 		OR = {
-		has_building = building_sacrificial_temple_1
-		has_building = building_sacrificial_temple_2
-		has_building = building_sacrificial_temple_3
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
 		}
 		from = {
 			NOR = {
@@ -1870,9 +1786,8 @@ pmca_ten_sacraficial_army = {
 			}
 		}
 	}
-    use_armynames_from = sacraficial_army
+	use_armynames_from = sacraficial_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-
 pmca_ten_sacraficial_nerve_army = {
 	damage = 70.0
 	health = 7.5
@@ -1897,26 +1812,26 @@ pmca_ten_sacraficial_nerve_army = {
 	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 500.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 500.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		has_civic = civic_death_cult
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		any_owned_pop = {
 		}
 	}
 	potential = {
 		OR = {
-		has_building = building_sacrificial_temple_1
-		has_building = building_sacrificial_temple_2
-		has_building = building_sacrificial_temple_3
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
 		}
 		from = {
 			NOR = {
@@ -1924,7 +1839,7 @@ pmca_ten_sacraficial_nerve_army = {
 				has_trait = "trait_machine_unit"
 				is_sapient = no
 			}
-				has_trait = "trait_nerve_stapled"
+			has_trait = "trait_nerve_stapled"
 		}
 	}
 
@@ -1951,7 +1866,7 @@ pmca_ten_sacraficial_nerve_army = {
 			}
 		}
 	}
-    use_armynames_from = sacraficial_nerve_army
+	use_armynames_from = sacraficial_nerve_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_archaeo_army = {
@@ -1978,16 +1893,16 @@ pmca_ten_archaeo_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minor_artifacts
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minor_artifacts
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -1997,7 +1912,7 @@ pmca_ten_archaeo_army = {
 			has_ascension_perk = ap_archaeoengineers
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2045,7 +1960,7 @@ pmca_ten_archaeo_army = {
 			}
 		}
 	}
-    use_armynames_from = archaeo_army
+	use_armynames_from = archaeo_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_archaeo_army_better = {
@@ -2072,16 +1987,16 @@ pmca_ten_archaeo_army_better = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minor_artifacts
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minor_artifacts
+			PMCA_VALUE = 50.0
+		}
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -2089,7 +2004,7 @@ pmca_ten_archaeo_army_better = {
 		}
 		has_ascension_perk = ap_archaeoengineers
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2137,7 +2052,7 @@ pmca_ten_archaeo_army_better = {
 			}
 		}
 	}
-    use_armynames_from = archaeo_army_better
+	use_armynames_from = archaeo_army_better # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_milita_army = {
@@ -2163,23 +2078,23 @@ pmca_ten_milita_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = food
-            PMCA_VALUE = 1500.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = food
+			PMCA_VALUE = 0.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2230,7 +2145,7 @@ pmca_ten_milita_army = {
 			}
 		}
 	}
-    use_armynames_from = milita_army
+	use_armynames_from = milita_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_men_army = {
@@ -2258,23 +2173,23 @@ pmca_ten_men_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2320,7 +2235,7 @@ pmca_ten_men_army = {
 			}
 		}
 	}
-    use_armynames_from = men_army
+	use_armynames_from = men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_knight_army = {
@@ -2349,23 +2264,23 @@ pmca_ten_knight_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 150.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 150.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2411,7 +2326,7 @@ pmca_ten_knight_army = {
 			}
 		}
 	}
-    use_armynames_from = knight_army
+	use_armynames_from = knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_knight_air_army = {
@@ -2440,23 +2355,23 @@ pmca_ten_knight_air_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 300.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 300.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2502,7 +2417,7 @@ pmca_ten_knight_air_army = {
 			}
 		}
 	}
-    use_armynames_from = knight_air_army
+	use_armynames_from = knight_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_treb_army = {
@@ -2529,23 +2444,23 @@ pmca_ten_treb_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 100.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 100.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2597,7 +2512,7 @@ pmca_ten_treb_army = {
 			}
 		}
 	}
-    use_armynames_from = treb_army
+	use_armynames_from = treb_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_grail_army = {
@@ -2624,23 +2539,23 @@ pmca_ten_grail_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 100.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 100.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2685,7 +2600,7 @@ pmca_ten_grail_army = {
 			}
 		}
 	}
-    use_armynames_from = grail_army
+	use_armynames_from = grail_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_house_army = {
@@ -2694,8 +2609,8 @@ pmca_ten_house_army = {
 	morale = 15.0
 	morale_damage = 1.50
 	collateral_damage = 10.0
-	war_exhaustion = 10.0
-	time = 120
+	war_exhaustion = 60.0
+	time = 50
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
 	resources = {
@@ -2711,30 +2626,30 @@ pmca_ten_house_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = influence
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = influence
+			PMCA_VALUE = 50.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential = {
 		planet = {
 			exists = leader
-		 }
+		}
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -2776,7 +2691,7 @@ pmca_ten_house_army = {
 			}
 		}
 	}
-    use_armynames_from = house_army
+	use_armynames_from = house_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_royal_guard = {
@@ -2801,16 +2716,16 @@ pmca_ten_royal_guard = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
@@ -2820,9 +2735,9 @@ pmca_ten_royal_guard = {
 			has_ethic = ethic_authoritarian
 			has_authority = auth_imperial
 			has_ethic = ethic_fanatic_authoritarian
-			}
+		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2869,7 +2784,7 @@ pmca_ten_royal_guard = {
 			}
 		}
 	}
-    use_armynames_from = royal_guard
+	use_armynames_from = royal_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_royal_men_army = {
@@ -2897,23 +2812,23 @@ pmca_ten_royal_men_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -2960,7 +2875,7 @@ pmca_ten_royal_men_army = {
 			}
 		}
 	}
-    use_armynames_from = royal_men_army
+	use_armynames_from = royal_men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_royal_knight_army = {
@@ -2989,23 +2904,23 @@ pmca_ten_royal_knight_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 150.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 150.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -3052,7 +2967,7 @@ pmca_ten_royal_knight_army = {
 			}
 		}
 	}
-    use_armynames_from = royal_knight_army
+	use_armynames_from = royal_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_psi_knight_army = {
@@ -3077,23 +2992,23 @@ pmca_ten_psi_knight_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 3000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 3000.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -3140,7 +3055,7 @@ pmca_ten_psi_knight_army = {
 			}
 		}
 	}
-    use_armynames_from = psi_knight_army
+	use_armynames_from = psi_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_royal_air_army = {
@@ -3169,23 +3084,23 @@ pmca_ten_royal_air_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 300.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 300.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -3237,7 +3152,7 @@ pmca_ten_royal_air_army = {
 			}
 		}
 	}
-    use_armynames_from = royal_air_army
+	use_armynames_from = royal_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_knight_walker_army = {
@@ -3264,23 +3179,23 @@ pmca_ten_knight_walker_army = {
 	}
 	show_tech_unlock_if = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 1000.0
+		}
 
 		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
@@ -3333,7 +3248,97 @@ pmca_ten_knight_walker_army = {
 			}
 		}
 	}
-    use_armynames_from = knight_walker_army
+	use_armynames_from = knight_walker_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_pilgram_army = {
+	damage = 15.0
+	health = 12.5
+	has_morale = no
+	morale_damage = 1.50
+	collateral_damage = 10.0
+	war_exhaustion = 2.5
+	time = 100
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			food = 3000.0
+			minerals = 1000.0
+		}
+
+		upkeep = {
+			energy = 1.0
+			food = 50.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
+
+		has_ethic = ethic_spiritualist
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = pilgram_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_battle_bot = {
@@ -3359,13 +3364,13 @@ pmca_ten_battle_bot = {
 	}
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 1000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 1000.0
+		}
 
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 	}
 	potential = {
 		from = { has_trait = "trait_mechanical" }
@@ -3398,7 +3403,7 @@ pmca_ten_battle_bot = {
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-    use_armynames_from = battle_bot
+	use_armynames_from = battle_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_war_bot = {
@@ -3424,13 +3429,13 @@ pmca_ten_war_bot = {
 	}
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = minerals
-            PMCA_VALUE = 2000.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 2000.0
+		}
 
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 	}
 	potential = {
 		from = { has_trait = "trait_mechanical" }
@@ -3463,13 +3468,13 @@ pmca_ten_war_bot = {
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-    use_armynames_from = war_bot
+	use_armynames_from = war_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
 pmca_ten_synth_commandos = {
 	damage = 21.5
 	health = 25.0
-	morale_damage = 2.15
+	morale_damage = 3.00
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
 	has_morale = no
@@ -3490,13 +3495,13 @@ pmca_ten_synth_commandos = {
 	}
 
 	potential_country = {
-        pmca_materiel_policy_check = {
-            PMCA_MULT = ten
-            PMCA_RESOURCE = alloys
-            PMCA_VALUE = 50.0
-        }
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 50.0
+		}
 
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 	}
 	potential = {
 		from = { has_trait = "trait_mechanical" }
@@ -3529,5 +3534,5 @@ pmca_ten_synth_commandos = {
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-    use_armynames_from = synth_commandos
+	use_armynames_from = synth_commandos # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
