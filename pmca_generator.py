@@ -1,6 +1,6 @@
 import re
 import os
-
+import time
 
 class pmca_generate_defs:
     input_file_name = "input.txt"
@@ -794,34 +794,35 @@ class pmca_generate_defs:
 
     # Change a variable whenever we see a brace
     def update_brace_count(self, input_line, reset_seen_blocks):
-        if reset_seen_blocks == False and "{" in input_line:
-            self.num_isolated_braces += 1
-        if reset_seen_blocks == False and "}" in input_line:
-            self.num_isolated_braces -= 1
-            self.in_cost_table = False
-        if self.num_isolated_braces == 1:
-            self.in_resource_table = False
-        if reset_seen_blocks == True and self.num_isolated_braces == 0:
+        if not reset_seen_blocks:
+            if "{" in input_line:
+                self.num_isolated_braces += 1
+            if "}" in input_line:
+                self.num_isolated_braces -= 1
+                self.in_cost_table = False
+        elif self.num_isolated_braces == 0:
             self.seen_use_armynames_from = False
             self.seen_potential_country_block = False
             self.current_resource_name = "food"
             self.current_resource_value = 0
 
+        if self.num_isolated_braces == 1:
+            self.in_resource_table = False
+
     # Save the army def for later if needed, and prepend pmca_ten_ to the line
     def fetch_army_def_and_prepend(self, input_line):
-        appended_string = input_line
         if (
             self.num_isolated_braces == 1
             and "= {" in input_line
-            and not "}" in input_line
-            and not "pmca_ten" in input_line
-            and not "pmca_hundred" in input_line
+            and "}" not in input_line
+            and "pmca_ten" not in input_line
+            and "pmca_hundred" not in input_line
         ):
             self.army_def_name = re.match(r"\w+", input_line).group(0)
             self.army_def_list.append(self.army_def_name)
-            appended_string = "pmca_ten_" + input_line.strip() + " # PMCA_GEN: Inserted prefix\n"
+            return "pmca_ten_" + input_line.strip() + " # PMCA_GEN: Inserted prefix\n"
 
-        return appended_string
+        return input_line
 
     # Return a string for output when given a line, meant for inserting the pmca_materiel_policy_check scripted_trigger
     def insert_materiel_policy_check(self, input_line):
@@ -836,12 +837,13 @@ class pmca_generate_defs:
 
     # Try to update the cost of an army for later
     def update_army_costs(self, input_line):
-        clean_string = re.sub("\t", "", input_line)
+        clean_string = input_line.strip()
+        match_value = re.match(r"[^ ]*", clean_string).group(0)
         if (
-            self.resource_priority_dict[re.match(r"[^ ]*", clean_string).group(0)]
+            self.resource_priority_dict[match_value]
             > self.resource_priority_dict[self.current_resource_name]
         ):
-            self.current_resource_name = re.match(r"[^ ]*", clean_string).group(0)
+            self.current_resource_name = match_value
             self.current_resource_value = self.convert_list(
                 re.findall(r"\d+(?:\.\d+)?", input_line), False
             )
@@ -892,26 +894,26 @@ class pmca_generate_defs:
                         )
 
                     # Insert scripted trigger if potential_country exists, create if it doesn't
-                    match (self.insert_materiel_policy_check(string_to_output)):
-                        case 1:
-                            file_output.write(string_to_output)
-                            string_to_output = ""
-                            file_output.write(self.pmca_scripted_trigger_block + "\n")
-                        case -1:
-                            string_to_output = ""
-                            nested_string = re.search(r"\{ (.*?) \}\n", line).group(0)
-                            nested_string = nested_string[2:-2]
-                            file_output.write(
-                                "    potential_country = { # PMCA_GEN: Modified trigger block, probably was a nested 1-line statement\n"
-                            )
-                            file_output.write(self.pmca_scripted_trigger_block + "\n")
-                            file_output.write("        " + nested_string + "\n")
-                            file_output.write("    }\n")
-                        case 0:
-                            pass
+                    match_value = self.insert_materiel_policy_check(string_to_output)
+                    if match_value == 1:
+                        file_output.write(string_to_output)
+                        string_to_output = ""
+                        file_output.write(self.pmca_scripted_trigger_block + "\n")
+                    elif match_value == -1:
+                        string_to_output = ""
+                        nested_string = re.search(r"\{ (.*?) \}\n", line).group(0)[2:-2]
+                        file_output.write(
+                            "    potential_country = { # PMCA_GEN: Modified trigger block, probably was a nested 1-line statement\n"
+                        )
+                        file_output.write(self.pmca_scripted_trigger_block + "\n")
+                        file_output.write("        " + nested_string + "\n")
+                        file_output.write("    }\n")
+                    else:
+                        pass
+
                     if (
                         self.num_isolated_braces == 0
-                        and self.seen_potential_country_block == False
+                        and not self.seen_potential_country_block
                         and "}" in string_to_output
                     ):
                         file_output.write(
@@ -925,7 +927,7 @@ class pmca_generate_defs:
                         self.seen_use_armynames_from = True
                     if (
                         self.num_isolated_braces == 0
-                        and self.seen_use_armynames_from == False
+                        and not self.seen_use_armynames_from
                         and "}" in line
                     ):
                         file_output.write(
@@ -936,7 +938,9 @@ class pmca_generate_defs:
 
                 self.update_brace_count(string_to_output, True)
                 if insert_notification:
-                    file_output.write("# PMCA_GEN: Army definitions patched using python, please check for errors\n")
+                    file_output.write(
+                        "# PMCA_GEN: Army definitions patched using python, please check for errors\n"
+                    )
                     insert_notification = False
                 file_output.write(string_to_output)
 
@@ -960,75 +964,59 @@ class pmca_generate_defs:
         )
 
     # Handle AI weight stuff
-    def handle_ai_base(self, input_list, is_hundred):
-        output = float(input_list[0])
+    def handle_ai_base(self, input_value, is_hundred):
+        output = float(input_value)
         if is_hundred:
-            return str(output * (2 / 3) * 2)
+            output *= 4 / 3
         else:
-            return str(output * 1.5)
+            output *= 1.5
+        return str(output)
 
     # Get the number in a string and send it to another function for multiplying
+    # PM: So, the lambda match is getting a group from re.sub? That's my only explanation on how this shit works tbh, ChatGPT is wildin
     def factor_number_in_string(self, input_line, is_hundred):
-        output_string = input_line
-        temp_list = re.findall(r"\d+(?:\.\d+)?", input_line)
         if "base" in input_line:
-            output_string = re.sub(
+            return re.sub(
                 r"\d+(?:\.\d+)?",
-                self.handle_ai_base(temp_list, is_hundred),
-                output_string,
+                lambda match: self.handle_ai_base(match.group(0), is_hundred),
+                input_line,
             )
         else:
-            output_string = re.sub(
-                r"\d+(?:\.\d+)?", self.convert_list(temp_list, True), output_string
+            return re.sub(
+                r"\d+(?:\.\d+)?",
+                lambda match: self.convert_list([match.group(0)], True),
+                input_line,
             )
-
-        return output_string
 
     def multiply_values_by_ten(self):
         with open(self.output_file_post_insert_name, "r") as file_input, open(
             self.output_file_x10_name, "w"
         ) as file_output:
             for line in file_input:
-                string_to_output = line
                 self.update_brace_count(line, False)
-                if self.should_read_line(string_to_output):
+                if self.should_read_line(line):
                     if "resources = {" in line:
                         self.in_resource_table = True
-                    if self.valid_lines_to_multiply(
-                        string_to_output
-                    ) and self.has_number(string_to_output):
-                        string_to_output = self.factor_number_in_string(
-                            string_to_output, False
-                        )
-                self.update_brace_count(string_to_output, True)
-                file_output.write(string_to_output)
+                    if self.valid_lines_to_multiply(line) and self.has_number(line):
+                        line = self.factor_number_in_string(line, False)
+                self.update_brace_count(line, True)
+                file_output.write(line)
 
     def multiply_values_by_hundred(self):
         with open(self.output_file_x10_name, "r") as file_input, open(
             self.output_file_x100_name, "w"
         ) as file_output:
             for line in file_input:
-                string_to_output = line
                 self.update_brace_count(line, False)
-                if self.should_read_line(string_to_output):
+                if self.should_read_line(line):
                     if "resources = {" in line:
                         self.in_resource_table = True
-                    if self.valid_lines_to_multiply(
-                        string_to_output
-                    ) and self.has_number(string_to_output):
-                        string_to_output = self.factor_number_in_string(
-                            string_to_output, True
-                        )
-                    if "PMCA_MULT = ten" in string_to_output:
-                        string_to_output = re.sub(
-                            "PMCA_MULT = ten", "PMCA_MULT = hundred", string_to_output
-                        )
-                    if "pmca_ten_" in string_to_output:
-                        string_to_output = re.sub(
-                            "pmca_ten_", "pmca_hundred_", string_to_output
-                        )
-                self.update_brace_count(string_to_output, True)
-                file_output.write(string_to_output)
+                    if self.valid_lines_to_multiply(line) and self.has_number(line):
+                        line = self.factor_number_in_string(line, True)
+                    line = line.replace("PMCA_MULT = ten", "PMCA_MULT = hundred")
+                    line = line.replace("pmca_ten_", "pmca_hundred_")
+                self.update_brace_count(line, True)
+                file_output.write(line)
 
     def generate_placeholder_loc_keys(self):
         with open(self.output_file_placeholder_loc_keys_name, "w") as file_output:
@@ -1110,7 +1098,7 @@ class pmca_generate_defs:
                         )
                     )
 
-
+start = time.time()
 if os.path.isfile("./input.txt"):
     directory = "PMCA_GEN_OUTPUT"
     path = os.path.join(os.getcwd(), directory)
@@ -1125,6 +1113,7 @@ if os.path.isfile("./input.txt"):
 
     print("Inserting required army properties...")
     pmca_automater.insert_pmca_army_defs()
+    print("Number of Army Definitions: " + str(len(pmca_generate_defs.army_def_list)))
 
     print("Multiplying values to x10...")
     pmca_automater.multiply_values_by_ten()
@@ -1145,3 +1134,5 @@ else:
     print(
         "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
     )
+end = time.time()
+print("Time to complete: " + str((end - start)*1000) + " milliseconds (ms)")
