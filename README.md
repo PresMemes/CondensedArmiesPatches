@@ -25,7 +25,7 @@ Table of Contents:
 ### Comments, Ignored lines, and editing post_insert_defs ###
 By default, the script will try to ignore any lines that start with a `#`. But if you want it to ignore a certain line, include `# PMCA_GEN: IGNORE` at the end of the line and the script should skip it.
 
-If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), simply comment out `pmca_automater.insert_pmca_army_defs()` on line 376. 
+If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), simply comment out `pmca_automater.insert_pmca_army_defs()`. 
 
 ## Script clean-up
 
