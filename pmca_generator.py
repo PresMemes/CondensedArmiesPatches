@@ -2,6 +2,7 @@ import re
 import os
 import time
 
+
 class pmca_generate_defs:
     input_file_name = "input.txt"
     output_file_post_insert_name = "PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
@@ -792,6 +793,15 @@ class pmca_generate_defs:
 
     army_def_list = []
 
+    replacement_patterns = {
+        "NOT = { has_authority = auth_machine_intelligence }": "is_machine_empire = no",
+        "has_authority = auth_machine_intelligence": "is_machine_empire = yes",
+        "NOT = { has_authority = auth_hive_mind }": "is_hive_empire = no",
+        "has_authority = auth_hive_mind": "is_hive_empire = yes",
+        "NOT = { has_ethic = ethic_gestalt_consciousness }": "is_gestalt = no",
+        "has_ethic = ethic_gestalt_consciousness": "is_gestalt = yes",
+    }
+
     # Change a variable whenever we see a brace
     def update_brace_count(self, input_line, reset_seen_blocks):
         if not reset_seen_blocks:
@@ -824,7 +834,7 @@ class pmca_generate_defs:
 
         return input_line
 
-    # Return a string for output when given a line, meant for inserting the pmca_materiel_policy_check scripted_trigger
+    # Return a int for output when given a line, meant for inserting the pmca_materiel_policy_check scripted_trigger
     def insert_materiel_policy_check(self, input_line):
         if "potential_country = {" in input_line:
             self.seen_potential_country_block = True
@@ -855,13 +865,18 @@ class pmca_generate_defs:
             output *= 10
         return str(output)
 
-    # Should the script read this line?
+    def convert_to_scripted_trigger(self, input_string):
+        for pattern, replacement in self.replacement_patterns.items():
+            input_string = input_string.replace(pattern, replacement)
+        return input_string
+
+    # If the line has PMCA_GEN: IGNORE || starts with a #, return false
     def should_read_line(self, input_line):
-        if input_line.strip() and input_line.strip()[0] == "#":
-            return False
-        if "PMCA_GEN: IGNORE" in input_line:
-            return False
-        return True
+        return (
+            "PMCA_GEN: IGNORE" not in input_line
+            and input_line.strip()
+            and input_line.strip()[0] != "#"
+        )
 
     def insert_pmca_army_defs(self):
         insert_notification = True
@@ -873,6 +888,10 @@ class pmca_generate_defs:
                 self.update_brace_count(line, False)
                 if self.should_read_line(string_to_output):
                     string_to_output = self.fetch_army_def_and_prepend(line)
+
+                    string_to_output = self.convert_to_scripted_trigger(
+                        string_to_output
+                    )
 
                     if "resources = {" in line:
                         self.in_resource_table = True
@@ -901,7 +920,9 @@ class pmca_generate_defs:
                         file_output.write(self.pmca_scripted_trigger_block + "\n")
                     elif match_value == -1:
                         string_to_output = ""
-                        nested_string = re.search(r"\{ (.*?) \}\n", line).group(0)[2:-2]
+                        nested_string = self.convert_to_scripted_trigger(
+                            re.search(r"\{ (.*?) \}\n", line).group(0).strip()[2:-2]
+                        )
                         file_output.write(
                             "    potential_country = { # PMCA_GEN: Modified trigger block, probably was a nested 1-line statement\n"
                         )
@@ -942,6 +963,7 @@ class pmca_generate_defs:
                         "# PMCA_GEN: Army definitions patched using python, please check for errors\n"
                     )
                     insert_notification = False
+
                 file_output.write(string_to_output)
 
     # Does input_line have a int/float?
@@ -1020,15 +1042,14 @@ class pmca_generate_defs:
 
     def generate_placeholder_loc_keys(self):
         with open(self.output_file_placeholder_loc_keys_name, "w") as file_output:
-            if len(self.army_def_list) > 0:
-                for key in self.army_def_list:
-                    file_output.write("pmca_ten_" + key + ': "REPLACE_ME"\n')
-                    file_output.write("pmca_ten_" + key + '_plural: "REPLACE_ME"\n')
-                    file_output.write("pmca_ten_" + key + '_desc: "REPLACE_ME"\n')
-                for key in self.army_def_list:
-                    file_output.write("pmca_hundred_" + key + ': "REPLACE_ME"\n')
-                    file_output.write("pmca_hundred_" + key + '_plural: "REPLACE_ME"\n')
-                    file_output.write("pmca_hundred_" + key + '_desc: "REPLACE_ME"\n')
+            for key in self.army_def_list:
+                file_output.write(f'pmca_ten_{key}: "REPLACE_ME"\n')
+                file_output.write(f'pmca_ten_{key}_plural: "REPLACE_ME"\n')
+                file_output.write(f'pmca_ten_{key}_desc: "REPLACE_ME"\n')
+            for key in self.army_def_list:
+                file_output.write(f'pmca_hundred_{key}: "REPLACE_ME"\n')
+                file_output.write(f'pmca_hundred_{key}_plural: "REPLACE_ME"\n')
+                file_output.write(f'pmca_hundred_{key}_desc: "REPLACE_ME"\n')
 
     pmcaTen = "$pmca_ten$ "
     pmcaHundred = "$pmca_hundred$ "
@@ -1042,61 +1063,27 @@ class pmca_generate_defs:
         ) as file_output:
             count = 0
             for line in file_input:
-                output_line = line
                 count += 1
+                loc_keys = re.findall(r"(?:pmca_ten_|pmca_hundred_)([^:]*)", line)
                 if count % 3 == 1:  # Army Name Singular
-                    if "pmca_ten_" in output_line:
-                        file_output.write(
-                            re.sub(
-                                '"REPLACE_ME"',
-                                self.combineStrings(
-                                    self.pmcaTen,
-                                    re.findall(r"(?:pmca_ten_)([^:]*)", output_line),
-                                ),
-                                output_line,
-                            )
+                    if loc_keys:
+                        output_line = re.sub(
+                            r'"REPLACE_ME"',
+                            self.combineStrings(self.pmcaTen, loc_keys),
+                            line,
                         )
                     else:
-                        file_output.write(
-                            re.sub(
-                                '"REPLACE_ME"',
-                                self.combineStrings(
-                                    self.pmcaHundred,
-                                    re.findall(
-                                        r"(?:pmca_hundred_)([^:]*)", output_line
-                                    ),
-                                ),
-                                output_line,
-                            )
-                        )
-
+                        output_line = line
                 elif count % 3 == 2:  # Army Name Plural
-                    file_output.write(
-                        re.sub(
-                            '"REPLACE_ME"',
-                            self.combineStrings(
-                                "",
-                                re.findall(
-                                    r"(?:pmca_ten_|pmca_hundred_)([^:]*)", output_line
-                                ),
-                            ),
-                            output_line,
-                        )
+                    output_line = re.sub(
+                        r'"REPLACE_ME"', self.combineStrings("", loc_keys), line
                     )
-
                 else:  # Army Description
-                    file_output.write(
-                        re.sub(
-                            '"REPLACE_ME"',
-                            self.combineStrings(
-                                "",
-                                re.findall(
-                                    r"(?:pmca_ten_|pmca_hundred_)([^:]*)", output_line
-                                ),
-                            ),
-                            output_line,
-                        )
+                    output_line = re.sub(
+                        r'"REPLACE_ME"', self.combineStrings("", loc_keys), line
                     )
+                file_output.write(output_line)
+
 
 start = time.time()
 if os.path.isfile("./input.txt"):
@@ -1135,4 +1122,4 @@ else:
         "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
     )
 end = time.time()
-print("Time to complete: " + str((end - start)*1000) + " milliseconds (ms)")
+print("Time to complete: " + str((end - start) * 1000) + " milliseconds (ms)")
