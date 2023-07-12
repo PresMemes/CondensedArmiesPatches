@@ -5,13 +5,11 @@ import time
 
 class pmca_generate_defs:
     input_file_name = "input.txt"
-    output_file_post_insert_name = "PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
-    output_file_x10_name = "PMCA_GEN_OUTPUT/01_pmca_ten_defs.txt"
-    output_file_x100_name = "PMCA_GEN_OUTPUT/02_pmca_hundred_defs.txt"
-    output_file_placeholder_loc_keys_name = (
-        "PMCA_GEN_OUTPUT/03_pmca_loc_keys_placeholders.txt"
-    )
-    output_file_loc_keys_name = "PMCA_GEN_OUTPUT/04_pmca_loc_keys_complete.txt"
+    post_insert_path = "PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
+    x10_path = "PMCA_GEN_OUTPUT/01_pmca_ten_defs.txt"
+    x100_path = "PMCA_GEN_OUTPUT/02_pmca_hundred_defs.txt"
+    placeholder_loc_path = "PMCA_GEN_OUTPUT/03_pmca_loc_keys_placeholders.txt"
+    loc_keys_path = "PMCA_GEN_OUTPUT/04_pmca_loc_keys_complete.txt"
 
     in_resource_table = False
     in_cost_table = False
@@ -881,7 +879,7 @@ class pmca_generate_defs:
     def insert_pmca_army_defs(self):
         insert_notification = True
         with open(self.input_file_name, "r") as file_input, open(
-            self.output_file_post_insert_name, "w"
+            self.post_insert_path, "w"
         ) as file_output:
             for line in file_input:
                 string_to_output = line
@@ -1011,8 +1009,8 @@ class pmca_generate_defs:
             )
 
     def multiply_values_by_ten(self):
-        with open(self.output_file_post_insert_name, "r") as file_input, open(
-            self.output_file_x10_name, "w"
+        with open(self.post_insert_path, "r") as file_input, open(
+            self.x10_path, "w"
         ) as file_output:
             for line in file_input:
                 self.update_brace_count(line, False)
@@ -1025,8 +1023,8 @@ class pmca_generate_defs:
                 file_output.write(line)
 
     def multiply_values_by_hundred(self):
-        with open(self.output_file_x10_name, "r") as file_input, open(
-            self.output_file_x100_name, "w"
+        with open(self.x10_path, "r") as file_input, open(
+            self.x100_path, "w"
         ) as file_output:
             for line in file_input:
                 self.update_brace_count(line, False)
@@ -1041,7 +1039,7 @@ class pmca_generate_defs:
                 file_output.write(line)
 
     def generate_placeholder_loc_keys(self):
-        with open(self.output_file_placeholder_loc_keys_name, "w") as file_output:
+        with open(self.placeholder_loc_path, "w") as file_output:
             for key in self.army_def_list:
                 file_output.write(f'pmca_ten_{key}: "REPLACE_ME"\n')
                 file_output.write(f'pmca_ten_{key}_plural: "REPLACE_ME"\n')
@@ -1058,8 +1056,8 @@ class pmca_generate_defs:
         return str('"' + prefix + "$" + input_list[0] + "$" + '"')
 
     def complete_loc_keys(self):
-        with open(self.output_file_placeholder_loc_keys_name, "r") as file_input, open(
-            self.output_file_loc_keys_name, "w"
+        with open(self.placeholder_loc_path, "r") as file_input, open(
+            self.loc_keys_path, "w"
         ) as file_output:
             count = 0
             for line in file_input:
@@ -1089,18 +1087,18 @@ start = time.time()
 if os.path.isfile("./input.txt"):
     directory = "PMCA_GEN_OUTPUT"
     path = os.path.join(os.getcwd(), directory)
-    print("Trying to create Directory '%s'..." % directory)
+    print(f"Trying to create Directory '{directory}'...")
     try:
         os.mkdir(path)
-        print("Directory '%s' does NOT exist, creating..." % directory)
+        print(f"Directory '{directory}' does NOT exist, creating...")
     except OSError as error:
-        print("Directory '%s' exists, continuing..." % directory)
+        print(f"Directory '{directory}' exists, continuing...")
 
     pmca_automater = pmca_generate_defs()
 
     print("Inserting required army properties...")
     pmca_automater.insert_pmca_army_defs()
-    print("Number of Army Definitions: " + str(len(pmca_generate_defs.army_def_list)))
+    print(f"Number of Army Definitions: {len(pmca_generate_defs.army_def_list)}")
 
     print("Multiplying values to x10...")
     pmca_automater.multiply_values_by_ten()
@@ -1114,12 +1112,13 @@ if os.path.isfile("./input.txt"):
     print("Replacing placeholder lines with preferred text and format...")
     pmca_automater.complete_loc_keys()
 
-    print(
-        "Done! Check the Directory '%s' for your freshly Condensed Armies!" % directory
-    )
+    print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
 else:
     print(
         "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
     )
 end = time.time()
-print("Time to complete: " + str((end - start) * 1000) + " milliseconds (ms)")
+print(f"\nTime to complete: {(end - start) * 1000} milliseconds (ms)")
+print(
+    f"Estimated Time per Army Definition: {((end - start) * 1000) / len(pmca_generate_defs.army_def_list)} milliseconds (ms)"
+)
