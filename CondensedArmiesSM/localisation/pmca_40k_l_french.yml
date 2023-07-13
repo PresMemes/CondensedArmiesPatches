@@ -1,0 +1,32 @@
+﻿l_french:
+
+ ############################
+ ### SPACE_MARINE_COMPANY ###
+ ############################
+ pmca_ten_space_marine_company: "$pmca_ten$ $space_marine_company$"
+ pmca_ten_space_marine_company_plural: "$space_marine_company_plural$"
+ pmca_ten_space_marine_company_desc: "$space_marine_company_desc$"
+ pmca_hundred_space_marine_company: "$pmca_hundred$ $space_marine_company$"
+ pmca_hundred_space_marine_company_plural: "$space_marine_company_plural$"
+ pmca_hundred_space_marine_company_desc: "$space_marine_company_desc$"
+
+ ################################
+ ### SPACE_MARINE_BROTHERHOOD ###
+ ################################
+ pmca_ten_space_marine_brotherhood: "$pmca_ten$ $space_marine_brotherhood$"
+ pmca_ten_space_marine_brotherhood_plural: "$space_marine_brotherhood_plural$"
+ pmca_ten_space_marine_brotherhood_desc: "$space_marine_brotherhood_desc$"
+ pmca_hundred_space_marine_brotherhood: "$pmca_hundred$ $space_marine_brotherhood$"
+ pmca_hundred_space_marine_brotherhood_plural: "$space_marine_brotherhood_plural$"
+ pmca_hundred_space_marine_brotherhood_desc: "$space_marine_brotherhood_desc$"
+
+ #########################
+ ### TITAN_LEGION_ARMY ###
+ #########################
+ pmca_ten_titan_legion_army: "$pmca_ten$ $titan_legion_army$"
+ pmca_ten_titan_legion_army_plural: "$titan_legion_army_plural$"
+ pmca_ten_titan_legion_army_desc: "$titan_legion_army_desc$"
+ pmca_hundred_titan_legion_army: "$pmca_hundred$ $titan_legion_army$"
+ pmca_hundred_titan_legion_army_plural: "$titan_legion_army_plural$"
+ pmca_hundred_titan_legion_army_desc: "$titan_legion_army_desc$"
+

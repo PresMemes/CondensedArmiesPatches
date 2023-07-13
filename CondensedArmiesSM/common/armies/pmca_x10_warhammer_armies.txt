@@ -1,11 +1,11 @@
-# Gene Warrior Armies
-pmca_ten_space_marine_company = {
-	damage = 45
-	health = 40
-	morale = 40
+# PMCA_GEN: Army definitions patched using python, please check for errors
+pmca_ten_space_marine_company = { # PMCA_GEN: Inserted prefix
+	damage = 45.0
+	health = 40.0
+	morale = 40.0
 	morale_damage = 1.5
-	collateral_damage = 10
-	war_exhaustion = 30
+	collateral_damage = 10.0
+	war_exhaustion = 30.0
 	has_morale = yes
 	has_species = yes
 	time = 250
@@ -16,20 +16,12 @@ pmca_ten_space_marine_company = {
 	resources = {
 		category = armies
 		cost = {
-			minerals = 10000
+			minerals = 10000.0
 		}
 
 		upkeep = {
-			energy = 60
+			energy = 60.0
 			alloys = 2.5
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 10000
 		}
 	}
 
@@ -38,16 +30,24 @@ pmca_ten_space_marine_company = {
 			has_active_building = building_space_marine_chapter_fortress
 		}
 	}
-	use_armynames_from = space_marine_company
+
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 10000.0
+		}
+	}
+	use_armynames_from = space_marine_company # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_space_marine_brotherhood = {
-	damage = 40
-	health = 35
-	morale = 45
+pmca_ten_space_marine_brotherhood = { # PMCA_GEN: Inserted prefix
+	damage = 40.0
+	health = 35.0
+	morale = 45.0
 	morale_damage = 2.5
-	collateral_damage = 10
-	war_exhaustion = 30
+	collateral_damage = 10.0
+	war_exhaustion = 30.0
 	has_morale = yes
 	has_species = yes
 	time = 250
@@ -58,21 +58,13 @@ pmca_ten_space_marine_brotherhood = {
 	resources = {
 		category = armies
 		cost = {
-			minerals = 10000
-			sr_zro  = 250
+			minerals = 10000.0
+			sr_zro  = 250.0
 		}
 
 		upkeep = {
-			energy = 60
+			energy = 60.0
 			alloys = 2.5
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = sr_zro
-			PMCA_VALUE = 250
 		}
 	}
 
@@ -81,90 +73,25 @@ pmca_ten_space_marine_brotherhood = {
 			has_active_building = building_space_marine_chapter_fortress
 		}
 	}
-	use_armynames_from = space_marine_brotherhood
-}
 
-pmca_ten_death_watch_company = {
-	damage = 60
-	health = 45
-	#morale = 2.5
-	morale_damage = 2.0
-	collateral_damage = 10
-	war_exhaustion = 30
-	has_morale = no
-	has_species = yes
-	time = 250
-	icon = GFX_army_type_death_watch_company
 
-	prerequisites = { "tech_living_state" }
-
-	resources = {
-		category = armies
-		cost = {
-			minerals = 15000
-			alloys = 2000
-			influence = 150
-		}
-
-		upkeep = {
-			energy = 100
-			alloys = 2.5
-		}
-	}
-
-	potential_country = {
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
-			PMCA_RESOURCE = influence
-			PMCA_VALUE = 150
+			PMCA_RESOURCE = sr_zro
+			PMCA_VALUE = 250.0
 		}
 	}
-
-	potential = {
-		planet = {
-			has_active_building = building_death_watch_fortress
-		}
-	}
-
-	allow = {
-		# custom_tooltip = {
-			# text = death_watch_company_limit_tooltip
-			# owner = {
-				# check_variable = {
-					# which = "death_watch_company_count"
-					# value < 6
-				# }
-			# }
-		# }
-	}
-
-	on_queued = {
-		owner = {
-			change_variable = {
-				which = "death_watch_company_count"
-				value = 1
-			}
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = {
-				which = "death_watch_company_count"
-				value = -1
-			}
-		}
-	}
-	use_armynames_from = death_watch_company
+	use_armynames_from = space_marine_brotherhood # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_titan_legion_army = {
-	damage = 70
-	health = 70
-	morale = 20
+pmca_ten_titan_legion_army = { # PMCA_GEN: Inserted prefix
+	damage = 75.0
+	health = 70.0
+	morale = 20.0
 	morale_damage = 2.5
-	collateral_damage = 30
-	war_exhaustion = 30
+	collateral_damage = 30.0
+	war_exhaustion = 30.0
 	has_morale = no
 	time = 300
 	icon = GFX_army_type_titan_legion
@@ -175,22 +102,14 @@ pmca_ten_titan_legion_army = {
 	resources = {
 		category = armies
 		cost = {
-			minerals = 12000
-			energy = 10000
-			alloys = 500
+			minerals = 12000.0
+			energy = 10000.0
+			alloys = 2500.0
 		}
 
 		upkeep = {
-			energy = 100
-			alloys = 5
-		}
-	}
-
-	potential_country = {
-		pmca_materiel_policy_check = {
-			PMCA_MULT = ten
-			PMCA_RESOURCE = energy
-			PMCA_VALUE = 10000
+			energy = 100.0
+			alloys = 5.0
 		}
 	}
 
@@ -199,5 +118,14 @@ pmca_ten_titan_legion_army = {
 			has_active_building = building_titan_foundry
 		}
 	}
-	use_armynames_from = titan_legion_army
+
+
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 2500.0
+		}
+	}
+	use_armynames_from = titan_legion_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }

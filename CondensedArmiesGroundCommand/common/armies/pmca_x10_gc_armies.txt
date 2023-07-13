@@ -1,5 +1,6 @@
-# Assault Army
-pmca_ten_infantry_army = {
+# PMCA_GEN: Army definitions patched using python, please check for errors
+# Assault Armies
+pmca_ten_infantry_army = { # PMCA_GEN: Inserted prefix
 	damage = 10.0
 	health = 10.0
 	morale = 10.0
@@ -35,6 +36,9 @@ pmca_ten_infantry_army = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -85,7 +89,8 @@ pmca_ten_infantry_army = {
 	}
 	use_armynames_from = infantry_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_armor_division = {
+
+pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
 	damage = 22.5
 	health = 20.0
 	morale = 10.0
@@ -122,6 +127,9 @@ pmca_ten_armor_division = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		NOT = { has_technology = "tech_housing_2" }
 		OR = {
@@ -180,7 +188,8 @@ pmca_ten_armor_division = {
 	}
 	use_armynames_from = armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_gravity_armor_division = {
+
+pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
 	damage = 29.0
 	health = 25.0
 	morale = 10.0
@@ -217,6 +226,9 @@ pmca_ten_gravity_armor_division = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -274,7 +286,8 @@ pmca_ten_gravity_armor_division = {
 	}
 	use_armynames_from = gravity_armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_mechanized_division = {
+
+pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 15.0
 	morale = 10.0
@@ -310,6 +323,9 @@ pmca_ten_mechanized_division = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -367,7 +383,8 @@ pmca_ten_mechanized_division = {
 	}
 	use_armynames_from = mechanized_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_airborne_division = {
+
+pmca_ten_airborne_division = { # PMCA_GEN: Inserted prefix
 	damage = 12.5
 	health = 10.0
 	morale = 10.0
@@ -403,6 +420,9 @@ pmca_ten_airborne_division = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -453,7 +473,8 @@ pmca_ten_airborne_division = {
 	}
 	use_armynames_from = airborne_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_marine_division = {
+
+pmca_ten_marine_division = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 10.0
 	morale = 10.0
@@ -489,6 +510,9 @@ pmca_ten_marine_division = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		NOT = { has_civic = civic_distinguished_admiralty }
 		OR = {
@@ -540,7 +564,8 @@ pmca_ten_marine_division = {
 	}
 	use_armynames_from = marine_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_fighter_wing = {
+
+pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
 	damage = 22.5
 	health = 7.5
 	morale = 10.0
@@ -577,6 +602,9 @@ pmca_ten_fighter_wing = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -634,7 +662,8 @@ pmca_ten_fighter_wing = {
 	}
 	use_armynames_from = fighter_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_close_air_support_wing = {
+
+pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 7.5
 	morale = 10.0
@@ -671,6 +700,9 @@ pmca_ten_close_air_support_wing = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -728,7 +760,8 @@ pmca_ten_close_air_support_wing = {
 	}
 	use_armynames_from = close_air_support_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_strategic_bomber_wing = {
+
+pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
 	damage = 20.0
 	health = 5.0
 	morale = 10.0
@@ -765,6 +798,9 @@ pmca_ten_strategic_bomber_wing = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			is_machine_empire = no
@@ -822,7 +858,8 @@ pmca_ten_strategic_bomber_wing = {
 	}
 	use_armynames_from = strategic_bomber_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_titan_army = {
+
+pmca_ten_titan_army = { # PMCA_GEN: Inserted prefix
 	damage = 100.0
 	health = 80.0
 	has_morale = no
@@ -917,7 +954,8 @@ pmca_ten_titan_army = {
 	}
 	use_armynames_from = titan_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_chivalric_army = {
+
+pmca_ten_chivalric_army = { # PMCA_GEN: Inserted prefix
 	damage = 17.5
 	health = 15.0
 	morale = 25.0
@@ -1006,7 +1044,7 @@ pmca_ten_chivalric_army = {
 	use_armynames_from = chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_mecha_chivalric_army = {
+pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
 	damage = 20.0
 	health = 20.0
 	morale = 17.5
@@ -1103,7 +1141,7 @@ pmca_ten_mecha_chivalric_army = {
 	use_armynames_from = mecha_chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_republican_guard = {
+pmca_ten_republican_guard = { # PMCA_GEN: Inserted prefix
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -1139,6 +1177,9 @@ pmca_ten_republican_guard = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			has_ethic = ethic_egalitarian
@@ -1196,7 +1237,7 @@ pmca_ten_republican_guard = {
 	use_armynames_from = republican_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_naval_infantry = {
+pmca_ten_naval_infantry = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 10.0
 	morale = 17.5
@@ -1283,7 +1324,8 @@ pmca_ten_naval_infantry = {
 	}
 	use_armynames_from = naval_infantry # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_esoteric_army = {
+
+pmca_ten_esoteric_army = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 25.0
 	morale = 20.0
@@ -1368,7 +1410,8 @@ pmca_ten_esoteric_army = {
 	}
 	use_armynames_from = esoteric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_void_warband = {
+
+pmca_ten_void_warband = { # PMCA_GEN: Inserted prefix
 	damage = 17.5
 	health = 10.0
 	morale = 30.0
@@ -1456,7 +1499,7 @@ pmca_ten_void_warband = {
 	use_armynames_from = void_warband # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_ideological_army = {
+pmca_ten_ideological_army = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 10.0
 	morale = 30.0
@@ -1543,7 +1586,8 @@ pmca_ten_ideological_army = {
 	}
 	use_armynames_from = ideological_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_imperial_guard = {
+
+pmca_ten_imperial_guard = { # PMCA_GEN: Inserted prefix
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -1579,6 +1623,9 @@ pmca_ten_imperial_guard = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		OR = {
 			has_ethic = ethic_authoritarian
@@ -1636,7 +1683,7 @@ pmca_ten_imperial_guard = {
 	use_armynames_from = imperial_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_conscript_army = {
+pmca_ten_conscript_army = { # PMCA_GEN: Inserted prefix
 	damage = 10.0
 	health = 10.0
 	morale = 7.5
@@ -1669,9 +1716,14 @@ pmca_ten_conscript_army = {
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
 		}
 		has_civic = civic_shared_burden
 		is_machine_empire = no
+		any_owned_pop = {
+		}
 	}
 	potential = {
 		from = {
@@ -1708,7 +1760,8 @@ pmca_ten_conscript_army = {
 	}
 	use_armynames_from = conscript_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_sacraficial_army = {
+
+pmca_ten_sacraficial_army = { # PMCA_GEN: Inserted prefix
 	damage = 70.0
 	health = 7.5
 	morale = 7.5
@@ -1742,7 +1795,10 @@ pmca_ten_sacraficial_army = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
-		has_civic = civic_death_cult
+		OR = {
+			has_civic = civic_death_cult_corporate
+			has_civic = civic_death_cult
+		}
 		is_machine_empire = no
 		any_owned_pop = {
 		}
@@ -1788,7 +1844,8 @@ pmca_ten_sacraficial_army = {
 	}
 	use_armynames_from = sacraficial_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
-pmca_ten_sacraficial_nerve_army = {
+
+pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
 	damage = 70.0
 	health = 7.5
 	has_morale = no
@@ -1822,7 +1879,10 @@ pmca_ten_sacraficial_nerve_army = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
-		has_civic = civic_death_cult
+		OR = {
+			has_civic = civic_death_cult_corporate
+			has_civic = civic_death_cult
+		}
 		is_machine_empire = no
 		any_owned_pop = {
 		}
@@ -1869,7 +1929,7 @@ pmca_ten_sacraficial_nerve_army = {
 	use_armynames_from = sacraficial_nerve_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_archaeo_army = {
+pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 15.0
 	morale = 25.0
@@ -1963,7 +2023,7 @@ pmca_ten_archaeo_army = {
 	use_armynames_from = archaeo_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_archaeo_army_better = {
+pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
 	damage = 35.0
 	health = 22.5
 	morale = 30.0
@@ -2055,7 +2115,7 @@ pmca_ten_archaeo_army_better = {
 	use_armynames_from = archaeo_army_better # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_milita_army = {
+pmca_ten_milita_army = { # PMCA_GEN: Inserted prefix
 	damage = 10.0
 	health = 10.0
 	morale = 10.0
@@ -2148,7 +2208,7 @@ pmca_ten_milita_army = {
 	use_armynames_from = milita_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_men_army = {
+pmca_ten_men_army = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 15.0
 	morale = 15.0
@@ -2238,7 +2298,7 @@ pmca_ten_men_army = {
 	use_armynames_from = men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_army = {
+pmca_ten_knight_army = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 25.0
 	morale = 30.0
@@ -2329,7 +2389,7 @@ pmca_ten_knight_army = {
 	use_armynames_from = knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_air_army = {
+pmca_ten_knight_air_army = { # PMCA_GEN: Inserted prefix
 	damage = 32.5
 	health = 25.0
 	morale = 30.0
@@ -2420,7 +2480,7 @@ pmca_ten_knight_air_army = {
 	use_armynames_from = knight_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_treb_army = {
+pmca_ten_treb_army = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 10.0
 	morale = 10.0
@@ -2515,7 +2575,7 @@ pmca_ten_treb_army = {
 	use_armynames_from = treb_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_grail_army = {
+pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
 	damage = 5.0
 	health = 10.0
 	morale = 100.0
@@ -2603,7 +2663,7 @@ pmca_ten_grail_army = {
 	use_armynames_from = grail_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_house_army = {
+pmca_ten_house_army = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 15.0
 	morale = 15.0
@@ -2694,7 +2754,7 @@ pmca_ten_house_army = {
 	use_armynames_from = house_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_guard = {
+pmca_ten_royal_guard = { # PMCA_GEN: Inserted prefix
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -2787,7 +2847,7 @@ pmca_ten_royal_guard = {
 	use_armynames_from = royal_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_men_army = {
+pmca_ten_royal_men_army = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 15.0
 	morale = 20.0
@@ -2878,7 +2938,7 @@ pmca_ten_royal_men_army = {
 	use_armynames_from = royal_men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_knight_army = {
+pmca_ten_royal_knight_army = { # PMCA_GEN: Inserted prefix
 	damage = 30.0
 	health = 25.0
 	morale = 30.0
@@ -2970,7 +3030,7 @@ pmca_ten_royal_knight_army = {
 	use_armynames_from = royal_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_psi_knight_army = {
+pmca_ten_psi_knight_army = { # PMCA_GEN: Inserted prefix
 	damage = 80.0
 	health = 30.0
 	morale = 30.0
@@ -3058,7 +3118,7 @@ pmca_ten_psi_knight_army = {
 	use_armynames_from = psi_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_air_army = {
+pmca_ten_royal_air_army = { # PMCA_GEN: Inserted prefix
 	damage = 32.5
 	health = 25.0
 	morale = 30.0
@@ -3155,7 +3215,7 @@ pmca_ten_royal_air_army = {
 	use_armynames_from = royal_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_walker_army = {
+pmca_ten_knight_walker_army = { # PMCA_GEN: Inserted prefix
 	damage = 100.0
 	health = 80.0
 	has_morale = no
@@ -3251,7 +3311,7 @@ pmca_ten_knight_walker_army = {
 	use_armynames_from = knight_walker_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_pilgram_army = {
+pmca_ten_pilgram_army = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 12.5
 	has_morale = no
@@ -3294,6 +3354,9 @@ pmca_ten_pilgram_army = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
+		}
+		NOR = {
+			authority = auth_corporate
 		}
 	}
 	potential = {
@@ -3341,7 +3404,664 @@ pmca_ten_pilgram_army = {
 	use_armynames_from = pilgram_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_battle_bot = {
+pmca_ten_security_army = { # PMCA_GEN: Inserted prefix
+	damage = 10.0
+	health = 10.0
+	morale = 10.0
+	morale_damage = 1.00
+	collateral_damage = 20.0
+	war_exhaustion = 8.0
+	time = 60
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 3000.0
+		}
+
+		upkeep = {
+			energy = 40.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 3000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = security_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_private_army = { # PMCA_GEN: Inserted prefix
+	damage = 22.5
+	health = 20.0
+	morale = 10.0
+	morale_damage = 2.00
+	collateral_damage = 15.0
+	war_exhaustion = 10.0
+	time = 100
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 6000.0
+		}
+
+		upkeep = {
+			energy = 60.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 6000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		NOT = { has_technology = "tech_housing_2" }
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = private_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_gravity_private_army = { # PMCA_GEN: Inserted prefix
+	damage = 31.0
+	health = 25.0
+	morale = 12.5
+	morale_damage = 2.50
+	collateral_damage = 15.0
+	war_exhaustion = 15.0
+	time = 150
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" "tech_housing_2" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 12000.0
+		}
+
+		upkeep = {
+			energy = 90.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 12000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = gravity_private_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_aero_wing = { # PMCA_GEN: Inserted prefix
+	damage = 30.0
+	health = 7.5
+	morale = 15.0
+	morale_damage = 2.50
+	collateral_damage = 20.0
+	war_exhaustion = 11.0
+	time = 90
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 10000.0
+		}
+
+		upkeep = {
+			energy = 80.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 10000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = aero_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_permanent_army = { # PMCA_GEN: Inserted prefix
+	damage = 15.0
+	health = 10.0
+	has_morale = no
+	morale_damage = 2.50
+	collateral_damage = 25.0
+	war_exhaustion = 2.5
+	time = 60
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 3000.0
+		}
+
+		upkeep = {
+			energy = 40.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 3000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		has_civic = civic_permanent_employment
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			has_trait = "trait_zombie"
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = permanent_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
+	damage = 27.5
+	health = 20.0
+	morale = 15.0
+	morale_damage = 2.50
+	collateral_damage = 30.0
+	war_exhaustion = 5.0
+	time = 100
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 6000.0
+		}
+
+		upkeep = {
+			energy = 100.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 6000.0
+		}
+
+		has_civic = civic_crusader_spirit_corporate
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		NOT = { has_technology = "tech_housing_2" }
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = renegade_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_executive_army = { # PMCA_GEN: Inserted prefix
+	damage = 25.0
+	health = 20.0
+	morale = 40.0
+	morale_damage = 2.00
+	collateral_damage = 15.0
+	war_exhaustion = 60.0
+	time = 200
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 10000.0
+		}
+
+		upkeep = {
+			energy = 120.0
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 10000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		NOT = { has_technology = "tech_housing_2" }
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = { is_capital = yes }
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+	use_armynames_from = executive_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
+}
+
+pmca_ten_battle_bot = { # PMCA_GEN: Inserted prefix
 	damage = 20.0
 	health = 7.5
 	morale_damage = 1.75
@@ -3406,7 +4126,7 @@ pmca_ten_battle_bot = {
 	use_armynames_from = battle_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_war_bot = {
+pmca_ten_war_bot = { # PMCA_GEN: Inserted prefix
 	damage = 15.0
 	health = 20.0
 	morale_damage = 1.25
@@ -3471,7 +4191,7 @@ pmca_ten_war_bot = {
 	use_armynames_from = war_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_synth_commandos = {
+pmca_ten_synth_commandos = { # PMCA_GEN: Inserted prefix
 	damage = 21.5
 	health = 25.0
 	morale_damage = 3.00

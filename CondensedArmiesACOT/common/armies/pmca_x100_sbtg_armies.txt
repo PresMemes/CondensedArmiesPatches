@@ -1,137 +1,133 @@
-pmca_hundred_origin_assault_guardian = {
-	damage = 5000
-	health = 5000
+pmca_hundred_origin_assault_guardian = { # PMCA_GEN: Inserted prefix
+	damage = 5000.0
+	health = 5000.0
 	has_morale = no
 	morale_damage = 4.5
-	collateral_damage = 300
-	war_exhaustion = 0.00
+	collateral_damage = 300.0
+	war_exhaustion = 0.0
 	time = 5
 	icon = GFX_army_type_psionic
-	
+
 	resources = {
 		category = armies
 		cost = {
 		}
 	}
 
-	potential_country = {
-		has_global_flag = sofe_activated
-		pmca_materiel_policy_check = {
-			PMCA_MULT = hundred
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 0
-		}
-	}
-	
 	prerequisites = { "tech_celestial_guardian" }
 	potential = {
 		from = {
-				has_trait = "trait_bionic_implants"
-				has_trait = "trait_ancient_race"
-				has_trait = "trait_ancient_knowledge"
-				has_trait = "trait_master_mind"
+			has_trait = "trait_bionic_implants"
+			has_trait = "trait_ancient_race"
+			has_trait = "trait_ancient_knowledge"
+			has_trait = "trait_master_mind"
 		}
 	}
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = food
+			PMCA_VALUE = 0.0
+		}
+	}
+	use_armynames_from = origin_assault_guardian # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_hundred_origin_autarch_guardian = {
-	damage = 25000
-	health = 15000
+pmca_hundred_origin_autarch_guardian = { # PMCA_GEN: Inserted prefix
+	damage = 25000.0
+	health = 15000.0
 	has_morale = no
 	morale_damage = 20.0
-	collateral_damage = 10000
-	war_exhaustion = 0.00
+	collateral_damage = 10000.0
+	war_exhaustion = 0.0
 	time = 10
 	icon = GFX_army_type_psionic
-	
+
 	resources = {
 		category = armies
 		cost = {
 		}
 	}
 
-	potential_country = {
-		has_global_flag = sofe_activated
-		pmca_materiel_policy_check = {
-			PMCA_MULT = hundred
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 0
-		}
-	}
-	
 	prerequisites = { "tech_celestial_guardian" }
 	potential = {
 		from = {
-				has_trait = "trait_bionic_implants"
-				has_trait = "trait_ancient_race"
-				has_trait = "trait_ancient_knowledge"
-				has_trait = "trait_master_mind"
+			has_trait = "trait_bionic_implants"
+			has_trait = "trait_ancient_race"
+			has_trait = "trait_ancient_knowledge"
+			has_trait = "trait_master_mind"
 		}
 	}
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = food
+			PMCA_VALUE = 0.0
+		}
+	}
+	use_armynames_from = origin_autarch_guardian # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_hundred_sofe_psionic_dark_archon = {
-	damage = 4000
-	health = 1000
+pmca_hundred_sofe_psionic_dark_archon = { # PMCA_GEN: Inserted prefix
+	damage = 4000.0
+	health = 1000.0
 	has_morale = no
 	has_species = no
 	morale_damage = 20.0
-	collateral_damage = 150
-	war_exhaustion = 0
+	collateral_damage = 150.0
+	war_exhaustion = 0.0
 	time = 800
 	icon = GFX_army_type_psionic
-	
+
 	resources = {
 		category = armies
 		cost = {
-			influence = 25000
-			unity = 2500000
+			influence = 25000.0
+			unity = 2500000.0
 		}
 		upkeep = {
-			unity = 25000	
+			unity = 25000.0
 		}
 	}
 
-	potential_country = {
-		has_global_flag = sofe_activated
+	prerequisites = { "tech_psionic_archon" }
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
 		pmca_materiel_policy_check = {
 			PMCA_MULT = hundred
-			PMCA_RESOURCE = unity
-			PMCA_VALUE = 2500000
+			PMCA_RESOURCE = influence
+			PMCA_VALUE = 25000.0
 		}
 	}
-	
-	prerequisites = { "tech_psionic_archon" }
+	use_armynames_from = sofe_psionic_dark_archon # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_hundred_sofe_omega_mech = {
-	damage = 3000
-	health = 3000
+pmca_hundred_sofe_omega_mech = { # PMCA_GEN: Inserted prefix
+	damage = 3000.0
+	health = 3000.0
 	has_morale = no
 	has_species = no
 	morale_damage = 10.0
-	collateral_damage = 450
-	war_exhaustion = 0
+	collateral_damage = 450.0
+	war_exhaustion = 0.0
 	time = 500
 	icon = GFX_army_type_psionic
-	
+
 	resources = {
 		category = armies
 		cost = {
-			acot_sr_light_matter = 10000
+			acot_sr_light_matter = 10000.0
 		}
 		upkeep = {
 		}
 	}
 
-	potential_country = {
-		has_global_flag = sofe_activated
+	prerequisites = { "tech_omega_warmech" }
+	potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess
 		pmca_materiel_policy_check = {
 			PMCA_MULT = hundred
 			PMCA_RESOURCE = acot_sr_light_matter
-			PMCA_VALUE = 10000
+			PMCA_VALUE = 10000.0
 		}
 	}
-	
-	prerequisites = { "tech_omega_warmech" }
+	use_armynames_from = sofe_omega_mech # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }

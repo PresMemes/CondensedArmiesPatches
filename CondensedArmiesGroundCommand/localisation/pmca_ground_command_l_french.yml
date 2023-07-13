@@ -1,0 +1,472 @@
+﻿l_french:
+
+ #####################
+ ### INFANTRY_ARMY ###
+ #####################
+ pmca_ten_infantry_army: "$pmca_ten$ $infantry_army$"
+ pmca_ten_infantry_army_plural: "$infantry_army_plural$"
+ pmca_ten_infantry_army_desc: "$infantry_army_desc$"
+ pmca_hundred_infantry_army: "$pmca_hundred$ $infantry_army$"
+ pmca_hundred_infantry_army_plural: "$infantry_army_plural$"
+ pmca_hundred_infantry_army_desc: "$infantry_army_desc$"
+
+ ######################
+ ### ARMOR_DIVISION ###
+ ######################
+ pmca_ten_armor_division: "$pmca_ten$ $armor_division$"
+ pmca_ten_armor_division_plural: "$armor_division_plural$"
+ pmca_ten_armor_division_desc: "$armor_division_desc$"
+ pmca_hundred_armor_division: "$pmca_hundred$ $armor_division$"
+ pmca_hundred_armor_division_plural: "$armor_division_plural$"
+ pmca_hundred_armor_division_desc: "$armor_division_desc$"
+
+ ##############################
+ ### GRAVITY_ARMOR_DIVISION ###
+ ##############################
+ pmca_ten_gravity_armor_division: "$pmca_ten$ $gravity_armor_division$"
+ pmca_ten_gravity_armor_division_plural: "$gravity_armor_division_plural$"
+ pmca_ten_gravity_armor_division_desc: "$gravity_armor_division_desc$"
+ pmca_hundred_gravity_armor_division: "$pmca_hundred$ $gravity_armor_division$"
+ pmca_hundred_gravity_armor_division_plural: "$gravity_armor_division_plural$"
+ pmca_hundred_gravity_armor_division_desc: "$gravity_armor_division_desc$"
+
+ ###########################
+ ### MECHANIZED_DIVISION ###
+ ###########################
+ pmca_ten_mechanized_division: "$pmca_ten$ $mechanized_division$"
+ pmca_ten_mechanized_division_plural: "$mechanized_division_plural$"
+ pmca_ten_mechanized_division_desc: "$mechanized_division_desc$"
+ pmca_hundred_mechanized_division: "$pmca_hundred$ $mechanized_division$"
+ pmca_hundred_mechanized_division_plural: "$mechanized_division_plural$"
+ pmca_hundred_mechanized_division_desc: "$mechanized_division_desc$"
+
+ #########################
+ ### AIRBORNE_DIVISION ###
+ #########################
+ pmca_ten_airborne_division: "$pmca_ten$ $airborne_division$"
+ pmca_ten_airborne_division_plural: "$airborne_division_plural$"
+ pmca_ten_airborne_division_desc: "$airborne_division_desc$"
+ pmca_hundred_airborne_division: "$pmca_hundred$ $airborne_division$"
+ pmca_hundred_airborne_division_plural: "$airborne_division_plural$"
+ pmca_hundred_airborne_division_desc: "$airborne_division_desc$"
+
+ #######################
+ ### MARINE_DIVISION ###
+ #######################
+ pmca_ten_marine_division: "$pmca_ten$ $marine_division$"
+ pmca_ten_marine_division_plural: "$marine_division_plural$"
+ pmca_ten_marine_division_desc: "$marine_division_desc$"
+ pmca_hundred_marine_division: "$pmca_hundred$ $marine_division$"
+ pmca_hundred_marine_division_plural: "$marine_division_plural$"
+ pmca_hundred_marine_division_desc: "$marine_division_desc$"
+
+ ####################
+ ### FIGHTER_WING ###
+ ####################
+ pmca_ten_fighter_wing: "$pmca_ten$ $fighter_wing$"
+ pmca_ten_fighter_wing_plural: "$fighter_wing_plural$"
+ pmca_ten_fighter_wing_desc: "$fighter_wing_desc$"
+ pmca_hundred_fighter_wing: "$pmca_hundred$ $fighter_wing$"
+ pmca_hundred_fighter_wing_plural: "$fighter_wing_plural$"
+ pmca_hundred_fighter_wing_desc: "$fighter_wing_desc$"
+
+ ##############################
+ ### CLOSE_AIR_SUPPORT_WING ###
+ ##############################
+ pmca_ten_close_air_support_wing: "$pmca_ten$ $close_air_support_wing$"
+ pmca_ten_close_air_support_wing_plural: "$close_air_support_wing_plural$"
+ pmca_ten_close_air_support_wing_desc: "$close_air_support_wing_desc$"
+ pmca_hundred_close_air_support_wing: "$pmca_hundred$ $close_air_support_wing$"
+ pmca_hundred_close_air_support_wing_plural: "$close_air_support_wing_plural$"
+ pmca_hundred_close_air_support_wing_desc: "$close_air_support_wing_desc$"
+
+ #############################
+ ### STRATEGIC_BOMBER_WING ###
+ #############################
+ pmca_ten_strategic_bomber_wing: "$pmca_ten$ $strategic_bomber_wing$"
+ pmca_ten_strategic_bomber_wing_plural: "$strategic_bomber_wing_plural$"
+ pmca_ten_strategic_bomber_wing_desc: "$strategic_bomber_wing_desc$"
+ pmca_hundred_strategic_bomber_wing: "$pmca_hundred$ $strategic_bomber_wing$"
+ pmca_hundred_strategic_bomber_wing_plural: "$strategic_bomber_wing_plural$"
+ pmca_hundred_strategic_bomber_wing_desc: "$strategic_bomber_wing_desc$"
+
+ ##################
+ ### TITAN_ARMY ###
+ ##################
+ pmca_ten_titan_army: "$pmca_ten$ $titan_army$"
+ pmca_ten_titan_army_plural: "$titan_army_plural$"
+ pmca_ten_titan_army_desc: "$titan_army_desc$"
+ pmca_hundred_titan_army: "$pmca_hundred$ $titan_army$"
+ pmca_hundred_titan_army_plural: "$titan_army_plural$"
+ pmca_hundred_titan_army_desc: "$titan_army_desc$"
+
+ ######################
+ ### CHIVALRIC_ARMY ###
+ ######################
+ pmca_ten_chivalric_army: "$pmca_ten$ $chivalric_army$"
+ pmca_ten_chivalric_army_plural: "$chivalric_army_plural$"
+ pmca_ten_chivalric_army_desc: "$chivalric_army_desc$"
+ pmca_hundred_chivalric_army: "$pmca_hundred$ $chivalric_army$"
+ pmca_hundred_chivalric_army_plural: "$chivalric_army_plural$"
+ pmca_hundred_chivalric_army_desc: "$chivalric_army_desc$"
+
+ ############################
+ ### MECHA_CHIVALRIC_ARMY ###
+ ############################
+ pmca_ten_mecha_chivalric_army: "$pmca_ten$ $mecha_chivalric_army$"
+ pmca_ten_mecha_chivalric_army_plural: "$mecha_chivalric_army_plural$"
+ pmca_ten_mecha_chivalric_army_desc: "$mecha_chivalric_army_desc$"
+ pmca_hundred_mecha_chivalric_army: "$pmca_hundred$ $mecha_chivalric_army$"
+ pmca_hundred_mecha_chivalric_army_plural: "$mecha_chivalric_army_plural$"
+ pmca_hundred_mecha_chivalric_army_desc: "$mecha_chivalric_army_desc$"
+
+ ########################
+ ### REPUBLICAN_GUARD ###
+ ########################
+ pmca_ten_republican_guard: "$pmca_ten$ $republican_guard$"
+ pmca_ten_republican_guard_plural: "$republican_guard_plural$"
+ pmca_ten_republican_guard_desc: "$republican_guard_desc$"
+ pmca_hundred_republican_guard: "$pmca_hundred$ $republican_guard$"
+ pmca_hundred_republican_guard_plural: "$republican_guard_plural$"
+ pmca_hundred_republican_guard_desc: "$republican_guard_desc$"
+
+ ######################
+ ### NAVAL_INFANTRY ###
+ ######################
+ pmca_ten_naval_infantry: "$pmca_ten$ $naval_infantry$"
+ pmca_ten_naval_infantry_plural: "$naval_infantry_plural$"
+ pmca_ten_naval_infantry_desc: "$naval_infantry_desc$"
+ pmca_hundred_naval_infantry: "$pmca_hundred$ $naval_infantry$"
+ pmca_hundred_naval_infantry_plural: "$naval_infantry_plural$"
+ pmca_hundred_naval_infantry_desc: "$naval_infantry_desc$"
+
+ #####################
+ ### ESOTERIC_ARMY ###
+ #####################
+ pmca_ten_esoteric_army: "$pmca_ten$ $esoteric_army$"
+ pmca_ten_esoteric_army_plural: "$esoteric_army_plural$"
+ pmca_ten_esoteric_army_desc: "$esoteric_army_desc$"
+ pmca_hundred_esoteric_army: "$pmca_hundred$ $esoteric_army$"
+ pmca_hundred_esoteric_army_plural: "$esoteric_army_plural$"
+ pmca_hundred_esoteric_army_desc: "$esoteric_army_desc$"
+
+ ####################
+ ### VOID_WARBAND ###
+ ####################
+ pmca_ten_void_warband: "$pmca_ten$ $void_warband$"
+ pmca_ten_void_warband_plural: "$void_warband_plural$"
+ pmca_ten_void_warband_desc: "$void_warband_desc$"
+ pmca_hundred_void_warband: "$pmca_hundred$ $void_warband$"
+ pmca_hundred_void_warband_plural: "$void_warband_plural$"
+ pmca_hundred_void_warband_desc: "$void_warband_desc$"
+
+ ########################
+ ### IDEOLOGICAL_ARMY ###
+ ########################
+ pmca_ten_ideological_army: "$pmca_ten$ $ideological_army$"
+ pmca_ten_ideological_army_plural: "$ideological_army_plural$"
+ pmca_ten_ideological_army_desc: "$ideological_army_desc$"
+ pmca_hundred_ideological_army: "$pmca_hundred$ $ideological_army$"
+ pmca_hundred_ideological_army_plural: "$ideological_army_plural$"
+ pmca_hundred_ideological_army_desc: "$ideological_army_desc$"
+
+ ######################
+ ### IMPERIAL_GUARD ###
+ ######################
+ pmca_ten_imperial_guard: "$pmca_ten$ $imperial_guard$"
+ pmca_ten_imperial_guard_plural: "$imperial_guard_plural$"
+ pmca_ten_imperial_guard_desc: "$imperial_guard_desc$"
+ pmca_hundred_imperial_guard: "$pmca_hundred$ $imperial_guard$"
+ pmca_hundred_imperial_guard_plural: "$imperial_guard_plural$"
+ pmca_hundred_imperial_guard_desc: "$imperial_guard_desc$"
+
+ ######################
+ ### CONSCRIPT_ARMY ###
+ ######################
+ pmca_ten_conscript_army: "$pmca_ten$ $conscript_army$"
+ pmca_ten_conscript_army_plural: "$conscript_army_plural$"
+ pmca_ten_conscript_army_desc: "$conscript_army_desc$"
+ pmca_hundred_conscript_army: "$pmca_hundred$ $conscript_army$"
+ pmca_hundred_conscript_army_plural: "$conscript_army_plural$"
+ pmca_hundred_conscript_army_desc: "$conscript_army_desc$"
+
+ ########################
+ ### SACRAFICIAL_ARMY ###
+ ########################
+ pmca_ten_sacraficial_army: "$pmca_ten$ $sacraficial_army$"
+ pmca_ten_sacraficial_army_plural: "$sacraficial_army_plural$"
+ pmca_ten_sacraficial_army_desc: "$sacraficial_army_desc$"
+ pmca_hundred_sacraficial_army: "$pmca_hundred$ $sacraficial_army$"
+ pmca_hundred_sacraficial_army_plural: "$sacraficial_army_plural$"
+ pmca_hundred_sacraficial_army_desc: "$sacraficial_army_desc$"
+
+ ##############################
+ ### SACRAFICIAL_NERVE_ARMY ###
+ ##############################
+ pmca_ten_sacraficial_nerve_army: "$pmca_ten$ $sacraficial_nerve_army$"
+ pmca_ten_sacraficial_nerve_army_plural: "$sacraficial_nerve_army_plural$"
+ pmca_ten_sacraficial_nerve_army_desc: "$sacraficial_nerve_army_desc$"
+ pmca_hundred_sacraficial_nerve_army: "$pmca_hundred$ $sacraficial_nerve_army$"
+ pmca_hundred_sacraficial_nerve_army_plural: "$sacraficial_nerve_army_plural$"
+ pmca_hundred_sacraficial_nerve_army_desc: "$sacraficial_nerve_army_desc$"
+
+ ####################
+ ### ARCHAEO_ARMY ###
+ ####################
+ pmca_ten_archaeo_army: "$pmca_ten$ $archaeo_army$"
+ pmca_ten_archaeo_army_plural: "$archaeo_army_plural$"
+ pmca_ten_archaeo_army_desc: "$archaeo_army_desc$"
+ pmca_hundred_archaeo_army: "$pmca_hundred$ $archaeo_army$"
+ pmca_hundred_archaeo_army_plural: "$archaeo_army_plural$"
+ pmca_hundred_archaeo_army_desc: "$archaeo_army_desc$"
+
+ ###########################
+ ### ARCHAEO_ARMY_BETTER ###
+ ###########################
+ pmca_ten_archaeo_army_better: "$pmca_ten$ $archaeo_army_better$"
+ pmca_ten_archaeo_army_better_plural: "$archaeo_army_better_plural$"
+ pmca_ten_archaeo_army_better_desc: "$archaeo_army_better_desc$"
+ pmca_hundred_archaeo_army_better: "$pmca_hundred$ $archaeo_army_better$"
+ pmca_hundred_archaeo_army_better_plural: "$archaeo_army_better_plural$"
+ pmca_hundred_archaeo_army_better_desc: "$archaeo_army_better_desc$"
+
+ ###################
+ ### MILITA_ARMY ###
+ ###################
+ pmca_ten_milita_army: "$pmca_ten$ $milita_army$"
+ pmca_ten_milita_army_plural: "$milita_army_plural$"
+ pmca_ten_milita_army_desc: "$milita_army_desc$"
+ pmca_hundred_milita_army: "$pmca_hundred$ $milita_army$"
+ pmca_hundred_milita_army_plural: "$milita_army_plural$"
+ pmca_hundred_milita_army_desc: "$milita_army_desc$"
+
+ ################
+ ### MEN_ARMY ###
+ ################
+ pmca_ten_men_army: "$pmca_ten$ $men_army$"
+ pmca_ten_men_army_plural: "$men_army_plural$"
+ pmca_ten_men_army_desc: "$men_army_desc$"
+ pmca_hundred_men_army: "$pmca_hundred$ $men_army$"
+ pmca_hundred_men_army_plural: "$men_army_plural$"
+ pmca_hundred_men_army_desc: "$men_army_desc$"
+
+ ###################
+ ### KNIGHT_ARMY ###
+ ###################
+ pmca_ten_knight_army: "$pmca_ten$ $knight_army$"
+ pmca_ten_knight_army_plural: "$knight_army_plural$"
+ pmca_ten_knight_army_desc: "$knight_army_desc$"
+ pmca_hundred_knight_army: "$pmca_hundred$ $knight_army$"
+ pmca_hundred_knight_army_plural: "$knight_army_plural$"
+ pmca_hundred_knight_army_desc: "$knight_army_desc$"
+
+ #######################
+ ### KNIGHT_AIR_ARMY ###
+ #######################
+ pmca_ten_knight_air_army: "$pmca_ten$ $knight_air_army$"
+ pmca_ten_knight_air_army_plural: "$knight_air_army_plural$"
+ pmca_ten_knight_air_army_desc: "$knight_air_army_desc$"
+ pmca_hundred_knight_air_army: "$pmca_hundred$ $knight_air_army$"
+ pmca_hundred_knight_air_army_plural: "$knight_air_army_plural$"
+ pmca_hundred_knight_air_army_desc: "$knight_air_army_desc$"
+
+ #################
+ ### TREB_ARMY ###
+ #################
+ pmca_ten_treb_army: "$pmca_ten$ $treb_army$"
+ pmca_ten_treb_army_plural: "$treb_army_plural$"
+ pmca_ten_treb_army_desc: "$treb_army_desc$"
+ pmca_hundred_treb_army: "$pmca_hundred$ $treb_army$"
+ pmca_hundred_treb_army_plural: "$treb_army_plural$"
+ pmca_hundred_treb_army_desc: "$treb_army_desc$"
+
+ ##################
+ ### GRAIL_ARMY ###
+ ##################
+ pmca_ten_grail_army: "$pmca_ten$ $grail_army$"
+ pmca_ten_grail_army_plural: "$grail_army_plural$"
+ pmca_ten_grail_army_desc: "$grail_army_desc$"
+ pmca_hundred_grail_army: "$pmca_hundred$ $grail_army$"
+ pmca_hundred_grail_army_plural: "$grail_army_plural$"
+ pmca_hundred_grail_army_desc: "$grail_army_desc$"
+
+ ##################
+ ### HOUSE_ARMY ###
+ ##################
+ pmca_ten_house_army: "$pmca_ten$ $house_army$"
+ pmca_ten_house_army_plural: "$house_army_plural$"
+ pmca_ten_house_army_desc: "$house_army_desc$"
+ pmca_hundred_house_army: "$pmca_hundred$ $house_army$"
+ pmca_hundred_house_army_plural: "$house_army_plural$"
+ pmca_hundred_house_army_desc: "$house_army_desc$"
+
+ ###################
+ ### ROYAL_GUARD ###
+ ###################
+ pmca_ten_royal_guard: "$pmca_ten$ $royal_guard$"
+ pmca_ten_royal_guard_plural: "$royal_guard_plural$"
+ pmca_ten_royal_guard_desc: "$royal_guard_desc$"
+ pmca_hundred_royal_guard: "$pmca_hundred$ $royal_guard$"
+ pmca_hundred_royal_guard_plural: "$royal_guard_plural$"
+ pmca_hundred_royal_guard_desc: "$royal_guard_desc$"
+
+ ######################
+ ### ROYAL_MEN_ARMY ###
+ ######################
+ pmca_ten_royal_men_army: "$pmca_ten$ $royal_men_army$"
+ pmca_ten_royal_men_army_plural: "$royal_men_army_plural$"
+ pmca_ten_royal_men_army_desc: "$royal_men_army_desc$"
+ pmca_hundred_royal_men_army: "$pmca_hundred$ $royal_men_army$"
+ pmca_hundred_royal_men_army_plural: "$royal_men_army_plural$"
+ pmca_hundred_royal_men_army_desc: "$royal_men_army_desc$"
+
+ #########################
+ ### ROYAL_KNIGHT_ARMY ###
+ #########################
+ pmca_ten_royal_knight_army: "$pmca_ten$ $royal_knight_army$"
+ pmca_ten_royal_knight_army_plural: "$royal_knight_army_plural$"
+ pmca_ten_royal_knight_army_desc: "$royal_knight_army_desc$"
+ pmca_hundred_royal_knight_army: "$pmca_hundred$ $royal_knight_army$"
+ pmca_hundred_royal_knight_army_plural: "$royal_knight_army_plural$"
+ pmca_hundred_royal_knight_army_desc: "$royal_knight_army_desc$"
+
+ #######################
+ ### PSI_KNIGHT_ARMY ###
+ #######################
+ pmca_ten_psi_knight_army: "$pmca_ten$ $psi_knight_army$"
+ pmca_ten_psi_knight_army_plural: "$psi_knight_army_plural$"
+ pmca_ten_psi_knight_army_desc: "$psi_knight_army_desc$"
+ pmca_hundred_psi_knight_army: "$pmca_hundred$ $psi_knight_army$"
+ pmca_hundred_psi_knight_army_plural: "$psi_knight_army_plural$"
+ pmca_hundred_psi_knight_army_desc: "$psi_knight_army_desc$"
+
+ ######################
+ ### ROYAL_AIR_ARMY ###
+ ######################
+ pmca_ten_royal_air_army: "$pmca_ten$ $royal_air_army$"
+ pmca_ten_royal_air_army_plural: "$royal_air_army_plural$"
+ pmca_ten_royal_air_army_desc: "$royal_air_army_desc$"
+ pmca_hundred_royal_air_army: "$pmca_hundred$ $royal_air_army$"
+ pmca_hundred_royal_air_army_plural: "$royal_air_army_plural$"
+ pmca_hundred_royal_air_army_desc: "$royal_air_army_desc$"
+
+ ##########################
+ ### KNIGHT_WALKER_ARMY ###
+ ##########################
+ pmca_ten_knight_walker_army: "$pmca_ten$ $knight_walker_army$"
+ pmca_ten_knight_walker_army_plural: "$knight_walker_army_plural$"
+ pmca_ten_knight_walker_army_desc: "$knight_walker_army_desc$"
+ pmca_hundred_knight_walker_army: "$pmca_hundred$ $knight_walker_army$"
+ pmca_hundred_knight_walker_army_plural: "$knight_walker_army_plural$"
+ pmca_hundred_knight_walker_army_desc: "$knight_walker_army_desc$"
+
+ ####################
+ ### PILGRAM_ARMY ###
+ ####################
+ pmca_ten_pilgram_army: "$pmca_ten$ $pilgram_army$"
+ pmca_ten_pilgram_army_plural: "$pilgram_army_plural$"
+ pmca_ten_pilgram_army_desc: "$pilgram_army_desc$"
+ pmca_hundred_pilgram_army: "$pmca_hundred$ $pilgram_army$"
+ pmca_hundred_pilgram_army_plural: "$pilgram_army_plural$"
+ pmca_hundred_pilgram_army_desc: "$pilgram_army_desc$"
+
+ #####################
+ ### SECURITY_ARMY ###
+ #####################
+ pmca_ten_security_army: "$pmca_ten$ $security_army$"
+ pmca_ten_security_army_plural: "$security_army_plural$"
+ pmca_ten_security_army_desc: "$security_army_desc$"
+ pmca_hundred_security_army: "$pmca_hundred$ $security_army$"
+ pmca_hundred_security_army_plural: "$security_army_plural$"
+ pmca_hundred_security_army_desc: "$security_army_desc$"
+
+ ####################
+ ### PRIVATE_ARMY ###
+ ####################
+ pmca_ten_private_army: "$pmca_ten$ $private_army$"
+ pmca_ten_private_army_plural: "$private_army_plural$"
+ pmca_ten_private_army_desc: "$private_army_desc$"
+ pmca_hundred_private_army: "$pmca_hundred$ $private_army$"
+ pmca_hundred_private_army_plural: "$private_army_plural$"
+ pmca_hundred_private_army_desc: "$private_army_desc$"
+
+ ############################
+ ### GRAVITY_PRIVATE_ARMY ###
+ ############################
+ pmca_ten_gravity_private_army: "$pmca_ten$ $gravity_private_army$"
+ pmca_ten_gravity_private_army_plural: "$gravity_private_army_plural$"
+ pmca_ten_gravity_private_army_desc: "$gravity_private_army_desc$"
+ pmca_hundred_gravity_private_army: "$pmca_hundred$ $gravity_private_army$"
+ pmca_hundred_gravity_private_army_plural: "$gravity_private_army_plural$"
+ pmca_hundred_gravity_private_army_desc: "$gravity_private_army_desc$"
+
+ #################
+ ### AERO_WING ###
+ #################
+ pmca_ten_aero_wing: "$pmca_ten$ $aero_wing$"
+ pmca_ten_aero_wing_plural: "$aero_wing_plural$"
+ pmca_ten_aero_wing_desc: "$aero_wing_desc$"
+ pmca_hundred_aero_wing: "$pmca_hundred$ $aero_wing$"
+ pmca_hundred_aero_wing_plural: "$aero_wing_plural$"
+ pmca_hundred_aero_wing_desc: "$aero_wing_desc$"
+
+ ######################
+ ### PERMANENT_ARMY ###
+ ######################
+ pmca_ten_permanent_army: "$pmca_ten$ $permanent_army$"
+ pmca_ten_permanent_army_plural: "$permanent_army_plural$"
+ pmca_ten_permanent_army_desc: "$permanent_army_desc$"
+ pmca_hundred_permanent_army: "$pmca_hundred$ $permanent_army$"
+ pmca_hundred_permanent_army_plural: "$permanent_army_plural$"
+ pmca_hundred_permanent_army_desc: "$permanent_army_desc$"
+
+ #####################
+ ### RENEGADE_ARMY ###
+ #####################
+ pmca_ten_renegade_army: "$pmca_ten$ $renegade_army$"
+ pmca_ten_renegade_army_plural: "$renegade_army_plural$"
+ pmca_ten_renegade_army_desc: "$renegade_army_desc$"
+ pmca_hundred_renegade_army: "$pmca_hundred$ $renegade_army$"
+ pmca_hundred_renegade_army_plural: "$renegade_army_plural$"
+ pmca_hundred_renegade_army_desc: "$renegade_army_desc$"
+
+ ######################
+ ### EXECUTIVE_ARMY ###
+ ######################
+ pmca_ten_executive_army: "$pmca_ten$ $executive_army$"
+ pmca_ten_executive_army_plural: "$executive_army_plural$"
+ pmca_ten_executive_army_desc: "$executive_army_desc$"
+ pmca_hundred_executive_army: "$pmca_hundred$ $executive_army$"
+ pmca_hundred_executive_army_plural: "$executive_army_plural$"
+ pmca_hundred_executive_army_desc: "$executive_army_desc$"
+
+ ##################
+ ### BATTLE_BOT ###
+ ##################
+ pmca_ten_battle_bot: "$pmca_ten$ $battle_bot$"
+ pmca_ten_battle_bot_plural: "$battle_bot_plural$"
+ pmca_ten_battle_bot_desc: "$battle_bot_desc$"
+ pmca_hundred_battle_bot: "$pmca_hundred$ $battle_bot$"
+ pmca_hundred_battle_bot_plural: "$battle_bot_plural$"
+ pmca_hundred_battle_bot_desc: "$battle_bot_desc$"
+
+ ###############
+ ### WAR_BOT ###
+ ###############
+ pmca_ten_war_bot: "$pmca_ten$ $war_bot$"
+ pmca_ten_war_bot_plural: "$war_bot_plural$"
+ pmca_ten_war_bot_desc: "$war_bot_desc$"
+ pmca_hundred_war_bot: "$pmca_hundred$ $war_bot$"
+ pmca_hundred_war_bot_plural: "$war_bot_plural$"
+ pmca_hundred_war_bot_desc: "$war_bot_desc$"
+
+ #######################
+ ### SYNTH_COMMANDOS ###
+ #######################
+ pmca_ten_synth_commandos: "$pmca_ten$ $synth_commandos$"
+ pmca_ten_synth_commandos_plural: "$synth_commandos_plural$"
+ pmca_ten_synth_commandos_desc: "$synth_commandos_desc$"
+ pmca_hundred_synth_commandos: "$pmca_hundred$ $synth_commandos$"
+ pmca_hundred_synth_commandos_plural: "$synth_commandos_plural$"
+ pmca_hundred_synth_commandos_desc: "$synth_commandos_desc$"
+
