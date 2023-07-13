@@ -14,7 +14,7 @@ Table of Contents:
 
 1. Download `pmca_generator.py` and extract it wherever, then create a new file called `input.txt` (An example input.txt has been provided if you want to see how it should look)
 2. Paste the army definitions that you want to patch inside `input.txt`
-3. Run `pmca_generator.py` and enter a custom mod prefix (or leave it blank) and press enter. A new folder with the following file structure should be visible (replace pmca with your prefix):
+3. Run `pmca_generator.py` and enter a custom mod prefix (or leave it blank) and press enter. A new folder with the following file structure should be visible:
 ```
 PMCA_GEN_OUTPUT/
 ├─ common/
