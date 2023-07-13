@@ -8,8 +8,7 @@ class pmca_generate_defs:
     post_insert_path = "PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
     x10_path = "PMCA_GEN_OUTPUT/01_pmca_ten_defs.txt"
     x100_path = "PMCA_GEN_OUTPUT/02_pmca_hundred_defs.txt"
-    placeholder_loc_path = "PMCA_GEN_OUTPUT/03_pmca_loc_keys_placeholders.txt"
-    loc_keys_path = "PMCA_GEN_OUTPUT/04_pmca_loc_keys_complete.txt"
+    loc_keys_path = "PMCA_GEN_OUTPUT/03_pmca_loc_keys.txt"
 
     in_resource_table = False
     in_cost_table = False
@@ -791,6 +790,7 @@ class pmca_generate_defs:
 
     army_def_list = []
 
+    # Add your one-line trigger to scripted trigger replacements here
     replacement_patterns = {
         "NOT = { has_authority = auth_machine_intelligence }": "is_machine_empire = no",
         "has_authority = auth_machine_intelligence": "is_machine_empire = yes",
@@ -798,9 +798,11 @@ class pmca_generate_defs:
         "has_authority = auth_hive_mind": "is_hive_empire = yes",
         "NOT = { has_ethic = ethic_gestalt_consciousness }": "is_gestalt = no",
         "has_ethic = ethic_gestalt_consciousness": "is_gestalt = yes",
+        "NOT = { has_authority = auth_corporate }": "is_megacorp = no",
+        "has_authority = auth_corporate": "is_megacorp = yes",
     }
 
-    # Change a variable whenever we see a brace
+    # Change a variable whenever we see a brace, includes braces in commented out lines, so please delete them if possible
     def update_brace_count(self, input_line, reset_seen_blocks):
         if not reset_seen_blocks:
             if "{" in input_line:
@@ -863,10 +865,23 @@ class pmca_generate_defs:
             output *= 10
         return str(output)
 
+    # Convert a given line to the scripted trigger variant if possible
     def convert_to_scripted_trigger(self, input_string):
         for pattern, replacement in self.replacement_patterns.items():
             input_string = input_string.replace(pattern, replacement)
         return input_string
+
+    # Update the scripted trigger block if we see a number in the cost table
+    def update_scripted_trigger_block(self, input_line):
+        if self.in_cost_table and bool(re.search(r"\d", input_line)):
+            self.update_army_costs(input_line)
+            self.pmca_scripted_trigger_block = (
+                "        pmca_materiel_policy_check = {\n            PMCA_MULT = ten\n            PMCA_RESOURCE = "
+                + self.current_resource_name
+                + "\n            PMCA_VALUE = "
+                + str(self.current_resource_value)
+                + "\n        }\n"
+            )
 
     # If the line has PMCA_GEN: IGNORE || starts with a #, return false
     def should_read_line(self, input_line):
@@ -900,17 +915,9 @@ class pmca_generate_defs:
                     ):
                         self.in_cost_table = True
 
-                    if self.in_cost_table and bool(re.search(r"\d", line)):
-                        self.update_army_costs(line)
-                        self.pmca_scripted_trigger_block = (
-                            "        pmca_materiel_policy_check = {\n            PMCA_MULT = ten\n            PMCA_RESOURCE = "
-                            + self.current_resource_name
-                            + "\n            PMCA_VALUE = "
-                            + str(self.current_resource_value)
-                            + "\n        }\n"
-                        )
+                    self.update_scripted_trigger_block(line)
 
-                    # Insert scripted trigger if potential_country exists, create if it doesn't
+                    # Insert pmca_materiel_policy_check, modify the potential_country = {} if needed
                     match_value = self.insert_materiel_policy_check(string_to_output)
                     if match_value == 1:
                         file_output.write(string_to_output)
@@ -930,6 +937,7 @@ class pmca_generate_defs:
                     else:
                         pass
 
+                    # If potential_country = {} is not seen, insert it w/ the pmca_materiel_policy_check
                     if (
                         self.num_isolated_braces == 0
                         and not self.seen_potential_country_block
@@ -941,7 +949,7 @@ class pmca_generate_defs:
                         file_output.write(self.pmca_scripted_trigger_block)
                         file_output.write("    }\n")
 
-                    # Create use_armynames_from if it doesn't exist
+                    # If use_armynames_from is not seen, insert it
                     if "use_armynames_from" in line:
                         self.seen_use_armynames_from = True
                     if (
@@ -956,6 +964,8 @@ class pmca_generate_defs:
                         )
 
                 self.update_brace_count(string_to_output, True)
+
+                # Insert a line at the top of the file notifying that this was done w/ Python
                 if insert_notification:
                     file_output.write(
                         "# PMCA_GEN: Army definitions patched using python, please check for errors\n"
@@ -1039,48 +1049,15 @@ class pmca_generate_defs:
                 file_output.write(line)
 
     def generate_placeholder_loc_keys(self):
-        with open(self.placeholder_loc_path, "w") as file_output:
+        with open(self.loc_keys_path, "w") as file_output:
             for key in self.army_def_list:
-                file_output.write(f'pmca_ten_{key}: "REPLACE_ME"\n')
-                file_output.write(f'pmca_ten_{key}_plural: "REPLACE_ME"\n')
-                file_output.write(f'pmca_ten_{key}_desc: "REPLACE_ME"\n')
+                file_output.write(f'pmca_ten_{key}: "$pmca_ten$ ${key}$"\n')
+                file_output.write(f'pmca_ten_{key}_plural: "${key}_plural$"\n')
+                file_output.write(f'pmca_ten_{key}_desc: "${key}_desc$"\n')
             for key in self.army_def_list:
-                file_output.write(f'pmca_hundred_{key}: "REPLACE_ME"\n')
-                file_output.write(f'pmca_hundred_{key}_plural: "REPLACE_ME"\n')
-                file_output.write(f'pmca_hundred_{key}_desc: "REPLACE_ME"\n')
-
-    pmcaTen = "$pmca_ten$ "
-    pmcaHundred = "$pmca_hundred$ "
-
-    def combineStrings(self, prefix, input_list):
-        return str('"' + prefix + "$" + input_list[0] + "$" + '"')
-
-    def complete_loc_keys(self):
-        with open(self.placeholder_loc_path, "r") as file_input, open(
-            self.loc_keys_path, "w"
-        ) as file_output:
-            count = 0
-            for line in file_input:
-                count += 1
-                loc_keys = re.findall(r"(?:pmca_ten_|pmca_hundred_)([^:]*)", line)
-                if count % 3 == 1:  # Army Name Singular
-                    if loc_keys:
-                        output_line = re.sub(
-                            r'"REPLACE_ME"',
-                            self.combineStrings(self.pmcaTen, loc_keys),
-                            line,
-                        )
-                    else:
-                        output_line = line
-                elif count % 3 == 2:  # Army Name Plural
-                    output_line = re.sub(
-                        r'"REPLACE_ME"', self.combineStrings("", loc_keys), line
-                    )
-                else:  # Army Description
-                    output_line = re.sub(
-                        r'"REPLACE_ME"', self.combineStrings("", loc_keys), line
-                    )
-                file_output.write(output_line)
+                file_output.write(f'pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n')
+                file_output.write(f'pmca_hundred_{key}_plural: "${key}_plural$"\n')
+                file_output.write(f'pmca_hundred_{key}_desc: "${key}_desc$"\n')
 
 
 start = time.time()
@@ -1091,7 +1068,7 @@ if os.path.isfile("./input.txt"):
     try:
         os.mkdir(path)
         print(f"Directory '{directory}' does NOT exist, creating...")
-    except OSError as error:
+    except OSError:
         print(f"Directory '{directory}' exists, continuing...")
 
     pmca_automater = pmca_generate_defs()
@@ -1106,11 +1083,8 @@ if os.path.isfile("./input.txt"):
     print("Multiplying values to x100...")
     pmca_automater.multiply_values_by_hundred()
 
-    print("Generating placeholder localisation keys...")
+    print("Generating localisation keys...")
     pmca_automater.generate_placeholder_loc_keys()
-
-    print("Replacing placeholder lines with preferred text and format...")
-    pmca_automater.complete_loc_keys()
 
     print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
 else:
@@ -1118,7 +1092,7 @@ else:
         "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
     )
 end = time.time()
-print(f"\nTime to complete: {(end - start) * 1000} milliseconds (ms)")
+time_in_milliseconds = round((end - start) * 1000, 2)
 print(
-    f"Estimated Time per Army Definition: {((end - start) * 1000) / len(pmca_generate_defs.army_def_list)} milliseconds (ms)"
+    f"\nEstimated time to complete: {time_in_milliseconds} milliseconds or {round(time_in_milliseconds / (1000 / 60), 2)} frames (at 60FPS/60Hz)"
 )
