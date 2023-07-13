@@ -802,7 +802,8 @@ class pmca_generate_defs:
         "NOT = { has_authority = auth_corporate }": "is_megacorp = no",
         "has_authority = auth_corporate": "is_megacorp = yes",
     }
-        
+
+    #PM: ??? why does this work
     @staticmethod
     def change_custom_file_name(file_name):
         pmca_generate_defs.custom_file_name = file_name
@@ -899,9 +900,7 @@ class pmca_generate_defs:
     def insert_pmca_army_defs(self):
         # self.post_insert_path = f"PMCA_GEN_OUTPUT/00_{self.custom_file_name}_post_insert_defs.txt"
         self.post_insert_path = self.post_insert_path.replace("pmca", self.custom_file_name)
-        with open(self.input_file_name, "r") as file_input, open(
-            self.post_insert_path, "w"
-        ) as file_output:
+        with open(self.input_file_name, "r", encoding="utf-8") as file_input, open(self.post_insert_path, "w", encoding="utf-8") as file_output:
             file_output.write("# PMCA_GEN: Army definitions patched using python, please check for errors\n")
             for line in file_input:
                 string_to_output = line
@@ -1019,9 +1018,7 @@ class pmca_generate_defs:
 
     def multiply_values_by_ten(self):
         self.x10_path = self.x10_path.replace("pmca", self.custom_file_name)
-        with open(self.post_insert_path, "r") as file_input, open(
-            self.x10_path, "w"
-        ) as file_output:
+        with open(self.post_insert_path, "r", encoding="utf-8") as file_input, open(self.x10_path, "w", encoding="utf-8") as file_output:
             for line in file_input:
                 self.update_brace_count(line, False)
                 if self.should_read_line(line):
@@ -1034,9 +1031,7 @@ class pmca_generate_defs:
 
     def multiply_values_by_hundred(self):
         self.x100_path = self.x100_path.replace("pmca", self.custom_file_name)
-        with open(self.x10_path, "r") as file_input, open(
-            self.x100_path, "w"
-        ) as file_output:
+        with open(self.x10_path, "r", encoding="utf-8") as file_input, open(self.x100_path, "w", encoding="utf-8") as file_output:
             for line in file_input:
                 self.update_brace_count(line, False)
                 if self.should_read_line(line):
@@ -1053,7 +1048,7 @@ class pmca_generate_defs:
         self.loc_keys_path = f"PMCA_GEN_OUTPUT/localisation/pmca_l_english.yml" # Need to reset this every time to avoid file name stupidity
         self.loc_keys_path = self.loc_keys_path.replace("pmca", self.custom_file_name)
         self.loc_keys_path = re.sub(r'l_\w+', l_language, self.loc_keys_path)
-        with open(self.loc_keys_path, "w") as file_output:
+        with open(self.loc_keys_path, "w", encoding="utf-8-sig") as file_output:
             file_output.write(f"{l_language}:\n\n")
             for key in self.army_def_list:
                 comment_block = '#' * (len(f'### {key} ###'))
@@ -1091,12 +1086,11 @@ if os.path.isfile("./input.txt"):
     create_folders()
 
     pmca_automater = pmca_generate_defs()
-    
+
     if custom_file_name_input != "":
         pmca_generate_defs.change_custom_file_name("pmca_" + custom_file_name_input)
     else:
         pmca_generate_defs.change_custom_file_name("pmca")
-
 
     print("Inserting required army properties...")
     pmca_automater.insert_pmca_army_defs()
@@ -1124,14 +1118,13 @@ if os.path.isfile("./input.txt"):
         pmca_automater.generate_loc_keys(language)
 
     print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
+
+    end = time.time()
+    time_in_milliseconds = round((end - start) * 1000, 2)
+    print("\nStats:")
+    print(f"    Number of Army Definitions: {len(pmca_generate_defs.army_def_list)}")
+    print(f"    Number of languages supported by Stellaris: {len(stellaris_languages)}")
+    print(f"    Number of localisation keys generated: {len(pmca_generate_defs.army_def_list) * 6 * len(stellaris_languages)} total | {len(pmca_generate_defs.army_def_list) * 6} per file")
+    print(f"    Estimated time to complete: {time_in_milliseconds} milliseconds or {round(time_in_milliseconds / (1000 / 60), 2)} frames (at 60FPS)")
 else:
-    print(
-        "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
-    )
-end = time.time()
-time_in_milliseconds = round((end - start) * 1000, 2)
-print("\nStats:")
-print(f"    Number of Army Definitions: {len(pmca_generate_defs.army_def_list)}")
-print(f"    Number of languages supported by Stellaris: {len(stellaris_languages)}")
-print(f"    Number of localisation keys generated: {len(pmca_generate_defs.army_def_list) * 6 * len(stellaris_languages)} total | {len(pmca_generate_defs.army_def_list) * 6} per file")
-print(f"    Estimated time to complete: {time_in_milliseconds} milliseconds or {round(time_in_milliseconds / (1000 / 60), 2)} frames (at 60FPS)")
+    print("ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it.")
