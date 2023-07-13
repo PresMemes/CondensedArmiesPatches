@@ -5,10 +5,11 @@ import time
 
 class pmca_generate_defs:
     input_file_name = "input.txt"
-    post_insert_path = "PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
-    x10_path = "PMCA_GEN_OUTPUT/01_pmca_ten_defs.txt"
-    x100_path = "PMCA_GEN_OUTPUT/02_pmca_hundred_defs.txt"
-    loc_keys_path = "PMCA_GEN_OUTPUT/03_pmca_loc_keys.txt"
+    custom_file_name = "pmca"
+    post_insert_path = f"PMCA_GEN_OUTPUT/00_pmca_post_insert_defs.txt"
+    x10_path = f"PMCA_GEN_OUTPUT/common/armies/01_pmca_ten_defs.txt"
+    x100_path = f"PMCA_GEN_OUTPUT/common/armies/02_pmca_hundred_defs.txt"
+    loc_keys_path = f"PMCA_GEN_OUTPUT/localisation/03_pmca_l_english.yml"
 
     in_resource_table = False
     in_cost_table = False
@@ -801,6 +802,10 @@ class pmca_generate_defs:
         "NOT = { has_authority = auth_corporate }": "is_megacorp = no",
         "has_authority = auth_corporate": "is_megacorp = yes",
     }
+        
+    @staticmethod
+    def change_custom_file_name(file_name):
+        pmca_generate_defs.custom_file_name = file_name
 
     # Change a variable whenever we see a brace, includes braces in commented out lines, so please delete them if possible
     def update_brace_count(self, input_line, reset_seen_blocks):
@@ -892,10 +897,12 @@ class pmca_generate_defs:
         )
 
     def insert_pmca_army_defs(self):
-        insert_notification = True
+        # self.post_insert_path = f"PMCA_GEN_OUTPUT/00_{self.custom_file_name}_post_insert_defs.txt"
+        self.post_insert_path = self.post_insert_path.replace("pmca", self.custom_file_name)
         with open(self.input_file_name, "r") as file_input, open(
             self.post_insert_path, "w"
         ) as file_output:
+            file_output.write("# PMCA_GEN: Army definitions patched using python, please check for errors\n")
             for line in file_input:
                 string_to_output = line
                 self.update_brace_count(line, False)
@@ -964,14 +971,6 @@ class pmca_generate_defs:
                         )
 
                 self.update_brace_count(string_to_output, True)
-
-                # Insert a line at the top of the file notifying that this was done w/ Python
-                if insert_notification:
-                    file_output.write(
-                        "# PMCA_GEN: Army definitions patched using python, please check for errors\n"
-                    )
-                    insert_notification = False
-
                 file_output.write(string_to_output)
 
     # Does input_line have a int/float?
@@ -1019,6 +1018,7 @@ class pmca_generate_defs:
             )
 
     def multiply_values_by_ten(self):
+        self.x10_path = self.x10_path.replace("pmca", self.custom_file_name)
         with open(self.post_insert_path, "r") as file_input, open(
             self.x10_path, "w"
         ) as file_output:
@@ -1033,6 +1033,7 @@ class pmca_generate_defs:
                 file_output.write(line)
 
     def multiply_values_by_hundred(self):
+        self.x100_path = self.x100_path.replace("pmca", self.custom_file_name)
         with open(self.x10_path, "r") as file_input, open(
             self.x100_path, "w"
         ) as file_output:
@@ -1048,34 +1049,57 @@ class pmca_generate_defs:
                 self.update_brace_count(line, True)
                 file_output.write(line)
 
-    def generate_placeholder_loc_keys(self):
+    def generate_loc_keys(self, l_language):
+        self.loc_keys_path = f"PMCA_GEN_OUTPUT/localisation/pmca_l_english.yml" # Need to reset this every time to avoid file name stupidity
+        self.loc_keys_path = self.loc_keys_path.replace("pmca", self.custom_file_name)
+        self.loc_keys_path = re.sub(r'l_\w+', l_language, self.loc_keys_path)
         with open(self.loc_keys_path, "w") as file_output:
+            file_output.write(f"{l_language}:\n\n")
             for key in self.army_def_list:
-                file_output.write(f'pmca_ten_{key}: "$pmca_ten$ ${key}$"\n')
-                file_output.write(f'pmca_ten_{key}_plural: "${key}_plural$"\n')
-                file_output.write(f'pmca_ten_{key}_desc: "${key}_desc$"\n')
-            for key in self.army_def_list:
-                file_output.write(f'pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n')
-                file_output.write(f'pmca_hundred_{key}_plural: "${key}_plural$"\n')
-                file_output.write(f'pmca_hundred_{key}_desc: "${key}_desc$"\n')
+                comment_block = '#' * (len(f'### {key} ###'))
+                file_output.write(f' {comment_block}\n')
+                file_output.write(f' ### {key.upper()} ###\n')
+                file_output.write(f' {comment_block}\n')
+                file_output.write(f' pmca_ten_{key}: "$pmca_ten$ ${key}$"\n')
+                file_output.write(f' pmca_ten_{key}_plural: "${key}_plural$"\n')
+                file_output.write(f' pmca_ten_{key}_desc: "${key}_desc$"\n')
+                file_output.write(f' pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n')
+                file_output.write(f' pmca_hundred_{key}_plural: "${key}_plural$"\n')
+                file_output.write(f' pmca_hundred_{key}_desc: "${key}_desc$"\n')
+                file_output.write(f'\n')
 
+def create_folders():
+    common_folder = os.path.join(directory, "common")
+    armies_folder = os.path.join(common_folder, "armies")
+    localisation_folder = os.path.join(directory, "localisation")
 
-start = time.time()
+    # Check if folders already exist
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    if not os.path.exists(common_folder):
+        os.makedirs(common_folder)
+    if not os.path.exists(armies_folder):
+        os.makedirs(armies_folder)
+    if not os.path.exists(localisation_folder):
+        os.makedirs(localisation_folder)
+
 if os.path.isfile("./input.txt"):
+    custom_file_name_input = input("Please enter a custom mod prefix, or press ENTER to default to no prefix: ")
+    start = time.time()
     directory = "PMCA_GEN_OUTPUT"
-    path = os.path.join(os.getcwd(), directory)
-    print(f"Trying to create Directory '{directory}'...")
-    try:
-        os.mkdir(path)
-        print(f"Directory '{directory}' does NOT exist, creating...")
-    except OSError:
-        print(f"Directory '{directory}' exists, continuing...")
+    print("\nCreating directories...")
+    create_folders()
 
     pmca_automater = pmca_generate_defs()
+    
+    if custom_file_name_input != "":
+        pmca_generate_defs.change_custom_file_name("pmca_" + custom_file_name_input)
+    else:
+        pmca_generate_defs.change_custom_file_name("pmca")
+
 
     print("Inserting required army properties...")
     pmca_automater.insert_pmca_army_defs()
-    print(f"Number of Army Definitions: {len(pmca_generate_defs.army_def_list)}")
 
     print("Multiplying values to x10...")
     pmca_automater.multiply_values_by_ten()
@@ -1084,7 +1108,20 @@ if os.path.isfile("./input.txt"):
     pmca_automater.multiply_values_by_hundred()
 
     print("Generating localisation keys...")
-    pmca_automater.generate_placeholder_loc_keys()
+    stellaris_languages = [
+        "l_braz_por",
+        "l_english",
+        "l_french",
+        "l_german",
+        "l_japanese",
+        "l_korean",
+        "l_polish",
+        "l_russian",
+        "l_simp_chinese",
+        "l_spanish",
+    ]
+    for language in stellaris_languages:
+        pmca_automater.generate_loc_keys(language)
 
     print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
 else:
@@ -1093,6 +1130,8 @@ else:
     )
 end = time.time()
 time_in_milliseconds = round((end - start) * 1000, 2)
-print(
-    f"\nEstimated time to complete: {time_in_milliseconds} milliseconds or {round(time_in_milliseconds / (1000 / 60), 2)} frames (at 60FPS/60Hz)"
-)
+print("\nStats:")
+print(f"    Number of Army Definitions: {len(pmca_generate_defs.army_def_list)}")
+print(f"    Number of languages supported by Stellaris: {len(stellaris_languages)}")
+print(f"    Number of localisation keys generated: {len(pmca_generate_defs.army_def_list) * 6 * len(stellaris_languages)} total | {len(pmca_generate_defs.army_def_list) * 6} per file")
+print(f"    Estimated time to complete: {time_in_milliseconds} milliseconds or {round(time_in_milliseconds / (1000 / 60), 2)} frames (at 60FPS)")
