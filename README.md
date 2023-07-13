@@ -19,13 +19,14 @@ Table of Contents:
      - `00_pmca_post_insert_defs.txt`
      - `01_pmca_ten_defs.txt`
      - `02_pmca_hundred_defs.txt`
-     - `03_pmca_auto_generated_loc_keys.txt`
-     - `04_pmca_loc_keys_complete.txt`
+     - `03_pmca_loc_keys.txt`
 
 ### Comments, Ignored lines, and editing post_insert_defs ###
 By default, the script will try to ignore any lines that start with a `#`. But if you want it to ignore a certain line, include `# PMCA_GEN: IGNORE` at the end of the line and the script should skip it.
 
-If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), simply comment out `pmca_automater.insert_pmca_army_defs()`. 
+If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), comment out `pmca_automater.insert_pmca_army_defs()`. 
+
+Please make sure to delete any commented-out lines with braces in them! The script does NOT ignore them and can cause massive issues.
 
 ## Script clean-up
 
@@ -45,5 +46,5 @@ Check `04_pmca_loc_keys_complete.txt` for your hopefully completed localisation 
  
  
 # Patching Manually
-To be honest, it's pretty boring. Just go through every. single. line. and multiply the number by x10/x100. Except for build time and morale damage.
+To be honest, it's pretty dull. Just go through every. single. line. and multiply the number by x10/x100, except for build time and morale damage.
 For AI weight, the x10 version should have a 1.5x higher base, with x100 armies having a 2x base. So a vanilla army with an AI weight of 100 should have a weight of 150/200 for x10 and x100 respectively.
