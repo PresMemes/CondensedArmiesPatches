@@ -14,19 +14,39 @@ Table of Contents:
 
 1. Download `pmca_generator.py` and extract it wherever, then create a new file called `input.txt` (An example input.txt has been provided if you want to see how it should look)
 2. Paste the army definitions that you want to patch inside `input.txt`
-3. Run `pmca_generator.py` and it should create a new directory called `PMCA_GEN_OUTPUT` with the following structure:
-   - `PMCA_GEN_OUTPUT/`
-     - `00_pmca_post_insert_defs.txt`
-     - `01_pmca_ten_defs.txt`
-     - `02_pmca_hundred_defs.txt`
-     - `03_pmca_loc_keys.txt`
+3. Run `pmca_generator.py` and enter a custom mod prefix (or leave it blank) and press enter. A new folder with the following file structure should be visible (replace pmca with your prefix):
+```
+PMCA_GEN_OUTPUT/
+├─ common/
+│  ├─ armies/
+│  │  ├─ 01_pmca_ten_defs.txt
+│  │  ├─ 02_pmca_hundred_defs.txt
+├─ localisation/
+│  ├─ pmca_l_braz_por.yml
+│  ├─ pmca_l_english.yml
+│  ├─ pmca_l_french.yml
+│  ├─ pmca_l_german.yml
+│  ├─ pmca_l_japanese.yml
+│  ├─ pmca_l_korean.yml
+│  ├─ pmca_l_polish.yml
+│  ├─ pmca_l_russian.yml
+│  ├─ pmca_l_simp_chinese.yml
+│  ├─ pmca_l_spanish.yml
+├─ 00_pmca_post_insert_defs.txt
+```
+
+### What types of armies shouldn't be condensed? ###
+- Anything that involves variables
+- Unbuildable Armies (i.e event spawn armies)
+- Defensive Armies are your choice tbh, I personally don't but the script doesn't care either way
 
 ### Comments, Ignored lines, and editing post_insert_defs ###
-By default, the script will try to ignore any lines that start with a `#`. But if you want it to ignore a certain line, include `# PMCA_GEN: IGNORE` at the end of the line and the script should skip it.
+PLEASE make sure to delete any commented-out lines with braces in them! The script does NOT ignore them and can cause massive issues.
 
-If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), comment out `pmca_automater.insert_pmca_army_defs()`. 
+Otherwise, the script will try to ignore any lines that start with a `#`. But if you want it to ignore a certain line, include `# PMCA_GEN: IGNORE` at the end of the line and the script should skip it.
 
-Please make sure to delete any commented-out lines with braces in them! The script does NOT ignore them and can cause massive issues.
+If you want to edit `00_pmca_post_insert_defs.txt` after running the script (as that's what the x10 and x100 scripts use), comment out `pmca_automater.insert_pmca_army_defs()` around line 1102. 
+
 
 ## Script clean-up
 
@@ -42,7 +62,7 @@ Please make sure to delete any commented-out lines with braces in them! The scri
 And always make sure to actually test the mod in-game!
 
 ## Localisation
-Check `04_pmca_loc_keys_complete.txt` for your hopefully completed localisation keys. If you want to do it manually for some reason, check `03_pmca_auto_generated_loc_keys.txt`
+Check the `localisation` folder inside `PMCA_GEN_OUTPUT`
  
  
 # Patching Manually
