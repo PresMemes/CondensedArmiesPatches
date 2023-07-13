@@ -1,7 +1,7 @@
 import re
 import os
 import time
-
+import shutil
 
 class pmca_generate_defs:
     input_file_name = "input.txt"
@@ -821,6 +821,13 @@ class pmca_generate_defs:
             self.seen_potential_country_block = False
             self.current_resource_name = "food"
             self.current_resource_value = 0
+            self.pmca_scripted_trigger_block = (
+                "        pmca_materiel_policy_check = {\n            PMCA_MULT = ten\n            PMCA_RESOURCE = "
+                + self.current_resource_name
+                + "\n            PMCA_VALUE = "
+                + str(self.current_resource_value)
+                + "\n        }\n"
+            )
 
         if self.num_isolated_braces == 1:
             self.in_resource_table = False
@@ -842,6 +849,8 @@ class pmca_generate_defs:
 
     # Return a int for output when given a line, meant for inserting the pmca_materiel_policy_check scripted_trigger
     def insert_materiel_policy_check(self, input_line):
+        if "use_armynames_from" in input_line:
+            self.seen_use_armynames_from = True
         if "potential_country = {" in input_line:
             self.seen_potential_country_block = True
             if "}" in input_line:
@@ -856,7 +865,8 @@ class pmca_generate_defs:
         clean_string = input_line.strip()
         match_value = re.match(r"[^ ]*", clean_string).group(0)
         if (
-            self.resource_priority_dict[match_value]
+            self.num_isolated_braces <= 3 # Avoid triggered cost blocks
+            and self.resource_priority_dict[match_value]
             > self.resource_priority_dict[self.current_resource_name]
         ):
             self.current_resource_name = match_value
@@ -889,7 +899,7 @@ class pmca_generate_defs:
                 + "\n        }\n"
             )
 
-    # If the line has PMCA_GEN: IGNORE || starts with a #, return false
+    # If the line has PMCA_GEN: IGNORE or starts with a #, return false
     def should_read_line(self, input_line):
         return (
             "PMCA_GEN: IGNORE" not in input_line
@@ -943,31 +953,15 @@ class pmca_generate_defs:
                     else:
                         pass
 
-                    # If potential_country = {} is not seen, insert it w/ the pmca_materiel_policy_check
-                    if (
-                        self.num_isolated_braces == 0
-                        and not self.seen_potential_country_block
-                        and "}" in string_to_output
-                    ):
-                        file_output.write(
-                            "    potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess\n"
-                        )
-                        file_output.write(self.pmca_scripted_trigger_block)
-                        file_output.write("    }\n")
-
-                    # If use_armynames_from is not seen, insert it
-                    if "use_armynames_from" in line:
-                        self.seen_use_armynames_from = True
-                    if (
-                        self.num_isolated_braces == 0
-                        and not self.seen_use_armynames_from
-                        and "}" in line
-                    ):
-                        file_output.write(
-                            "    use_armynames_from = "
-                            + self.army_def_name
-                            + " # PMCA_GEN: No use_armynames_from detected, inserted best guess\n"
-                        )
+                    # Insert missing blocks of script if needed
+                    if self.num_isolated_braces == 0 and "}" in line:
+                        if not self.seen_use_armynames_from:
+                            file_output.write(f"    use_armynames_from = {self.army_def_name} # PMCA_GEN: No use_armynames_from detected, inserted best guess\n" )
+                    
+                        if not self.seen_potential_country_block:
+                            file_output.write("    potential_country = { # PMCA_GEN: No potential_country detected, inserted best guess\n")
+                            file_output.write(self.pmca_scripted_trigger_block)
+                            file_output.write("    }\n")
 
                 self.update_brace_count(string_to_output, True)
                 file_output.write(string_to_output)
@@ -981,7 +975,7 @@ class pmca_generate_defs:
         return bool(
             not "morale_damage" in input_line
             and (
-                self.in_resource_table
+                ( self.in_resource_table and self.num_isolated_braces <= 3 )
                 or "damage" in input_line
                 or "health" in input_line
                 or "morale" in input_line
@@ -1063,10 +1057,13 @@ class pmca_generate_defs:
                 file_output.write(f' pmca_hundred_{key}_desc: "${key}_desc$"\n')
                 file_output.write(f'\n')
 
-def create_folders():
+def create_folders(delete_folder):
     common_folder = os.path.join(directory, "common")
     armies_folder = os.path.join(common_folder, "armies")
     localisation_folder = os.path.join(directory, "localisation")
+    
+    if delete_folder and os.path.exists(directory):
+        shutil.rmtree(directory)
 
     # Check if folders already exist
     if not os.path.exists(directory):
@@ -1083,7 +1080,7 @@ if os.path.isfile("./input.txt"):
     start = time.time()
     directory = "PMCA_GEN_OUTPUT"
     print("\nCreating directories...")
-    create_folders()
+    create_folders(False)
 
     pmca_automater = pmca_generate_defs()
 
