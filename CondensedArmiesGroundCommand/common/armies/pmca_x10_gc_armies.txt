@@ -1,6 +1,5 @@
-# PMCA_GEN: Army definitions patched using python, please check for errors
-# Assault Armies
-pmca_ten_infantry_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_infantry_army = {
+	use_armynames_from = infantry_army
 	damage = 10.0
 	health = 10.0
 	morale = 10.0
@@ -15,17 +14,18 @@ pmca_ten_infantry_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -45,6 +45,7 @@ pmca_ten_infantry_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -87,10 +88,10 @@ pmca_ten_infantry_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = infantry_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
+pmca_ten_armor_division = {
+	use_armynames_from = armor_division
 	damage = 22.5
 	health = 20.0
 	morale = 10.0
@@ -106,17 +107,18 @@ pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
 			minerals = 2000.0
 			alloys = 100.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -137,6 +139,7 @@ pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -144,7 +147,6 @@ pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -186,10 +188,10 @@ pmca_ten_armor_division = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
+pmca_ten_gravity_armor_division = {
+	use_armynames_from = gravity_armor_division
 	damage = 29.0
 	health = 25.0
 	morale = 10.0
@@ -198,24 +200,28 @@ pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
 	war_exhaustion = 15.0
 	time = 150
 	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" "tech_housing_2" }
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+	}
 	resources = {
 		category = armies
 		cost = {
 			minerals = 2000.0
 			alloys = 150.0
 		}
-
 		upkeep = {
 			energy = 40.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -235,6 +241,7 @@ pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -242,7 +249,6 @@ pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -284,10 +290,10 @@ pmca_ten_gravity_armor_division = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = gravity_armor_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
+pmca_ten_mechanized_division = {
+	use_armynames_from = mechanized_division
 	damage = 15.0
 	health = 15.0
 	morale = 10.0
@@ -302,17 +308,18 @@ pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1500.0
 		}
-
 		upkeep = {
 			energy = 15.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -332,6 +339,7 @@ pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -339,7 +347,6 @@ pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -381,10 +388,10 @@ pmca_ten_mechanized_division = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = mechanized_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_airborne_division = { # PMCA_GEN: Inserted prefix
+pmca_ten_airborne_division = {
+	use_armynames_from = airborne_division
 	damage = 12.5
 	health = 10.0
 	morale = 10.0
@@ -399,17 +406,18 @@ pmca_ten_airborne_division = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -429,6 +437,7 @@ pmca_ten_airborne_division = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -471,10 +480,10 @@ pmca_ten_airborne_division = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = airborne_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_marine_division = { # PMCA_GEN: Inserted prefix
+pmca_ten_marine_division = {
+	use_armynames_from = marine_division
 	damage = 15.0
 	health = 10.0
 	morale = 10.0
@@ -489,23 +498,25 @@ pmca_ten_marine_division = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = minerals
 			PMCA_VALUE = 1000.0
 		}
+
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -520,6 +531,7 @@ pmca_ten_marine_division = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -562,10 +574,10 @@ pmca_ten_marine_division = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = marine_division # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
+pmca_ten_fighter_wing = {
+	use_armynames_from = fighter_wing
 	damage = 22.5
 	health = 7.5
 	morale = 10.0
@@ -581,23 +593,25 @@ pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
 			PMCA_VALUE = 50.0
 		}
+
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -611,6 +625,7 @@ pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -618,7 +633,6 @@ pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -660,10 +674,10 @@ pmca_ten_fighter_wing = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = fighter_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
+pmca_ten_close_air_support_wing = {
+	use_armynames_from = close_air_support_wing
 	damage = 30.0
 	health = 7.5
 	morale = 10.0
@@ -679,23 +693,25 @@ pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
 			PMCA_VALUE = 50.0
 		}
+
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -709,6 +725,7 @@ pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -716,7 +733,6 @@ pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -758,10 +774,10 @@ pmca_ten_close_air_support_wing = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = close_air_support_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
+pmca_ten_strategic_bomber_wing = {
+	use_armynames_from = strategic_bomber_wing
 	damage = 20.0
 	health = 5.0
 	morale = 10.0
@@ -777,23 +793,25 @@ pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = alloys
 			PMCA_VALUE = 50.0
 		}
+
 
 		NOR = {
 			has_civic = civic_feudal_realm
@@ -807,6 +825,7 @@ pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -814,7 +833,6 @@ pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -856,37 +874,42 @@ pmca_ten_strategic_bomber_wing = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = strategic_bomber_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_titan_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_titan_army = {
+	use_armynames_from = titan_army
 	damage = 100.0
 	health = 80.0
 	has_morale = no
-	pop_limited = no
 	morale_damage = 12.00
 	collateral_damage = 120.0
 	war_exhaustion = 100.0
 	time = 300
 	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" "tech_synthetic_workers" "tech_ship_armor_5" }
+	pop_limited = no
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_synthetic_workers"
+		"tech_ship_armor_5"
+	}
 	resources = {
 		category = armies
 		cost = {
 			minerals = 3000.0
 			alloys = 1000.0
 		}
-
 		upkeep = {
 			energy = 200.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -903,6 +926,7 @@ pmca_ten_titan_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -910,9 +934,9 @@ pmca_ten_titan_army = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
+				has_trait = "trait_zombie"
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
 				is_sapient = no
@@ -952,10 +976,10 @@ pmca_ten_titan_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = titan_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_chivalric_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_chivalric_army = {
+	use_armynames_from = chivalric_army
 	damage = 17.5
 	health = 15.0
 	morale = 25.0
@@ -970,17 +994,18 @@ pmca_ten_chivalric_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -999,6 +1024,7 @@ pmca_ten_chivalric_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1041,10 +1067,10 @@ pmca_ten_chivalric_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_mecha_chivalric_army = {
+	use_armynames_from = mecha_chivalric_army
 	damage = 20.0
 	health = 20.0
 	morale = 17.5
@@ -1060,17 +1086,18 @@ pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1089,6 +1116,7 @@ pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -1096,7 +1124,6 @@ pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -1138,10 +1165,10 @@ pmca_ten_mecha_chivalric_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = mecha_chivalric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_republican_guard = { # PMCA_GEN: Inserted prefix
+pmca_ten_republican_guard = {
+	use_armynames_from = republican_guard
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -1156,17 +1183,18 @@ pmca_ten_republican_guard = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1185,12 +1213,13 @@ pmca_ten_republican_guard = { # PMCA_GEN: Inserted prefix
 			has_ethic = ethic_egalitarian
 			has_ethic = ethic_fanatic_egalitarian
 			has_civic = civic_parliamentary_system
-		}
+			}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -1234,10 +1263,10 @@ pmca_ten_republican_guard = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = republican_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_naval_infantry = { # PMCA_GEN: Inserted prefix
+pmca_ten_naval_infantry = {
+	use_armynames_from = naval_infantry
 	damage = 15.0
 	health = 10.0
 	morale = 17.5
@@ -1252,17 +1281,18 @@ pmca_ten_naval_infantry = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1280,6 +1310,7 @@ pmca_ten_naval_infantry = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1322,10 +1353,10 @@ pmca_ten_naval_infantry = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = naval_infantry # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_esoteric_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_esoteric_army = {
+	use_armynames_from = esoteric_army
 	damage = 30.0
 	health = 25.0
 	morale = 20.0
@@ -1341,18 +1372,19 @@ pmca_ten_esoteric_army = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 100.0
 			alloys = 5.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1366,6 +1398,7 @@ pmca_ten_esoteric_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1408,10 +1441,10 @@ pmca_ten_esoteric_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = esoteric_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_void_warband = { # PMCA_GEN: Inserted prefix
+pmca_ten_void_warband = {
+	use_armynames_from = void_warband
 	damage = 17.5
 	health = 10.0
 	morale = 30.0
@@ -1426,17 +1459,18 @@ pmca_ten_void_warband = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1454,6 +1488,7 @@ pmca_ten_void_warband = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1496,10 +1531,10 @@ pmca_ten_void_warband = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = void_warband # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_ideological_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_ideological_army = {
+	use_armynames_from = ideological_army
 	damage = 15.0
 	health = 10.0
 	morale = 30.0
@@ -1514,17 +1549,18 @@ pmca_ten_ideological_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 10.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1542,6 +1578,7 @@ pmca_ten_ideological_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1584,10 +1621,10 @@ pmca_ten_ideological_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = ideological_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_imperial_guard = { # PMCA_GEN: Inserted prefix
+pmca_ten_imperial_guard = {
+	use_armynames_from = imperial_guard
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -1602,17 +1639,18 @@ pmca_ten_imperial_guard = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1631,12 +1669,13 @@ pmca_ten_imperial_guard = { # PMCA_GEN: Inserted prefix
 			has_ethic = ethic_authoritarian
 			has_authority = auth_imperial
 			has_ethic = ethic_fanatic_authoritarian
-		}
+			}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -1680,10 +1719,10 @@ pmca_ten_imperial_guard = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = imperial_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_conscript_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_conscript_army = {
+	use_armynames_from = conscript_army
 	damage = 10.0
 	health = 10.0
 	morale = 7.5
@@ -1692,19 +1731,16 @@ pmca_ten_conscript_army = { # PMCA_GEN: Inserted prefix
 	war_exhaustion = 2.5
 	time = 30
 	icon = GFX_army_type_slave
-
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 500.0
 		}
-
 		upkeep = {
 			food = 5.0
 		}
 	}
-
-	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
 		pmca_materiel_policy_check = {
@@ -1725,6 +1761,7 @@ pmca_ten_conscript_army = { # PMCA_GEN: Inserted prefix
 		any_owned_pop = {
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -1758,10 +1795,10 @@ pmca_ten_conscript_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = conscript_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_sacraficial_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_sacraficial_army = {
+	use_armynames_from = sacraficial_army
 	damage = 70.0
 	health = 7.5
 	morale = 7.5
@@ -1770,19 +1807,16 @@ pmca_ten_sacraficial_army = { # PMCA_GEN: Inserted prefix
 	war_exhaustion = 0.0
 	time = 30
 	icon = GFX_army_type_slave
-
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 500.0
 		}
-
 		upkeep = {
 			food = 5.0
 		}
 	}
-
-	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
 		pmca_materiel_policy_check = {
@@ -1803,11 +1837,12 @@ pmca_ten_sacraficial_army = { # PMCA_GEN: Inserted prefix
 		any_owned_pop = {
 		}
 	}
+
 	potential = {
 		OR = {
-			has_building = building_sacrificial_temple_1
-			has_building = building_sacrificial_temple_2
-			has_building = building_sacrificial_temple_3
+		has_building = building_sacrificial_temple_1
+		has_building = building_sacrificial_temple_2
+		has_building = building_sacrificial_temple_3
 		}
 		from = {
 			NOR = {
@@ -1842,10 +1877,10 @@ pmca_ten_sacraficial_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = sacraficial_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_sacraficial_nerve_army = {
+	use_armynames_from = sacraficial_nerve_army
 	damage = 70.0
 	health = 7.5
 	has_morale = no
@@ -1854,19 +1889,16 @@ pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
 	war_exhaustion = 0.0
 	time = 30
 	icon = GFX_army_type_slave
-
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 500.0
 		}
-
 		upkeep = {
 			food = 5.0
 		}
 	}
-
-	prerequisites = { "tech_assault_armies" }
 
 	potential_country = {
 		pmca_materiel_policy_check = {
@@ -1887,11 +1919,12 @@ pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
 		any_owned_pop = {
 		}
 	}
+
 	potential = {
 		OR = {
-			has_building = building_sacrificial_temple_1
-			has_building = building_sacrificial_temple_2
-			has_building = building_sacrificial_temple_3
+		has_building = building_sacrificial_temple_1
+		has_building = building_sacrificial_temple_2
+		has_building = building_sacrificial_temple_3
 		}
 		from = {
 			NOR = {
@@ -1899,7 +1932,7 @@ pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
 				has_trait = "trait_machine_unit"
 				is_sapient = no
 			}
-			has_trait = "trait_nerve_stapled"
+				has_trait = "trait_nerve_stapled"
 		}
 	}
 
@@ -1926,10 +1959,10 @@ pmca_ten_sacraficial_nerve_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = sacraficial_nerve_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_archaeo_army = {
+	use_armynames_from = archaeo_army
 	damage = 30.0
 	health = 15.0
 	morale = 25.0
@@ -1945,18 +1978,19 @@ pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			minor_artifacts = 50.0
 		}
-
 		upkeep = {
 			energy = 100.0
 			minor_artifacts = 5.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -1976,6 +2010,7 @@ pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		has_active_building = building_archaeostudies_faculty
 		from = {
@@ -1986,7 +2021,6 @@ pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-
 
 	ai_weight = {
 		base = 150.0
@@ -2020,10 +2054,10 @@ pmca_ten_archaeo_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = archaeo_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
+pmca_ten_archaeo_army_better = {
+	use_armynames_from = archaeo_army_better
 	damage = 35.0
 	health = 22.5
 	morale = 30.0
@@ -2039,18 +2073,19 @@ pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			minor_artifacts = 50.0
 		}
-
 		upkeep = {
 			energy = 100.0
 			minor_artifacts = 5.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2068,6 +2103,7 @@ pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		has_active_building = building_archaeostudies_faculty
 		from = {
@@ -2078,7 +2114,6 @@ pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-
 
 	ai_weight = {
 		base = 150.0
@@ -2112,10 +2147,10 @@ pmca_ten_archaeo_army_better = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = archaeo_army_better # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_milita_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_milita_army = {
+	use_armynames_from = milita_army
 	damage = 10.0
 	health = 10.0
 	morale = 10.0
@@ -2130,23 +2165,24 @@ pmca_ten_milita_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			food = 1500.0
 		}
-
 		upkeep = {
 			energy = 10.0
 			food = 0.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
 			PMCA_RESOURCE = food
-			PMCA_VALUE = 0.0
+			PMCA_VALUE = 1500.0
 		}
 
 		OR = {
@@ -2158,6 +2194,7 @@ pmca_ten_milita_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_city }
@@ -2205,10 +2242,10 @@ pmca_ten_milita_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = milita_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_men_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_men_army = {
+	use_armynames_from = men_army
 	damage = 15.0
 	health = 15.0
 	morale = 15.0
@@ -2225,18 +2262,19 @@ pmca_ten_men_army = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 50.0
 			food = 1.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2253,6 +2291,7 @@ pmca_ten_men_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -2295,10 +2334,108 @@ pmca_ten_men_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_ranger_army = {
+	use_armynames_from = ranger_army
+	damage = 17.5
+	health = 10.0
+	morale = 15.0
+	morale_damage = 3.00
+	collateral_damage = 2.5
+	war_exhaustion = 10.0
+	time = 100
+	icon = GFX_army_type_assault
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_ground_defense_planning"
+	}
+	resources = {
+		category = armies
+		cost = {
+			food = 4000.0
+		}
+		upkeep = {
+			energy = 20.0
+			food = 12.5
+		}
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = food
+			PMCA_VALUE = 4000.0
+		}
+
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential = {
+		OR = {
+			planet = { has_district = district_city }
+			planet = { has_district = district_farming_uncapped }
+			planet = { has_district = district_farming }
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+}
+
+pmca_ten_knight_army = {
+	use_armynames_from = knight_army
 	damage = 30.0
 	health = 25.0
 	morale = 30.0
@@ -2315,19 +2452,20 @@ pmca_ten_knight_army = { # PMCA_GEN: Inserted prefix
 			minerals = 3000.0
 			alloys = 150.0
 		}
-
 		upkeep = {
 			energy = 100.0
 			food = 5.0
 			alloys = 0.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2344,6 +2482,7 @@ pmca_ten_knight_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -2386,10 +2525,10 @@ pmca_ten_knight_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_air_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_knight_air_army = {
+	use_armynames_from = knight_air_army
 	damage = 32.5
 	health = 25.0
 	morale = 30.0
@@ -2406,19 +2545,20 @@ pmca_ten_knight_air_army = { # PMCA_GEN: Inserted prefix
 			minerals = 5000.0
 			alloys = 300.0
 		}
-
 		upkeep = {
 			energy = 150.0
 			food = 5.0
 			alloys = 1.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2435,6 +2575,7 @@ pmca_ten_knight_air_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -2477,10 +2618,10 @@ pmca_ten_knight_air_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = knight_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_treb_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_treb_army = {
+	use_armynames_from = treb_army
 	damage = 30.0
 	health = 10.0
 	morale = 10.0
@@ -2496,18 +2637,19 @@ pmca_ten_treb_army = { # PMCA_GEN: Inserted prefix
 			minerals = 2000.0
 			alloys = 100.0
 		}
-
 		upkeep = {
 			energy = 80.0
 			alloys = 0.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2524,6 +2666,7 @@ pmca_ten_treb_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -2572,10 +2715,10 @@ pmca_ten_treb_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = treb_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_grail_army = {
+	use_armynames_from = grail_army
 	damage = 5.0
 	health = 10.0
 	morale = 100.0
@@ -2591,18 +2734,19 @@ pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
 			minerals = 2000.0
 			alloys = 100.0
 		}
-
 		upkeep = {
 			energy = 80.0
 			alloys = 0.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2619,6 +2763,7 @@ pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -2628,6 +2773,7 @@ pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
+
 	ai_weight = {
 		base = 150.0
 		modifier = {
@@ -2660,10 +2806,10 @@ pmca_ten_grail_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = grail_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_house_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_house_army = {
+	use_armynames_from = house_army
 	damage = 15.0
 	health = 15.0
 	morale = 15.0
@@ -2678,18 +2824,19 @@ pmca_ten_house_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			influence = 50.0
 		}
-
 		upkeep = {
 			energy = 10.0
 			influence = 0.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2706,10 +2853,11 @@ pmca_ten_house_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = {
 			exists = leader
-		}
+		 }
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -2751,10 +2899,10 @@ pmca_ten_house_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = house_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_guard = { # PMCA_GEN: Inserted prefix
+pmca_ten_royal_guard = {
+	use_armynames_from = royal_guard
 	damage = 17.5
 	health = 15.0
 	morale = 30.0
@@ -2769,17 +2917,18 @@ pmca_ten_royal_guard = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2795,12 +2944,13 @@ pmca_ten_royal_guard = { # PMCA_GEN: Inserted prefix
 			has_ethic = ethic_authoritarian
 			has_authority = auth_imperial
 			has_ethic = ethic_fanatic_authoritarian
-		}
+			}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -2844,10 +2994,10 @@ pmca_ten_royal_guard = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = royal_guard # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_men_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_royal_men_army = {
+	use_armynames_from = royal_men_army
 	damage = 15.0
 	health = 15.0
 	morale = 20.0
@@ -2864,18 +3014,19 @@ pmca_ten_royal_men_army = { # PMCA_GEN: Inserted prefix
 			minerals = 1000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 80.0
 			food = 2.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2892,6 +3043,7 @@ pmca_ten_royal_men_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -2935,10 +3087,10 @@ pmca_ten_royal_men_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = royal_men_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_knight_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_royal_knight_army = {
+	use_armynames_from = royal_knight_army
 	damage = 30.0
 	health = 25.0
 	morale = 30.0
@@ -2955,19 +3107,20 @@ pmca_ten_royal_knight_army = { # PMCA_GEN: Inserted prefix
 			minerals = 3000.0
 			alloys = 150.0
 		}
-
 		upkeep = {
 			energy = 150.0
 			food = 5.0
 			alloys = 1.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -2984,6 +3137,7 @@ pmca_ten_royal_knight_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -3027,10 +3181,10 @@ pmca_ten_royal_knight_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = royal_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_psi_knight_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_psi_knight_army = {
+	use_armynames_from = psi_knight_army
 	damage = 80.0
 	health = 30.0
 	morale = 30.0
@@ -3045,17 +3199,18 @@ pmca_ten_psi_knight_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			minerals = 3000.0
 		}
-
 		upkeep = {
 			energy = 200.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3072,6 +3227,7 @@ pmca_ten_psi_knight_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			has_trait = "trait_psionic"
@@ -3115,10 +3271,10 @@ pmca_ten_psi_knight_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = psi_knight_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_royal_air_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_royal_air_army = {
+	use_armynames_from = royal_air_army
 	damage = 32.5
 	health = 25.0
 	morale = 30.0
@@ -3135,19 +3291,20 @@ pmca_ten_royal_air_army = { # PMCA_GEN: Inserted prefix
 			minerals = 5000.0
 			alloys = 300.0
 		}
-
 		upkeep = {
 			energy = 200.0
 			food = 5.0
 			alloys = 1.5
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3164,6 +3321,7 @@ pmca_ten_royal_air_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -3212,37 +3370,42 @@ pmca_ten_royal_air_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = royal_air_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_knight_walker_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_knight_walker_army = {
+	use_armynames_from = knight_walker_army
 	damage = 100.0
 	health = 80.0
 	has_morale = no
-	pop_limited = no
 	morale_damage = 12.00
 	collateral_damage = 120.0
 	war_exhaustion = 100.0
 	time = 300
 	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" "tech_housing_2" "tech_ship_armor_5" }
+	pop_limited = no
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+		"tech_ship_armor_5"
+	}
 	resources = {
 		category = armies
 		cost = {
 			minerals = 3000.0
 			alloys = 1000.0
 		}
-
 		upkeep = {
 			energy = 200.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3259,6 +3422,7 @@ pmca_ten_knight_walker_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		OR = {
 			planet = { has_district = district_industrial }
@@ -3266,7 +3430,6 @@ pmca_ten_knight_walker_army = { # PMCA_GEN: Inserted prefix
 			planet = { has_district = district_hab_industrial }
 			planet = { has_district = district_rw_industrial }
 		}
-
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -3308,10 +3471,10 @@ pmca_ten_knight_walker_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = knight_walker_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_pilgram_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_pilgram_army = {
+	use_armynames_from = pilgram_army
 	damage = 15.0
 	health = 12.5
 	has_morale = no
@@ -3327,18 +3490,19 @@ pmca_ten_pilgram_army = { # PMCA_GEN: Inserted prefix
 			food = 3000.0
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 1.0
 			food = 50.0
 		}
 	}
+
 	show_tech_unlock_if = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3359,6 +3523,7 @@ pmca_ten_pilgram_army = { # PMCA_GEN: Inserted prefix
 			authority = auth_corporate
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3401,10 +3566,10 @@ pmca_ten_pilgram_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = pilgram_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_security_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_security_army = {
+	use_armynames_from = security_army
 	damage = 10.0
 	health = 10.0
 	morale = 10.0
@@ -3419,17 +3584,23 @@ pmca_ten_security_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 3000.0
 		}
-
 		upkeep = {
 			energy = 40.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3451,6 +3622,7 @@ pmca_ten_security_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3494,10 +3666,10 @@ pmca_ten_security_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = security_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_private_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_private_army = {
+	use_armynames_from = private_army
 	damage = 22.5
 	health = 20.0
 	morale = 10.0
@@ -3512,17 +3684,23 @@ pmca_ten_private_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 6000.0
 		}
-
 		upkeep = {
 			energy = 60.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3545,6 +3723,7 @@ pmca_ten_private_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3588,10 +3767,10 @@ pmca_ten_private_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = private_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_gravity_private_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_gravity_private_army = {
+	use_armynames_from = gravity_private_army
 	damage = 31.0
 	health = 25.0
 	morale = 12.5
@@ -3600,23 +3779,32 @@ pmca_ten_gravity_private_army = { # PMCA_GEN: Inserted prefix
 	war_exhaustion = 15.0
 	time = 150
 	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" "tech_housing_2" }
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+	}
 	resources = {
 		category = armies
 		cost = {
 			energy = 12000.0
 		}
-
 		upkeep = {
 			energy = 90.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3638,6 +3826,7 @@ pmca_ten_gravity_private_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3681,10 +3870,10 @@ pmca_ten_gravity_private_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = gravity_private_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_aero_wing = { # PMCA_GEN: Inserted prefix
+pmca_ten_aero_wing = {
+	use_armynames_from = aero_wing
 	damage = 30.0
 	health = 7.5
 	morale = 15.0
@@ -3699,17 +3888,23 @@ pmca_ten_aero_wing = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 10000.0
 		}
-
 		upkeep = {
 			energy = 80.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3731,6 +3926,7 @@ pmca_ten_aero_wing = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3774,10 +3970,10 @@ pmca_ten_aero_wing = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = aero_wing # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_permanent_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_permanent_army = {
+	use_armynames_from = permanent_army
 	damage = 15.0
 	health = 10.0
 	has_morale = no
@@ -3792,17 +3988,23 @@ pmca_ten_permanent_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 3000.0
 		}
-
 		upkeep = {
 			energy = 40.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		has_civic = civic_permanent_employment
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3825,6 +4027,7 @@ pmca_ten_permanent_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			has_trait = "trait_zombie"
@@ -3868,10 +4071,10 @@ pmca_ten_permanent_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = permanent_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_renegade_army = {
+	use_armynames_from = renegade_army
 	damage = 27.5
 	health = 20.0
 	morale = 15.0
@@ -3886,17 +4089,19 @@ pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 6000.0
 		}
-
 		upkeep = {
 			energy = 100.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		has_civic = civic_crusader_spirit_corporate
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -3909,17 +4114,18 @@ pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
+		has_civic = civic_permanent_employment
 		OR = {
 			has_civic = civic_corporate_dominion
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		NOT = { has_technology = "tech_housing_2" }
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		from = {
 			NOR = {
@@ -3943,7 +4149,7 @@ pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
 					OR = {
 						has_ethic = ethic_militarist
 						has_ethic = ethic_fanatic_militarist
-					}
+				}
 					has_technology = tech_gene_banks
 				}
 			}
@@ -3956,17 +4162,17 @@ pmca_ten_renegade_army = { # PMCA_GEN: Inserted prefix
 					has_technology = tech_neural_implants
 				}
 				AND = {
-					has_ai_personality_behaviour = robot_liberator
+				has_ai_personality_behaviour = robot_liberator
 					has_technology = tech_droid_workers
 				}
 				has_valid_civic = civic_reanimated_armies
 			}
 		}
 	}
-	use_armynames_from = renegade_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_executive_army = { # PMCA_GEN: Inserted prefix
+pmca_ten_executive_army = {
+	use_armynames_from = executive_army
 	damage = 25.0
 	health = 20.0
 	morale = 40.0
@@ -3981,17 +4187,23 @@ pmca_ten_executive_army = { # PMCA_GEN: Inserted prefix
 		cost = {
 			energy = 10000.0
 		}
-
 		upkeep = {
 			energy = 120.0
 		}
 	}
+
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = ten
@@ -4014,6 +4226,7 @@ pmca_ten_executive_army = { # PMCA_GEN: Inserted prefix
 			has_valid_civic = civic_machine_assimilator
 		}
 	}
+
 	potential = {
 		planet = { is_capital = yes }
 		from = {
@@ -4058,26 +4271,225 @@ pmca_ten_executive_army = { # PMCA_GEN: Inserted prefix
 			}
 		}
 	}
-	use_armynames_from = executive_army # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_battle_bot = { # PMCA_GEN: Inserted prefix
+pmca_ten_gravity_executive_army = {
+	use_armynames_from = gravity_executive_army
+	damage = 35.0
+	health = 30.0
+	morale = 42.5
+	morale_damage = 2.25
+	collateral_damage = 20.0
+	war_exhaustion = 80.0
+	time = 200
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			energy = 10000.0
+		}
+		upkeep = {
+			energy = 120.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		always = no
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 10000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		has_technology = "tech_housing_2"
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential = {
+		planet = { is_capital = yes }
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+}
+
+pmca_ten_strike_army = {
+	use_armynames_from = strike_army
+	damage = 40.0
+	health = 12.5
+	morale = 45.0
+	morale_damage = 3.00
+	collateral_damage = 5.0
+	war_exhaustion = 100.0
+	time = 200
+	icon = GFX_army_type_assault
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_powered_exoskeletons"
+	}
+	resources = {
+		category = armies
+		cost = {
+			energy = 20000.0
+		}
+		upkeep = {
+			energy = 150.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = ten
+			PMCA_RESOURCE = energy
+			PMCA_VALUE = 20000.0
+		}
+
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
+			has_civic = civic_corporate_dominion
+			has_civic = civic_merchant_guilds
+			is_megacorp = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_zombie"
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 150.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+}
+
+pmca_ten_battle_bot = {
+	use_armynames_from = battle_bot
 	damage = 20.0
 	health = 7.5
+	has_morale = no
 	morale_damage = 1.75
 	collateral_damage = 19.0
 	war_exhaustion = 5.0
-	has_morale = no
 	time = 90
 	icon = GFX_army_type_robot
-	has_species = yes
-
+	prerequisites = { "tech_droid_workers" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 1000.0
 		}
-
 		upkeep = {
 			energy = 15.0
 		}
@@ -4092,11 +4504,10 @@ pmca_ten_battle_bot = { # PMCA_GEN: Inserted prefix
 
 		is_machine_empire = no
 	}
+
 	potential = {
 		from = { has_trait = "trait_mechanical" }
 	}
-
-	prerequisites = { "tech_droid_workers" }
 
 	allow = {
 		owner = { NOT = { has_policy_flag = robots_outlawed } }
@@ -4123,26 +4534,24 @@ pmca_ten_battle_bot = { # PMCA_GEN: Inserted prefix
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-	use_armynames_from = battle_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_war_bot = { # PMCA_GEN: Inserted prefix
+pmca_ten_war_bot = {
+	use_armynames_from = war_bot
 	damage = 15.0
 	health = 20.0
+	has_morale = no
 	morale_damage = 1.25
 	collateral_damage = 10.0
 	war_exhaustion = 10.0
-	has_morale = no
 	time = 100
 	icon = GFX_army_type_robot
-	has_species = yes
-
+	prerequisites = { "tech_droid_workers" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 2000.0
 		}
-
 		upkeep = {
 			energy = 20.0
 		}
@@ -4157,11 +4566,10 @@ pmca_ten_war_bot = { # PMCA_GEN: Inserted prefix
 
 		is_machine_empire = no
 	}
+
 	potential = {
 		from = { has_trait = "trait_mechanical" }
 	}
-
-	prerequisites = { "tech_droid_workers" }
 
 	allow = {
 		owner = { NOT = { has_policy_flag = robots_outlawed } }
@@ -4188,27 +4596,25 @@ pmca_ten_war_bot = { # PMCA_GEN: Inserted prefix
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-	use_armynames_from = war_bot # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
 
-pmca_ten_synth_commandos = { # PMCA_GEN: Inserted prefix
+pmca_ten_synth_commandos = {
+	use_armynames_from = synth_commandos
 	damage = 21.5
 	health = 25.0
+	has_morale = no
 	morale_damage = 3.00
 	collateral_damage = 5.0
 	war_exhaustion = 15.0
-	has_morale = no
 	time = 190
 	icon = GFX_army_type_robot
-	has_species = yes
-
+	prerequisites = { "tech_synthetic_workers" }
 	resources = {
 		category = armies
 		cost = {
 			minerals = 2000.0
 			alloys = 50.0
 		}
-
 		upkeep = {
 			energy = 25.0
 		}
@@ -4223,11 +4629,10 @@ pmca_ten_synth_commandos = { # PMCA_GEN: Inserted prefix
 
 		is_machine_empire = no
 	}
+
 	potential = {
 		from = { has_trait = "trait_mechanical" }
 	}
-
-	prerequisites = { "tech_synthetic_workers" }
 
 	allow = {
 		owner = { NOT = { has_policy_flag = robots_outlawed } }
@@ -4254,5 +4659,5 @@ pmca_ten_synth_commandos = { # PMCA_GEN: Inserted prefix
 			NOT = { has_ethic = ethic_fanatic_materialist }
 		}
 	}
-	use_armynames_from = synth_commandos # PMCA_GEN: No use_armynames_from detected, inserted best guess
 }
+

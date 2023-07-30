@@ -251,6 +251,16 @@
  pmca_hundred_men_army_desc: "$men_army_desc$"
 
  ###################
+ ### RANGER_ARMY ###
+ ###################
+ pmca_ten_ranger_army: "$pmca_ten$ $ranger_army$"
+ pmca_ten_ranger_army_plural: "$ranger_army_plural$"
+ pmca_ten_ranger_army_desc: "$ranger_army_desc$"
+ pmca_hundred_ranger_army: "$pmca_hundred$ $ranger_army$"
+ pmca_hundred_ranger_army_plural: "$ranger_army_plural$"
+ pmca_hundred_ranger_army_desc: "$ranger_army_desc$"
+
+ ###################
  ### KNIGHT_ARMY ###
  ###################
  pmca_ten_knight_army: "$pmca_ten$ $knight_army$"
@@ -440,6 +450,26 @@
  pmca_hundred_executive_army_plural: "$executive_army_plural$"
  pmca_hundred_executive_army_desc: "$executive_army_desc$"
 
+ ##############################
+ ### GRAVITY_EXECUTIVE_ARMY ###
+ ##############################
+ pmca_ten_gravity_executive_army: "$pmca_ten$ $gravity_executive_army$"
+ pmca_ten_gravity_executive_army_plural: "$gravity_executive_army_plural$"
+ pmca_ten_gravity_executive_army_desc: "$gravity_executive_army_desc$"
+ pmca_hundred_gravity_executive_army: "$pmca_hundred$ $gravity_executive_army$"
+ pmca_hundred_gravity_executive_army_plural: "$gravity_executive_army_plural$"
+ pmca_hundred_gravity_executive_army_desc: "$gravity_executive_army_desc$"
+
+ ###################
+ ### STRIKE_ARMY ###
+ ###################
+ pmca_ten_strike_army: "$pmca_ten$ $strike_army$"
+ pmca_ten_strike_army_plural: "$strike_army_plural$"
+ pmca_ten_strike_army_desc: "$strike_army_desc$"
+ pmca_hundred_strike_army: "$pmca_hundred$ $strike_army$"
+ pmca_hundred_strike_army_plural: "$strike_army_plural$"
+ pmca_hundred_strike_army_desc: "$strike_army_desc$"
+
  ##################
  ### BATTLE_BOT ###
  ##################
@@ -469,4 +499,3 @@
  pmca_hundred_synth_commandos: "$pmca_hundred$ $synth_commandos$"
  pmca_hundred_synth_commandos_plural: "$synth_commandos_plural$"
  pmca_hundred_synth_commandos_desc: "$synth_commandos_desc$"
-
