@@ -2,7 +2,7 @@ import re
 import time
 import os
 
-directory = "PMCA_GEN_OUTPUT"
+directory = ".\PMCA_GEN_OUTPUT"
 common_folder = os.path.join(directory, "common")
 armies_folder = os.path.join(common_folder, "armies")
 localisation_folder = os.path.join(directory, "localisation")
@@ -790,31 +790,31 @@ resource_priority_dict = {
 class CArmy:
     def __init__(
         self,
-        script_army_name,
-        script_damage,
-        script_health,
-        script_morale,
-        script_morale_damage,
-        script_collateral_damaage,
-        script_war_exhaustion,
-        script_build_time,
-        script_icon,
-        script_prereqs,
-        script_ai_weight_base=0,
-        script_show_tech_unlock_if="",
-        script_potential_country="",
-        script_potential="",
-        script_allow="",
-        script_on_queued="",
-        script_on_unqueued="",
-        script_ai_weight_modifiers="",
-        script_resource_table="",
-        script_has_species='yes',
-        script_disband_if_species_lacks_rights='yes',
-        script_defensive='no',
-        script_occupation='no',
-        script_pop_limited='yes',
-        script_use_armynames_from="",
+        script_army_name: str,
+        script_damage: str,
+        script_health: str,
+        script_morale: str,
+        script_morale_damage: str,
+        script_collateral_damaage: str,
+        script_war_exhaustion: str,
+        script_build_time: str,
+        script_icon: str,
+        script_prereqs: str,
+        script_ai_weight_base: float=0.0,
+        script_show_tech_unlock_if: str="",
+        script_potential_country: str="",
+        script_potential: str="",
+        script_allow: str="",
+        script_on_queued: str="",
+        script_on_unqueued: str="",
+        script_ai_weight_modifiers: str="",
+        script_resource_table: str="",
+        script_has_species: str="yes",
+        script_disband_if_species_lacks_rights: str="yes",
+        script_defensive: str="no",
+        script_occupation: str="no",
+        script_pop_limited: str="yes",
+        script_use_armynames_from: str="",
     ):
         self.category = ""
         self.sub_block_type = []
@@ -848,19 +848,12 @@ class CArmy:
         self.war_exhaustion = float(script_war_exhaustion)
         self.build_time = script_build_time
         self.icon = script_icon
-        self.pop_limited = script_pop_limited
-        self.has_species = script_has_species
-        self.disband_if_species_lacks_rights = script_disband_if_species_lacks_rights
+        self.pop_limited = True if script_pop_limited == "yes" else False
+        self.has_species = True if script_has_species == "yes" else False
+        self.disband_if_species_lacks_rights = True if script_disband_if_species_lacks_rights == "yes" else False
+        self.use_armynames_from = self.use_armynames_from if script_use_armynames_from else self.persistent_army_name
 
-        if script_use_armynames_from:
-            self.use_armynames_from = script_use_armynames_from
-        else:
-            self.use_armynames_from = self.persistent_army_name
-
-        if script_prereqs is not None:
-            self.prerequisites = script_prereqs
-        else:
-            self.prerequisites = []
+        self.prerequisites = script_prereqs if script_prereqs is not None else []
 
         if script_resource_table:
             self.parse_resource_table(script_resource_table)
@@ -882,18 +875,12 @@ class CArmy:
 
     def __str__(self):
         allow_one_line = self.allow.replace("\n", " ").replace("\t", "\\t")
-        show_tech_unlock_if_one_line = self.show_tech_unlock_if.replace(
-            "\n", ""
-        ).replace("\t", "")
-        potential_country_one_line = self.potential_country.replace("\n", "").replace(
-            "\t", ""
-        )
+        show_tech_unlock_if_one_line = self.show_tech_unlock_if.replace("\n", "").replace("\t", "")
+        potential_country_one_line = self.potential_country.replace("\n", "").replace("\t", "")
         potential_one_line = self.potential.replace("\n", "").replace("\t", "")
         on_queued_one_line = self.on_queued.replace("\n", "").replace("\t", "")
         on_unqueued_one_line = self.on_unqueued.replace("\n", "").replace("\t", "")
-        ai_weight_conditions_one_line = self.ai_weight_conditions.replace(
-            "\n", ""
-        ).replace("\t", "")
+        ai_weight_conditions_one_line = self.ai_weight_conditions.replace("\n", "").replace("\t", "")
 
         if self.morale:
             morale_string = f"Morale = {self.morale}"
@@ -931,90 +918,89 @@ class CArmy:
             f"  Subblock Multipliers = {self.mult_values}"
         )
 
-    def convert_to_pdscript(self):
-        """Returns valid PDScript as a string"""
-        pdx_script_string = ""
-        pdx_script_string += f"{self.army_name} = {{\n"
-        pdx_script_string += f"\tuse_armynames_from = {self.use_armynames_from}\n"
-        if self.defensive == 'yes':
-            pdx_script_string += f"\tdefensive = yes\n"
-        if self.occupation == 'yes':
-            pdx_script_string += f"\toccupation = yes\n"
-        pdx_script_string += f"\tdamage = {self.damage}\n"
-        pdx_script_string += f"\thealth = {self.health}\n"
+    def convert_to_pdscript(self) -> str:
+        """Appends all of the class' variables into a string"""
+
+        PDScript_string = ""
+        PDScript_string += f"{self.army_name} = {{\n"
+        PDScript_string += f"\tuse_armynames_from = {self.use_armynames_from}\n"
+        if self.defensive == "yes":
+            PDScript_string += f"\tdefensive = yes\n"
+        if self.occupation == "yes":
+            PDScript_string += f"\toccupation = yes\n"
+        PDScript_string += f"\tdamage = {self.damage}\n"
+        PDScript_string += f"\thealth = {self.health}\n"
         if self.has_morale:
-            pdx_script_string += f"\tmorale = {self.morale}\n"
+            PDScript_string += f"\tmorale = {self.morale}\n"
         else:
-            pdx_script_string += f"\thas_morale = no\n"
-        pdx_script_string += f"\tmorale_damage = {self.morale_damage}\n"
-        pdx_script_string += f"\tcollateral_damage = {self.collateral_damage}\n"
-        pdx_script_string += f"\twar_exhaustion = {self.war_exhaustion}\n"
-        pdx_script_string += f"\ttime = {self.build_time}\n"
-        pdx_script_string += f"\ticon = {self.icon}\n"
+            PDScript_string += f"\thas_morale = no\n"
+        PDScript_string += f"\tmorale_damage = {self.morale_damage}\n"
+        PDScript_string += f"\tcollateral_damage = {self.collateral_damage}\n"
+        PDScript_string += f"\twar_exhaustion = {self.war_exhaustion}\n"
+        PDScript_string += f"\ttime = {self.build_time}\n"
+        PDScript_string += f"\ticon = {self.icon}\n"
 
-        if self.pop_limited == "no":
-            pdx_script_string += f"\tpop_limited = no\n"
+        if not self.pop_limited:
+            PDScript_string += f"\tpop_limited = no\n"
 
-        if self.has_species == "no":
-            pdx_script_string += f"\thas_species  = no\n"
+        if not self.has_species:
+            PDScript_string += f"\thas_species  = no\n"
 
-        if self.disband_if_species_lacks_rights == "no":
-            pdx_script_string += f"\tdisband_if_species_lacks_rights = no\n"
+        if not self.disband_if_species_lacks_rights:
+            PDScript_string += f"\tdisband_if_species_lacks_rights = no\n"
 
         if self.prerequisites:
-            pdx_script_string += f"\tprerequisites = {{"
+            PDScript_string += f"\tprerequisites = {{"
             if len(self.prerequisites) == 1:
-                pdx_script_string += f' "{self.prerequisites[0]}" }}\n'
+                PDScript_string += f' "{self.prerequisites[0]}" }}\n'
             else:
-                pdx_script_string += "\n\n".join(
-                    '\t\t"' + item + '"' for item in self.prerequisites
-                )
-                pdx_script_string += f"\n\t}}\n"
+                PDScript_string += "\n" + "\n".join(f'\t\t"{item}"' for item in self.prerequisites)
+                PDScript_string += f"\n\t}}\n"
 
-        pdx_script_string += self.reconstruct_resource_table()
+        PDScript_string += self.reconstruct_resource_table()
 
         if self.show_tech_unlock_if:
-            pdx_script_string += f"\n\tshow_tech_unlock_if = {{\n"
-            pdx_script_string += f"\t\t{self.show_tech_unlock_if.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\tshow_tech_unlock_if = {{\n"
+            PDScript_string += f"\t\t{self.show_tech_unlock_if.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.potential_country:
-            pdx_script_string += f"\n\tpotential_country = {{\n"
-            pdx_script_string += f"\t\t{self.potential_country.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\tpotential_country = {{\n"
+            PDScript_string += f"\t\t{self.potential_country.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.potential:
-            pdx_script_string += f"\n\tpotential = {{\n"
-            pdx_script_string += f"\t\t{self.potential.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\tpotential = {{\n"
+            PDScript_string += f"\t\t{self.potential.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.allow:
-            pdx_script_string += f"\n\tallow = {{\n"
-            pdx_script_string += f"\t\t{self.allow.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\tallow = {{\n"
+            PDScript_string += f"\t\t{self.allow.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.on_queued:
-            pdx_script_string += f"\n\ton_queued = {{\n"
-            pdx_script_string += f"\t\t{self.on_queued.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\ton_queued = {{\n"
+            PDScript_string += f"\t\t{self.on_queued.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.on_unqueued:
-            pdx_script_string += f"\n\ton_unqueued = {{\n"
-            pdx_script_string += f"\t\t{self.on_unqueued.strip()}\n"
-            pdx_script_string += f"\t}}\n"
+            PDScript_string += f"\n\ton_unqueued = {{\n"
+            PDScript_string += f"\t\t{self.on_unqueued.strip()}\n"
+            PDScript_string += f"\t}}\n"
 
         if self.ai_weight:
-            pdx_script_string += f"\n\tai_weight = {{\n"
-            pdx_script_string += f"\t\tbase = {self.ai_weight}\n"
+            PDScript_string += f"\n\tai_weight = {{\n"
+            PDScript_string += f"\t\tbase = {self.ai_weight}\n"
             if self.ai_weight_conditions:
-                pdx_script_string += f"\t\t{self.ai_weight_conditions}\n"
-            pdx_script_string += f"\t}}\n"
+                PDScript_string += f"\t\t{self.ai_weight_conditions}\n"
+            PDScript_string += f"\t}}\n"
 
-        pdx_script_string += f"}}\n\n"
-        return pdx_script_string
+        PDScript_string += f"}}\n\n"
+        return PDScript_string
 
-    def parse_resource_table(self, input_string):
-        """Turns a resource table into a bunch of variables"""
+    def parse_resource_table(self, input_string: str) -> None:
+        """Turns a resource table into variables for later"""
 
         split_string = input_string.splitlines()
         num_unpaired_braces = 0
@@ -1035,7 +1021,9 @@ class CArmy:
             if "{" in line:
                 num_unpaired_braces += 1
                 if num_unpaired_braces == 2:
-                    self.sub_block_type.append(re.match(type_regex, line.strip()).group(0))
+                    self.sub_block_type.append(
+                        re.match(type_regex, line.strip()).group(0)
+                    )
                     inside_sub_block = True
                     seen_mult = False
                 if num_unpaired_braces == 3:
@@ -1070,8 +1058,8 @@ class CArmy:
                             temp_resource_pairs = {}
                         temp_resource_pairs[resource_name] = resource_value
 
-    def reconstruct_resource_table(self):
-        """Returns a resource table as a string"""
+    def reconstruct_resource_table(self) -> str:
+        """Appends various variables into a string"""
 
         output = f"\tresources = {{\n\t\tcategory = {self.category}"
 
@@ -1103,27 +1091,27 @@ class CArmy:
 ###########################
 
 
-def scan_armies():
-    """Scans input.txt for army definitions, then sends a string to parse_armies_for_creation"""
+def scan_input_file() -> None:
+    """Scans input.txt for army definitions, then sends every army definition to parse_armies_for_creation"""
 
     with open("input.txt", "r", encoding="utf-8") as file_input:
         num_isolated_braces = 0
         army_string = ""
         for line in file_input:
-            num_isolated_braces += line.count("{")
-            num_isolated_braces -= line.count("}")
             if should_read_line(line):
+                num_isolated_braces += line.count("{")
+                num_isolated_braces -= line.count("}")
                 army_string += line
                 if num_isolated_braces == 0:
                     parse_armies_for_creation(army_string)
                     army_string = ""
 
 
-def should_read_line(input_string):
+def should_read_line(input_string: str) -> bool:
+    """If the given string is empty or starts with a #, return false"""
     return input_string.strip() and not input_string.strip().startswith("#")
 
-
-def parse_armies_for_creation(input_string):
+def parse_armies_for_creation(input_string: str) -> None:
     """Turn a given string into a CArmy object"""
 
     number_regex = r"\d+\.?\d*"
@@ -1140,26 +1128,28 @@ def parse_armies_for_creation(input_string):
     scan_war_exhaustion = get_attribute_value(input_string, "war_exhaustion", number_regex)
     scan_time = get_attribute_value(input_string, "time", number_regex)
     scan_icon = get_attribute_value(input_string, "icon", r"\w+")
-    scan_defensive = get_attribute_value(input_string, "defensive", r"yes", default=False)
-    scan_occupation = get_attribute_value(input_string, "occupation", r"yes", default=False)
-    scan_pop_limited = get_attribute_value(input_string, "pop_limited", r"no", default=True)
-    scan_has_species = get_attribute_value(input_string, "has_species", r"no", default=True)
-    scan_disband_if_species_lacks_rights = get_attribute_value(input_string, "disband_if_species_lacks_rights", r"no", default=True)
+    scan_defensive = get_attribute_value(input_string, "defensive", r"yes", default="no")
+    scan_occupation = get_attribute_value(input_string, "occupation", r"yes", default="no")
+    scan_pop_limited = get_attribute_value(input_string, "pop_limited", r"no", default="yes")
+    scan_has_species = get_attribute_value(input_string, "has_species", r"no", default="yes")
+    scan_disband_if_species_lacks_rights = get_attribute_value(input_string, "disband_if_species_lacks_rights", r"no", default="yes")
     scan_use_armynames_from = get_attribute_value(input_string, "use_armynames_from", r"\w+")
 
     # Try to find the prerequisites block
-    prerequisites_pattern = r"prerequisites\s*=\s*{([^}]*)}"
-    prerequisites_match = re.search(prerequisites_pattern, input_string, re.DOTALL)
-    if prerequisites_match:
-        prerequisites_block = prerequisites_match.group(1)
+    prerequisites_pattern = r'prerequisites\s*=\s*{([^}]*)}'
+    prerequisites_block = None
+
+    for match in re.finditer(prerequisites_pattern, input_string, flags=re.DOTALL):
+        prerequisites_block = match.group(1)
+        break
+
+    if prerequisites_block:
         scan_prerequisites_list = re.findall(r'"([^"]+)"|(\S+)', prerequisites_block)
-        scan_prerequisites_list = [
-            item[0] if item[0] else item[1] for item in scan_prerequisites_list
-        ]
+        scan_prerequisites_list = [item[0] if item[0] else item[1] for item in scan_prerequisites_list]
     else:
         scan_prerequisites_list = None
 
-    # Find blocks of code with 1..inf amount of opening and closing braces (How the fuck does PDS do this???)
+    # Find blocks of code with 1..inf amount of opening and closing curly braces (How the fuck does PDS do this???)
     num_unpaired_braces = 0
     scan_variables = {
         "resources": [False, ""],
@@ -1191,7 +1181,7 @@ def parse_armies_for_creation(input_string):
 
     for key, (inside_flag, scan_data) in scan_variables.items():
         if key != "resources" and key != "ai_weight" and scan_data:
-            scan_variables[key][1] = strip_first_and_last_line(scan_data)
+            scan_variables[key][1] = strip_first_and_last_brace(scan_data)
         if key == "ai_weight":
             scan_ai_weight_base = handle_ai_weight(scan_data, True)
             scan_ai_weight_modifiers = handle_ai_weight(scan_data, False)
@@ -1239,18 +1229,23 @@ def parse_armies_for_creation(input_string):
     list_of_CArmies.append(army)
 
 
-def get_attribute_value(input_string, attribute, pattern, default=None):
-    match = re.search(rf"{attribute}\s*=\s*({pattern})", input_string, re.DOTALL | re.IGNORECASE)
+def get_attribute_value(input_string: str, attribute: str, pattern: str, default=None) -> str:
+    """Gets an attribute when given an regex pattern, returns default otherwise. Ignores case and is multiline"""
+    match = re.search(
+        rf"{attribute}\s*=\s*({pattern})", input_string, flags=re.DOTALL | re.IGNORECASE
+    )
     return match.group(1) if match else default
 
 
-def strip_first_and_last_line(input_string):
+def strip_first_and_last_brace(input_string: str) -> str:
+    """Returns everthing between the first and last brace"""
     first_brace_index = input_string.find("{")
     last_brace_index = input_string.rfind("}")
     return input_string.strip()[first_brace_index + 1 : last_brace_index - 2]
 
 
-def handle_ai_weight(input_string, is_base):
+def handle_ai_weight(input_string: str, is_base: bool=False) -> str:
+    """Returns either the AI Weight base or the modifiers for it, depending on is_base"""
     if is_base:
         return get_attribute_value(input_string, "base", r"\d+\.?\d*", default=0.0)
     else:
@@ -1258,7 +1253,10 @@ def handle_ai_weight(input_string, is_base):
         return "\n".join(lines).strip()
 
 
-def create_folders():
+# If you want to use this code to make your own parser for PDScript, everything above this comment is probably what you want.
+
+
+def create_folders() -> None:
     """Creates the required folders"""
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -1270,54 +1268,56 @@ def create_folders():
         os.makedirs(localisation_folder)
 
 
-def generate_loc_keys(directory, language_keys):
+def generate_loc_keys(file_name_prefix: str) -> None:
     """Generates every loc key for every language"""
 
-    for language in language_keys:
-        file_name = os.path.join(directory, f"pmca_{language}.yml")
+    file_content = ""
+    for key in all_army_keys:
+        comment_block = "#" * (len(f"### {key} ###"))
+        file_content += f"\n {comment_block}\n"
+        file_content += f" ### {key.upper()} ###\n"
+        file_content += f" {comment_block}\n"
+        file_content += f' pmca_ten_{key}: "$pmca_ten$ ${key}$"\n'
+        file_content += f' pmca_ten_{key}_plural: "${key}_plural$"\n'
+        file_content += f' pmca_ten_{key}_desc: "${key}_desc$"\n'
+        file_content += f' pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n'
+        file_content += f' pmca_hundred_{key}_plural: "${key}_plural$"\n'
+        file_content += f' pmca_hundred_{key}_desc: "${key}_desc$"\n'
+
+    for language in stellaris_languages:
+        file_name = os.path.join(localisation_folder, f"{file_name_prefix}_{language}.yml")
         with open(file_name, "w", encoding="utf-8-sig") as file_output:
-            file_output.write(f"{language}:\n")
-            for key in all_army_keys:
-                comment_block = "#" * (len(f"### {key} ###"))
-                file_output.write(f"\n {comment_block}\n")
-                file_output.write(f" ### {key.upper()} ###\n")
-                file_output.write(f" {comment_block}\n")
-                file_output.write(f' pmca_ten_{key}: "$pmca_ten$ ${key}$"\n')
-                file_output.write(f' pmca_ten_{key}_plural: "${key}_plural$"\n')
-                file_output.write(f' pmca_ten_{key}_desc: "${key}_desc$"\n')
-                file_output.write(f' pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n')
-                file_output.write(f' pmca_hundred_{key}_plural: "${key}_plural$"\n')
-                file_output.write(f' pmca_hundred_{key}_desc: "${key}_desc$"\n')
+            file_output.write(f"{language}:\n\n # Localisation generated using Python\n{file_content}")
 
 
-def multiply_army_stats_by_ten(CArmy_object, is_hundred=False):
+def multiply_army_stats_by_factor(input_CArmy: CArmy, factor: float, is_hundred: bool=False) -> None:
     """Multiplies a given CArmy stats by 10"""
 
     # Multiply resource stats
-    for item in CArmy_object.resource_pairs:
+    for item in input_CArmy.resource_pairs:
         for key, value in item.items():
             try:
-                multiplied_value = float(value) * 10
+                multiplied_value = float(value) * factor
                 item[key] = str(multiplied_value)
             except ValueError:
                 pass
 
     # Multiply regular stats
-    CArmy_object.damage *= 10
-    CArmy_object.health *= 10
-    if CArmy_object.has_morale:
-        CArmy_object.morale *= 10
-    CArmy_object.collateral_damage *= 10
-    CArmy_object.war_exhaustion *= 10
+    input_CArmy.damage *= factor
+    input_CArmy.health *= factor
+    if input_CArmy.has_morale:
+        input_CArmy.morale *= factor
+    input_CArmy.collateral_damage *= factor
+    input_CArmy.war_exhaustion *= factor
 
     # Multiply AI Weight base
     ai_weight_multiplier = 2 / 3 * 2 if is_hundred else 1.5
-    CArmy_object.ai_weight *= ai_weight_multiplier
+    input_CArmy.ai_weight *= ai_weight_multiplier
 
-    update_potential_country(CArmy_object, is_hundred)
+    update_potential_country(input_CArmy, is_hundred)
 
 
-def update_potential_country(CArmy_object, is_hundred=False):
+def update_potential_country(input_CArmy: CArmy, is_hundred: bool=False) -> None:
     """Adds the pmca_materiel_policy_check to self.potential_country"""
 
     pmca_mult = "ten" if not is_hundred else "hundred"
@@ -1325,7 +1325,9 @@ def update_potential_country(CArmy_object, is_hundred=False):
     current_resource_value = 0
 
     # NOTE: how the fuck do lambda functions work
-    for sub_type, trigger, resource in zip(CArmy_object.sub_block_type, CArmy_object.triggers, CArmy_object.resource_pairs):
+    for sub_type, trigger, resource in zip(
+        input_CArmy.sub_block_type, input_CArmy.triggers, input_CArmy.resource_pairs
+    ):
         if sub_type == "cost" and trigger == ["always = yes"]:
             current_resource, current_resource_value = max(
                 resource.items(), key=lambda x: resource_priority_dict[x[0]]
@@ -1340,18 +1342,25 @@ def update_potential_country(CArmy_object, is_hundred=False):
 \t\t\tPMCA_VALUE = {current_resource_value}
 \t\t}}\n{conditional_newline}"""
 
-    
-    if not is_hundred and CArmy_object.potential_country and not CArmy_object.potential_country.startswith('\t\t'):
-        CArmy_object.potential_country = "\t\t" + CArmy_object.potential_country
+    if (
+        not is_hundred
+        and input_CArmy.potential_country
+        and not input_CArmy.potential_country.startswith("\t\t")
+    ):
+        input_CArmy.potential_country = "\t\t" + input_CArmy.potential_country
 
     # HACK: This is a really stupid way to stop duplication of the scripted_trigger and I don't care
-    CArmy_object.potential_country = re.sub(r"pmca_materiel_policy_check\s*=\s*{[^}]*}\n?", "", CArmy_object.potential_country)
-    CArmy_object.potential_country = scripted_trigger + CArmy_object.potential_country
+    input_CArmy.potential_country = re.sub(
+        r"pmca_materiel_policy_check\s*=\s*{[^}]*}\n?",
+        "",
+        input_CArmy.potential_country,
+    )
+    input_CArmy.potential_country = scripted_trigger + input_CArmy.potential_country
 
-    optimize_triggers(CArmy_object)
+    optimize_triggers(input_CArmy)
 
 
-def optimize_triggers(CArmy_object):
+def optimize_triggers(input_CArmy: CArmy) -> None:
     """Replaces common triggers with scripted triggers"""
 
     # Add your trigger to scripted trigger replacements here
@@ -1367,73 +1376,83 @@ def optimize_triggers(CArmy_object):
     }
 
     for trigger in replacement_patterns:
-        CArmy_object.show_tech_unlock_if = CArmy_object.show_tech_unlock_if.replace(
-            trigger, replacement_patterns[trigger]
-        )
-        CArmy_object.potential_country = CArmy_object.potential_country.replace(
-            trigger, replacement_patterns[trigger]
-        )
-        CArmy_object.potential = CArmy_object.potential.replace(
-            trigger, replacement_patterns[trigger]
-        )
-        CArmy_object.allow = CArmy_object.allow.replace(
-            trigger, replacement_patterns[trigger]
-        )
-        CArmy_object.ai_weight_conditions = CArmy_object.ai_weight_conditions.replace(
-            trigger, replacement_patterns[trigger]
-        )
+        input_CArmy.show_tech_unlock_if = input_CArmy.show_tech_unlock_if.replace(trigger, replacement_patterns[trigger])
+        input_CArmy.potential_country = input_CArmy.potential_country.replace(trigger, replacement_patterns[trigger])
+        input_CArmy.potential = input_CArmy.potential.replace(trigger, replacement_patterns[trigger])
+        input_CArmy.allow = input_CArmy.allow.replace(trigger, replacement_patterns[trigger])
+        input_CArmy.ai_weight_conditions = input_CArmy.ai_weight_conditions.replace(trigger, replacement_patterns[trigger])
 
 
-def generate_army_defs():
-    """Generates all of the required localisation keys"""
+def generate_army_defs(file_prefix: str) -> None:
+    """Generates all of the army definitions"""
 
-    times_ten_defs = os.path.join(armies_folder, f"pmca_x10_armies.txt")
-    times_hundred_defs = os.path.join(armies_folder, f"pmca_x100_armies.txt")
+    times_ten_defs = os.path.join(armies_folder, f"{file_prefix}_x10_armies.txt")
+    times_hundred_defs = os.path.join(armies_folder, f"{file_prefix}_x100_armies.txt")
+    x10_output = "# x10 army definitions generated using Python\n\n"
+    x100_output = "# x100 army definitions generated using Python\n\n"
+
+    for army in list_of_CArmies:
+        all_army_keys.append(army.persistent_army_name)
+        army.army_name = "pmca_ten_" + army.army_name
+        multiply_army_stats_by_factor(army, 10)
+        x10_output += army.convert_to_pdscript()
+    for army in list_of_CArmies:
+        army.army_name = army.army_name.replace("pmca_ten_", "pmca_hundred_")
+        multiply_army_stats_by_factor(army, 10, True)
+        x100_output += army.convert_to_pdscript()
 
     with open(times_ten_defs, "w", encoding="utf-8") as file_output:
-        for army in list_of_CArmies:
-            all_army_keys.append(army.persistent_army_name)
-            army.army_name = "pmca_ten_" + army.army_name
-            multiply_army_stats_by_ten(army)
-            file_output.write(army.convert_to_pdscript())
+        file_output.write(x10_output)
+
     with open(times_hundred_defs, "w", encoding="utf-8") as file_output:
-        for army in list_of_CArmies:
-            army.army_name = army.army_name.replace("pmca_ten_", "pmca_hundred_")
-            multiply_army_stats_by_ten(army, True)
-            file_output.write(army.convert_to_pdscript())
+        file_output.write(x100_output)
 
 
-def generate_pm_condensed_armies():
+def generate_pm_condensed_armies() -> None:
     """Actually runs stuff"""
 
-    if os.path.isfile("./input.txt"):
+    if os.path.isfile(".\input.txt"):
+        input_file_prefix = input(
+            "Enter a custom file prefix, or leave blank to default to 'REPLACE_ME': "
+        )
+
+        if not input_file_prefix.strip():
+            file_prefix = "REPLACE_ME"
+        else:
+            file_prefix = input_file_prefix
+
         start = time.time()
         print("\nCreating directories...")
+
         create_folders()
 
         print("Scanning input...")
-        scan_armies()
+        scan_input_file()
 
         print("Writing x10/x100 definitions...")
-        generate_army_defs()
+        generate_army_defs(file_prefix)
 
         print("Generating localisation keys...")
-        generate_loc_keys(localisation_folder, stellaris_languages)
+        generate_loc_keys(file_prefix)
 
-        print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
+        print(
+            f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!"
+        )
 
         end = time.time()
         time_in_milliseconds = round((end - start) * 1000, 2)
         print("\nStats:")
         print(f"\tNumber of Army Definitions: {len(list_of_CArmies)}")
-        print(f"\tNumber of languages supported by Stellaris: {len(stellaris_languages)}")
-        print(f"\tNumber of localisation keys generated: {len(list_of_CArmies) * 6 * len(stellaris_languages)} total | {len(list_of_CArmies) * 6} per file")
+        print(
+            f"\tNumber of languages supported by Stellaris: {len(stellaris_languages)}"
+        )
+        print(
+            f"\tNumber of localisation keys generated: {len(list_of_CArmies) * 6 * len(stellaris_languages)} total | {len(list_of_CArmies) * 6} per file"
+        )
         print(f"\tEstimated time to complete: {time_in_milliseconds} milliseconds")
-
-        with open("output.txt", 'w', encoding='utf-8') as file_output:
-            for key in all_army_keys:
-                file_output.write(key + '\n')
     else:
-        print("ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it.")
+        print(
+            "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
+        )
 
 generate_pm_condensed_armies()
