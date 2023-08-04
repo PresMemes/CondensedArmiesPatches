@@ -1,3 +1,5 @@
+# x100 army definitions generated using Python
+
 pmca_hundred_infantry_army = {
 	use_armynames_from = infantry_army
 	damage = 100.0
@@ -2173,6 +2175,10 @@ pmca_hundred_milita_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2270,6 +2276,10 @@ pmca_hundred_men_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2362,6 +2372,10 @@ pmca_hundred_ranger_army = {
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -2461,6 +2475,10 @@ pmca_hundred_knight_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2554,6 +2572,10 @@ pmca_hundred_knight_air_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2644,6 +2666,10 @@ pmca_hundred_treb_army = {
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -2742,6 +2768,10 @@ pmca_hundred_grail_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2832,6 +2862,10 @@ pmca_hundred_house_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -2915,14 +2949,22 @@ pmca_hundred_royal_guard = {
 	resources = {
 		category = armies
 		cost = {
-			minerals = 10000.0
+			food = 60000.0
+			minerals = 30000.0
+			alloys = 2500.0
 		}
 		upkeep = {
-			energy = 200.0
+			energy = 2000.0
+			food = 100.0
+			alloys = 50.0
 		}
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -2932,8 +2974,8 @@ pmca_hundred_royal_guard = {
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = hundred
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 10000.0
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 2500.0
 		}
 
 		OR = {
@@ -2998,12 +3040,12 @@ pmca_hundred_royal_guard = {
 
 pmca_hundred_royal_men_army = {
 	use_armynames_from = royal_men_army
-	damage = 150.0
-	health = 150.0
-	morale = 200.0
-	morale_damage = 1.50
+	damage = 175.0
+	health = 175.0
+	morale = 250.0
+	morale_damage = 1.75
 	collateral_damage = 100.0
-	war_exhaustion = 150.0
+	war_exhaustion = 200.0
 	time = 120
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
@@ -3021,6 +3063,10 @@ pmca_hundred_royal_men_army = {
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -3091,12 +3137,12 @@ pmca_hundred_royal_men_army = {
 
 pmca_hundred_royal_knight_army = {
 	use_armynames_from = royal_knight_army
-	damage = 300.0
-	health = 250.0
-	morale = 300.0
-	morale_damage = 3.00
+	damage = 325.0
+	health = 275.0
+	morale = 350.0
+	morale_damage = 3.25
 	collateral_damage = 150.0
-	war_exhaustion = 400.0
+	war_exhaustion = 450.0
 	time = 200
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
@@ -3115,6 +3161,10 @@ pmca_hundred_royal_knight_army = {
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -3197,14 +3247,22 @@ pmca_hundred_psi_knight_army = {
 	resources = {
 		category = armies
 		cost = {
-			minerals = 30000.0
+			food = 40000.0
+			minerals = 60000.0
+			alloys = 1000.0
 		}
 		upkeep = {
 			energy = 2000.0
+			food = 100.0
+			alloys = 10.0
 		}
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -3214,8 +3272,8 @@ pmca_hundred_psi_knight_army = {
 	potential_country = {
 		pmca_materiel_policy_check = {
 			PMCA_MULT = hundred
-			PMCA_RESOURCE = minerals
-			PMCA_VALUE = 30000.0
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 1000.0
 		}
 
 		OR = {
@@ -3275,12 +3333,12 @@ pmca_hundred_psi_knight_army = {
 
 pmca_hundred_royal_air_army = {
 	use_armynames_from = royal_air_army
-	damage = 325.0
-	health = 250.0
-	morale = 300.0
-	morale_damage = 3.50
+	damage = 375.0
+	health = 275.0
+	morale = 350.0
+	morale_damage = 3.75
 	collateral_damage = 200.0
-	war_exhaustion = 450.0
+	war_exhaustion = 500.0
 	time = 250
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
@@ -3299,6 +3357,10 @@ pmca_hundred_royal_air_army = {
 	}
 
 	show_tech_unlock_if = {
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -3401,6 +3463,10 @@ pmca_hundred_knight_walker_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -3497,6 +3563,11 @@ pmca_hundred_pilgram_army = {
 	}
 
 	show_tech_unlock_if = {
+		has_ethic = ethic_spiritualist
+		OR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -4114,7 +4185,6 @@ pmca_hundred_renegade_army = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
-		has_civic = civic_permanent_employment
 		OR = {
 			has_civic = civic_corporate_dominion
 			has_civic = civic_merchant_guilds
@@ -4283,7 +4353,10 @@ pmca_hundred_gravity_executive_army = {
 	war_exhaustion = 800.0
 	time = 200
 	icon = GFX_army_type_assault
-	prerequisites = { "tech_assault_armies" }
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+	}
 	resources = {
 		category = armies
 		cost = {
@@ -4318,7 +4391,6 @@ pmca_hundred_gravity_executive_army = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		has_technology = "tech_housing_2"
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
