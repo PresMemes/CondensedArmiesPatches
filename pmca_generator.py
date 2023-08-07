@@ -2,13 +2,14 @@ import re
 import time
 import os
 
+
 directory = ".\PMCA_GEN_OUTPUT"
 common_folder = os.path.join(directory, "common")
 armies_folder = os.path.join(common_folder, "armies")
 localisation_folder = os.path.join(directory, "localisation")
 
 list_of_CArmies = []
-all_army_keys = []
+concerning_CArmies = {}
 stellaris_languages = [
     "l_braz_por",
     "l_english",
@@ -815,10 +816,11 @@ class CArmy:
         script_occupation: str="no",
         script_pop_limited: str="yes",
         script_use_armynames_from: str="",
+        script_is_pop_spawned: str="no",
     ):
         self.category = ""
         self.sub_block_type = []
-        self.triggers = []
+        self.trigger_list = []
         self.resource_pairs = []
         self.mult_values = []
 
@@ -848,10 +850,11 @@ class CArmy:
         self.war_exhaustion = float(script_war_exhaustion)
         self.build_time = script_build_time
         self.icon = script_icon
-        self.pop_limited = True if script_pop_limited == "yes" else False
-        self.has_species = True if script_has_species == "yes" else False
-        self.disband_if_species_lacks_rights = True if script_disband_if_species_lacks_rights == "yes" else False
-        self.use_armynames_from = self.use_armynames_from if script_use_armynames_from else self.persistent_army_name
+        self.pop_limited = script_pop_limited
+        self.has_species = script_has_species
+        self.is_pop_spawned = script_is_pop_spawned
+        self.disband_if_species_lacks_rights = script_disband_if_species_lacks_rights
+        self.use_armynames_from = script_use_armynames_from if script_use_armynames_from else self.persistent_army_name
 
         self.prerequisites = script_prereqs if script_prereqs is not None else []
 
@@ -870,7 +873,7 @@ class CArmy:
 
         self.on_unqueued = script_on_unqueued
 
-        self.ai_weight = float(script_ai_weight_base)
+        self.ai_weight = float(script_ai_weight_base) if script_ai_weight_base else None
         self.ai_weight_conditions = script_ai_weight_modifiers
 
     def __str__(self):
@@ -913,7 +916,7 @@ class CArmy:
             f"AI Weight Modifiers = {{ {ai_weight_conditions_one_line} }}\n"
             f"Economic Category = {self.category}\n"
             f"  Resource Subblocks = {self.sub_block_type}\n"
-            f"  Subblock Trigger(s) = {self.triggers}\n"
+            f"  Subblock Trigger(s) = {self.trigger_list}\n"
             f"  Subblock Resource Pairs = {self.resource_pairs}\n"
             f"  Subblock Multipliers = {self.mult_values}"
         )
@@ -940,13 +943,16 @@ class CArmy:
         PDScript_string += f"\ttime = {self.build_time}\n"
         PDScript_string += f"\ticon = {self.icon}\n"
 
-        if not self.pop_limited:
+        if self.pop_limited == "no":
             PDScript_string += f"\tpop_limited = no\n"
 
-        if not self.has_species:
+        if self.is_pop_spawned == "yes":
+            PDScript_string += f"\tis_pop_spawned = yes\n"
+
+        if self.has_species == "no":
             PDScript_string += f"\thas_species  = no\n"
 
-        if not self.disband_if_species_lacks_rights:
+        if self.disband_if_species_lacks_rights == "no":
             PDScript_string += f"\tdisband_if_species_lacks_rights = no\n"
 
         if self.prerequisites:
@@ -989,7 +995,7 @@ class CArmy:
             PDScript_string += f"\t\t{self.on_unqueued.strip()}\n"
             PDScript_string += f"\t}}\n"
 
-        if self.ai_weight:
+        if self.ai_weight is not None:
             PDScript_string += f"\n\tai_weight = {{\n"
             PDScript_string += f"\t\tbase = {self.ai_weight}\n"
             if self.ai_weight_conditions:
@@ -1021,9 +1027,7 @@ class CArmy:
             if "{" in line:
                 num_unpaired_braces += 1
                 if num_unpaired_braces == 2:
-                    self.sub_block_type.append(
-                        re.match(type_regex, line.strip()).group(0)
-                    )
+                    self.sub_block_type.append(re.match(type_regex, line.strip()).group(0))
                     inside_sub_block = True
                     seen_mult = False
                 if num_unpaired_braces == 3:
@@ -1037,12 +1041,15 @@ class CArmy:
                     if not seen_mult:
                         self.mult_values.append(0.0)
                     if not seen_trigger_block:
-                        self.triggers.append(["always = yes"])
+                        self.trigger_list.append(["always = yes"])
                     else:
-                        self.triggers.append(trigger_block.copy())
+                        self.trigger_list.append(trigger_block.copy())
                         trigger_block.clear()
                     inside_sub_block = False
                     seen_trigger_block = False
+
+            if inside_sub_block and num_unpaired_braces == 3 and not line.strip().startswith("trigger = {"):
+                trigger_block.append(line.strip())
 
             # Add name = value pair to dictionary, or add it to the mult list
             if inside_sub_block and num_unpaired_braces == 2:
@@ -1058,17 +1065,21 @@ class CArmy:
                             temp_resource_pairs = {}
                         temp_resource_pairs[resource_name] = resource_value
 
+        print(self.category)
+        print(self.sub_block_type)
+        print(self.trigger_list)
+        print(self.resource_pairs)
+        print(self.mult_values)
+
     def reconstruct_resource_table(self) -> str:
         """Appends various variables into a string"""
 
         output = f"\tresources = {{\n\t\tcategory = {self.category}"
 
-        for sub_type, trigger, resource, mult in zip(
-            self.sub_block_type, self.triggers, self.resource_pairs, self.mult_values
-        ):
+        for sub_type, trigger, resource, mult in zip(self.sub_block_type, self.trigger_list, self.resource_pairs, self.mult_values):
             output += f"\n\t\t{sub_type} = {{"
 
-            if len(trigger) >= 1 and trigger[0] != "always = yes":
+            if len(trigger) >= 1 and trigger != ["always = yes"]:
                 output += "\n\t\t\ttrigger = {"
                 for line in trigger:
                     output += f"\n\t\t\t\t{line}"
@@ -1095,16 +1106,18 @@ def scan_input_file() -> None:
     """Scans input.txt for army definitions, then sends every army definition to parse_armies_for_creation"""
 
     with open("input.txt", "r", encoding="utf-8") as file_input:
-        num_isolated_braces = 0
-        army_string = ""
-        for line in file_input:
-            if should_read_line(line):
-                num_isolated_braces += line.count("{")
-                num_isolated_braces -= line.count("}")
-                army_string += line
-                if num_isolated_braces == 0:
-                    parse_armies_for_creation(army_string)
-                    army_string = ""
+        file_contents = file_input.readlines()
+
+    num_isolated_braces = 0
+    army_string = ""
+    for line in file_contents:
+        if should_read_line(line):
+            num_isolated_braces += line.count("{")
+            num_isolated_braces -= line.count("}")
+            army_string += line
+            if num_isolated_braces == 0:
+                parse_armies_for_creation(army_string)
+                army_string = ""
 
 
 def should_read_line(input_string: str) -> bool:
@@ -1131,6 +1144,7 @@ def parse_armies_for_creation(input_string: str) -> None:
     scan_defensive = get_attribute_value(input_string, "defensive", r"yes", default="no")
     scan_occupation = get_attribute_value(input_string, "occupation", r"yes", default="no")
     scan_pop_limited = get_attribute_value(input_string, "pop_limited", r"no", default="yes")
+    scan_is_pop_spawned = get_attribute_value(input_string, "is_pop_spawned", r"yes", default="no")
     scan_has_species = get_attribute_value(input_string, "has_species", r"no", default="yes")
     scan_disband_if_species_lacks_rights = get_attribute_value(input_string, "disband_if_species_lacks_rights", r"no", default="yes")
     scan_use_armynames_from = get_attribute_value(input_string, "use_armynames_from", r"\w+")
@@ -1224,6 +1238,7 @@ def parse_armies_for_creation(input_string: str) -> None:
         script_defensive=scan_defensive,
         script_occupation=scan_occupation,
         script_pop_limited=scan_pop_limited,
+        script_is_pop_spawned=scan_is_pop_spawned,
         script_use_armynames_from=scan_use_armynames_from,
     )
     list_of_CArmies.append(army)
@@ -1238,16 +1253,18 @@ def get_attribute_value(input_string: str, attribute: str, pattern: str, default
 
 
 def strip_first_and_last_brace(input_string: str) -> str:
-    """Returns everthing between the first and last brace"""
+    """Returns everything between the first and last brace"""
     first_brace_index = input_string.find("{")
     last_brace_index = input_string.rfind("}")
-    return input_string.strip()[first_brace_index + 1 : last_brace_index - 2]
+
+    # Account for leading spaces and get the substring between the braces
+    return input_string[first_brace_index + 1 : last_brace_index].strip()
 
 
 def handle_ai_weight(input_string: str, is_base: bool=False) -> str:
     """Returns either the AI Weight base or the modifiers for it, depending on is_base"""
     if is_base:
-        return get_attribute_value(input_string, "base", r"\d+\.?\d*", default=0.0)
+        return get_attribute_value(input_string, "base", r"\d+\.?\d*")
     else:
         lines = input_string.splitlines()[2:-1]
         return "\n".join(lines).strip()
@@ -1272,17 +1289,17 @@ def generate_loc_keys(file_name_prefix: str) -> None:
     """Generates every loc key for every language"""
 
     file_content = ""
-    for key in all_army_keys:
-        comment_block = "#" * (len(f"### {key} ###"))
+    for key in list_of_CArmies:
+        comment_block = "#" * len(f"### {key.persistent_army_name} ###")
         file_content += f"\n {comment_block}\n"
-        file_content += f" ### {key.upper()} ###\n"
+        file_content += f" ### {key.persistent_army_name.upper()} ###\n"
         file_content += f" {comment_block}\n"
-        file_content += f' pmca_ten_{key}: "$pmca_ten$ ${key}$"\n'
-        file_content += f' pmca_ten_{key}_plural: "${key}_plural$"\n'
-        file_content += f' pmca_ten_{key}_desc: "${key}_desc$"\n'
-        file_content += f' pmca_hundred_{key}: "$pmca_hundred$ ${key}$"\n'
-        file_content += f' pmca_hundred_{key}_plural: "${key}_plural$"\n'
-        file_content += f' pmca_hundred_{key}_desc: "${key}_desc$"\n'
+        file_content += f' pmca_ten_{key.persistent_army_name}: "$pmca_ten$ ${key.persistent_army_name}$"\n'
+        file_content += f' pmca_ten_{key.persistent_army_name}_plural: "${key.persistent_army_name}_plural$"\n'
+        file_content += f' pmca_ten_{key.persistent_army_name}_desc: "${key.persistent_army_name}_desc$"\n'
+        file_content += f' pmca_hundred_{key.persistent_army_name}: "$pmca_hundred$ ${key.persistent_army_name}$"\n'
+        file_content += f' pmca_hundred_{key.persistent_army_name}_plural: "${key.persistent_army_name}_plural$"\n'
+        file_content += f' pmca_hundred_{key.persistent_army_name}_desc: "${key.persistent_army_name}_desc$"\n'
 
     for language in stellaris_languages:
         file_name = os.path.join(localisation_folder, f"{file_name_prefix}_{language}.yml")
@@ -1311,8 +1328,9 @@ def multiply_army_stats_by_factor(input_CArmy: CArmy, factor: float, is_hundred:
     input_CArmy.war_exhaustion *= factor
 
     # Multiply AI Weight base
-    ai_weight_multiplier = 2 / 3 * 2 if is_hundred else 1.5
-    input_CArmy.ai_weight *= ai_weight_multiplier
+    if input_CArmy.ai_weight is not None:
+        ai_weight_multiplier = 2 / 3 * 2 if is_hundred else 1.5
+        input_CArmy.ai_weight *= ai_weight_multiplier
 
     update_potential_country(input_CArmy, is_hundred)
 
@@ -1325,22 +1343,14 @@ def update_potential_country(input_CArmy: CArmy, is_hundred: bool=False) -> None
     current_resource_value = 0
 
     # NOTE: how the fuck do lambda functions work
-    for sub_type, trigger, resource in zip(
-        input_CArmy.sub_block_type, input_CArmy.triggers, input_CArmy.resource_pairs
-    ):
+    for sub_type, trigger, resource in zip(input_CArmy.sub_block_type, input_CArmy.trigger_list, input_CArmy.resource_pairs):
         if sub_type == "cost" and trigger == ["always = yes"]:
-            current_resource, current_resource_value = max(
-                resource.items(), key=lambda x: resource_priority_dict[x[0]]
-            )
+            current_resource, current_resource_value = max(resource.items(), key=lambda x: resource_priority_dict[x[0]])
 
     conditional_newline = "\n" if not is_hundred else ""
 
     # NOTE: This looks terrible I know, but I GitHub will scream at me for spaces vs tabs in the diffs
-    scripted_trigger = f"""pmca_materiel_policy_check = {{
-\t\t\tPMCA_MULT = {pmca_mult}
-\t\t\tPMCA_RESOURCE = {current_resource}
-\t\t\tPMCA_VALUE = {current_resource_value}
-\t\t}}\n{conditional_newline}"""
+    scripted_trigger = f"pmca_materiel_policy_check = {{\n\t\t\tPMCA_MULT = {pmca_mult}\n\t\t\tPMCA_RESOURCE = {current_resource}\n\t\t\tPMCA_VALUE = {current_resource_value}\n\t\t}}\n{conditional_newline}"
 
     if (
         not is_hundred
@@ -1392,7 +1402,6 @@ def generate_army_defs(file_prefix: str) -> None:
     x100_output = "# x100 army definitions generated using Python\n\n"
 
     for army in list_of_CArmies:
-        all_army_keys.append(army.persistent_army_name)
         army.army_name = "pmca_ten_" + army.army_name
         multiply_army_stats_by_factor(army, 10)
         x10_output += army.convert_to_pdscript()
@@ -1407,14 +1416,49 @@ def generate_army_defs(file_prefix: str) -> None:
     with open(times_hundred_defs, "w", encoding="utf-8") as file_output:
         file_output.write(x100_output)
 
+def add_concerning_armies_to_list() -> None:
+    """Adds armies that are unbuildable to a list for viewing later"""
+    global concerning_CArmies  # python being quirky for some reason
+
+    for army in list_of_CArmies:
+        key = army.persistent_army_name
+        value = []
+
+        if army.defensive == "yes":
+            value.append("The 'defensive' property is set to 'yes' in the army definition.")
+
+        if army.occupation == "yes":
+            value.append("The 'occupation' property is set to 'yes' in the army definition.")
+
+        blocks_to_check = ["potential_country", "potential", "allow", "on_queued", "on_unqueued"]
+
+        blocks_with_always_no = []
+        blocks_with_variable_modification = []
+
+        for block in blocks_to_check:
+            if army.__getattribute__(block).strip().startswith("always = no"):
+                blocks_with_always_no.append(block)
+
+            if army.__getattribute__(block).find("variable = {") != -1:
+                blocks_with_variable_modification.append(block)
+
+        if blocks_with_always_no:
+            value.append(f"The '{', '.join(blocks_with_always_no)}' {'blocks' if len(blocks_with_always_no) > 1 else 'block'} starts with 'always = no'.")
+
+        if blocks_with_variable_modification:
+            value.append(f"Variable modification detected in the '{', '.join(blocks_with_variable_modification)}' {'blocks' if len(blocks_with_variable_modification) > 1 else 'block'}.")
+
+        concerning_CArmies[key] = value
+
+    concerning_CArmies = {key: value for key, value in concerning_CArmies.items() if value}
+
+
 
 def generate_pm_condensed_armies() -> None:
     """Actually runs stuff"""
 
     if os.path.isfile(".\input.txt"):
-        input_file_prefix = input(
-            "Enter a custom file prefix, or leave blank to default to 'REPLACE_ME': "
-        )
+        input_file_prefix = input("Enter a custom file prefix, or leave blank to default to 'REPLACE_ME': ")
 
         if not input_file_prefix.strip():
             file_prefix = "REPLACE_ME"
@@ -1429,30 +1473,44 @@ def generate_pm_condensed_armies() -> None:
         print("Scanning input...")
         scan_input_file()
 
-        print("Writing x10/x100 definitions...")
+        add_concerning_armies_to_list()
+
+        print("Writing x10 and x100 definitions...")
         generate_army_defs(file_prefix)
 
         print("Generating localisation keys...")
         generate_loc_keys(file_prefix)
 
-        print(
-            f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!"
-        )
+        print(f"Done! Check the Directory '{directory}' for your freshly Condensed Armies!")
 
         end = time.time()
         time_in_milliseconds = round((end - start) * 1000, 2)
-        print("\nStats:")
-        print(f"\tNumber of Army Definitions: {len(list_of_CArmies)}")
-        print(
-            f"\tNumber of languages supported by Stellaris: {len(stellaris_languages)}"
-        )
-        print(
-            f"\tNumber of localisation keys generated: {len(list_of_CArmies) * 6 * len(stellaris_languages)} total | {len(list_of_CArmies) * 6} per file"
-        )
-        print(f"\tEstimated time to complete: {time_in_milliseconds} milliseconds")
+        print("\n------------------------\n")
+        print("Stats:")
+        print(f"  - Number of Army Definitions: {len(list_of_CArmies)}")
+        print(f"  - Number of languages supported by Stellaris: {len(stellaris_languages)}")
+        print(f"  - Number of localisation keys generated: {len(list_of_CArmies) * 6 * len(stellaris_languages)} total | {len(list_of_CArmies) * 6} per file")
+        print(f"  - Estimated time to complete: {time_in_milliseconds} milliseconds\n")
+
+        if len(concerning_CArmies) > 0 and input("Some armies were detected as unbuildable and/or should not be condensed. Would you like to see the details? [Y/N]: ").upper() == "Y":
+            print("\n------------------------\n")
+            for key, values in concerning_CArmies.items():
+                print(f"{key}:")
+                for value in values:
+                    print(f"  - {value}")
+
+            if input("\nWould you like to see a quick explanation of all of the warnings? [Y/N]: ").upper() == "Y":
+                print("\n------------------------\n")
+                print("The 'defensive' property is set to 'yes' in the army definition:")
+                print("  - Defensive armies are usually unbuildable, but condensing is up to personal preference if they are buildable.")
+                print("The 'occupation' property is set to 'yes' in the army definition:")
+                print("  - I have no idea how Stellaris would handle condensed occupation armies, but they're unbuildable so /shrug.")
+                print("The 'BLOCK' block starts with 'always = no':")
+                print("  - Literally impossible for either the player and AI to build them.")
+                print("  - Only the first line is checked due to the script not understanding nuance, such as banning AI from building a certain army.")
+                print("Variable modification detected in the 'BLOCK' block:")
+                print("  - Events that handle increasing/decreasing variables usually don't account for condensed versions of armies.")
     else:
-        print(
-            "ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it."
-        )
+        print("ERROR: input.txt does NOT exist! Please create it and put your army definitions inside it.")
 
 generate_pm_condensed_armies()
