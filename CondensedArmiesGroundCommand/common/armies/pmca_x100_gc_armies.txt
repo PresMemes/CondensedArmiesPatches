@@ -22,6 +22,10 @@ pmca_hundred_infantry_army = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -42,9 +46,9 @@ pmca_hundred_infantry_army = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+		NOR = {
+			 is_machine_empire = yes
+			 has_valid_civic = civic_machine_assimilator
 		}
 	}
 
@@ -115,6 +119,10 @@ pmca_hundred_armor_division = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -136,10 +144,10 @@ pmca_hundred_armor_division = {
 			is_megacorp = yes
 		}
 		NOT = { has_technology = "tech_housing_2" }
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -218,6 +226,10 @@ pmca_hundred_gravity_armor_division = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
@@ -238,10 +250,10 @@ pmca_hundred_gravity_armor_division = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -316,9 +328,13 @@ pmca_hundred_mechanized_division = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -336,10 +352,10 @@ pmca_hundred_mechanized_division = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -414,9 +430,13 @@ pmca_hundred_airborne_division = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -434,10 +454,10 @@ pmca_hundred_airborne_division = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -506,9 +526,13 @@ pmca_hundred_marine_division = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -519,7 +543,6 @@ pmca_hundred_marine_division = {
 			PMCA_VALUE = 10000.0
 		}
 
-
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
@@ -528,10 +551,10 @@ pmca_hundred_marine_division = {
 			is_megacorp = yes
 		}
 		NOT = { has_civic = civic_distinguished_admiralty }
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -601,9 +624,13 @@ pmca_hundred_fighter_wing = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -614,7 +641,6 @@ pmca_hundred_fighter_wing = {
 			PMCA_VALUE = 500.0
 		}
 
-
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
@@ -622,10 +648,10 @@ pmca_hundred_fighter_wing = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -701,9 +727,13 @@ pmca_hundred_close_air_support_wing = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -714,7 +744,6 @@ pmca_hundred_close_air_support_wing = {
 			PMCA_VALUE = 500.0
 		}
 
-
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
@@ -722,10 +751,10 @@ pmca_hundred_close_air_support_wing = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -801,9 +830,13 @@ pmca_hundred_strategic_bomber_wing = {
 	}
 
 	show_tech_unlock_if = {
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -814,7 +847,6 @@ pmca_hundred_strategic_bomber_wing = {
 			PMCA_VALUE = 500.0
 		}
 
-
 		NOR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
@@ -822,10 +854,10 @@ pmca_hundred_strategic_bomber_wing = {
 			has_civic = civic_merchant_guilds
 			is_megacorp = yes
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -907,6 +939,14 @@ pmca_hundred_titan_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_technology = tech_synthetic_workers
+			has_technology = tech_ship_armor_5
+		}
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
@@ -923,10 +963,10 @@ pmca_hundred_titan_army = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -1021,10 +1061,10 @@ pmca_hundred_chivalric_army = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
-		OR = {
-			is_machine_empire = no
+		NOR = {
+			is_machine_empire = yes
 			has_valid_civic = civic_machine_assimilator
-		}
+	   }
 	}
 
 	potential = {
@@ -1115,7 +1155,7 @@ pmca_hundred_mecha_chivalric_army = {
 		has_origin = origin_mechanists
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1218,7 +1258,7 @@ pmca_hundred_republican_guard = {
 			}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1309,7 +1349,7 @@ pmca_hundred_naval_infantry = {
 		has_civic = civic_distinguished_admiralty
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1397,7 +1437,7 @@ pmca_hundred_esoteric_army = {
 		has_origin = origin_scion
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1487,7 +1527,7 @@ pmca_hundred_void_warband = {
 		has_civic = civic_barbaric_despoilers
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1573,7 +1613,7 @@ pmca_hundred_ideological_army = {
 		has_civic = civic_nationalistic_zeal
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 			NOR = {
 				has_civic = civic_feudal_realm
 				has_origin = origin_toxic_knights
@@ -1674,7 +1714,7 @@ pmca_hundred_imperial_guard = {
 			}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -1760,8 +1800,6 @@ pmca_hundred_conscript_army = {
 		}
 		has_civic = civic_shared_burden
 		is_machine_empire = no
-		any_owned_pop = {
-		}
 	}
 
 	potential = {
@@ -2009,7 +2047,7 @@ pmca_hundred_archaeo_army = {
 		}
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -2102,7 +2140,7 @@ pmca_hundred_archaeo_army_better = {
 		has_ascension_perk = ap_archaeoengineers
 		OR = {
 			is_machine_empire = no
-			has_valid_civic = civic_machine_assimilator
+			NOT = { has_valid_civic = civic_machine_assimilator }
 		}
 	}
 
@@ -3463,6 +3501,10 @@ pmca_hundred_knight_walker_army = {
 
 	show_tech_unlock_if = {
 		OR = {
+			has_technology = tech_housing_2
+			has_technology = tech_ship_armor_5
+		}
+		OR = {
 			has_civic = civic_feudal_realm
 			has_origin = origin_toxic_knights
 		}
@@ -3590,9 +3632,7 @@ pmca_hundred_pilgram_army = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
 		}
-		NOR = {
-			authority = auth_corporate
-		}
+		is_megacorp = no
 	}
 
 	potential = {
@@ -4733,3 +4773,535 @@ pmca_hundred_synth_commandos = {
 	}
 }
 
+pmca_hundred_nano_army = {
+	use_armynames_from = nano_army
+	damage = 800.0
+	health = 75.0
+	has_morale = no
+	morale_damage = 10.00
+	collateral_damage = 8000.0
+	war_exhaustion = 1.0
+	time = 90
+	icon = GFX_army_type_machine_assault
+	pop_limited = no
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_nanite_assemblers"
+	}
+	resources = {
+		category = armies
+		cost = {
+			nanites = 15000.0
+		}
+		upkeep = {
+			energy = 1000.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = nanites
+			PMCA_VALUE = 15000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+ 			set = 0
+ 			has_technology = tech_adaptive_combat_algorithms
+ 		}
+	}
+}
+
+pmca_hundred_hazard_army = {
+	use_armynames_from = hazard_army
+	damage = 100.0
+	health = 100.0
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 200.0
+	war_exhaustion = 50.0
+	time = 90
+	icon = GFX_army_type_machine_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			alloys = 1000.0
+		}
+		upkeep = {
+			energy = 400.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 1000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+ 			set = 0
+ 			has_technology = tech_adaptive_combat_algorithms
+ 		}
+	}
+}
+
+pmca_hundred_hazard_army_2 = {
+	use_armynames_from = hazard_army_2
+	damage = 200.0
+	health = 200.0
+	has_morale = no
+	morale_damage = 2.50
+	collateral_damage = 250.0
+	war_exhaustion = 100.0
+	time = 180
+	icon = GFX_army_type_machine_assault
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 2000.0
+		}
+		upkeep = {
+			energy = 800.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 2000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+			set = 0
+			has_technology = tech_adaptive_combat_algorithms
+		}
+	}
+}
+
+pmca_hundred_hazard_army_3 = {
+	use_armynames_from = hazard_army_3
+	damage = 400.0
+	health = 400.0
+	has_morale = no
+	morale_damage = 5.00
+	collateral_damage = 500.0
+	war_exhaustion = 400.0
+	time = 360
+	icon = GFX_army_type_machine_assault
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_housing_2"
+		"tech_ship_armor_4"
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 6000.0
+		}
+		upkeep = {
+			energy = 1500.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 6000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+			set = 0
+			has_technology = tech_adaptive_combat_algorithms
+		}
+	}
+}
+
+pmca_hundred_robo_commandos = {
+	use_armynames_from = robo_commandos
+	damage = 215.0
+	health = 250.0
+	has_morale = no
+	morale_damage = 3.00
+	collateral_damage = 50.0
+	war_exhaustion = 500.0
+	time = 190
+	icon = GFX_army_type_robot
+	prerequisites = { "tech_combat_computers_2" }
+	resources = {
+		category = armies
+		cost = {
+			alloys = 5000.0
+		}
+		upkeep = {
+			energy = 1000.0
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 5000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+ 			set = 0
+ 			OR = {
+ 				NOT = { has_policy_flag = robots_outlawed }
+ 				has_technology = tech_telepathy
+ 				has_technology = tech_gene_seed_purification
+ 				NAND = {
+ 					has_ai_personality_behaviour = robot_liberator
+ 					has_technology = tech_droid_workers
+ 				}
+ 			}
+ 			is_fallen_empire = no
+ 		}
+ 		modifier = {
+ 			set = 0
+ 			is_fallen_empire = yes
+ 			NOT = { has_ethic = ethic_fanatic_materialist }
+ 		}
+	}
+}
+
+pmca_hundred_bohemoth_army = {
+	use_armynames_from = bohemoth_army
+	damage = 1000.0
+	health = 800.0
+	has_morale = no
+	morale_damage = 12.00
+	collateral_damage = 1200.0
+	war_exhaustion = 1000.0
+	time = 300
+	icon = GFX_army_type_assault
+	pop_limited = no
+	prerequisites = {
+		"tech_assault_armies"
+		"tech_power_plant_4"
+		"tech_ship_armor_5"
+	}
+	resources = {
+		category = armies
+		cost = {
+			minerals = 30000.0
+			alloys = 10000.0
+		}
+		upkeep = {
+			energy = 2000.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_technology = tech_power_plant_4
+			has_technology = tech_ship_armor_5
+		}
+		is_machine_empire = yes
+		NOR = {
+			has_civic = civic_feudal_realm
+			has_origin = origin_toxic_knights
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 10000.0
+		}
+
+		is_machine_empire = yes
+	}
+
+	potential = {
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+		}
+		from = {
+				has_trait = "trait_machine_unit"
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+}
+
+pmca_hundred_eradicator_army = {
+	use_armynames_from = eradicator_army
+	damage = 700.0
+	health = 75.0
+	has_morale = no
+	morale_damage = 4.00
+	collateral_damage = 900.0
+	war_exhaustion = 25.0
+	time = 90
+	icon = GFX_army_type_robot
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			alloys = 1500.0
+		}
+		upkeep = {
+			energy = 150.0
+		}
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = alloys
+			PMCA_VALUE = 1500.0
+		}
+
+		is_machine_empire = yes
+		has_civic = civic_machine_terminator
+	}
+
+	potential = {
+		from = { has_trait = "trait_machine_unit" }
+		OR = {
+			planet = { has_district = district_industrial }
+			planet = { has_district = district_arcology_arms_industry }
+			planet = { has_district = district_hab_industrial }
+			planet = { has_district = district_rw_industrial }
+			}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+			set = 0
+			OR = {
+				NOT = { has_policy_flag = robots_outlawed }
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				NAND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+			}
+			is_fallen_empire = no
+		}
+		modifier = {
+			set = 0
+			is_fallen_empire = yes
+			NOT = { has_ethic = ethic_fanatic_materialist }
+		}
+	}
+}
+
+pmca_hundred_auxillary_army = {
+	use_armynames_from = auxillary_army
+	damage = 150.0
+	health = 150.0
+	morale = 125.0
+	morale_damage = 1.25
+	collateral_damage = 100.0
+	war_exhaustion = 150.0
+	time = 90
+	icon = GFX_army_type_assault
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 10000.0
+		}
+		upkeep = {
+			energy = 100.0
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+			has_civic = civic_machine_assimilator
+	}
+
+	potential_country = {
+		pmca_materiel_policy_check = {
+			PMCA_MULT = hundred
+			PMCA_RESOURCE = minerals
+			PMCA_VALUE = 10000.0
+		}
+
+		is_machine_empire = yes
+			has_civic = civic_machine_assimilator
+	}
+
+	potential = {
+		from = {
+			has_trait = "trait_cybernetic"
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 200.0
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+			OR = {
+				AND = {
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+				}
+				AND = {
+					has_ai_personality_behaviour = robot_liberator
+					has_technology = tech_droid_workers
+				}
+				has_valid_civic = civic_reanimated_armies
+			}
+		}
+	}
+}

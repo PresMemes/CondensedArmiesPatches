@@ -501,3 +501,83 @@
  pmca_hundred_synth_commandos: "$pmca_hundred$ $synth_commandos$"
  pmca_hundred_synth_commandos_plural: "$synth_commandos_plural$"
  pmca_hundred_synth_commandos_desc: "$synth_commandos_desc$"
+
+ #################
+ ### NANO_ARMY ###
+ #################
+ pmca_ten_nano_army: "$pmca_ten$ $nano_army$"
+ pmca_ten_nano_army_plural: "$nano_army_plural$"
+ pmca_ten_nano_army_desc: "$nano_army_desc$"
+ pmca_hundred_nano_army: "$pmca_hundred$ $nano_army$"
+ pmca_hundred_nano_army_plural: "$nano_army_plural$"
+ pmca_hundred_nano_army_desc: "$nano_army_desc$"
+
+ ###################
+ ### HAZARD_ARMY ###
+ ###################
+ pmca_ten_hazard_army: "$pmca_ten$ $hazard_army$"
+ pmca_ten_hazard_army_plural: "$hazard_army_plural$"
+ pmca_ten_hazard_army_desc: "$hazard_army_desc$"
+ pmca_hundred_hazard_army: "$pmca_hundred$ $hazard_army$"
+ pmca_hundred_hazard_army_plural: "$hazard_army_plural$"
+ pmca_hundred_hazard_army_desc: "$hazard_army_desc$"
+
+ #####################
+ ### HAZARD_ARMY_2 ###
+ #####################
+ pmca_ten_hazard_army_2: "$pmca_ten$ $hazard_army_2$"
+ pmca_ten_hazard_army_2_plural: "$hazard_army_2_plural$"
+ pmca_ten_hazard_army_2_desc: "$hazard_army_2_desc$"
+ pmca_hundred_hazard_army_2: "$pmca_hundred$ $hazard_army_2$"
+ pmca_hundred_hazard_army_2_plural: "$hazard_army_2_plural$"
+ pmca_hundred_hazard_army_2_desc: "$hazard_army_2_desc$"
+
+ #####################
+ ### HAZARD_ARMY_3 ###
+ #####################
+ pmca_ten_hazard_army_3: "$pmca_ten$ $hazard_army_3$"
+ pmca_ten_hazard_army_3_plural: "$hazard_army_3_plural$"
+ pmca_ten_hazard_army_3_desc: "$hazard_army_3_desc$"
+ pmca_hundred_hazard_army_3: "$pmca_hundred$ $hazard_army_3$"
+ pmca_hundred_hazard_army_3_plural: "$hazard_army_3_plural$"
+ pmca_hundred_hazard_army_3_desc: "$hazard_army_3_desc$"
+
+ ######################
+ ### ROBO_COMMANDOS ###
+ ######################
+ pmca_ten_robo_commandos: "$pmca_ten$ $robo_commandos$"
+ pmca_ten_robo_commandos_plural: "$robo_commandos_plural$"
+ pmca_ten_robo_commandos_desc: "$robo_commandos_desc$"
+ pmca_hundred_robo_commandos: "$pmca_hundred$ $robo_commandos$"
+ pmca_hundred_robo_commandos_plural: "$robo_commandos_plural$"
+ pmca_hundred_robo_commandos_desc: "$robo_commandos_desc$"
+
+ #####################
+ ### BOHEMOTH_ARMY ###
+ #####################
+ pmca_ten_bohemoth_army: "$pmca_ten$ $bohemoth_army$"
+ pmca_ten_bohemoth_army_plural: "$bohemoth_army_plural$"
+ pmca_ten_bohemoth_army_desc: "$bohemoth_army_desc$"
+ pmca_hundred_bohemoth_army: "$pmca_hundred$ $bohemoth_army$"
+ pmca_hundred_bohemoth_army_plural: "$bohemoth_army_plural$"
+ pmca_hundred_bohemoth_army_desc: "$bohemoth_army_desc$"
+
+ #######################
+ ### ERADICATOR_ARMY ###
+ #######################
+ pmca_ten_eradicator_army: "$pmca_ten$ $eradicator_army$"
+ pmca_ten_eradicator_army_plural: "$eradicator_army_plural$"
+ pmca_ten_eradicator_army_desc: "$eradicator_army_desc$"
+ pmca_hundred_eradicator_army: "$pmca_hundred$ $eradicator_army$"
+ pmca_hundred_eradicator_army_plural: "$eradicator_army_plural$"
+ pmca_hundred_eradicator_army_desc: "$eradicator_army_desc$"
+
+ ######################
+ ### AUXILLARY_ARMY ###
+ ######################
+ pmca_ten_auxillary_army: "$pmca_ten$ $auxillary_army$"
+ pmca_ten_auxillary_army_plural: "$auxillary_army_plural$"
+ pmca_ten_auxillary_army_desc: "$auxillary_army_desc$"
+ pmca_hundred_auxillary_army: "$pmca_hundred$ $auxillary_army$"
+ pmca_hundred_auxillary_army_plural: "$auxillary_army_plural$"
+ pmca_hundred_auxillary_army_desc: "$auxillary_army_desc$"
