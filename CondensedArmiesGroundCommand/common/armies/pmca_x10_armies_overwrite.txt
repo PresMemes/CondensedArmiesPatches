@@ -1,5 +1,3 @@
-# Irony this is a placeholder file please ignore it
-
 # Overwritten to maintain consistency with Ground Command
 pmca_ten_assault_army = {
     damage = 10.0
