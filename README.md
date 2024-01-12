@@ -24,19 +24,21 @@ There are some things this script cannot parse:
 3. Run the program using terminal/command prompt/whatever
 
 4. You'll prompted for two inputs
-  4a. `Enter a custom file prefix:` This will be used for the file names.
+
+   4a. `Enter a custom file prefix:` This will be used for the file names.
     - Please refrain from naming your files `pmca_<mod_initials>` as that is the format I use.
     - `my_mod_pmca_<mod_initials>_patch` would be fine, however
-  4b. `Enter the mod's id variable:` This is for the conditional inline Condensed Armies uses.
+
+   4b. `Enter the mod's id variable:` This is for the conditional inline Condensed Armies uses.
     - If you're making an external patch: press `Enter`
     - If you're making an integrated/internal patch: Please refer to the [Conditional Inlines](#PMCA's-Conditional-Inline) section for more info
 
-5. After the program is done, you should see a new folder in the directory called `PMCA_GEN_OUTPUT` with all the neccasary files to make the armies work
+6. After the program is done, you should see a new folder in the directory called `PMCA_GEN_OUTPUT` with all the neccasary files to make the armies work
 
-6. If you are prompted with `Some armies were detected as having concerning properties:` enter Y to see which armies in a new file called `pmca_issues.txt`
+7. If you are prompted with `Some armies were detected as having concerning properties:` enter Y to see which armies in a new file called `pmca_issues.txt`
   6a. These are guidelines, not errors, and be can be ignored if you want.
 
-7. (Optional) Use an on-action to mark your Condensed Armies with the appropriate flag
+8. (Optional) Use an on-action to mark your Condensed Armies with the appropriate flag
   7a. If it's a x10 army, `set_army_flag = pmca_times_ten_army`
   7b. If it's a x100 army, `set_army_flag = pmca_times_hundred_army`
 
