@@ -1,89 +1,56 @@
-# How to make a patch for Condensed Armies
-This guide will assume:
-1. You know how to mod Stellaris. (Required)
-2. How to run Python scripts. (Optional, but heavily recommended)
+## President Memes' Condensed Armies Automatic Patcher (PMCAAP)
+This guide will assume the following:
+- [You know how to mod Stellaris](https://stellaris.paradoxwikis.com/Modding_tutorial)
+  - At the very minimum, how to modify/create new armies
+- How to run Python Scripts
 
-If you do not know how to mod Stellaris, I'd recommend starting with the [Modding Tutorial](https://stellaris.paradoxwikis.com/Modding_tutorial).
 
-# Patching with Python (Recommended)
-**Required: Python 3.8.10 or Later**
+### System Info
+Python Version used: 3.10.6
 
-1. Download pmca_generator.py.
 
-2. In the same directory as pmca_generator.py, create a new file named input.txt.
+### Limitations
+There are some things this script cannot parse:
+- Inline Scripts
+  - To fix: Replace the inline script with the unwrapped version
+- Quotes
+  - All quotes are deleted as to not mess with the inline script Condensed Armies uses, make sure that whatever uses them will work fine without them
 
-3. Inside the input.txt file, paste all the army definitions that you want patches.
+### Step-by-Step
+1. Download `pmca_generator_v2.py`
 
-4. Open a terminal/command prompt, navigate to the directory containing pmca_generator.py, and execute the program using the following command:
-```bash
-python pmca_generator.py
+2. Create a file called `input.txt` in the same directory as `pmca_generator_v2.py`
+
+3. Run the program using terminal/command prompt/whatever
+
+4. You'll prompted for two inputs
+  4a. `Enter a custom file prefix:` This will be used for the file names.
+    - Please refrain from naming your files `pmca_<mod_initials>` as that is the format I use.
+    - `my_mod_pmca_<mod_initials>_patch` would be fine, however
+  4b. `Enter the mod's id variable:` This is for the conditional inline Condensed Armies uses.
+    - If you're making an external patch: press `Enter`
+    - If you're making an integrated/internal patch: Please refer to the [Conditional Inlines](#PMCA's-Conditional-Inline) section for more info
+
+5. After the program is done, you should see a new folder in the directory called `PMCA_GEN_OUTPUT` with all the neccasary files to make the armies work
+
+6. If you are prompted with `Some armies were detected as having concerning properties:` enter Y to see which armies in a new file called `pmca_issues.txt`
+  6a. These are guidelines, not errors, and be can be ignored if you want.
+
+7. (Optional) Use an on-action to mark your Condensed Armies with the appropriate flag
+  7a. If it's a x10 army, `set_army_flag = pmca_times_ten_army`
+  7b. If it's a x100 army, `set_army_flag = pmca_times_hundred_army`
+
+#### Condensed Armies' Conditional Inline
+Here's an explanation on how they work from TTFTCUTS, who pioneered the method:
+> I realised since inlines can be picked by name, which can include scripted variables indirectly, they can be used to fully exclude references to missing things without needing placeholders successfully made our unity job inline not complain about missing bug branch jobs.
+Since I already had it set up to not include the modifier block at all when given 0 as the job count, I just multiplied the count by a @has_bug_branch var which is 0 in gigas and 1 in bug branch, suddenly, no modifier block at all without bug branch.
+In a simpler sense it can be used to just pick between two inlines with stuff or not directly based on the variable.
+
+Condensed Armies uses this concept with an equation made by MrRoAdd that looks like this:
 ```
-5. After running the program, you will be prompted to input a custom file name. This name will be used to generate the following file structure in the PMCA_GEN_OUTPUT directory:
+|(((x / x) - 1) / ((0/0) - 1)) - 1|
 ```
-PMCA_GEN_OUTPUT/
-├─ common/
-│  ├─ armies/
-│  │  ├─ <custom_file_name>_x10_armies.txt
-│  │  ├─ <custom_file_name>_x100_armies.txt
-├─ localisation/
-│  ├─ <custom_file_name>_l_braz_por.yml
-│  ├─ <custom_file_name>_l_english.yml
-│  ├─ <custom_file_name>_l_french.yml
-│  ├─ <custom_file_name>_l_german.yml
-│  ├─ <custom_file_name>_l_japanese.yml
-│  ├─ <custom_file_name>_l_korean.yml
-│  ├─ <custom_file_name>_l_polish.yml
-│  ├─ <custom_file_name>_l_russian.yml
-│  ├─ <custom_file_name>_l_simp_chinese.yml
-│  ├─ <custom_file_name>_l_spanish.yml
+In traditional mathematics, this does not work. However, due to a quirk with the Clausewitz Engine divison by zero in inline math will consistently return ((2^32) / (10^5)).
+In short: If x is 0, output 0. Otherwise, output 1.
 
-```
-Note: `<custom_file_name>` will be replaced by whatever you input, or `REPLACE_ME` if no input is given.
-Also, please avoid naming your file `pmca_<mod_name>` as that is what I usually name my files.
-
-6. After the main script finishes, you might be prompted with a Y/N question about seeing unbuildable armies or armies that shouldn't be condensed. You can ignore them if you wish, but I wouldn't recommend it.
-    * Another Y/N prompt will appear after you enter Y to explain the warnings.
-
-
-#### Input sanitization
-<details>
-<summary>Weird Formatting</summary>
-If the script is acting weird, try formatting the armies similar to how PDS does it (Shift + Alt + F with VSCode + CWTools)
-</details>
-
-<details>
-<summary>Empty Resource Tables</summary>
-
-```
-resources = {
-  category = armies
-  cost = {
-
-  }
-  upkeep = {
-    energy = 10
-  }
-}
-```
-The empty cost block WILL screw the entire table up, as the script assumes each sub block (cost, upkeep, produces) contains at least one `resource = value` set.
-
-</details>
-
-
-#### Script clean-up
-The script is usually pretty good at it, but just in case.
-* CTRL + F `pmca_materiel_policy_check` and make sure that:
-  * `PMCA_RESOURCE` points towards the most difficult resource to maintain. This is entirely subjective, so there's no issue with picking the "wrong resource"
-  * `PMCA_VALUE` matches `PMCA_RESOURCE` cost.
-    * Resources in triggered cost blocks should be ignored, but it's your choice.
-
-And always make sure to actually test the mod in-game!
-
-# Patching Manually
-To be honest, it's pretty dull.
-
-Delete army if it's unbuildable or does anything with variables
-Multiply everything (except build_time and morale_damage) by x10
-Do it again, then do localisation.
-
-please just use the python script, life's too short to waste a few hours adding 0 to a bunch of numbers.
+Now to take advantage of this, you need to make a placeholder scripted_variable from the mod you want to patch (e.g: `@has_ancient_caches`) which must be set to 0. Then just paste the placeholder's name in when the scripts asks for a id variable and you should have a bunch of armies that will never be compiled unless the mod they're from is present.
