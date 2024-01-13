@@ -31,7 +31,7 @@ There are some things this script cannot parse:
 
    4b. `Enter the mod's id variable:` This is for the conditional inline Condensed Armies uses.
     - If you're making an external patch: press `Enter`
-    - If you're making an integrated/internal patch: Please refer to the [Conditional Inlines](#PMCA's-Conditional-Inline) section for more info
+    - If you're making an integrated/internal patch: Please refer to the [Conditional Inlines](#Condensed-Armies'-Conditional-Inline) section for more info
 
 6. After the program is done, you should see a new folder in the directory called `PMCA_GEN_OUTPUT` with all the necessary files to make the armies work
 
