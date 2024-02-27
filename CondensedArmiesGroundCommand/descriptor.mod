@@ -3,5 +3,5 @@ tags={
 	"Military"
 }
 name="Condensed Armies - Ground Command Patch"
-supported_version="3.10.*"
+supported_version="3.11.*"
 remote_file_id="2997039279"
