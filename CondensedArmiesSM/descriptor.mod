@@ -3,5 +3,5 @@ tags={
 	"Military"
 }
 name="Condensed Armies - Space Marine Forces compat"
-supported_version="v3.12.*"
+supported_version="3.12.*"
 remote_file_id="2809626594"
