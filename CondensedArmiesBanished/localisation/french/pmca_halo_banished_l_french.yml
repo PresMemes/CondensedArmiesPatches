@@ -1,0 +1,201 @@
+﻿l_french:
+
+ # Localisation generated using Python
+
+ #######################
+ ### BANISHED_LEGION ###
+ #######################
+ pmca_ten_banished_legion: "$pmca_ten$ $banished_legion$"
+ pmca_ten_banished_legion_plural: "$banished_legion_plural$"
+ pmca_ten_banished_legion_desc: "$banished_legion_desc$"
+ pmca_hundred_banished_legion: "$pmca_hundred$ $banished_legion$"
+ pmca_hundred_banished_legion_plural: "$banished_legion_plural$"
+ pmca_hundred_banished_legion_desc: "$banished_legion_desc$"
+
+
+ #########################
+ ### BANISHED_GOLIATHS ###
+ #########################
+ pmca_ten_banished_goliaths: "$pmca_ten$ $banished_goliaths$"
+ pmca_ten_banished_goliaths_plural: "$banished_goliaths_plural$"
+ pmca_ten_banished_goliaths_desc: "$banished_goliaths_desc$"
+ pmca_hundred_banished_goliaths: "$pmca_hundred$ $banished_goliaths$"
+ pmca_hundred_banished_goliaths_plural: "$banished_goliaths_plural$"
+ pmca_hundred_banished_goliaths_desc: "$banished_goliaths_desc$"
+
+
+ ##############################
+ ### BANISHED_ATRIOX_CHOSEN ###
+ ##############################
+ pmca_ten_banished_atriox_chosen: "$pmca_ten$ $banished_atriox_chosen$"
+ pmca_ten_banished_atriox_chosen_plural: "$banished_atriox_chosen_plural$"
+ pmca_ten_banished_atriox_chosen_desc: "$banished_atriox_chosen_desc$"
+ pmca_hundred_banished_atriox_chosen: "$pmca_hundred$ $banished_atriox_chosen$"
+ pmca_hundred_banished_atriox_chosen_plural: "$banished_atriox_chosen_plural$"
+ pmca_hundred_banished_atriox_chosen_desc: "$banished_atriox_chosen_desc$"
+
+
+ ###################################
+ ### BANISHED_JACKAL_MERCENARIES ###
+ ###################################
+ pmca_ten_banished_jackal_mercenaries: "$pmca_ten$ $banished_jackal_mercenaries$"
+ pmca_ten_banished_jackal_mercenaries_plural: "$banished_jackal_mercenaries_plural$"
+ pmca_ten_banished_jackal_mercenaries_desc: "$banished_jackal_mercenaries_desc$"
+ pmca_hundred_banished_jackal_mercenaries: "$pmca_hundred$ $banished_jackal_mercenaries$"
+ pmca_hundred_banished_jackal_mercenaries_plural: "$banished_jackal_mercenaries_plural$"
+ pmca_hundred_banished_jackal_mercenaries_desc: "$banished_jackal_mercenaries_desc$"
+
+
+ #############################
+ ### BANISHED_HONOR_GUARDS ###
+ #############################
+ pmca_ten_banished_honor_guards: "$pmca_ten$ $banished_honor_guards$"
+ pmca_ten_banished_honor_guards_plural: "$banished_honor_guards_plural$"
+ pmca_ten_banished_honor_guards_desc: "$banished_honor_guards_desc$"
+ pmca_hundred_banished_honor_guards: "$pmca_hundred$ $banished_honor_guards$"
+ pmca_hundred_banished_honor_guards_plural: "$banished_honor_guards_plural$"
+ pmca_hundred_banished_honor_guards_desc: "$banished_honor_guards_desc$"
+
+
+ #######################
+ ### BANISHED_GHOSTS ###
+ #######################
+ pmca_ten_banished_ghosts: "$pmca_ten$ $banished_ghosts$"
+ pmca_ten_banished_ghosts_plural: "$banished_ghosts_plural$"
+ pmca_ten_banished_ghosts_desc: "$banished_ghosts_desc$"
+ pmca_hundred_banished_ghosts: "$pmca_hundred$ $banished_ghosts$"
+ pmca_hundred_banished_ghosts_plural: "$banished_ghosts_plural$"
+ pmca_hundred_banished_ghosts_desc: "$banished_ghosts_desc$"
+
+
+ #########################
+ ### BANISHED_CHOPPERS ###
+ #########################
+ pmca_ten_banished_choppers: "$pmca_ten$ $banished_choppers$"
+ pmca_ten_banished_choppers_plural: "$banished_choppers_plural$"
+ pmca_ten_banished_choppers_desc: "$banished_choppers_desc$"
+ pmca_hundred_banished_choppers: "$pmca_hundred$ $banished_choppers$"
+ pmca_hundred_banished_choppers_plural: "$banished_choppers_plural$"
+ pmca_hundred_banished_choppers_desc: "$banished_choppers_desc$"
+
+
+ ###########################
+ ### BANISHED_SKITTERERS ###
+ ###########################
+ pmca_ten_banished_skitterers: "$pmca_ten$ $banished_skitterers$"
+ pmca_ten_banished_skitterers_plural: "$banished_skitterers_plural$"
+ pmca_ten_banished_skitterers_desc: "$banished_skitterers_desc$"
+ pmca_hundred_banished_skitterers: "$pmca_hundred$ $banished_skitterers$"
+ pmca_hundred_banished_skitterers_plural: "$banished_skitterers_plural$"
+ pmca_hundred_banished_skitterers_desc: "$banished_skitterers_desc$"
+
+
+ ########################
+ ### BANISHED_GOBLINS ###
+ ########################
+ pmca_ten_banished_goblins: "$pmca_ten$ $banished_goblins$"
+ pmca_ten_banished_goblins_plural: "$banished_goblins_plural$"
+ pmca_ten_banished_goblins_desc: "$banished_goblins_desc$"
+ pmca_hundred_banished_goblins: "$pmca_hundred$ $banished_goblins$"
+ pmca_hundred_banished_goblins_plural: "$banished_goblins_plural$"
+ pmca_hundred_banished_goblins_desc: "$banished_goblins_desc$"
+
+
+ ########################
+ ### BANISHED_LOCUSTS ###
+ ########################
+ pmca_ten_banished_locusts: "$pmca_ten$ $banished_locusts$"
+ pmca_ten_banished_locusts_plural: "$banished_locusts_plural$"
+ pmca_ten_banished_locusts_desc: "$banished_locusts_desc$"
+ pmca_hundred_banished_locusts: "$pmca_hundred$ $banished_locusts$"
+ pmca_hundred_banished_locusts_plural: "$banished_locusts_plural$"
+ pmca_hundred_banished_locusts_desc: "$banished_locusts_desc$"
+
+
+ ########################
+ ### BANISHED_REAVERS ###
+ ########################
+ pmca_ten_banished_reavers: "$pmca_ten$ $banished_reavers$"
+ pmca_ten_banished_reavers_plural: "$banished_reavers_plural$"
+ pmca_ten_banished_reavers_desc: "$banished_reavers_desc$"
+ pmca_hundred_banished_reavers: "$pmca_hundred$ $banished_reavers$"
+ pmca_hundred_banished_reavers_plural: "$banished_reavers_plural$"
+ pmca_hundred_banished_reavers_desc: "$banished_reavers_desc$"
+
+
+ ##########################
+ ### BANISHED_MARAUDERS ###
+ ##########################
+ pmca_ten_banished_marauders: "$pmca_ten$ $banished_marauders$"
+ pmca_ten_banished_marauders_plural: "$banished_marauders_plural$"
+ pmca_ten_banished_marauders_desc: "$banished_marauders_desc$"
+ pmca_hundred_banished_marauders: "$pmca_hundred$ $banished_marauders$"
+ pmca_hundred_banished_marauders_plural: "$banished_marauders_plural$"
+ pmca_hundred_banished_marauders_desc: "$banished_marauders_desc$"
+
+
+ ########################
+ ### BANISHED_WRAITHS ###
+ ########################
+ pmca_ten_banished_wraiths: "$pmca_ten$ $banished_wraiths$"
+ pmca_ten_banished_wraiths_plural: "$banished_wraiths_plural$"
+ pmca_ten_banished_wraiths_desc: "$banished_wraiths_desc$"
+ pmca_hundred_banished_wraiths: "$pmca_hundred$ $banished_wraiths$"
+ pmca_hundred_banished_wraiths_plural: "$banished_wraiths_plural$"
+ pmca_hundred_banished_wraiths_desc: "$banished_wraiths_desc$"
+
+
+ #################################
+ ### BANISHED_BANSHEE_SQUADRON ###
+ #################################
+ pmca_ten_banished_banshee_squadron: "$pmca_ten$ $banished_banshee_squadron$"
+ pmca_ten_banished_banshee_squadron_plural: "$banished_banshee_squadron_plural$"
+ pmca_ten_banished_banshee_squadron_desc: "$banished_banshee_squadron_desc$"
+ pmca_hundred_banished_banshee_squadron: "$pmca_hundred$ $banished_banshee_squadron$"
+ pmca_hundred_banished_banshee_squadron_plural: "$banished_banshee_squadron_plural$"
+ pmca_hundred_banished_banshee_squadron_desc: "$banished_banshee_squadron_desc$"
+
+
+ #############################
+ ### BANISHED_BLISTERBACKS ###
+ #############################
+ pmca_ten_banished_blisterbacks: "$pmca_ten$ $banished_blisterbacks$"
+ pmca_ten_banished_blisterbacks_plural: "$banished_blisterbacks_plural$"
+ pmca_ten_banished_blisterbacks_desc: "$banished_blisterbacks_desc$"
+ pmca_hundred_banished_blisterbacks: "$pmca_hundred$ $banished_blisterbacks$"
+ pmca_hundred_banished_blisterbacks_plural: "$banished_blisterbacks_plural$"
+ pmca_hundred_banished_blisterbacks_desc: "$banished_blisterbacks_desc$"
+
+
+ ########################
+ ### BANISHED_PHANTOM ###
+ ########################
+ pmca_ten_banished_phantom: "$pmca_ten$ $banished_phantom$"
+ pmca_ten_banished_phantom_plural: "$banished_phantom_plural$"
+ pmca_ten_banished_phantom_desc: "$banished_phantom_desc$"
+ pmca_hundred_banished_phantom: "$pmca_hundred$ $banished_phantom$"
+ pmca_hundred_banished_phantom_plural: "$banished_phantom_plural$"
+ pmca_hundred_banished_phantom_desc: "$banished_phantom_desc$"
+
+
+ #####################
+ ### BANISHED_LICH ###
+ #####################
+ pmca_ten_banished_lich: "$pmca_ten$ $banished_lich$"
+ pmca_ten_banished_lich_plural: "$banished_lich_plural$"
+ pmca_ten_banished_lich_desc: "$banished_lich_desc$"
+ pmca_hundred_banished_lich: "$pmca_hundred$ $banished_lich$"
+ pmca_hundred_banished_lich_plural: "$banished_lich_plural$"
+ pmca_hundred_banished_lich_desc: "$banished_lich_desc$"
+
+
+ #######################
+ ### BANISHED_SCARAB ###
+ #######################
+ pmca_ten_banished_scarab: "$pmca_ten$ $banished_scarab$"
+ pmca_ten_banished_scarab_plural: "$banished_scarab_plural$"
+ pmca_ten_banished_scarab_desc: "$banished_scarab_desc$"
+ pmca_hundred_banished_scarab: "$pmca_hundred$ $banished_scarab$"
+ pmca_hundred_banished_scarab_plural: "$banished_scarab_plural$"
+ pmca_hundred_banished_scarab_desc: "$banished_scarab_desc$"
+

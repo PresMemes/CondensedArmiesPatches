@@ -1,0 +1,157 @@
+﻿l_russian:
+
+ # Localisation generated using Python
+
+ #############################
+ ### FLOOD_INFECTION_FORMS ###
+ #############################
+ pmca_ten_flood_infection_forms: "$pmca_ten$ $flood_infection_forms$"
+ pmca_ten_flood_infection_forms_plural: "$flood_infection_forms_plural$"
+ pmca_ten_flood_infection_forms_desc: "$flood_infection_forms_desc$"
+ pmca_hundred_flood_infection_forms: "$pmca_hundred$ $flood_infection_forms$"
+ pmca_hundred_flood_infection_forms_plural: "$flood_infection_forms_plural$"
+ pmca_hundred_flood_infection_forms_desc: "$flood_infection_forms_desc$"
+
+
+ ###########################
+ ### FLOOD_CARRIER_FORMS ###
+ ###########################
+ pmca_ten_flood_carrier_forms: "$pmca_ten$ $flood_carrier_forms$"
+ pmca_ten_flood_carrier_forms_plural: "$flood_carrier_forms_plural$"
+ pmca_ten_flood_carrier_forms_desc: "$flood_carrier_forms_desc$"
+ pmca_hundred_flood_carrier_forms: "$pmca_hundred$ $flood_carrier_forms$"
+ pmca_hundred_flood_carrier_forms_plural: "$flood_carrier_forms_plural$"
+ pmca_hundred_flood_carrier_forms_desc: "$flood_carrier_forms_desc$"
+
+
+ ##########################
+ ### FLOOD_COMBAT_FORMS ###
+ ##########################
+ pmca_ten_flood_combat_forms: "$pmca_ten$ $flood_combat_forms$"
+ pmca_ten_flood_combat_forms_plural: "$flood_combat_forms_plural$"
+ pmca_ten_flood_combat_forms_desc: "$flood_combat_forms_desc$"
+ pmca_hundred_flood_combat_forms: "$pmca_hundred$ $flood_combat_forms$"
+ pmca_hundred_flood_combat_forms_plural: "$flood_combat_forms_plural$"
+ pmca_hundred_flood_combat_forms_desc: "$flood_combat_forms_desc$"
+
+
+ ############################
+ ### FLOOD_THRASHER_FORMS ###
+ ############################
+ pmca_ten_flood_thrasher_forms: "$pmca_ten$ $flood_thrasher_forms$"
+ pmca_ten_flood_thrasher_forms_plural: "$flood_thrasher_forms_plural$"
+ pmca_ten_flood_thrasher_forms_desc: "$flood_thrasher_forms_desc$"
+ pmca_hundred_flood_thrasher_forms: "$pmca_hundred$ $flood_thrasher_forms$"
+ pmca_hundred_flood_thrasher_forms_plural: "$flood_thrasher_forms_plural$"
+ pmca_hundred_flood_thrasher_forms_desc: "$flood_thrasher_forms_desc$"
+
+
+ ################################
+ ### FLOOD_PURE_STALKER_FORMS ###
+ ################################
+ pmca_ten_flood_pure_stalker_forms: "$pmca_ten$ $flood_pure_stalker_forms$"
+ pmca_ten_flood_pure_stalker_forms_plural: "$flood_pure_stalker_forms_plural$"
+ pmca_ten_flood_pure_stalker_forms_desc: "$flood_pure_stalker_forms_desc$"
+ pmca_hundred_flood_pure_stalker_forms: "$pmca_hundred$ $flood_pure_stalker_forms$"
+ pmca_hundred_flood_pure_stalker_forms_plural: "$flood_pure_stalker_forms_plural$"
+ pmca_hundred_flood_pure_stalker_forms_desc: "$flood_pure_stalker_forms_desc$"
+
+
+ ###############################
+ ### FLOOD_PURE_RANGED_FORMS ###
+ ###############################
+ pmca_ten_flood_pure_ranged_forms: "$pmca_ten$ $flood_pure_ranged_forms$"
+ pmca_ten_flood_pure_ranged_forms_plural: "$flood_pure_ranged_forms_plural$"
+ pmca_ten_flood_pure_ranged_forms_desc: "$flood_pure_ranged_forms_desc$"
+ pmca_hundred_flood_pure_ranged_forms: "$pmca_hundred$ $flood_pure_ranged_forms$"
+ pmca_hundred_flood_pure_ranged_forms_plural: "$flood_pure_ranged_forms_plural$"
+ pmca_hundred_flood_pure_ranged_forms_desc: "$flood_pure_ranged_forms_desc$"
+
+
+ ############################
+ ### FLOOD_PURE_TANK_FORM ###
+ ############################
+ pmca_ten_flood_pure_tank_form: "$pmca_ten$ $flood_pure_tank_form$"
+ pmca_ten_flood_pure_tank_form_plural: "$flood_pure_tank_form_plural$"
+ pmca_ten_flood_pure_tank_form_desc: "$flood_pure_tank_form_desc$"
+ pmca_hundred_flood_pure_tank_form: "$pmca_hundred$ $flood_pure_tank_form$"
+ pmca_hundred_flood_pure_tank_form_plural: "$flood_pure_tank_form_plural$"
+ pmca_hundred_flood_pure_tank_form_desc: "$flood_pure_tank_form_desc$"
+
+
+ #################################
+ ### FLOOD_PURE_INFESTOR_FORMS ###
+ #################################
+ pmca_ten_flood_pure_infestor_forms: "$pmca_ten$ $flood_pure_infestor_forms$"
+ pmca_ten_flood_pure_infestor_forms_plural: "$flood_pure_infestor_forms_plural$"
+ pmca_ten_flood_pure_infestor_forms_desc: "$flood_pure_infestor_forms_desc$"
+ pmca_hundred_flood_pure_infestor_forms: "$pmca_hundred$ $flood_pure_infestor_forms$"
+ pmca_hundred_flood_pure_infestor_forms_plural: "$flood_pure_infestor_forms_plural$"
+ pmca_hundred_flood_pure_infestor_forms_desc: "$flood_pure_infestor_forms_desc$"
+
+
+ ##########################
+ ### FLOOD_SEEDER_FORMS ###
+ ##########################
+ pmca_ten_flood_seeder_forms: "$pmca_ten$ $flood_seeder_forms$"
+ pmca_ten_flood_seeder_forms_plural: "$flood_seeder_forms_plural$"
+ pmca_ten_flood_seeder_forms_desc: "$flood_seeder_forms_desc$"
+ pmca_hundred_flood_seeder_forms: "$pmca_hundred$ $flood_seeder_forms$"
+ pmca_hundred_flood_seeder_forms_plural: "$flood_seeder_forms_plural$"
+ pmca_hundred_flood_seeder_forms_desc: "$flood_seeder_forms_desc$"
+
+
+ ##########################
+ ### FLOOD_BOMBER_FORMS ###
+ ##########################
+ pmca_ten_flood_bomber_forms: "$pmca_ten$ $flood_bomber_forms$"
+ pmca_ten_flood_bomber_forms_plural: "$flood_bomber_forms_plural$"
+ pmca_ten_flood_bomber_forms_desc: "$flood_bomber_forms_desc$"
+ pmca_hundred_flood_bomber_forms: "$pmca_hundred$ $flood_bomber_forms$"
+ pmca_hundred_flood_bomber_forms_plural: "$flood_bomber_forms_plural$"
+ pmca_hundred_flood_bomber_forms_desc: "$flood_bomber_forms_desc$"
+
+
+ #####################
+ ### FLOOD_HELLION ###
+ #####################
+ pmca_ten_flood_hellion: "$pmca_ten$ $flood_hellion$"
+ pmca_ten_flood_hellion_plural: "$flood_hellion_plural$"
+ pmca_ten_flood_hellion_desc: "$flood_hellion_desc$"
+ pmca_hundred_flood_hellion: "$pmca_hundred$ $flood_hellion$"
+ pmca_hundred_flood_hellion_plural: "$flood_hellion_plural$"
+ pmca_hundred_flood_hellion_desc: "$flood_hellion_desc$"
+
+
+ ############################
+ ### FLOOD_BLIGHTSTALKERS ###
+ ############################
+ pmca_ten_flood_blightstalkers: "$pmca_ten$ $flood_blightstalkers$"
+ pmca_ten_flood_blightstalkers_plural: "$flood_blightstalkers_plural$"
+ pmca_ten_flood_blightstalkers_desc: "$flood_blightstalkers_desc$"
+ pmca_hundred_flood_blightstalkers: "$pmca_hundred$ $flood_blightstalkers$"
+ pmca_hundred_flood_blightstalkers_plural: "$flood_blightstalkers_plural$"
+ pmca_hundred_flood_blightstalkers_desc: "$flood_blightstalkers_desc$"
+
+
+ ########################
+ ### FLOOD_JUGGERNAUT ###
+ ########################
+ pmca_ten_flood_juggernaut: "$pmca_ten$ $flood_juggernaut$"
+ pmca_ten_flood_juggernaut_plural: "$flood_juggernaut_plural$"
+ pmca_ten_flood_juggernaut_desc: "$flood_juggernaut_desc$"
+ pmca_hundred_flood_juggernaut: "$pmca_hundred$ $flood_juggernaut$"
+ pmca_hundred_flood_juggernaut_plural: "$flood_juggernaut_plural$"
+ pmca_hundred_flood_juggernaut_desc: "$flood_juggernaut_desc$"
+
+
+ #########################
+ ### FLOOD_ABOMINATION ###
+ #########################
+ pmca_ten_flood_abomination: "$pmca_ten$ $flood_abomination$"
+ pmca_ten_flood_abomination_plural: "$flood_abomination_plural$"
+ pmca_ten_flood_abomination_desc: "$flood_abomination_desc$"
+ pmca_hundred_flood_abomination: "$pmca_hundred$ $flood_abomination$"
+ pmca_hundred_flood_abomination_plural: "$flood_abomination_plural$"
+ pmca_hundred_flood_abomination_desc: "$flood_abomination_desc$"
+

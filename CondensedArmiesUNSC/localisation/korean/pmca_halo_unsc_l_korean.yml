@@ -1,0 +1,267 @@
+﻿l_korean:
+
+ # Localisation generated using Python
+
+ ###########################
+ ### UNSC_MARINE_COMPANY ###
+ ###########################
+ pmca_ten_unsc_marine_company: "$pmca_ten$ $unsc_marine_company$"
+ pmca_ten_unsc_marine_company_plural: "$unsc_marine_company_plural$"
+ pmca_ten_unsc_marine_company_desc: "$unsc_marine_company_desc$"
+ pmca_hundred_unsc_marine_company: "$pmca_hundred$ $unsc_marine_company$"
+ pmca_hundred_unsc_marine_company_plural: "$unsc_marine_company_plural$"
+ pmca_hundred_unsc_marine_company_desc: "$unsc_marine_company_desc$"
+
+
+ #########################
+ ### UNSC_ODST_COMPANY ###
+ #########################
+ pmca_ten_unsc_odst_company: "$pmca_ten$ $unsc_odst_company$"
+ pmca_ten_unsc_odst_company_plural: "$unsc_odst_company_plural$"
+ pmca_ten_unsc_odst_company_desc: "$unsc_odst_company_desc$"
+ pmca_hundred_unsc_odst_company: "$pmca_hundred$ $unsc_odst_company$"
+ pmca_hundred_unsc_odst_company_plural: "$unsc_odst_company_plural$"
+ pmca_hundred_unsc_odst_company_desc: "$unsc_odst_company_desc$"
+
+
+ ###############################
+ ### UNSC_SPARTAN_IV_COMPANY ###
+ ###############################
+ pmca_ten_unsc_spartan_IV_company: "$pmca_ten$ $unsc_spartan_IV_company$"
+ pmca_ten_unsc_spartan_IV_company_plural: "$unsc_spartan_IV_company_plural$"
+ pmca_ten_unsc_spartan_IV_company_desc: "$unsc_spartan_IV_company_desc$"
+ pmca_hundred_unsc_spartan_IV_company: "$pmca_hundred$ $unsc_spartan_IV_company$"
+ pmca_hundred_unsc_spartan_IV_company_plural: "$unsc_spartan_IV_company_plural$"
+ pmca_hundred_unsc_spartan_IV_company_desc: "$unsc_spartan_IV_company_desc$"
+
+
+ ###############################
+ ### UNSC_JACKRABBIT_COMPANY ###
+ ###############################
+ pmca_ten_unsc_jackrabbit_company: "$pmca_ten$ $unsc_jackrabbit_company$"
+ pmca_ten_unsc_jackrabbit_company_plural: "$unsc_jackrabbit_company_plural$"
+ pmca_ten_unsc_jackrabbit_company_desc: "$unsc_jackrabbit_company_desc$"
+ pmca_hundred_unsc_jackrabbit_company: "$pmca_hundred$ $unsc_jackrabbit_company$"
+ pmca_hundred_unsc_jackrabbit_company_plural: "$unsc_jackrabbit_company_plural$"
+ pmca_hundred_unsc_jackrabbit_company_desc: "$unsc_jackrabbit_company_desc$"
+
+
+ ############################
+ ### UNSC_WARTHOG_COMPANY ###
+ ############################
+ pmca_ten_unsc_warthog_company: "$pmca_ten$ $unsc_warthog_company$"
+ pmca_ten_unsc_warthog_company_plural: "$unsc_warthog_company_plural$"
+ pmca_ten_unsc_warthog_company_desc: "$unsc_warthog_company_desc$"
+ pmca_hundred_unsc_warthog_company: "$pmca_hundred$ $unsc_warthog_company$"
+ pmca_hundred_unsc_warthog_company_plural: "$unsc_warthog_company_plural$"
+ pmca_hundred_unsc_warthog_company_desc: "$unsc_warthog_company_desc$"
+
+
+ ##########################
+ ### UNSC_COBRA_COMPANY ###
+ ##########################
+ pmca_ten_unsc_cobra_company: "$pmca_ten$ $unsc_cobra_company$"
+ pmca_ten_unsc_cobra_company_plural: "$unsc_cobra_company_plural$"
+ pmca_ten_unsc_cobra_company_desc: "$unsc_cobra_company_desc$"
+ pmca_hundred_unsc_cobra_company: "$pmca_hundred$ $unsc_cobra_company$"
+ pmca_hundred_unsc_cobra_company_plural: "$unsc_cobra_company_plural$"
+ pmca_hundred_unsc_cobra_company_desc: "$unsc_cobra_company_desc$"
+
+
+ ###########################
+ ### UNSC_MANTIS_COMPANY ###
+ ###########################
+ pmca_ten_unsc_mantis_company: "$pmca_ten$ $unsc_mantis_company$"
+ pmca_ten_unsc_mantis_company_plural: "$unsc_mantis_company_plural$"
+ pmca_ten_unsc_mantis_company_desc: "$unsc_mantis_company_desc$"
+ pmca_hundred_unsc_mantis_company: "$pmca_hundred$ $unsc_mantis_company$"
+ pmca_hundred_unsc_mantis_company_plural: "$unsc_mantis_company_plural$"
+ pmca_hundred_unsc_mantis_company_desc: "$unsc_mantis_company_desc$"
+
+
+ #####################
+ ### UNSC_COLOSSUS ###
+ #####################
+ pmca_ten_unsc_colossus: "$pmca_ten$ $unsc_colossus$"
+ pmca_ten_unsc_colossus_plural: "$unsc_colossus_plural$"
+ pmca_ten_unsc_colossus_desc: "$unsc_colossus_desc$"
+ pmca_hundred_unsc_colossus: "$pmca_hundred$ $unsc_colossus$"
+ pmca_hundred_unsc_colossus_plural: "$unsc_colossus_plural$"
+ pmca_hundred_unsc_colossus_desc: "$unsc_colossus_desc$"
+
+
+ ##########################
+ ### UNSC_SCORPION_TANK ###
+ ##########################
+ pmca_ten_unsc_scorpion_tank: "$pmca_ten$ $unsc_scorpion_tank$"
+ pmca_ten_unsc_scorpion_tank_plural: "$unsc_scorpion_tank_plural$"
+ pmca_ten_unsc_scorpion_tank_desc: "$unsc_scorpion_tank_desc$"
+ pmca_hundred_unsc_scorpion_tank: "$pmca_hundred$ $unsc_scorpion_tank$"
+ pmca_hundred_unsc_scorpion_tank_plural: "$unsc_scorpion_tank_plural$"
+ pmca_hundred_unsc_scorpion_tank_desc: "$unsc_scorpion_tank_desc$"
+
+
+ ########################
+ ### UNSC_GRIZLY_TANK ###
+ ########################
+ pmca_ten_unsc_grizly_tank: "$pmca_ten$ $unsc_grizly_tank$"
+ pmca_ten_unsc_grizly_tank_plural: "$unsc_grizly_tank_plural$"
+ pmca_ten_unsc_grizly_tank_desc: "$unsc_grizly_tank_desc$"
+ pmca_hundred_unsc_grizly_tank: "$pmca_hundred$ $unsc_grizly_tank$"
+ pmca_hundred_unsc_grizly_tank_plural: "$unsc_grizly_tank_plural$"
+ pmca_hundred_unsc_grizly_tank_desc: "$unsc_grizly_tank_desc$"
+
+
+ ############################
+ ### UNSC_HORNET_SQUADRON ###
+ ############################
+ pmca_ten_unsc_hornet_squadron: "$pmca_ten$ $unsc_hornet_squadron$"
+ pmca_ten_unsc_hornet_squadron_plural: "$unsc_hornet_squadron_plural$"
+ pmca_ten_unsc_hornet_squadron_desc: "$unsc_hornet_squadron_desc$"
+ pmca_hundred_unsc_hornet_squadron: "$pmca_hundred$ $unsc_hornet_squadron$"
+ pmca_hundred_unsc_hornet_squadron_plural: "$unsc_hornet_squadron_plural$"
+ pmca_hundred_unsc_hornet_squadron_desc: "$unsc_hornet_squadron_desc$"
+
+
+ #################################
+ ### UNSC_SPARROWHAWK_SQUADRON ###
+ #################################
+ pmca_ten_unsc_sparrowhawk_squadron: "$pmca_ten$ $unsc_sparrowhawk_squadron$"
+ pmca_ten_unsc_sparrowhawk_squadron_plural: "$unsc_sparrowhawk_squadron_plural$"
+ pmca_ten_unsc_sparrowhawk_squadron_desc: "$unsc_sparrowhawk_squadron_desc$"
+ pmca_hundred_unsc_sparrowhawk_squadron: "$pmca_hundred$ $unsc_sparrowhawk_squadron$"
+ pmca_hundred_unsc_sparrowhawk_squadron_plural: "$unsc_sparrowhawk_squadron_plural$"
+ pmca_hundred_unsc_sparrowhawk_squadron_desc: "$unsc_sparrowhawk_squadron_desc$"
+
+
+ ############################
+ ### UNSC_PELICAN_GUNSHIP ###
+ ############################
+ pmca_ten_unsc_pelican_gunship: "$pmca_ten$ $unsc_pelican_gunship$"
+ pmca_ten_unsc_pelican_gunship_plural: "$unsc_pelican_gunship_plural$"
+ pmca_ten_unsc_pelican_gunship_desc: "$unsc_pelican_gunship_desc$"
+ pmca_hundred_unsc_pelican_gunship: "$pmca_hundred$ $unsc_pelican_gunship$"
+ pmca_hundred_unsc_pelican_gunship_plural: "$unsc_pelican_gunship_plural$"
+ pmca_hundred_unsc_pelican_gunship_desc: "$unsc_pelican_gunship_desc$"
+
+
+ ##############################
+ ### UNSC_SHORTSWORD_BOMBER ###
+ ##############################
+ pmca_ten_unsc_shortsword_bomber: "$pmca_ten$ $unsc_shortsword_bomber$"
+ pmca_ten_unsc_shortsword_bomber_plural: "$unsc_shortsword_bomber_plural$"
+ pmca_ten_unsc_shortsword_bomber_desc: "$unsc_shortsword_bomber_desc$"
+ pmca_hundred_unsc_shortsword_bomber: "$pmca_hundred$ $unsc_shortsword_bomber$"
+ pmca_hundred_unsc_shortsword_bomber_plural: "$unsc_shortsword_bomber_plural$"
+ pmca_hundred_unsc_shortsword_bomber_desc: "$unsc_shortsword_bomber_desc$"
+
+
+ ########################################
+ ### UNSC_BROADSWORD_FIGHTER_SQUADRON ###
+ ########################################
+ pmca_ten_unsc_broadsword_fighter_squadron: "$pmca_ten$ $unsc_broadsword_fighter_squadron$"
+ pmca_ten_unsc_broadsword_fighter_squadron_plural: "$unsc_broadsword_fighter_squadron_plural$"
+ pmca_ten_unsc_broadsword_fighter_squadron_desc: "$unsc_broadsword_fighter_squadron_desc$"
+ pmca_hundred_unsc_broadsword_fighter_squadron: "$pmca_hundred$ $unsc_broadsword_fighter_squadron$"
+ pmca_hundred_unsc_broadsword_fighter_squadron_plural: "$unsc_broadsword_fighter_squadron_plural$"
+ pmca_hundred_unsc_broadsword_fighter_squadron_desc: "$unsc_broadsword_fighter_squadron_desc$"
+
+
+ ############################
+ ### UNSC_VULTURE_GUNSHIP ###
+ ############################
+ pmca_ten_unsc_vulture_gunship: "$pmca_ten$ $unsc_vulture_gunship$"
+ pmca_ten_unsc_vulture_gunship_plural: "$unsc_vulture_gunship_plural$"
+ pmca_ten_unsc_vulture_gunship_desc: "$unsc_vulture_gunship_desc$"
+ pmca_hundred_unsc_vulture_gunship: "$pmca_hundred$ $unsc_vulture_gunship$"
+ pmca_hundred_unsc_vulture_gunship_plural: "$unsc_vulture_gunship_plural$"
+ pmca_hundred_unsc_vulture_gunship_desc: "$unsc_vulture_gunship_desc$"
+
+
+ ##############################
+ ### UNSC_LONGSWORD_FIGHTER ###
+ ##############################
+ pmca_ten_unsc_longsword_fighter: "$pmca_ten$ $unsc_longsword_fighter$"
+ pmca_ten_unsc_longsword_fighter_plural: "$unsc_longsword_fighter_plural$"
+ pmca_ten_unsc_longsword_fighter_desc: "$unsc_longsword_fighter_desc$"
+ pmca_hundred_unsc_longsword_fighter: "$pmca_hundred$ $unsc_longsword_fighter$"
+ pmca_hundred_unsc_longsword_fighter_plural: "$unsc_longsword_fighter_plural$"
+ pmca_hundred_unsc_longsword_fighter_desc: "$unsc_longsword_fighter_desc$"
+
+
+ ###########################
+ ### UNSC_CONDOR_GUNSHIP ###
+ ###########################
+ pmca_ten_unsc_condor_gunship: "$pmca_ten$ $unsc_condor_gunship$"
+ pmca_ten_unsc_condor_gunship_plural: "$unsc_condor_gunship_plural$"
+ pmca_ten_unsc_condor_gunship_desc: "$unsc_condor_gunship_desc$"
+ pmca_hundred_unsc_condor_gunship: "$pmca_hundred$ $unsc_condor_gunship$"
+ pmca_hundred_unsc_condor_gunship_plural: "$unsc_condor_gunship_plural$"
+ pmca_hundred_unsc_condor_gunship_desc: "$unsc_condor_gunship_desc$"
+
+
+ ##############################
+ ### ANCIENT_HUMAN_WARRIORS ###
+ ##############################
+ pmca_ten_ancient_human_warriors: "$pmca_ten$ $ancient_human_warriors$"
+ pmca_ten_ancient_human_warriors_plural: "$ancient_human_warriors_plural$"
+ pmca_ten_ancient_human_warriors_desc: "$ancient_human_warriors_desc$"
+ pmca_hundred_ancient_human_warriors: "$pmca_hundred$ $ancient_human_warriors$"
+ pmca_hundred_ancient_human_warriors_plural: "$ancient_human_warriors_plural$"
+ pmca_hundred_ancient_human_warriors_desc: "$ancient_human_warriors_desc$"
+
+
+ ##################################
+ ### ANCIENT_SANSHYUUM_WARRIORS ###
+ ##################################
+ pmca_ten_ancient_sanshyuum_warriors: "$pmca_ten$ $ancient_sanshyuum_warriors$"
+ pmca_ten_ancient_sanshyuum_warriors_plural: "$ancient_sanshyuum_warriors_plural$"
+ pmca_ten_ancient_sanshyuum_warriors_desc: "$ancient_sanshyuum_warriors_desc$"
+ pmca_hundred_ancient_sanshyuum_warriors: "$pmca_hundred$ $ancient_sanshyuum_warriors$"
+ pmca_hundred_ancient_sanshyuum_warriors_plural: "$ancient_sanshyuum_warriors_plural$"
+ pmca_hundred_ancient_sanshyuum_warriors_desc: "$ancient_sanshyuum_warriors_desc$"
+
+
+ ##################################
+ ### ANCIENT_HUMAN_FIBRIL_TANKS ###
+ ##################################
+ pmca_ten_ancient_human_fibril_tanks: "$pmca_ten$ $ancient_human_fibril_tanks$"
+ pmca_ten_ancient_human_fibril_tanks_plural: "$ancient_human_fibril_tanks_plural$"
+ pmca_ten_ancient_human_fibril_tanks_desc: "$ancient_human_fibril_tanks_desc$"
+ pmca_hundred_ancient_human_fibril_tanks: "$pmca_hundred$ $ancient_human_fibril_tanks$"
+ pmca_hundred_ancient_human_fibril_tanks_plural: "$ancient_human_fibril_tanks_plural$"
+ pmca_hundred_ancient_human_fibril_tanks_desc: "$ancient_human_fibril_tanks_desc$"
+
+
+ ######################################
+ ### ANCIENT_HUMAN_FIBRIL_ARTILLERY ###
+ ######################################
+ pmca_ten_ancient_human_fibril_artillery: "$pmca_ten$ $ancient_human_fibril_artillery$"
+ pmca_ten_ancient_human_fibril_artillery_plural: "$ancient_human_fibril_artillery_plural$"
+ pmca_ten_ancient_human_fibril_artillery_desc: "$ancient_human_fibril_artillery_desc$"
+ pmca_hundred_ancient_human_fibril_artillery: "$pmca_hundred$ $ancient_human_fibril_artillery$"
+ pmca_hundred_ancient_human_fibril_artillery_plural: "$ancient_human_fibril_artillery_plural$"
+ pmca_hundred_ancient_human_fibril_artillery_desc: "$ancient_human_fibril_artillery_desc$"
+
+
+ #################################
+ ### ANCIENT_HUMAN_COMBAT_SUIT ###
+ #################################
+ pmca_ten_ancient_human_combat_suit: "$pmca_ten$ $ancient_human_combat_suit$"
+ pmca_ten_ancient_human_combat_suit_plural: "$ancient_human_combat_suit_plural$"
+ pmca_ten_ancient_human_combat_suit_desc: "$ancient_human_combat_suit_desc$"
+ pmca_hundred_ancient_human_combat_suit: "$pmca_hundred$ $ancient_human_combat_suit$"
+ pmca_hundred_ancient_human_combat_suit_plural: "$ancient_human_combat_suit_plural$"
+ pmca_hundred_ancient_human_combat_suit_desc: "$ancient_human_combat_suit_desc$"
+
+
+ ####################################################
+ ### ANCIENT_HUMAN_SANSHYUUM_TUNED_SIEGE_PLATFORM ###
+ ####################################################
+ pmca_ten_ancient_human_sanshyuum_tuned_siege_platform: "$pmca_ten$ $ancient_human_sanshyuum_tuned_siege_platform$"
+ pmca_ten_ancient_human_sanshyuum_tuned_siege_platform_plural: "$ancient_human_sanshyuum_tuned_siege_platform_plural$"
+ pmca_ten_ancient_human_sanshyuum_tuned_siege_platform_desc: "$ancient_human_sanshyuum_tuned_siege_platform_desc$"
+ pmca_hundred_ancient_human_sanshyuum_tuned_siege_platform: "$pmca_hundred$ $ancient_human_sanshyuum_tuned_siege_platform$"
+ pmca_hundred_ancient_human_sanshyuum_tuned_siege_platform_plural: "$ancient_human_sanshyuum_tuned_siege_platform_plural$"
+ pmca_hundred_ancient_human_sanshyuum_tuned_siege_platform_desc: "$ancient_human_sanshyuum_tuned_siege_platform_desc$"
+

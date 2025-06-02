@@ -1,0 +1,311 @@
+﻿l_polish:
+
+ # Localisation generated using Python
+
+ ############################
+ ### COV_SANGHEILI_LEGION ###
+ ############################
+ pmca_ten_cov_sangheili_legion: "$pmca_ten$ $cov_sangheili_legion$"
+ pmca_ten_cov_sangheili_legion_plural: "$cov_sangheili_legion_plural$"
+ pmca_ten_cov_sangheili_legion_desc: "$cov_sangheili_legion_desc$"
+ pmca_hundred_cov_sangheili_legion: "$pmca_hundred$ $cov_sangheili_legion$"
+ pmca_hundred_cov_sangheili_legion_plural: "$cov_sangheili_legion_plural$"
+ pmca_hundred_cov_sangheili_legion_desc: "$cov_sangheili_legion_desc$"
+
+
+ ############################
+ ### SOS_SANGHEILI_LEGION ###
+ ############################
+ pmca_ten_sos_sangheili_legion: "$pmca_ten$ $sos_sangheili_legion$"
+ pmca_ten_sos_sangheili_legion_plural: "$sos_sangheili_legion_plural$"
+ pmca_ten_sos_sangheili_legion_desc: "$sos_sangheili_legion_desc$"
+ pmca_hundred_sos_sangheili_legion: "$pmca_hundred$ $sos_sangheili_legion$"
+ pmca_hundred_sos_sangheili_legion_plural: "$sos_sangheili_legion_plural$"
+ pmca_hundred_sos_sangheili_legion_desc: "$sos_sangheili_legion_desc$"
+
+
+ #############################
+ ### COV_JIRALHANAE_LEGION ###
+ #############################
+ pmca_ten_cov_jiralhanae_legion: "$pmca_ten$ $cov_jiralhanae_legion$"
+ pmca_ten_cov_jiralhanae_legion_plural: "$cov_jiralhanae_legion_plural$"
+ pmca_ten_cov_jiralhanae_legion_desc: "$cov_jiralhanae_legion_desc$"
+ pmca_hundred_cov_jiralhanae_legion: "$pmca_hundred$ $cov_jiralhanae_legion$"
+ pmca_hundred_cov_jiralhanae_legion_plural: "$cov_jiralhanae_legion_plural$"
+ pmca_hundred_cov_jiralhanae_legion_desc: "$cov_jiralhanae_legion_desc$"
+
+
+ #######################
+ ### COV_HONOR_GUARD ###
+ #######################
+ pmca_ten_cov_honor_guard: "$pmca_ten$ $cov_honor_guard$"
+ pmca_ten_cov_honor_guard_plural: "$cov_honor_guard_plural$"
+ pmca_ten_cov_honor_guard_desc: "$cov_honor_guard_desc$"
+ pmca_hundred_cov_honor_guard: "$pmca_hundred$ $cov_honor_guard$"
+ pmca_hundred_cov_honor_guard_plural: "$cov_honor_guard_plural$"
+ pmca_hundred_cov_honor_guard_desc: "$cov_honor_guard_desc$"
+
+
+ ###################
+ ### COV_PRELATE ###
+ ###################
+ pmca_ten_cov_prelate: "$pmca_ten$ $cov_prelate$"
+ pmca_ten_cov_prelate_plural: "$cov_prelate_plural$"
+ pmca_ten_cov_prelate_desc: "$cov_prelate_desc$"
+ pmca_hundred_cov_prelate: "$pmca_hundred$ $cov_prelate$"
+ pmca_hundred_cov_prelate_plural: "$cov_prelate_plural$"
+ pmca_hundred_cov_prelate_desc: "$cov_prelate_desc$"
+
+
+ ##########################
+ ### COV_WARRIOR_CRECHE ###
+ ##########################
+ pmca_ten_cov_warrior_creche: "$pmca_ten$ $cov_warrior_creche$"
+ pmca_ten_cov_warrior_creche_plural: "$cov_warrior_creche_plural$"
+ pmca_ten_cov_warrior_creche_desc: "$cov_warrior_creche_desc$"
+ pmca_hundred_cov_warrior_creche: "$pmca_hundred$ $cov_warrior_creche$"
+ pmca_hundred_cov_warrior_creche_plural: "$cov_warrior_creche_plural$"
+ pmca_hundred_cov_warrior_creche_desc: "$cov_warrior_creche_desc$"
+
+
+ #######################
+ ### COV_BRUTE_SKEIN ###
+ #######################
+ pmca_ten_cov_brute_skein: "$pmca_ten$ $cov_brute_skein$"
+ pmca_ten_cov_brute_skein_plural: "$cov_brute_skein_plural$"
+ pmca_ten_cov_brute_skein_desc: "$cov_brute_skein_desc$"
+ pmca_hundred_cov_brute_skein: "$pmca_hundred$ $cov_brute_skein$"
+ pmca_hundred_cov_brute_skein_plural: "$cov_brute_skein_plural$"
+ pmca_hundred_cov_brute_skein_desc: "$cov_brute_skein_desc$"
+
+
+ ##########################
+ ### COV_HUNTER_WARFORM ###
+ ##########################
+ pmca_ten_cov_hunter_warform: "$pmca_ten$ $cov_hunter_warform$"
+ pmca_ten_cov_hunter_warform_plural: "$cov_hunter_warform_plural$"
+ pmca_ten_cov_hunter_warform_desc: "$cov_hunter_warform_desc$"
+ pmca_hundred_cov_hunter_warform: "$pmca_hundred$ $cov_hunter_warform$"
+ pmca_hundred_cov_hunter_warform_plural: "$cov_hunter_warform_plural$"
+ pmca_hundred_cov_hunter_warform_desc: "$cov_hunter_warform_desc$"
+
+
+ ##############################
+ ### COV_KIGYAR_MERCENARIES ###
+ ##############################
+ pmca_ten_cov_kigyar_mercenaries: "$pmca_ten$ $cov_kigyar_mercenaries$"
+ pmca_ten_cov_kigyar_mercenaries_plural: "$cov_kigyar_mercenaries_plural$"
+ pmca_ten_cov_kigyar_mercenaries_desc: "$cov_kigyar_mercenaries_desc$"
+ pmca_hundred_cov_kigyar_mercenaries: "$pmca_hundred$ $cov_kigyar_mercenaries$"
+ pmca_hundred_cov_kigyar_mercenaries_plural: "$cov_kigyar_mercenaries_plural$"
+ pmca_hundred_cov_kigyar_mercenaries_desc: "$cov_kigyar_mercenaries_desc$"
+
+
+ ##############################
+ ### COV_TVAOAN_SKIRMISHERS ###
+ ##############################
+ pmca_ten_cov_tvaoan_skirmishers: "$pmca_ten$ $cov_tvaoan_skirmishers$"
+ pmca_ten_cov_tvaoan_skirmishers_plural: "$cov_tvaoan_skirmishers_plural$"
+ pmca_ten_cov_tvaoan_skirmishers_desc: "$cov_tvaoan_skirmishers_desc$"
+ pmca_hundred_cov_tvaoan_skirmishers: "$pmca_hundred$ $cov_tvaoan_skirmishers$"
+ pmca_hundred_cov_tvaoan_skirmishers_plural: "$cov_tvaoan_skirmishers_plural$"
+ pmca_hundred_cov_tvaoan_skirmishers_desc: "$cov_tvaoan_skirmishers_desc$"
+
+
+ #######################
+ ### COV_DRONE_SWARM ###
+ #######################
+ pmca_ten_cov_drone_swarm: "$pmca_ten$ $cov_drone_swarm$"
+ pmca_ten_cov_drone_swarm_plural: "$cov_drone_swarm_plural$"
+ pmca_ten_cov_drone_swarm_desc: "$cov_drone_swarm_desc$"
+ pmca_hundred_cov_drone_swarm: "$pmca_hundred$ $cov_drone_swarm$"
+ pmca_hundred_cov_drone_swarm_plural: "$cov_drone_swarm_plural$"
+ pmca_hundred_cov_drone_swarm_desc: "$cov_drone_swarm_desc$"
+
+
+ #########################
+ ### COV_GHOST_COMPANY ###
+ #########################
+ pmca_ten_cov_ghost_company: "$pmca_ten$ $cov_ghost_company$"
+ pmca_ten_cov_ghost_company_plural: "$cov_ghost_company_plural$"
+ pmca_ten_cov_ghost_company_desc: "$cov_ghost_company_desc$"
+ pmca_hundred_cov_ghost_company: "$pmca_hundred$ $cov_ghost_company$"
+ pmca_hundred_cov_ghost_company_plural: "$cov_ghost_company_plural$"
+ pmca_hundred_cov_ghost_company_desc: "$cov_ghost_company_desc$"
+
+
+ ###########################
+ ### COV_SPECTRE_COMPANY ###
+ ###########################
+ pmca_ten_cov_spectre_company: "$pmca_ten$ $cov_spectre_company$"
+ pmca_ten_cov_spectre_company_plural: "$cov_spectre_company_plural$"
+ pmca_ten_cov_spectre_company_desc: "$cov_spectre_company_desc$"
+ pmca_hundred_cov_spectre_company: "$pmca_hundred$ $cov_spectre_company$"
+ pmca_hundred_cov_spectre_company_plural: "$cov_spectre_company_plural$"
+ pmca_hundred_cov_spectre_company_desc: "$cov_spectre_company_desc$"
+
+
+ ##########################
+ ### COV_LOCUST_COMPANY ###
+ ##########################
+ pmca_ten_cov_locust_company: "$pmca_ten$ $cov_locust_company$"
+ pmca_ten_cov_locust_company_plural: "$cov_locust_company_plural$"
+ pmca_ten_cov_locust_company_desc: "$cov_locust_company_desc$"
+ pmca_hundred_cov_locust_company: "$pmca_hundred$ $cov_locust_company$"
+ pmca_hundred_cov_locust_company_plural: "$cov_locust_company_plural$"
+ pmca_hundred_cov_locust_company_desc: "$cov_locust_company_desc$"
+
+
+ ############################
+ ### COV_REVENANT_COMPANY ###
+ ############################
+ pmca_ten_cov_revenant_company: "$pmca_ten$ $cov_revenant_company$"
+ pmca_ten_cov_revenant_company_plural: "$cov_revenant_company_plural$"
+ pmca_ten_cov_revenant_company_desc: "$cov_revenant_company_desc$"
+ pmca_hundred_cov_revenant_company: "$pmca_hundred$ $cov_revenant_company$"
+ pmca_hundred_cov_revenant_company_plural: "$cov_revenant_company_plural$"
+ pmca_hundred_cov_revenant_company_desc: "$cov_revenant_company_desc$"
+
+
+ #######################
+ ### COV_WRAITH_TANK ###
+ #######################
+ pmca_ten_cov_wraith_tank: "$pmca_ten$ $cov_wraith_tank$"
+ pmca_ten_cov_wraith_tank_plural: "$cov_wraith_tank_plural$"
+ pmca_ten_cov_wraith_tank_desc: "$cov_wraith_tank_desc$"
+ pmca_hundred_cov_wraith_tank: "$pmca_hundred$ $cov_wraith_tank$"
+ pmca_hundred_cov_wraith_tank_plural: "$cov_wraith_tank_plural$"
+ pmca_hundred_cov_wraith_tank_desc: "$cov_wraith_tank_desc$"
+
+
+ ############################
+ ### COV_BANSHEE_SQUADRON ###
+ ############################
+ pmca_ten_cov_banshee_squadron: "$pmca_ten$ $cov_banshee_squadron$"
+ pmca_ten_cov_banshee_squadron_plural: "$cov_banshee_squadron_plural$"
+ pmca_ten_cov_banshee_squadron_desc: "$cov_banshee_squadron_desc$"
+ pmca_hundred_cov_banshee_squadron: "$pmca_hundred$ $cov_banshee_squadron$"
+ pmca_hundred_cov_banshee_squadron_plural: "$cov_banshee_squadron_plural$"
+ pmca_hundred_cov_banshee_squadron_desc: "$cov_banshee_squadron_desc$"
+
+
+ ###########################
+ ### COV_PHANTOM_GUNSHIP ###
+ ###########################
+ pmca_ten_cov_phantom_gunship: "$pmca_ten$ $cov_phantom_gunship$"
+ pmca_ten_cov_phantom_gunship_plural: "$cov_phantom_gunship_plural$"
+ pmca_ten_cov_phantom_gunship_desc: "$cov_phantom_gunship_desc$"
+ pmca_hundred_cov_phantom_gunship: "$pmca_hundred$ $cov_phantom_gunship$"
+ pmca_hundred_cov_phantom_gunship_plural: "$cov_phantom_gunship_plural$"
+ pmca_hundred_cov_phantom_gunship_desc: "$cov_phantom_gunship_desc$"
+
+
+ ########################
+ ### COV_LICH_GUNSHIP ###
+ ########################
+ pmca_ten_cov_lich_gunship: "$pmca_ten$ $cov_lich_gunship$"
+ pmca_ten_cov_lich_gunship_plural: "$cov_lich_gunship_plural$"
+ pmca_ten_cov_lich_gunship_desc: "$cov_lich_gunship_desc$"
+ pmca_hundred_cov_lich_gunship: "$pmca_hundred$ $cov_lich_gunship$"
+ pmca_hundred_cov_lich_gunship_plural: "$cov_lich_gunship_plural$"
+ pmca_hundred_cov_lich_gunship_desc: "$cov_lich_gunship_desc$"
+
+
+ ##################
+ ### COV_SCARAB ###
+ ##################
+ pmca_ten_cov_scarab: "$pmca_ten$ $cov_scarab$"
+ pmca_ten_cov_scarab_plural: "$cov_scarab_plural$"
+ pmca_ten_cov_scarab_desc: "$cov_scarab_desc$"
+ pmca_hundred_cov_scarab: "$pmca_hundred$ $cov_scarab$"
+ pmca_hundred_cov_scarab_plural: "$cov_scarab_plural$"
+ pmca_hundred_cov_scarab_desc: "$cov_scarab_desc$"
+
+
+ ##################
+ ### COV_DRAUGR ###
+ ##################
+ pmca_ten_cov_draugr: "$pmca_ten$ $cov_draugr$"
+ pmca_ten_cov_draugr_plural: "$cov_draugr_plural$"
+ pmca_ten_cov_draugr_desc: "$cov_draugr_desc$"
+ pmca_hundred_cov_draugr: "$pmca_hundred$ $cov_draugr$"
+ pmca_hundred_cov_draugr_plural: "$cov_draugr_plural$"
+ pmca_hundred_cov_draugr_desc: "$cov_draugr_desc$"
+
+
+ ##################
+ ### COV_KRAKEN ###
+ ##################
+ pmca_ten_cov_kraken: "$pmca_ten$ $cov_kraken$"
+ pmca_ten_cov_kraken_plural: "$cov_kraken_plural$"
+ pmca_ten_cov_kraken_desc: "$cov_kraken_desc$"
+ pmca_hundred_cov_kraken: "$pmca_hundred$ $cov_kraken$"
+ pmca_hundred_cov_kraken_plural: "$cov_kraken_plural$"
+ pmca_hundred_cov_kraken_desc: "$cov_kraken_desc$"
+
+
+ #############################
+ ### BRUTE_CHOPPER_COMPANY ###
+ #############################
+ pmca_ten_brute_chopper_company: "$pmca_ten$ $brute_chopper_company$"
+ pmca_ten_brute_chopper_company_plural: "$brute_chopper_company_plural$"
+ pmca_ten_brute_chopper_company_desc: "$brute_chopper_company_desc$"
+ pmca_hundred_brute_chopper_company: "$pmca_hundred$ $brute_chopper_company$"
+ pmca_hundred_brute_chopper_company_plural: "$brute_chopper_company_plural$"
+ pmca_hundred_brute_chopper_company_desc: "$brute_chopper_company_desc$"
+
+
+ #############################
+ ### BRUTE_PROWLER_COMPANY ###
+ #############################
+ pmca_ten_brute_prowler_company: "$pmca_ten$ $brute_prowler_company$"
+ pmca_ten_brute_prowler_company_plural: "$brute_prowler_company_plural$"
+ pmca_ten_brute_prowler_company_desc: "$brute_prowler_company_desc$"
+ pmca_hundred_brute_prowler_company: "$pmca_hundred$ $brute_prowler_company$"
+ pmca_hundred_brute_prowler_company_plural: "$brute_prowler_company_plural$"
+ pmca_hundred_brute_prowler_company_desc: "$brute_prowler_company_desc$"
+
+
+ ######################################
+ ### DIDACT_PROMETHEAN_CRAWLER_ARMY ###
+ ######################################
+ pmca_ten_didact_promethean_crawler_army: "$pmca_ten$ $didact_promethean_crawler_army$"
+ pmca_ten_didact_promethean_crawler_army_plural: "$didact_promethean_crawler_army_plural$"
+ pmca_ten_didact_promethean_crawler_army_desc: "$didact_promethean_crawler_army_desc$"
+ pmca_hundred_didact_promethean_crawler_army: "$pmca_hundred$ $didact_promethean_crawler_army$"
+ pmca_hundred_didact_promethean_crawler_army_plural: "$didact_promethean_crawler_army_plural$"
+ pmca_hundred_didact_promethean_crawler_army_desc: "$didact_promethean_crawler_army_desc$"
+
+
+ ######################################
+ ### DIDACT_PROMETHEAN_SOLDIER_ARMY ###
+ ######################################
+ pmca_ten_didact_promethean_soldier_army: "$pmca_ten$ $didact_promethean_soldier_army$"
+ pmca_ten_didact_promethean_soldier_army_plural: "$didact_promethean_soldier_army_plural$"
+ pmca_ten_didact_promethean_soldier_army_desc: "$didact_promethean_soldier_army_desc$"
+ pmca_hundred_didact_promethean_soldier_army: "$pmca_hundred$ $didact_promethean_soldier_army$"
+ pmca_hundred_didact_promethean_soldier_army_plural: "$didact_promethean_soldier_army_plural$"
+ pmca_hundred_didact_promethean_soldier_army_desc: "$didact_promethean_soldier_army_desc$"
+
+
+ #####################################
+ ### DIDACT_PROMETHEAN_KNIGHT_ARMY ###
+ #####################################
+ pmca_ten_didact_promethean_knight_army: "$pmca_ten$ $didact_promethean_knight_army$"
+ pmca_ten_didact_promethean_knight_army_plural: "$didact_promethean_knight_army_plural$"
+ pmca_ten_didact_promethean_knight_army_desc: "$didact_promethean_knight_army_desc$"
+ pmca_hundred_didact_promethean_knight_army: "$pmca_hundred$ $didact_promethean_knight_army$"
+ pmca_hundred_didact_promethean_knight_army_plural: "$didact_promethean_knight_army_plural$"
+ pmca_hundred_didact_promethean_knight_army_desc: "$didact_promethean_knight_army_desc$"
+
+
+ ##################################
+ ### DIDACT_PROMETHEAN_PHAETONS ###
+ ##################################
+ pmca_ten_didact_promethean_phaetons: "$pmca_ten$ $didact_promethean_phaetons$"
+ pmca_ten_didact_promethean_phaetons_plural: "$didact_promethean_phaetons_plural$"
+ pmca_ten_didact_promethean_phaetons_desc: "$didact_promethean_phaetons_desc$"
+ pmca_hundred_didact_promethean_phaetons: "$pmca_hundred$ $didact_promethean_phaetons$"
+ pmca_hundred_didact_promethean_phaetons_plural: "$didact_promethean_phaetons_plural$"
+ pmca_hundred_didact_promethean_phaetons_desc: "$didact_promethean_phaetons_desc$"
+

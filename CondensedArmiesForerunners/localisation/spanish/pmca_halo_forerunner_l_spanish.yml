@@ -1,0 +1,179 @@
+﻿l_spanish:
+
+ # Localisation generated using Python
+
+ ######################################
+ ### FORERUNNER_AGGRESSOR_SENTINELS ###
+ ######################################
+ pmca_ten_forerunner_aggressor_sentinels: "$pmca_ten$ $forerunner_aggressor_sentinels$"
+ pmca_ten_forerunner_aggressor_sentinels_plural: "$forerunner_aggressor_sentinels_plural$"
+ pmca_ten_forerunner_aggressor_sentinels_desc: "$forerunner_aggressor_sentinels_desc$"
+ pmca_hundred_forerunner_aggressor_sentinels: "$pmca_hundred$ $forerunner_aggressor_sentinels$"
+ pmca_hundred_forerunner_aggressor_sentinels_plural: "$forerunner_aggressor_sentinels_plural$"
+ pmca_hundred_forerunner_aggressor_sentinels_desc: "$forerunner_aggressor_sentinels_desc$"
+
+
+ ##################################
+ ### FORERUNNER_SUPER_SENTINELS ###
+ ##################################
+ pmca_ten_forerunner_super_sentinels: "$pmca_ten$ $forerunner_super_sentinels$"
+ pmca_ten_forerunner_super_sentinels_plural: "$forerunner_super_sentinels_plural$"
+ pmca_ten_forerunner_super_sentinels_desc: "$forerunner_super_sentinels_desc$"
+ pmca_hundred_forerunner_super_sentinels: "$pmca_hundred$ $forerunner_super_sentinels$"
+ pmca_hundred_forerunner_super_sentinels_plural: "$forerunner_super_sentinels_plural$"
+ pmca_hundred_forerunner_super_sentinels_desc: "$forerunner_super_sentinels_desc$"
+
+
+ #################################
+ ### FORERUNNER_ONYX_SENTINELS ###
+ #################################
+ pmca_ten_forerunner_onyx_sentinels: "$pmca_ten$ $forerunner_onyx_sentinels$"
+ pmca_ten_forerunner_onyx_sentinels_plural: "$forerunner_onyx_sentinels_plural$"
+ pmca_ten_forerunner_onyx_sentinels_desc: "$forerunner_onyx_sentinels_desc$"
+ pmca_hundred_forerunner_onyx_sentinels: "$pmca_hundred$ $forerunner_onyx_sentinels$"
+ pmca_hundred_forerunner_onyx_sentinels_plural: "$forerunner_onyx_sentinels_plural$"
+ pmca_hundred_forerunner_onyx_sentinels_desc: "$forerunner_onyx_sentinels_desc$"
+
+
+ ##################################
+ ### FORERUNNER_STRATO_SENTINEL ###
+ ##################################
+ pmca_ten_forerunner_strato_sentinel: "$pmca_ten$ $forerunner_strato_sentinel$"
+ pmca_ten_forerunner_strato_sentinel_plural: "$forerunner_strato_sentinel_plural$"
+ pmca_ten_forerunner_strato_sentinel_desc: "$forerunner_strato_sentinel_desc$"
+ pmca_hundred_forerunner_strato_sentinel: "$pmca_hundred$ $forerunner_strato_sentinel$"
+ pmca_hundred_forerunner_strato_sentinel_plural: "$forerunner_strato_sentinel_plural$"
+ pmca_hundred_forerunner_strato_sentinel_desc: "$forerunner_strato_sentinel_desc$"
+
+
+ ###############################
+ ### FORERUNNER_ARMIGER_ARMY ###
+ ###############################
+ pmca_ten_forerunner_armiger_army: "$pmca_ten$ $forerunner_armiger_army$"
+ pmca_ten_forerunner_armiger_army_plural: "$forerunner_armiger_army_plural$"
+ pmca_ten_forerunner_armiger_army_desc: "$forerunner_armiger_army_desc$"
+ pmca_hundred_forerunner_armiger_army: "$pmca_hundred$ $forerunner_armiger_army$"
+ pmca_hundred_forerunner_armiger_army_plural: "$forerunner_armiger_army_plural$"
+ pmca_hundred_forerunner_armiger_army_desc: "$forerunner_armiger_army_desc$"
+
+
+ #######################################
+ ### FORERUNNER_WARRIOR_SERVANT_ARMY ###
+ #######################################
+ pmca_ten_forerunner_warrior_servant_army: "$pmca_ten$ $forerunner_warrior_servant_army$"
+ pmca_ten_forerunner_warrior_servant_army_plural: "$forerunner_warrior_servant_army_plural$"
+ pmca_ten_forerunner_warrior_servant_army_desc: "$forerunner_warrior_servant_army_desc$"
+ pmca_hundred_forerunner_warrior_servant_army: "$pmca_hundred$ $forerunner_warrior_servant_army$"
+ pmca_hundred_forerunner_warrior_servant_army_plural: "$forerunner_warrior_servant_army_plural$"
+ pmca_hundred_forerunner_warrior_servant_army_desc: "$forerunner_warrior_servant_army_desc$"
+
+
+ #############################
+ ### FORERUNNER_WAR_SPHINX ###
+ #############################
+ pmca_ten_forerunner_war_sphinx: "$pmca_ten$ $forerunner_war_sphinx$"
+ pmca_ten_forerunner_war_sphinx_plural: "$forerunner_war_sphinx_plural$"
+ pmca_ten_forerunner_war_sphinx_desc: "$forerunner_war_sphinx_desc$"
+ pmca_hundred_forerunner_war_sphinx: "$pmca_hundred$ $forerunner_war_sphinx$"
+ pmca_hundred_forerunner_war_sphinx_plural: "$forerunner_war_sphinx_plural$"
+ pmca_hundred_forerunner_war_sphinx_desc: "$forerunner_war_sphinx_desc$"
+
+
+ #######################################
+ ### PROMETHEAN_WARRIOR_SERVANT_ARMY ###
+ #######################################
+ pmca_ten_promethean_warrior_servant_army: "$pmca_ten$ $promethean_warrior_servant_army$"
+ pmca_ten_promethean_warrior_servant_army_plural: "$promethean_warrior_servant_army_plural$"
+ pmca_ten_promethean_warrior_servant_army_desc: "$promethean_warrior_servant_army_desc$"
+ pmca_hundred_promethean_warrior_servant_army: "$pmca_hundred$ $promethean_warrior_servant_army$"
+ pmca_hundred_promethean_warrior_servant_army_plural: "$promethean_warrior_servant_army_plural$"
+ pmca_hundred_promethean_warrior_servant_army_desc: "$promethean_warrior_servant_army_desc$"
+
+
+ ##########################
+ ### PROMETHEAN_SEEKERS ###
+ ##########################
+ pmca_ten_promethean_seekers: "$pmca_ten$ $promethean_seekers$"
+ pmca_ten_promethean_seekers_plural: "$promethean_seekers_plural$"
+ pmca_ten_promethean_seekers_desc: "$promethean_seekers_desc$"
+ pmca_hundred_promethean_seekers: "$pmca_hundred$ $promethean_seekers$"
+ pmca_hundred_promethean_seekers_plural: "$promethean_seekers_plural$"
+ pmca_hundred_promethean_seekers_desc: "$promethean_seekers_desc$"
+
+
+ ###############################
+ ### PROMETHEAN_CRAWLER_ARMY ###
+ ###############################
+ pmca_ten_promethean_crawler_army: "$pmca_ten$ $promethean_crawler_army$"
+ pmca_ten_promethean_crawler_army_plural: "$promethean_crawler_army_plural$"
+ pmca_ten_promethean_crawler_army_desc: "$promethean_crawler_army_desc$"
+ pmca_hundred_promethean_crawler_army: "$pmca_hundred$ $promethean_crawler_army$"
+ pmca_hundred_promethean_crawler_army_plural: "$promethean_crawler_army_plural$"
+ pmca_hundred_promethean_crawler_army_desc: "$promethean_crawler_army_desc$"
+
+
+ ###############################
+ ### PROMETHEAN_SOLDIER_ARMY ###
+ ###############################
+ pmca_ten_promethean_soldier_army: "$pmca_ten$ $promethean_soldier_army$"
+ pmca_ten_promethean_soldier_army_plural: "$promethean_soldier_army_plural$"
+ pmca_ten_promethean_soldier_army_desc: "$promethean_soldier_army_desc$"
+ pmca_hundred_promethean_soldier_army: "$pmca_hundred$ $promethean_soldier_army$"
+ pmca_hundred_promethean_soldier_army_plural: "$promethean_soldier_army_plural$"
+ pmca_hundred_promethean_soldier_army_desc: "$promethean_soldier_army_desc$"
+
+
+ ##############################
+ ### PROMETHEAN_KNIGHT_ARMY ###
+ ##############################
+ pmca_ten_promethean_knight_army: "$pmca_ten$ $promethean_knight_army$"
+ pmca_ten_promethean_knight_army_plural: "$promethean_knight_army_plural$"
+ pmca_ten_promethean_knight_army_desc: "$promethean_knight_army_desc$"
+ pmca_hundred_promethean_knight_army: "$pmca_hundred$ $promethean_knight_army$"
+ pmca_hundred_promethean_knight_army_plural: "$promethean_knight_army_plural$"
+ pmca_hundred_promethean_knight_army_desc: "$promethean_knight_army_desc$"
+
+
+ ##############################
+ ### PROMETHEAN_LANCER_ARMY ###
+ ##############################
+ pmca_ten_promethean_lancer_army: "$pmca_ten$ $promethean_lancer_army$"
+ pmca_ten_promethean_lancer_army_plural: "$promethean_lancer_army_plural$"
+ pmca_ten_promethean_lancer_army_desc: "$promethean_lancer_army_desc$"
+ pmca_hundred_promethean_lancer_army: "$pmca_hundred$ $promethean_lancer_army$"
+ pmca_hundred_promethean_lancer_army_plural: "$promethean_lancer_army_plural$"
+ pmca_hundred_promethean_lancer_army_desc: "$promethean_lancer_army_desc$"
+
+
+ ###################################
+ ### PROMETHEAN_BATTLEWAGON_ARMY ###
+ ###################################
+ pmca_ten_promethean_battlewagon_army: "$pmca_ten$ $promethean_battlewagon_army$"
+ pmca_ten_promethean_battlewagon_army_plural: "$promethean_battlewagon_army_plural$"
+ pmca_ten_promethean_battlewagon_army_desc: "$promethean_battlewagon_army_desc$"
+ pmca_hundred_promethean_battlewagon_army: "$pmca_hundred$ $promethean_battlewagon_army$"
+ pmca_hundred_promethean_battlewagon_army_plural: "$promethean_battlewagon_army_plural$"
+ pmca_hundred_promethean_battlewagon_army_desc: "$promethean_battlewagon_army_desc$"
+
+
+ ###########################
+ ### PROMETHEAN_PHAETONS ###
+ ###########################
+ pmca_ten_promethean_phaetons: "$pmca_ten$ $promethean_phaetons$"
+ pmca_ten_promethean_phaetons_plural: "$promethean_phaetons_plural$"
+ pmca_ten_promethean_phaetons_desc: "$promethean_phaetons_desc$"
+ pmca_hundred_promethean_phaetons: "$pmca_hundred$ $promethean_phaetons$"
+ pmca_hundred_promethean_phaetons_plural: "$promethean_phaetons_plural$"
+ pmca_hundred_promethean_phaetons_desc: "$promethean_phaetons_desc$"
+
+
+ #########################
+ ### CREATED_EXECUTORS ###
+ #########################
+ pmca_ten_created_executors: "$pmca_ten$ $created_executors$"
+ pmca_ten_created_executors_plural: "$created_executors_plural$"
+ pmca_ten_created_executors_desc: "$created_executors_desc$"
+ pmca_hundred_created_executors: "$pmca_hundred$ $created_executors$"
+ pmca_hundred_created_executors_plural: "$created_executors_plural$"
+ pmca_hundred_created_executors_desc: "$created_executors_desc$"
+
