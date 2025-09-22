@@ -3,5 +3,5 @@ tags={
 	"Military"
 }
 name="Condensed Armies - Halo UNSC Portraits Patch"
-supported_version="4.0.*"
-remote_file_id="2809626594"
+supported_version="4.1.*"
+remote_file_id="3492364173"
