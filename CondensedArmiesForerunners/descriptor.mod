@@ -3,5 +3,5 @@ tags={
 	"Military"
 }
 name="Condensed Armies - Halo Forerunner Portraits Patch"
-supported_version="4.1.*"
+supported_version="4.4.*"
 remote_file_id="3492364388"

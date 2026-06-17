@@ -1,0 +1,2 @@
+# Ground Command
+@pmca_has_ground_command_compat = 1
