@@ -1,0 +1,2 @@
+# Halo Portraits: Forerunners
+@pmca_has_halo_portraits_forerunners_compat = 1

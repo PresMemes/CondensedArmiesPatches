@@ -1,0 +1,2 @@
+# Halo Portraits: Banished
+@pmca_has_halo_portraits_banished_compat = 1

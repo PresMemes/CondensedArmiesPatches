@@ -1,0 +1,2 @@
+# Halo Portraits: UNSC
+@pmca_has_halo_portraits_unsc_compat = 1

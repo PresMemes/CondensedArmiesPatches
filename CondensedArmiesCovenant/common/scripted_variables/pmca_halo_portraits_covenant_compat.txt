@@ -1,0 +1,2 @@
+# Halo Portraits: Covenant
+@pmca_has_halo_portraits_covenant_compat = 1

@@ -1,0 +1,2 @@
+# Halo Portraits: Flood
+@pmca_has_halo_portraits_flood_compat = 1
